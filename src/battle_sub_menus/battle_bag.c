@@ -407,6 +407,13 @@ static u8 TryUseItem(BattleBag *battleBag)
 {
     BattleBagContext *context = battleBag->context;
 
+    if ((Item_LoadParam(context->selectedBattleBagItem, ITEM_PARAM_BATTLE_POCKET, context->heapID) & BATTLE_POCKET_MASK_POKE_BALLS) == 0) {
+        MessageLoader_GetString(battleBag->messageLoader, BattleBag_Text_ItemHasNoUse, battleBag->string);
+        BattleBagText_DisplayMessage(battleBag);
+        battleBag->queuedState = TASK_STATE_CLEAR_ERROR_MESSAGE;
+        return TASK_STATE_AWAITING_TEXT_FINISH;
+    }
+
     if (battleBag->currentBattlePocket == ITEM_BATTLE_CATEGORY_BATTLE_ITEMS) {
         int partySlot = BattleBagTask_GetSelectedPartySlot(battleBag);
         u32 itemBattleUse = Item_LoadParam(context->selectedBattleBagItem, ITEM_PARAM_BATTLE_USE_FUNC, context->heapID);
