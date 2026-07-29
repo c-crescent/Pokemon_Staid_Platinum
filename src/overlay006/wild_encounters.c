@@ -98,7 +98,7 @@ static BOOL TryGenerateGrassEncounter_WithRadar(FieldSystem *fieldSystem, Pokemo
 static BOOL TryGenerateGrassEncounter_DoubleBattle(FieldSystem *fieldSystem, Pokemon *firstMon, FieldBattleDTO *battleParams, EncounterSlot *encounterTable, const WildEncounters_FieldParams *fieldParams);
 static BOOL TryGenerateSurfEncounter(FieldSystem *fieldSystem, Pokemon *param1, FieldBattleDTO *param2, EncounterSlot *param3, const WildEncounters_FieldParams *param4);
 static BOOL TryGenerateFishingEncounter(FieldSystem *fieldSystem, Pokemon *param1, FieldBattleDTO *param2, EncounterSlot *param3, const WildEncounters_FieldParams *param4, const int param5);
-static BOOL TryGenerateWildMon(Pokemon *firstPartyMon, const int fishingRodType, const WildEncounters_FieldParams *fieldParams, const EncounterSlot *encounterTable, const u8 encounterType, const int param5, FieldBattleDTO *param6);
+static BOOL TryGenerateWildMon(FieldSystem *fieldSystem, Pokemon *firstPartyMon, const int fishingRodType, const WildEncounters_FieldParams *fieldParams, const EncounterSlot *encounterTable, const u8 encounterType, const int param5, FieldBattleDTO *param6);
 static BOOL CreateWildMon_FromRadarNoChain(FieldSystem *fieldSystem, Pokemon *param1, const WildEncounters_FieldParams *param2, const EncounterSlot *param3, const int param4, FieldBattleDTO *param5, const int param6, const int param7);
 static BOOL CreateWildMon_FromRadarKeepChain(const int species, const int level, const int partyDest, const BOOL isShiny, const u32 trainerId, const WildEncounters_FieldParams *fieldParams, Pokemon *mon, FieldBattleDTO *battleParams);
 static u8 ModifyEncounterRateWithFieldParams(const BOOL isFishingEncounter, const u8 encounterRate, const WildEncounters_FieldParams *fieldParams, const u32 weatherEffect, Pokemon *unused);
@@ -717,7 +717,7 @@ static BOOL TryGenerateGrassEncounter_WithRadar(FieldSystem *fieldSystem, Pokemo
             }
         }
     } else {
-        encounterSuccess = TryGenerateWildMon(firstPartyMon, 0xff, encounterFieldParams, encounterTable, ENCOUNTER_TYPE_GRASS, 1, battleParams);
+        encounterSuccess = TryGenerateWildMon(fieldSystem, firstPartyMon, 0xff, encounterFieldParams, encounterTable, ENCOUNTER_TYPE_GRASS, 1, battleParams);
 
         if (encounterSuccess) {
             RadarChain_Clear(fieldSystem->chain);
@@ -729,22 +729,22 @@ static BOOL TryGenerateGrassEncounter_WithRadar(FieldSystem *fieldSystem, Pokemo
 
 static BOOL TryGenerateGrassEncounter_DoubleBattle(FieldSystem *fieldSystem, Pokemon *firstPartyMon, FieldBattleDTO *battleParams, EncounterSlot *encounterTable, const WildEncounters_FieldParams *fieldParams)
 {
-    if (!TryGenerateWildMon(firstPartyMon, 0xff, fieldParams, encounterTable, ENCOUNTER_TYPE_GRASS, 1, battleParams)) {
+    if (!TryGenerateWildMon(fieldSystem, firstPartyMon, 0xff, fieldParams, encounterTable, ENCOUNTER_TYPE_GRASS, 1, battleParams)) {
         return FALSE;
     }
 
-    BOOL encounterSuccess = TryGenerateWildMon(firstPartyMon, 0xff, fieldParams, encounterTable, ENCOUNTER_TYPE_GRASS, 3, battleParams);
+    BOOL encounterSuccess = TryGenerateWildMon(fieldSystem, firstPartyMon, 0xff, fieldParams, encounterTable, ENCOUNTER_TYPE_GRASS, 3, battleParams);
     return encounterSuccess;
 }
 
 static BOOL TryGenerateSurfEncounter(FieldSystem *fieldSystem, Pokemon *param1, FieldBattleDTO *param2, EncounterSlot *param3, const WildEncounters_FieldParams *param4)
 {
-    return TryGenerateWildMon(param1, 0xff, param4, param3, ENCOUNTER_TYPE_SURF, 1, param2);
+    return TryGenerateWildMon(fieldSystem, param1, 0xff, param4, param3, ENCOUNTER_TYPE_SURF, 1, param2);
 }
 
 static BOOL TryGenerateFishingEncounter(FieldSystem *fieldSystem, Pokemon *param1, FieldBattleDTO *param2, EncounterSlot *param3, const WildEncounters_FieldParams *param4, const int fishingRodType)
 {
-    return TryGenerateWildMon(param1, fishingRodType, param4, param3, ENCOUNTER_TYPE_FISHING, 1, param2);
+    return TryGenerateWildMon(fieldSystem, param1, fishingRodType, param4, param3, ENCOUNTER_TYPE_FISHING, 1, param2);
 }
 
 static BOOL ShouldGetRandomEncounter(FieldSystem *fieldSystem, const u32 encounterRate, const u8 tileBehavior)
@@ -948,8 +948,31 @@ static u8 GetNatureForWildMon(Pokemon *firstMon, const WildEncounters_FieldParam
     return LCRNG_RandMod(25);
 }
 
+static int GetLevelProgressionBonus(FieldSystem *fieldSystem)
+{
+    int bonus = 0;
+    TrainerInfo *trainerInfo = SaveData_GetTrainerInfo(fieldSystem->saveData);
+    VarsFlags *varsFlags = SaveData_GetVarsFlags(fieldSystem->saveData);
+
+    if (trainerInfo != NULL) {
+        bonus += TrainerInfo_BadgeCount(trainerInfo) * 4;
+    }
+
+    if (varsFlags != NULL) {
+        if (SystemFlag_CheckGameCompleted(varsFlags)) {
+            bonus += 6;
+        }
+
+        if (SystemFlag_CheckHasPartner(varsFlags)) {
+            bonus += 2;
+        }
+    }
+
+    return bonus;
+}
+
 // Only used for Surf and Fishing. Grass mons have their level distributions spread across multiple slots instead of min/maxLevel.
-static u8 GetWildMonLevel(const EncounterSlot *slot, const WildEncounters_FieldParams *encounterFieldParams)
+static u8 GetWildMonLevel(FieldSystem *fieldSystem, const EncounterSlot *slot, const WildEncounters_FieldParams *encounterFieldParams)
 {
     u8 randRange;
     u8 minLevel, maxLevel;
@@ -965,16 +988,25 @@ static u8 GetWildMonLevel(const EncounterSlot *slot, const WildEncounters_FieldP
     u8 levelRange = maxLevel - minLevel + 1;
     randRange = LCRNG_Next() % levelRange;
 
+    u8 baseLevel = minLevel + randRange;
+
+    if (fieldSystem != NULL) {
+        int bonus = GetLevelProgressionBonus(fieldSystem);
+        if (bonus > 0) {
+            baseLevel += bonus;
+        }
+    }
+
     // Hustle and Vital Spirit give a 50% chance to force mons to be max level
     if (!encounterFieldParams->isFirstMonEgg && (encounterFieldParams->firstMonAbility == ABILITY_HUSTLE || encounterFieldParams->firstMonAbility == ABILITY_VITAL_SPIRIT || encounterFieldParams->firstMonAbility == ABILITY_PRESSURE)) {
         if (LCRNG_RandMod(2) == 0) {
-            return minLevel + randRange;
+            return baseLevel;
         }
 
-        return maxLevel;
+        return baseLevel;
     }
 
-    return minLevel + randRange;
+    return baseLevel;
 }
 
 // Creates a mon with a personality that will make it shiny, and complies with Cute Charm/Synchronize.
@@ -1085,7 +1117,7 @@ static void CreateWildMon(u16 species, u8 level, const int partyDest, const Wild
     Heap_Free(newEncounter);
 }
 
-static BOOL TryGenerateWildMon(Pokemon *firstPartyMon, const int fishingRodType, const WildEncounters_FieldParams *encounterFieldParams, const EncounterSlot *encounterTable, const u8 encounterType, const int partyDest, FieldBattleDTO *battleParams)
+static BOOL TryGenerateWildMon(FieldSystem *fieldSystem, Pokemon *firstPartyMon, const int fishingRodType, const WildEncounters_FieldParams *encounterFieldParams, const EncounterSlot *encounterTable, const u8 encounterType, const int partyDest, FieldBattleDTO *battleParams)
 {
     BOOL forcedSlot;
     u8 encounterSlot = 0;
@@ -1115,7 +1147,7 @@ static BOOL TryGenerateWildMon(Pokemon *firstPartyMon, const int fishingRodType,
             encounterSlot = GetWaterEncounterSlot();
         }
 
-        level = GetWildMonLevel(&encounterTable[encounterSlot], encounterFieldParams);
+        level = GetWildMonLevel(fieldSystem, &encounterTable[encounterSlot], encounterFieldParams);
         break;
     case ENCOUNTER_TYPE_FISHING:
         // BUG: Magnet Pull doesn't function in water because its encounter slot gets overwritten when the Static check returns FALSE.
@@ -1126,7 +1158,7 @@ static BOOL TryGenerateWildMon(Pokemon *firstPartyMon, const int fishingRodType,
             encounterSlot = GetRodEncounterSlot(fishingRodType);
         }
 
-        level = GetWildMonLevel(&encounterTable[encounterSlot], encounterFieldParams);
+        level = GetWildMonLevel(fieldSystem, &encounterTable[encounterSlot], encounterFieldParams);
         break;
     default:
         GF_ASSERT(FALSE);
