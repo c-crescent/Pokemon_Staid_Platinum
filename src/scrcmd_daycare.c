@@ -77,7 +77,7 @@ BOOL ScrCmd_MoveMonToPartyFromDaycareSlot(ScriptContext *ctx)
 
     daycare = SaveData_SaveTable(saveData, SAVE_TABLE_ENTRY_DAYCARE);
     party = SaveData_GetParty(fieldSystem->saveData);
-    *destVar = Daycare_MoveToPartyFromDaycareSlot(party, *template, daycare, daycareSlot);
+    *destVar = Daycare_MoveToPartyFromDaycareSlot(party, *template, daycare, daycareSlot, saveData);
 
     return FALSE;
 }

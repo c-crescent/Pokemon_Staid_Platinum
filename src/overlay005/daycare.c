@@ -144,14 +144,14 @@ static void Daycare_ShiftMonSlots(Daycare *daycare)
     }
 }
 
-static void ov5_021E63E0(Pokemon *param0)
+static void ov5_021E63E0(Pokemon *param0, u8 maxLevel)
 {
     int v0, v1 = 0, v2;
     u16 v3;
     u16 v4;
 
     for (v0 = 0; v0 < 100; v0++) {
-        if (Pokemon_ShouldLevelUp(param0)) {
+        if (Pokemon_ShouldLevelUp(param0, maxLevel)) {
             v1 = 0;
 
             while ((v4 = Pokemon_LevelUpMove(param0, &v1, &v3)) != 0) {
@@ -167,23 +167,31 @@ static void ov5_021E63E0(Pokemon *param0)
     Pokemon_CalcLevelAndStats(param0);
 }
 
-static int Daycare_MoveToPartyFromDaycareMon(Party *party, DaycareMon *daycareMon, StringTemplate *template)
+static int Daycare_MoveToPartyFromDaycareMon(Party *party, DaycareMon *daycareMon, StringTemplate *template, SaveData *saveData)
 {
     Pokemon *mon = Pokemon_New(HEAP_ID_FIELD1);
     BoxPokemon *boxMon = DaycareMon_GetBoxMon(daycareMon);
     DaycareMail *daycareMail = DaycareMon_GetDaycareMail(daycareMon);
     u32 experience;
     u16 species;
+    u8 maxLevel;
+    TrainerInfo *trainerInfo;
 
     StringTemplate_SetNickname(template, 0, boxMon);
     species = BoxPokemon_GetValue(boxMon, MON_DATA_SPECIES, NULL);
     Pokemon_FromBoxPokemon(boxMon, mon);
 
+    trainerInfo = SaveData_GetTrainerInfo(saveData);
+    maxLevel = MAX_POKEMON_LEVEL;
+    if (trainerInfo) {
+        maxLevel = Pokemon_GetLevelCap(trainerInfo, SaveData_GetVarsFlags(saveData));
+    }
+
     if (Pokemon_GetValue(mon, MON_DATA_LEVEL, NULL) != MAX_POKEMON_LEVEL) {
         experience = Pokemon_GetValue(mon, MON_DATA_EXPERIENCE, NULL);
         experience += DaycareMon_GetSteps(daycareMon);
         Pokemon_SetValue(mon, MON_DATA_EXPERIENCE, (u8 *)&experience);
-        ov5_021E63E0(mon);
+        ov5_021E63E0(mon, maxLevel);
     }
 
     if (BoxPokemon_HoldsMail(boxMon)) {
@@ -198,12 +206,12 @@ static int Daycare_MoveToPartyFromDaycareMon(Party *party, DaycareMon *daycareMo
     return species;
 }
 
-u16 Daycare_MoveToPartyFromDaycareSlot(Party *party, StringTemplate *template, Daycare *daycare, u8 daycareSlot)
+u16 Daycare_MoveToPartyFromDaycareSlot(Party *party, StringTemplate *template, Daycare *daycare, u8 daycareSlot, SaveData *saveData)
 {
     u16 movedSpecies;
     DaycareMon *daycareMon = Daycare_GetDaycareMon(daycare, daycareSlot);
 
-    movedSpecies = Daycare_MoveToPartyFromDaycareMon(party, daycareMon, template);
+    movedSpecies = Daycare_MoveToPartyFromDaycareMon(party, daycareMon, template, saveData);
     Daycare_ShiftMonSlots(daycare);
 
     return movedSpecies;

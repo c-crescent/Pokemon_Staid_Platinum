@@ -13,6 +13,7 @@
 #include "constants/species.h"
 #include "constants/string.h"
 #include "generated/abilities.h"
+#include "generated/badges.h"
 #include "generated/game_records.h"
 #include "generated/genders.h"
 
@@ -9696,6 +9697,8 @@ static void BattleScript_GetExpTask(SysTask *task, void *inData)
     u32 battleType = BattleSystem_GetBattleType(data->battleSys);
     int item;
     int itemEffect;
+    u8 maxLevel;
+    TrainerInfo *trainerInfo;
 
     battler = data->battleCtx->faintedMon >> 1 & 1; // init to the side with the fainted mon
     expBattler = 0;
@@ -9822,7 +9825,13 @@ static void BattleScript_GetExpTask(SysTask *task, void *inData)
         break;
 
     case SEQ_GET_EXP_CHECK_LEVEL_UP:
-        if (Pokemon_ShouldLevelUp(mon)) {
+        trainerInfo = BattleSystem_GetTrainerInfo(data->battleSys, expBattler);
+        maxLevel = MAX_POKEMON_LEVEL;
+        if (trainerInfo) {
+            maxLevel = Pokemon_GetLevelCap(trainerInfo, SaveData_GetVarsFlags(data->battleSys->saveData));
+        }
+        
+        if (Pokemon_ShouldLevelUp(mon, maxLevel)) {
             // Only play the special level-up animation for an active battler
             if (data->battleCtx->selectedPartySlot[expBattler] == slot) {
                 BattleController_EmitPlayStatusEffect(data->battleSys, data->battleCtx, expBattler, BATTLE_ANIMATION_LEVEL_UP);

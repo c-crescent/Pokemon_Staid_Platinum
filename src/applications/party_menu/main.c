@@ -2745,7 +2745,7 @@ static int ApplyItemEffectOnPokemon(PartyMenuApplication *app)
         return PARTY_MENU_STATE_WAIT_MOVE_LIST_SELECTION;
     }
 
-    if (Party_CheckItemEffectsOnMember(app->partyMenu->party, app->partyMenu->usedItemID, app->currPartySlot, 0, HEAP_ID_PARTY_MENU) == TRUE) {
+    if (Party_CheckItemEffectsOnMember(app->partyMenu->party, app->partyMenu->usedItemID, app->currPartySlot, 0, HEAP_ID_PARTY_MENU, MAX_POKEMON_LEVEL) == TRUE) {
         Bag_TryRemoveItem(app->partyMenu->bag, app->partyMenu->usedItemID, 1, HEAP_ID_PARTY_MENU);
 
         if (Item_Get(itemData, ITEM_PARAM_EVOLVE) != FALSE) {

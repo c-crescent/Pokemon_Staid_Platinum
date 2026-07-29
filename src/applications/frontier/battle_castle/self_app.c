@@ -3157,7 +3157,7 @@ void BattleCastleSelfApp_HandleExitAppCmd(int netID, int unused, void *data, voi
 
 static void ApplyItemEffect(Pokemon *mon, u16 itemID)
 {
-    Pokemon_ApplyItemEffects(mon, itemID, 0, 0, HEAP_ID_BATTLE_CASTLE_APP);
+    Pokemon_ApplyItemEffects(mon, itemID, 0, 0, HEAP_ID_BATTLE_CASTLE_APP, MAX_POKEMON_LEVEL);
 }
 
 static void PrintPlayersAndPartnersNames(BattleCastleSelfApp *app, Window *window)

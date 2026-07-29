@@ -13,7 +13,7 @@
 
 u8 Daycare_CountMons(Daycare *daycare);
 void Daycare_MoveToEmptySlotFromParty(Party *party, int partySlot, Daycare *daycare, SaveData *saveData);
-u16 Daycare_MoveToPartyFromDaycareSlot(Party *party, StringTemplate *template, Daycare *daycare, u8 daycareSlot);
+u16 Daycare_MoveToPartyFromDaycareSlot(Party *party, StringTemplate *template, Daycare *daycare, u8 daycareSlot, SaveData *saveData);
 int BoxPokemon_GiveExperience(BoxPokemon *boxMon, u32 givenExp);
 int DaycareMon_GiveExperience(DaycareMon *daycareMon);
 int Daycare_BufferDaycarePriceBySlot(Daycare *daycare, u8 slot, StringTemplate *template);

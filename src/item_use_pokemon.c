@@ -131,7 +131,7 @@ static s32 CalculateEVUpdate(s32 current, s32 sumOthers, s32 change);
 static u8 CheckFriendshipItemEffect(Pokemon *mon, ItemData *item);
 static u8 UpdatePokemonFriendship(Pokemon *mon, s32 current, s32 change, u16 location, enum HeapID heapID);
 
-u8 Pokemon_CheckItemEffects(Pokemon *mon, u16 itemId, u16 moveSlot, enum HeapID heapID)
+u8 Pokemon_CheckItemEffects(Pokemon *mon, u16 itemId, u16 moveSlot, enum HeapID heapID, u8 maxLevel)
 {
     // For some reason, the original developer decided to use an array to store what should have been individual variables
     // For more clarity on what each slot is used for, and to make them look more like individual variables,
@@ -169,7 +169,7 @@ u8 Pokemon_CheckItemEffects(Pokemon *mon, u16 itemId, u16 moveSlot, enum HeapID 
     }
 
     if (Item_Get(item, ITEM_PARAM_LEVEL_UP)) {
-        if (Pokemon_GetValue(mon, MON_DATA_LEVEL, NULL) < MAX_POKEMON_LEVEL) {
+        if (Pokemon_GetValue(mon, MON_DATA_LEVEL, NULL) < maxLevel) {
             Heap_Free(item);
             return TRUE;
         }
@@ -228,13 +228,13 @@ u8 Pokemon_CheckItemEffects(Pokemon *mon, u16 itemId, u16 moveSlot, enum HeapID 
     return FALSE;
 }
 
-u8 Party_CheckItemEffectsOnMember(Party *party, u16 itemId, u8 partySlot, u8 moveSlot, enum HeapID heapID)
+u8 Party_CheckItemEffectsOnMember(Party *party, u16 itemId, u8 partySlot, u8 moveSlot, enum HeapID heapID, u8 maxLevel)
 {
     Pokemon *mon = Party_GetPokemonBySlotIndex(party, partySlot);
-    return Pokemon_CheckItemEffects(mon, itemId, moveSlot, heapID);
+    return Pokemon_CheckItemEffects(mon, itemId, moveSlot, heapID, maxLevel);
 }
 
-u8 Pokemon_ApplyItemEffects(Pokemon *mon, u16 itemId, u16 moveSlot, u16 location, enum HeapID heapID)
+u8 Pokemon_ApplyItemEffects(Pokemon *mon, u16 itemId, u16 moveSlot, u16 location, enum HeapID heapID, u8 maxLevel)
 {
     // For some reason, the original developer decided to use an array to store what should have been individual variables
     // For more clarity on what each slot is used for, and to make them look more like individual variables,
@@ -289,7 +289,7 @@ u8 Pokemon_ApplyItemEffects(Pokemon *mon, u16 itemId, u16 moveSlot, u16 location
     vApplyLevel = Pokemon_GetValue(mon, MON_DATA_LEVEL, NULL);
 
     if (Item_Get(item, ITEM_PARAM_LEVEL_UP)) {
-        if (vApplyLevel < MAX_POKEMON_LEVEL) {
+        if (vApplyLevel < maxLevel) {
             Pokemon_IncreaseValue(mon, MON_DATA_EXPERIENCE, Pokemon_GetExpToNextLevel(mon));
             Pokemon_CalcLevelAndStats(mon);
 
@@ -389,10 +389,10 @@ u8 Pokemon_ApplyItemEffects(Pokemon *mon, u16 itemId, u16 moveSlot, u16 location
     return effectApplied;
 }
 
-u8 Party_ApplyItemEffectsToMember(Party *party, u16 itemId, u8 partySlot, u8 moveSlot, u16 location, enum HeapID heapID)
+u8 Party_ApplyItemEffectsToMember(Party *party, u16 itemId, u8 partySlot, u8 moveSlot, u16 location, enum HeapID heapID, u8 maxLevel)
 {
     Pokemon *mon = Party_GetPokemonBySlotIndex(party, partySlot);
-    return Pokemon_ApplyItemEffects(mon, itemId, moveSlot, location, heapID);
+    return Pokemon_ApplyItemEffects(mon, itemId, moveSlot, location, heapID, maxLevel);
 }
 
 static u8 IsMoveMissingPP(Pokemon *mon, u32 moveSlot)

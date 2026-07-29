@@ -70,6 +70,7 @@ struct BattleSystem {
     CaptureAttempt *captureAttempt;
     u16 trainerIDs[MAX_BATTLERS];
     u8 unwritten[4];
+    SaveData *saveData;
     Trainer trainers[MAX_BATTLERS];
     Terrain terrains[2];
     BattleSubscreen *btlSubscreen;

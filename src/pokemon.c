@@ -52,6 +52,7 @@
 #include "unk_02017038.h"
 #include "unk_0202C9F4.h"
 #include "unk_02092494.h"
+#include "vars_flags.h"
 
 #include "res/pokemon/regional_pokedex_size.h"
 #include "res/trainers/classes/trbgra.naix"
@@ -3498,7 +3499,7 @@ BoxPokemon *Pokemon_GetBoxPokemon(Pokemon *mon)
     return &mon->box;
 }
 
-BOOL Pokemon_ShouldLevelUp(Pokemon *mon)
+BOOL Pokemon_ShouldLevelUp(Pokemon *mon, u8 maxLevel)
 {
     u16 monSpecies = Pokemon_GetValue(mon, MON_DATA_SPECIES, NULL);
     u8 monNextLevel = Pokemon_GetValue(mon, MON_DATA_LEVEL, NULL) + 1;
@@ -3511,7 +3512,9 @@ BOOL Pokemon_ShouldLevelUp(Pokemon *mon)
         Pokemon_SetValue(mon, MON_DATA_EXPERIENCE, &monExp);
     }
 
-    if (monNextLevel > MAX_POKEMON_LEVEL) {
+    if (monNextLevel > MAX_POKEMON_LEVEL || monNextLevel > maxLevel) {
+        monExp = Pokemon_GetExpRateBaseExpAt(monExpRate, maxLevel);
+        Pokemon_SetValue(mon, MON_DATA_EXPERIENCE, &monExp);
         return FALSE;
     }
 
@@ -3523,6 +3526,35 @@ BOOL Pokemon_ShouldLevelUp(Pokemon *mon)
     }
 
     return FALSE;
+}
+
+u8 Pokemon_GetLevelCap(const TrainerInfo *info, const VarsFlags *varsFlags)
+{
+    u8 badgeCount = TrainerInfo_BadgeCount(info);
+    u8 clearedOnce = FALSE;
+    u8 clearedTwice = FALSE;
+
+    if (varsFlags) {
+        if (VarsFlags_CheckFlag(varsFlags, FLAG_DEFEATED_TRAINER_CHAMPION_CYNTHIA)) {
+            return 80;
+        }
+        if (VarsFlags_CheckFlag(varsFlags, FLAG_DEFEATED_TRAINER_CHAMPION_CYNTHIA_REMATCH)) {
+            return MAX_POKEMON_LEVEL;
+        }
+    }
+
+    switch (badgeCount) {
+        case 0:  return 15;
+        case 1:  return 22;
+        case 2:  return 26;
+        case 3:  return 32;
+        case 4:  return 37;
+        case 5:  return 41;
+        case 6:  return 45;
+        case 7:  return 50;
+        case 8:  return 60;
+        default: return MAX_POKEMON_LEVEL;
+    }
 }
 
 u16 Pokemon_GetEvolutionTargetSpecies(Party *party, Pokemon *mon, u8 evoClass, u16 evoParam, int *evoTypeResult)

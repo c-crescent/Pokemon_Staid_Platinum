@@ -22,6 +22,7 @@
 #include "pokemon_sprite.h"
 #include "sprite_system.h"
 #include "trainer_info.h"
+#include "vars_flags.h"
 
 #define OTID_NOT_SET   0
 #define OTID_SET       1
@@ -547,7 +548,8 @@ u8 BoxPokemon_GetForm(BoxPokemon *boxMon);
  */
 BoxPokemon *Pokemon_GetBoxPokemon(Pokemon *mon);
 
-BOOL Pokemon_ShouldLevelUp(Pokemon *mon);
+BOOL Pokemon_ShouldLevelUp(Pokemon *mon, u8 maxLevel);
+u8 Pokemon_GetLevelCap(const TrainerInfo *info, const VarsFlags *varsFlags);
 u16 Pokemon_GetEvolutionTargetSpecies(Party *party, Pokemon *mon, u8 evoClass, u16 evoParam, int *evoTypeResult);
 u16 Pokemon_GetBaseSpeciesFromPersonalData(const u16 species);
 u16 Pokemon_GetBaseSpeciesForBattle(const u16 species);

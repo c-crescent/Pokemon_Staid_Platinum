@@ -33,6 +33,7 @@
 #include "party.h"
 #include "pokemon.h"
 #include "render_window.h"
+#include "save_player.h"
 #include "sound_playback.h"
 #include "species.h"
 #include "string_gf.h"
@@ -40,6 +41,7 @@
 #include "string_template.h"
 #include "system.h"
 #include "text.h"
+#include "vars_flags.h"
 
 #include "res/text/bank/party_menu.h"
 
@@ -414,7 +416,8 @@ static enum PartyMenuState PartyMenuCB_UseItem_Basic(PartyMenuApplication *appli
         application->currPartySlot,
         0,
         GetCurrentMapLabel(application),
-        HEAP_ID_PARTY_MENU);
+        HEAP_ID_PARTY_MENU,
+        MAX_POKEMON_LEVEL);
 
     PartyMenu_LoadMember(application, application->currPartySlot);
     PartyMenu_DrawMemberPanelData(application, application->currPartySlot);
@@ -448,7 +451,8 @@ static enum PartyMenuState PartyMenuCB_UseItem_SubtractEVs(PartyMenuApplication 
         application->currPartySlot,
         0,
         GetCurrentMapLabel(application),
-        HEAP_ID_PARTY_MENU);
+        HEAP_ID_PARTY_MENU,
+        MAX_POKEMON_LEVEL);
 
     PartyMenu_LoadMember(application, application->currPartySlot);
     PartyMenu_DrawMemberPanelData(application, application->currPartySlot);
@@ -484,7 +488,8 @@ static enum PartyMenuState PartyMenuCB_UseItem_RestoreHP(PartyMenuApplication *a
         application->currPartySlot,
         0,
         GetCurrentMapLabel(application),
-        HEAP_ID_PARTY_MENU);
+        HEAP_ID_PARTY_MENU,
+        MAX_POKEMON_LEVEL);
 
     Pokemon *mon = Party_GetPokemonBySlotIndex(application->partyMenu->party, application->currPartySlot);
     u32 curHP = Pokemon_GetValue(mon, MON_DATA_HP, NULL);
@@ -598,7 +603,8 @@ enum PartyMenuState PartyMenuCB_HandleSacredAsh(PartyMenuApplication *applicatio
             application->partyMenu->usedItemID,
             0,
             GetCurrentMapLabel(application),
-            HEAP_ID_PARTY_MENU);
+            HEAP_ID_PARTY_MENU,
+            MAX_POKEMON_LEVEL);
 
         curHP = Pokemon_GetValue(mon, MON_DATA_HP, NULL);
         string = MessageLoader_GetNewString(application->messageLoader, PartyMenu_Text_MonRegainedHealth);
@@ -674,6 +680,22 @@ enum {
 static enum PartyMenuState PartyMenuCB_UseItem_RareCandy(PartyMenuApplication *application)
 {
     Pokemon *mon = Party_GetPokemonBySlotIndex(application->partyMenu->party, application->currPartySlot);
+    u8 maxLevel = MAX_POKEMON_LEVEL;
+
+    if (application->partyMenu->fieldSystem && application->partyMenu->fieldSystem->saveData) {
+        maxLevel = Pokemon_GetLevelCap(
+            SaveData_GetTrainerInfo(application->partyMenu->fieldSystem->saveData),
+            SaveData_GetVarsFlags(application->partyMenu->fieldSystem->saveData)
+        );
+    }
+
+    if (Pokemon_GetValue(mon, MON_DATA_LEVEL, NULL) >= maxLevel) {
+        MessageLoader_GetString(application->messageLoader, PartyMenu_Text_ItWontHaveAnyEffect, application->tmpString);
+        PartyMenu_PrintLongMessage(application, PRINT_MESSAGE_PRELOADED, TRUE);
+        application->callback = PartyMenuCB_PrintThenWaitABPress;
+        PartyMenu_UpdateCursor(application, application->currPartySlot, 1);
+        return PARTY_MENU_STATE_EXEC_CALLBACK;
+    }
 
     application->monStats[STAT_HP] = (u16)Pokemon_GetValue(mon, MON_DATA_MAX_HP, NULL);
     application->monStats[STAT_ATTACK] = (u16)Pokemon_GetValue(mon, MON_DATA_ATK, NULL);
@@ -682,7 +704,7 @@ static enum PartyMenuState PartyMenuCB_UseItem_RareCandy(PartyMenuApplication *a
     application->monStats[STAT_SPECIAL_ATTACK] = (u16)Pokemon_GetValue(mon, MON_DATA_SP_DEF, NULL);
     application->monStats[STAT_SPECIAL_DEFENSE] = (u16)Pokemon_GetValue(mon, MON_DATA_SPEED, NULL);
 
-    Party_ApplyItemEffectsToMember(application->partyMenu->party, application->partyMenu->usedItemID, application->currPartySlot, 0, GetCurrentMapLabel(application), HEAP_ID_PARTY_MENU);
+    Party_ApplyItemEffectsToMember(application->partyMenu->party, application->partyMenu->usedItemID, application->currPartySlot, 0, GetCurrentMapLabel(application), HEAP_ID_PARTY_MENU, maxLevel);
 
     application->partyMembers[application->currPartySlot].level = Pokemon_GetValue(mon, MON_DATA_LEVEL, NULL);
     application->partyMembers[application->currPartySlot].curHP = Pokemon_GetValue(mon, MON_DATA_HP, NULL);
@@ -1194,7 +1216,7 @@ int PartyMenu_MoveSelection_HandleInput(PartyMenuApplication *application)
         Menu_Free(application->contextMenu, NULL);
         StringList_Free(application->contextMenuChoices);
 
-        if (Party_ApplyItemEffectsToMember(application->partyMenu->party, application->partyMenu->usedItemID, application->currPartySlot, (u8)menuAction, GetCurrentMapLabel(application), HEAP_ID_PARTY_MENU) == TRUE) {
+        if (Party_ApplyItemEffectsToMember(application->partyMenu->party, application->partyMenu->usedItemID, application->currPartySlot, (u8)menuAction, GetCurrentMapLabel(application), HEAP_ID_PARTY_MENU, MAX_POKEMON_LEVEL) == TRUE) {
             Pokemon *mon = Party_GetPokemonBySlotIndex(application->partyMenu->party, application->currPartySlot);
             BufferUsedItemMessage(application, application->partyMenu->usedItemID, Pokemon_GetValue(mon, MON_DATA_MOVE1 + menuAction, NULL));
             Bag_TryRemoveItem(application->partyMenu->bag, application->partyMenu->usedItemID, 1, HEAP_ID_PARTY_MENU);
