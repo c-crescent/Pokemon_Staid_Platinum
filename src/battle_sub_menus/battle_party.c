@@ -716,16 +716,6 @@ static u8 BattlePartyTask_ConfirmLearnMoveScreen(BattleParty *battleParty)
         }
 
         if (CheckSelectedMoveIsHM(battleParty) == TRUE) {
-            BattlePartyText_PrintHMMovesCantBeForgottenText(battleParty);
-
-            if (battleParty->displayingContestStats == FALSE) {
-                ClearMoveStats(battleParty);
-            } else {
-                ClearMoveContestStats(battleParty);
-            }
-
-            battleParty->queuedState = TASK_STATE_CONFIRM_LEARN_MOVE_SCREEN;
-        } else {
             battleParty->queuedState = TASK_STATE_EXIT;
         }
 
