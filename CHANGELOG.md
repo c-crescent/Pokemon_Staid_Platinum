@@ -7,7 +7,7 @@
 - [x] HM moves are now deletable like normal moves.
 - [x] Obstacles no longer require HMs to be known by a party member, just the HM in the player's bag.
 - [x] TMs are now infinitely reuseable. You can only get one copy of each TM.
-- [ ] Natures now have stat colours in the Summary Screen.
+- [x] Natures now have stat colours in the Summary Screen.
 - [x] EVs and IVs are now shown in the Summary Screen.
 - [x] Reversed Running Shoes behaviour. Press B to walk.
 - [x] Text Speed now defaults to Fast.
