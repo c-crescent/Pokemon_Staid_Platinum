@@ -348,7 +348,11 @@ Route201_AskUpForABattle:
     Message Route201_Text_OnlyOneThingToDo
     ShowYesNoMenu VAR_RESULT
     GoToIfEq VAR_RESULT, MENU_YES, Route201_StartRivalBattle
-    GoToIfEq VAR_RESULT, MENU_NO, Route201_DontBeThatWay
+    LockObject LOCALID_RIVAL
+    BufferRivalName 0
+    BufferPlayerName 1
+    Message Route201_Text_WhewLetsGoHome
+    GoTo Route201_EndChooseStarterSequenceAndWarpHome
     End
 
 Route201_StartRivalBattle:

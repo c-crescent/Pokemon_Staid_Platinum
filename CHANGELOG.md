@@ -21,6 +21,7 @@
 ### Story
 
 - [x] Significantly reduced the amount of text & animations in the early game.
+- [x] First rival battle now skippable.
 
 ### Bug Fixes
 - [x] HM05 Fly now uses the correct Flying type pallette. 
