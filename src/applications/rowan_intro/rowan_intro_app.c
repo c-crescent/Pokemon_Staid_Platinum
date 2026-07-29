@@ -948,9 +948,9 @@ static const ChoiceInfo sYesNoChoiceInfos[] = {
 };
 
 static const ChoiceInfo sInfoChoiceInfos[] = {
-    { .textID = RowanIntro_Text_ChoiceControlInfo, .choiceIndex = 1 },
+    { .textID = RowanIntro_Text_ChoiceNoInfo, .choiceIndex = 1 },
     { .textID = RowanIntro_Text_ChoiceAdventureInfo, .choiceIndex = 2 },
-    { .textID = RowanIntro_Text_ChoiceNoInfo, .choiceIndex = 3 }
+    { .textID = RowanIntro_Text_ChoiceControlInfo, .choiceIndex = 3 }
 };
 
 static const ChoiceInfo sRivalNameChoiceInfos[] = {
@@ -2091,8 +2091,7 @@ static BOOL RowanIntro_Run(RowanIntro *manager)
         if (RowanIntro_ChoiceBox(manager, CC_INFO, TRUE) == TRUE) {
             switch (manager->playerChoice) {
             case 1:
-                manager->bufferedState = RI_STATE_CONTROL_INFO_FADE_IN_START;
-                manager->state = RI_STATE_INFO_FADE_BLACK_START;
+                manager->state = RI_STATE_LEFT_ROWAN_AFTER_INFO;
                 break;
             case 2:
                 manager->bufferedState = RI_STATE_ADVENTURE_INFO_FADE_IN_START;
@@ -2101,8 +2100,9 @@ static BOOL RowanIntro_Run(RowanIntro *manager)
                     Bg_ClearTilemap(manager->bgConfig, BG_LAYER_MAIN_0);
                 }
                 break;
-            case 3:
-                manager->state = RI_STATE_LEFT_ROWAN_AFTER_INFO;
+            case 3:                
+                manager->bufferedState = RI_STATE_CONTROL_INFO_FADE_IN_START;
+                manager->state = RI_STATE_INFO_FADE_BLACK_START;
                 break;
             }
         }
@@ -2425,16 +2425,16 @@ static BOOL RowanIntro_Run(RowanIntro *manager)
         }
         break;
     case RI_STATE_PKBL_WAIT_INPUT:
-        if (RowanIntro_WasPokeballOpened() == TRUE) {
+        // if (RowanIntro_WasPokeballOpened() == TRUE) {
             manager->animData.progressCounter = 0;
             manager->animDelayUpdateCounter = 0;
             {
                 Bg_ClearTilemap(manager->bgConfig, BG_LAYER_MAIN_0);
             }
             manager->state = RI_STATE_PKBL_ANIM_PUSH_IN;
-        } else if (gSystem.pressedKeys) {
-            manager->state = RI_STATE_PKBL_DIALOGUE_USE_TOUCHSCREEN;
-        }
+        // } else if (gSystem.pressedKeys) {
+        //     manager->state = RI_STATE_PKBL_DIALOGUE_USE_TOUCHSCREEN;
+        // }
         break;
     case RI_STATE_PKBL_ANIM_PUSH_IN:
         if (manager->animDelayUpdateCounter) {
@@ -2598,7 +2598,7 @@ static BOOL RowanIntro_Run(RowanIntro *manager)
         break;
     case RI_STATE_GENDR_DIALOGUE:
         if (RowanIntro_DisplayMessage(manager, RowanIntro_Text_GenderDialogue, TRUE) == TRUE) {
-            manager->playerGender = GENDER_MALE;
+            manager->playerGender = GENDER_FEMALE;
             manager->state = RI_STATE_GENDR_CHOICE;
         }
         break;

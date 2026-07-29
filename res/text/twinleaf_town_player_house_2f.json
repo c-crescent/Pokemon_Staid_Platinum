@@ -5,9 +5,7 @@
       "id": "TwinleafTownPlayerHouse2F_Text_ConcludesSpecialProgram",
       "en_US": [
         "That concludes our special program,\n",
-        "“Let’s Ask Prof. Rowan!”\r",
-        "Brought to you by Jubilife TV on\n",
-        "Nationwide Net!\r"
+        "“Let’s Ask Prof. Rowan!”\r"
       ]
     },
     {
@@ -54,13 +52,7 @@
       "id": "TwinleafTownPlayerHouse2F_Text_ProfRowanWouldGivePokemon",
       "en_US": [
         "Hey, {STRVAR_1 3, 1, 0}!\n",
-        "Did you just see the TV? Sure you did!\r",
-        "Prof. Rowan’s that really important\n",
-        "guy who studies Pokémon, right?\r",
-        "That means he must have lots and lots\n",
-        "of Pokémon.\r",
-        "So, if we ask him, I bet he’d give us\n",
-        "some Pokémon!\r"
+        "Did you just see the TV? Sure you did!\r"
       ]
     },
     {
@@ -81,10 +73,7 @@
       "id": "TwinleafTownPlayerHouse2F_Text_SeeProfRowanAndGetPokemon",
       "en_US": [
         "Oh, right, right! We’re going to go see\n",
-        "Prof. Rowan and get some Pokémon.\r",
-        "I’ll be waiting outside.\r",
-        "OK, {STRVAR_1 3, 1, 0}? If you’re late, I’m\n",
-        "fining you $10 million!\r"
+        "Prof. Rowan and get some Pokémon.\r"
       ]
     }
   ]

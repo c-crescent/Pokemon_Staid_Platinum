@@ -5,18 +5,14 @@
       "id": "TwinleafTownPlayerHouse1F_Text_RivalAlreadyLeft",
       "en_US": [
         "Mom: {STRVAR_1 3, 0, 0}!\r",
-        "{STRVAR_1 3, 1, 0} already left.\r",
-        "I don’t know what it was about, but\n",
-        "he sure was in a hurry!\r"
+        "{STRVAR_1 3, 1, 0} already left.\r"
       ]
     },
     {
       "id": "TwinleafTownPlayerHouse1F_Text_KnowHowImpatientRivalIs",
       "en_US": [
         "Mom: You know how impatient\n",
-        "{STRVAR_1 3, 0, 0} is.\r",
-        "He took off before I could even\n",
-        "ask what it was about."
+        "{STRVAR_1 3, 0, 0} is.\r"
       ]
     },
     {
@@ -37,12 +33,7 @@
       "id": "TwinleafTownPlayerHouse1F_Text_DontGoIntoTallGrass",
       "en_US": [
         "Mom: Oh, yes!\n",
-        "{STRVAR_1 3, 0, 0}!\r",
-        "Don’t go into the tall grass.\n",
-        "Wild Pokémon might attack you.\r",
-        "It would be OK if you had your own\n",
-        "Pokémon, but you don’t, so...\r",
-        "Well, take care, sweetie!"
+        "Don’t go into the tall grass.\r"
       ]
     },
     {
@@ -56,19 +47,10 @@
       "id": "TwinleafTownPlayerHouse1F_Text_WowThatHappenedToYou",
       "en_US": [
         "Mom: What’s the matter, dear?\r",
-        "...\r",
         "Wow.\n",
         "That’s what happened to you?\r",
-        "You and {STRVAR_1 3, 0, 0} are lucky to have\n",
-        "met Prof. Rowan.\r",
-        "Imagine if you didn’t...\r",
-        "I wouldn’t like to think what the wild\n",
-        "Pokémon might have done to you two.\r",
         "{STRVAR_1 3, 1, 0}, go see Prof. Rowan, and\n",
-        "thank him properly for your Pokémon.\r",
-        "His lab is in Sandgem Town, isn’t it?\r",
-        "Now that you have your own Pokémon,\n",
-        "the tall grass won’t be so threatening.\r"
+        "thank him properly for your Pokémon.\r"
       ]
     },
     {
@@ -88,17 +70,8 @@
     {
       "id": "TwinleafTownPlayerHouse1F_Text_LetMeReadTheInstructions",
       "en_US": [
-        "Going to Sandgem Town is like an\n",
-        "adventure in itself, right?\r",
         "With those Running Shoes, you can\n",
-        "get to faraway places much faster.\r",
-        "OK...\n",
-        "Let me read the instructions...\r",
-        "“Press the B Button and dash\n",
-        "about faster than ever before!\r",
-        "“Put on the Running Shoes and\n",
-        "blaze new trails of adventure!”\r",
-        "Well, isn’t that just nifty!"
+        "get to faraway places much faster.\r"
       ]
     },
     {
@@ -107,18 +80,13 @@
         "Mom: I’ll read you the instructions\n",
         "for the Running Shoes...\r",
         "“Press the B Button and dash\n",
-        "about faster than ever before!\r",
-        "“Put on the Running Shoes and\n",
-        "blaze new trails of adventure!”\r",
-        "Well, isn’t that just nifty!"
+        "about faster than ever before!\r"
       ]
     },
     {
       "id": "TwinleafTownPlayerHouse1F_Text_MorningTakeAQuickRest",
       "en_US": [
         "Mom: Welcome home, {STRVAR_1 3, 0, 0}.\n",
-        "Are you and your Pokémon healthy?\r",
-        "It’s still early in the morning.\n",
         "Take a quick rest, dear.\r"
       ]
     },
@@ -134,8 +102,6 @@
       "id": "TwinleafTownPlayerHouse1F_Text_NightTakeAQuickRest",
       "en_US": [
         "Mom: Welcome home, {STRVAR_1 3, 0, 0}.\n",
-        "Are you and your Pokémon healthy?\r",
-        "I just made dinner.\n",
         "Take a quick rest, dear.\r"
       ]
     },
@@ -143,8 +109,6 @@
       "id": "TwinleafTownPlayerHouse1F_Text_LateNightTakeAQuickRest",
       "en_US": [
         "Mom: Welcome home, {STRVAR_1 3, 0, 0}.\n",
-        "Are you and your Pokémon healthy?\r",
-        "It’s so late right now...\n",
         "Take a quick rest, dear.\r"
       ]
     },
@@ -153,10 +117,6 @@
       "en_US": [
         "Mom: What is it, {STRVAR_1 3, 0, 0}?\r",
         "...\r",
-        "Wow. Professor Rowan asked you\n",
-        "to do something that big.\r",
-        "OK, dear, go for it!\n",
-        "Your mom’s got your back!\r",
         "Oh, I know! {STRVAR_1 3, 0, 0}, I’ve got\n",
         "something that you’ll find useful.\r"
       ]
@@ -165,32 +125,19 @@
       "id": "TwinleafTownPlayerHouse1F_Text_ThatsAJournal",
       "en_US": [
         "That’s a Journal. It keeps a record\n",
-        "of your daily events.\r",
-        "Check it, and you’ll be able to\n",
-        "remember what you did last.\r"
+        "of your daily events.\r"
       ]
     },
     {
       "id": "TwinleafTownPlayerHouse1F_Text_IWishICouldGoInstead",
       "en_US": [
         "Gee, a journey full of adventure...\n",
-        "I envy you, kiddo.\r",
-        "Plus, you’re not alone.\n",
-        "You have your Pokémon with you.\f",
-        "I wish I could go instead!\r"
+        "I envy you, kiddo.\r"
       ]
     },
     {
       "id": "TwinleafTownPlayerHouse1F_Text_GoEnjoyYourAdventure",
       "en_US": [
-        "I’m just joking, dear!\n",
-        "Yup, {STRVAR_1 3, 0, 0}!\r",
-        "I’ll be all right by myself, so you\n",
-        "go and enjoy your adventure!\r",
-        "When you’re exposed to new things,\n",
-        "and experience new sensations...\f",
-        "It makes your mother happy, too.\r",
-        "...But come back sometimes.\r",
         "I would like to see the kinds of\n",
         "Pokémon you’ve caught, dear.\r"
       ]
@@ -214,10 +161,6 @@
       "en_US": [
         "{STRVAR_1 3, 1, 0}’s mom: Oh...\n",
         "Then, he must have left already...\f",
-        "What to do...\r",
-        "That boy shouted about going on an\n",
-        "adventure, then he bolted.\r",
-        "He’s so headstrong and reckless...\n",
         "I at least wanted him to take this...\r"
       ]
     },
@@ -236,28 +179,20 @@
       "id": "TwinleafTownPlayerHouse1F_Text_TakeThisToRivalMale",
       "en_US": [
         "{STRVAR_1 3, 1, 0}’s mom: Oh, really?\n",
-        "You’d do that for me?\r",
-        "{STRVAR_1 3, 0, 0}, please take this to\n",
-        "{STRVAR_1 3, 1, 0} for me.\r"
+        "You’d do that for me?\r"
       ]
     },
     {
       "id": "TwinleafTownPlayerHouse1F_Text_TakeThisToRivalFemale",
       "en_US": [
         "{STRVAR_1 3, 1, 0}’s mom: Oh, really?\n",
-        "You’d do that for me?\r",
-        "{STRVAR_1 3, 0, 0}, please take this to\n",
-        "{STRVAR_1 3, 1, 0} for me.\r"
+        "You’d do that for me?\r"
       ]
     },
     {
       "id": "TwinleafTownPlayerHouse1F_Text_ProbablyStraightToJubilife",
       "en_US": [
-        "{STRVAR_1 3, 1, 0}’s mom: Let me think...\r",
-        "Knowing my boy, he would probably\n",
-        "head straight to Jubilife City...\r",
-        "OK, please take that to my\n",
-        "{STRVAR_1 3, 1, 0}.\r"
+        "{STRVAR_1 3, 1, 0}’s mom: Jubilife City...\r"
       ]
     },
     {
@@ -339,12 +274,7 @@
       "en_US": [
         "Mom: {STRVAR_1 3, 0, 0}!\r",
         "{STRVAR_1 3, 1, 0} came looking for you\n",
-        "a little while ago.\r",
-        "I don’t know what it was about, but\n",
-        "he was shouting about you needing\f",
-        "to get on a ship at Snowpoint City.\r",
-        "You know how impatient he is.\n",
-        "He was gone before I could ask."
+        "a little while ago.\r"
       ]
     },
     {
@@ -352,16 +282,7 @@
       "en_US": [
         "Mom: {STRVAR_1 3, 0, 0}!\r",
         "{STRVAR_1 3, 1, 0} came looking for you\n",
-        "a little while ago.\r",
-        "I don’t know what it was about, but\n",
-        "he was shouting about you needing\f",
-        "to get on a ship at Snowpoint City.\r",
-        "You know how impatient he is.\n",
-        "He was gone before I could ask.\r",
-        "Anyway, how’s it going, kid?\r",
-        "Is your project with Professor Rowan\n",
-        "coming along?"
-      ]
+        "a little while ago.\r"      ]
     },
     {
       "id": "TwinleafTownPlayerHouse1F_Text_PokemonAreLookingGood",
@@ -376,38 +297,28 @@
       "en_US": [
         "Mom: {STRVAR_1 3, 0, 0}.\r",
         "Listen. Always treat your Pokémon\n",
-        "with kindness.\r",
-        "Your Pokémon work hard, not for\n",
-        "themselves, but for you!"
+        "with kindness.\r"
       ]
     },
     {
       "id": "TwinleafTownPlayerHouse1F_Text_RemindsMeOfYourFather",
       "en_US": [
         "Mom: {STRVAR_1 3, 0, 0}.\r",
-        "Seeing you reminds me so much of your\n",
-        "father.\r",
-        "You two are so alike!"
+        "Seeing you reminds me so much of myself\r"
       ]
     },
     {
       "id": "TwinleafTownPlayerHouse1F_Text_IVisitRivalsMom",
       "en_US": [
         "Mom: While you’re gone, I go and\n",
-        "visit {STRVAR_1 3, 1, 0}’s mom.\r",
-        "We talk about this and that.\r",
-        "Well, actually, all we do is talk about\n",
-        "you two."
+        "visit {STRVAR_1 3, 1, 0}’s mom.\r"
       ]
     },
     {
       "id": "TwinleafTownPlayerHouse1F_Text_IsEverythingAllRight",
       "en_US": [
         "Mom: {STRVAR_1 3, 0, 0}, is everything all\n",
-        "right?\r",
-        "I get worried seeing the news...\r",
-        "But you’re all right, aren’t you?\n",
-        "After all, you’re never alone."
+        "right?\r"
       ]
     }
   ]

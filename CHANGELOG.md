@@ -20,7 +20,7 @@
 
 ### Story
 
-- [ ] Significantly reduced the amount of text & animations in the early game.
+- [x] Significantly reduced the amount of text & animations in the early game.
 
 ### Bug Fixes
 

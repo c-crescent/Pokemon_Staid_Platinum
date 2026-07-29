@@ -8,9 +8,7 @@
     {
       "id": "TwinleafTown_Text_GoingToSeeProfRowan",
       "en_US": [
-        "{STRVAR_1 3, 0, 0}: What was that about?!\r",
-        "Oh, hey, {STRVAR_1 3, 1, 0}!\r",
-        "Hey! I’m going to see Prof. Rowan!\n",
+        "{STRVAR_1 3, 0, 0}: Hey! I’m going to see Prof. Rowan!\n",
         "You should come, too! And quickly!\r"
       ]
     },
@@ -25,18 +23,14 @@
       "id": "TwinleafTown_Text_RivalWasLookingForYou1",
       "en_US": [
         "Hiya, {STRVAR_1 3, 0, 0}.\n",
-        "{STRVAR_1 3, 1, 0} was looking for you.\r",
-        "I think he’s home now.\n",
-        "Why don’t you go check it out?\r"
+        "{STRVAR_1 3, 1, 0} was looking for you.\r"
       ]
     },
     {
       "id": "TwinleafTown_Text_RivalWasLookingForYou2",
       "en_US": [
         "Hiya, {STRVAR_1 3, 0, 0}.\n",
-        "{STRVAR_1 3, 1, 0} was looking for you.\r",
-        "I think he’s home now.\n",
-        "Why don’t you go check it out?"
+        "{STRVAR_1 3, 1, 0} was looking for you.\r"
       ]
     },
     {
