@@ -23,6 +23,7 @@
 - [x] Significantly reduced the amount of text & animations in the early game.
 
 ### Bug Fixes
+- [x] HM05 Fly now uses the correct Flying type pallette. 
 
 ### Abilities
 
