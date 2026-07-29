@@ -28,11 +28,7 @@ FieldMoves_CutTree:
     GoToIfEq VAR_RESULT, MAX_PARTY_SIZE, FieldMoves_CantUseCut
     CheckBadgeAcquired BADGE_ID_FOREST, VAR_RESULT
     GoToIfEq VAR_RESULT, FALSE, FieldMoves_CantUseCut
-    Message FieldMoves_Text_WouldYouLikeToUseCut
-    ShowYesNoMenu VAR_RESULT
-    GoToIfEq VAR_RESULT, MENU_YES, FieldMoves_UseCutFromField
-    CloseMessage
-    GoTo FieldMoves_End
+    GoTo FieldMoves_UseCutFromField
     End
 
 FieldMoves_CantUseCut:
@@ -133,11 +129,7 @@ FieldMoves_Rock:
     GoToIfEq VAR_RESULT, MAX_PARTY_SIZE, FieldMoves_CantUseRockSmash
     CheckBadgeAcquired BADGE_ID_COAL, VAR_RESULT
     GoToIfEq VAR_RESULT, FALSE, FieldMoves_CantUseRockSmash
-    Message FieldMoves_Text_WouldYouLikeToUseRockSmash
-    ShowYesNoMenu VAR_RESULT
-    GoToIfEq VAR_RESULT, MENU_YES, FieldMoves_UseRockSmashFromField
-    CloseMessage
-    GoTo FieldMoves_End
+    GoTo FieldMoves_UseRockSmashFromField
     End
 
 FieldMoves_CantUseRockSmash:
@@ -190,11 +182,7 @@ FieldMoves_Boulder:
     GoToIfEq VAR_RESULT, MAX_PARTY_SIZE, FieldMoves_CantUseStrength
     CheckBadgeAcquired BADGE_ID_MINE, VAR_RESULT
     GoToIfEq VAR_RESULT, FALSE, FieldMoves_CantUseStrength
-    Message FieldMoves_Text_WouldYouLikeToUseStrength
-    ShowYesNoMenu VAR_RESULT
-    GoToIfEq VAR_RESULT, MENU_YES, FieldMoves_UseStrengthFromField
-    CloseMessage
-    GoTo FieldMoves_End
+    GoTo FieldMoves_UseStrengthFromField
     End
 
 FieldMoves_CantUseStrength:
@@ -252,11 +240,7 @@ FieldMoves_RockyWall:
     GoToIfEq VAR_RESULT, FALSE, FieldMoves_CantUseRockClimb
     CheckHasPartner VAR_RESULT
     GoToIfEq VAR_RESULT, TRUE, FieldMoves_NoRockClimbingWithPartner
-    Message FieldMoves_Text_WouldYouLikeToUseRockClimb
-    ShowYesNoMenu VAR_RESULT
-    GoToIfEq VAR_RESULT, MENU_YES, FieldMoves_UseRockClimbFromField
-    CloseMessage
-    GoTo FieldMoves_End2
+    GoTo FieldMoves_UseRockClimbFromField
     End
 
 FieldMoves_CantUseRockClimb:
@@ -301,11 +285,7 @@ FieldMoves_Water:
     LockAll
     CheckHasPartner VAR_RESULT
     GoToIfEq VAR_RESULT, TRUE, FieldMoves_CantUseSurf
-    Message FieldMoves_Text_WouldYouLikeToUseSurf
-    ShowYesNoMenu VAR_RESULT
-    GoToIfEq VAR_RESULT, MENU_YES, FieldMoves_UseSurfFromField
-    CloseMessage
-    GoTo FieldMoves_End2
+    GoTo FieldMoves_UseSurfFromField
     End
 
 FieldMoves_CantUseSurf:
@@ -344,11 +324,7 @@ FieldMoves_Fog_Unused:
     LockAll
     FindPartySlotWithMove VAR_RESULT, MOVE_DEFOG
     GoToIfEq VAR_RESULT, MAX_PARTY_SIZE, FieldMoves_CantUseDefog_Unused
-    Message FieldMoves_Text_WouldYouLikeToUseDefog_Unused
-    ShowYesNoMenu VAR_RESULT
-    GoToIfEq VAR_RESULT, MENU_YES, FieldMoves_UseDefogFromField_Unused
-    CloseMessage
-    GoTo FieldMoves_End2
+    GoTo FieldMoves_UseDefogFromField_Unused
     End
 
 FieldMoves_CantUseDefog_Unused:
@@ -421,11 +397,7 @@ FieldMoves_Waterfall:
     GoToIfEq VAR_RESULT, MAX_PARTY_SIZE, FieldMoves_CantUseWaterfall
     CheckBadgeAcquired BADGE_ID_BEACON, VAR_RESULT
     GoToIfEq VAR_RESULT, FALSE, FieldMoves_CantUseWaterfall
-    Message FieldMoves_Text_WouldYouLikeToUseWaterfall
-    ShowYesNoMenu VAR_RESULT
-    GoToIfEq VAR_RESULT, MENU_YES, FieldMoves_UseWaterfallFromField
-    CloseMessage
-    GoTo FieldMoves_End2
+    GoTo FieldMoves_UseWaterfallFromField
     End
 
 FieldMoves_CantUseWaterfall:
