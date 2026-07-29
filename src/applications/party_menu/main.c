@@ -1788,6 +1788,26 @@ static void sub_0207FFC8(PartyMenuApplication *application)
     Sprite_SetExplicitPalette2(application->sprites[PARTY_MENU_SPRITE_CURSOR_NORMAL], 1);
 }
 
+static BOOL PartyMenu_CanShowHMFieldMove(PartyMenuApplication *application, Pokemon *mon, u16 moveID, u16 hmItemID)
+{
+    if (Bag_GetItemQuantity(SaveData_GetBag(application->partyMenu->fieldSystem->saveData), hmItemID, HEAP_ID_PARTY_MENU) == 0) {
+        return FALSE;
+    }
+
+    return Pokemon_CanLearnTM(mon, Item_TMHMNumber(hmItemID)) == TRUE;
+}
+
+static BOOL PartyMenu_MonKnowsMove(Pokemon *mon, u16 moveID)
+{
+    for (u8 i = 0; i < 4; i++) {
+        if ((u16)Pokemon_GetValue(mon, MON_DATA_MOVE1 + i, NULL) == moveID) {
+            return TRUE;
+        }
+    }
+
+    return FALSE;
+}
+
 static u8 GetContextMenuEntriesForPartyMon(PartyMenuApplication *application, u8 *menuEntriesBuffer)
 {
     Pokemon *mon = Party_GetPokemonBySlotIndex(application->partyMenu->party, application->currPartySlot);
@@ -1812,6 +1832,35 @@ static u8 GetContextMenuEntriesForPartyMon(PartyMenuApplication *application, u8
                     menuEntriesBuffer[count] = fieldEffect;
                     count++;
                     PartyMenu_SetKnownFieldMove(application, move, fieldMoveIndex);
+                    fieldMoveIndex++;
+                }
+            }
+
+            static const struct {
+                u16 moveID;
+                u16 itemID;
+            } sHMFieldMoves[] = {
+                { MOVE_CUT, ITEM_HM01 },
+                { MOVE_FLY, ITEM_HM02 },
+                { MOVE_FLASH, ITEM_HM05 },
+            };
+
+            for (u16 j = 0; j < NELEMS(sHMFieldMoves); j++) {
+                u16 hmMove = sHMFieldMoves[j].moveID;
+
+                if (PartyMenu_MonKnowsMove(mon, hmMove) == TRUE) {
+                    continue;
+                }
+
+                if (PartyMenu_CanShowHMFieldMove(application, mon, hmMove, sHMFieldMoves[j].itemID) == FALSE) {
+                    continue;
+                }
+
+                fieldEffect = GetFieldMoveIndex(hmMove);
+                if (fieldEffect != 0xff) {
+                    menuEntriesBuffer[count] = fieldEffect;
+                    count++;
+                    PartyMenu_SetKnownFieldMove(application, hmMove, fieldMoveIndex);
                     fieldMoveIndex++;
                 }
             }

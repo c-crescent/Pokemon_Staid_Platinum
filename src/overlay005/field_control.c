@@ -28,6 +28,7 @@
 #include "overlay009/ov9_02249960.h"
 #include "underground/manager.h"
 
+#include "bag.h"
 #include "catching_show.h"
 #include "comm_manager.h"
 #include "comm_player_manager.h"
@@ -94,6 +95,43 @@ static BOOL Field_MapConnection(const FieldSystem *fieldSystem, int playerX, int
 static void Field_TrySetMapConnection(FieldSystem *fieldSystem);
 static BOOL Field_DistortionInteract(FieldSystem *fieldSystem, MapObject **object);
 static int Field_CheckTrainerInfo(void);
+static BOOL Field_CheckHasHMItem(FieldSystem *fieldSystem, u16 moveID);
+
+static BOOL Field_CheckHasHMItem(FieldSystem *fieldSystem, u16 moveID)
+{
+    u16 itemID = ITEM_NONE;
+
+    switch (moveID) {
+    case MOVE_CUT:
+        itemID = ITEM_HM01;
+        break;
+    case MOVE_FLY:
+        itemID = ITEM_HM02;
+        break;
+    case MOVE_SURF:
+        itemID = ITEM_HM03;
+        break;
+    case MOVE_STRENGTH:
+        itemID = ITEM_HM04;
+        break;
+    case MOVE_FLASH:
+        itemID = ITEM_HM05;
+        break;
+    case MOVE_ROCK_SMASH:
+        itemID = ITEM_HM06;
+        break;
+    case MOVE_WATERFALL:
+        itemID = ITEM_HM07;
+        break;
+    case MOVE_ROCK_CLIMB:
+        itemID = ITEM_HM08;
+        break;
+    default:
+        return FALSE;
+    }
+
+    return Bag_GetItemQuantity(SaveData_GetBag(fieldSystem->saveData), itemID, HEAP_ID_FIELD1) > 0;
+}
 
 static void FieldInput_Clear(FieldInput *input)
 {
@@ -211,7 +249,7 @@ BOOL FieldInput_Process(const FieldInput *input, FieldSystem *fieldSystem)
             playerEvent |= PLAYER_EVENT_USED_STRENGTH;
         }
 
-        if (Party_HasMonWithMove(SaveData_GetParty(fieldSystem->saveData), MOVE_WATERFALL) != PARTY_SLOT_NONE) {
+        if (Field_CheckHasHMItem(fieldSystem, MOVE_WATERFALL) == TRUE) {
             playerEvent |= PLAYER_EVENT_USED_WATERFALL;
         }
 
@@ -688,7 +726,7 @@ u16 Field_TileBehaviorToScript(FieldSystem *fieldSystem, u8 behavior)
         u32 distortionBehavior = PlayerAvatar_GetDistortionCurrTileBehaviour(fieldSystem->playerAvatar);
 
         if (PlayerAvatar_CanUseSurf(fieldSystem->playerAvatar, distortionBehavior, behavior) && TrainerInfo_HasBadge(info, 3)) {
-            if (Party_HasMonWithMove(SaveData_GetParty(fieldSystem->saveData), MOVE_SURF) != PARTY_SLOT_NONE) {
+            if (Field_CheckHasHMItem(fieldSystem, MOVE_SURF) == TRUE) {
                 return SCRIPT_ID(FIELD_MOVES, 4);
             }
         }
