@@ -69,6 +69,7 @@ Added various super bosses to the game, accessible after beating the Elite 4 rem
 
 - [ ] Fishing can no longer fail.
 - [ ] All wild pokemon levels now scale with the number of badges the player has.
+- [ ] All encounter slots now have a higher minimum rate. 5% for land and 10% for water / fishing.
 
 ### Common
 All non-mythical & non-legendary pokemon are now avaible before the first Elite 4.
