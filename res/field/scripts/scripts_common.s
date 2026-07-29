@@ -388,8 +388,6 @@ CommonScript_SaveComplete:
     BufferPlayerName 0
     Message CommonStrings_Text_PlayerSavedTheGame
     PlaySE SEQ_SE_DP_SAVE
-    WaitSE SEQ_SE_DP_SAVE
-    WaitABPressTime 30
     CloseSaveInfo
     Return
 
