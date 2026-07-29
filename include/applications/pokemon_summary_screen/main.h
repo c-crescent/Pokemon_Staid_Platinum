@@ -303,6 +303,13 @@ enum SummaryPokerusState {
     SUMMARY_POKERUS_CURED,
 };
 
+enum SkillsState {
+  SKILLS_STATE_STATS = 0,
+  SKILLS_STATE_EVS,
+  SKILLS_STATE_IVS,
+  MAX_SKILLS_STATE,
+};
+
 #define SUMMARY_SUBSCREEN_BUTTON_NONE 0xFF
 
 #define RIBBONS_PER_ROW  4
@@ -372,6 +379,21 @@ typedef struct PokemonSummaryMonData {
     u16 spAttack;
     u16 spDefense;
     u16 speed;
+
+    u16 evHP;
+    u16 evAttack;
+    u16 evDefense;
+    u16 evSpAttack;
+    u16 evSpDefense;
+    u16 evSpeed;
+ 
+    u16 ivHP;
+    u16 ivAttack;
+    u16 ivDefense;
+    u16 ivSpAttack;
+    u16 ivSpDefense;
+    u16 ivSpeed;    
+
     u8 ability;
     u8 nature;
 
@@ -455,6 +477,8 @@ typedef struct PokemonSummaryScreen {
     u8 ribbonRow;
     u8 ribbonMax;
     u8 ribbonID;
+
+    u8 skillsState;
 } PokemonSummaryScreen;
 
 BOOL PokemonSummaryScreen_ShowContestData(SaveData *saveData);
