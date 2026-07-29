@@ -51,7 +51,7 @@
 ### General
 
 - [ ] There is now an enforced level cap.
-- [ ] Battle style is now always Set.
+- [x] Battle style is now always Set.
 - [ ] All trainer battles now scale with the number of badges the player has.
 - [ ] No items in battle for the player.
 - [x] No items in battle for enemy trainers.
@@ -68,7 +68,7 @@ Added various super bosses to the game, accessible after beating the Elite 4 rem
 
 ### General
 
-- [ ] Fishing can no longer fail.
+- [x] Fishing can no longer fail.
 - [x] All wild pokemon levels now scale with the number of badges the player has & whether the game is completed.
 - [x] All encounter slots now have a higher minimum rate. 5% for land and 10% for water / fishing.
 
