@@ -9,7 +9,7 @@
 - [ ] TMs are now infinitely reuseable. You can only get one copy of each TM.
 - [ ] Natures now have stat colours in the Summary Screen.
 - [ ] EVs and IVs are now shown in the Summary Screen.
-- [ ] Reversed Running Shoes behaviour. Press B to walk.
+- [x] Reversed Running Shoes behaviour. Press B to walk.
 - [x] Text Speed now defaults to Fast.
 - [x] L & R now turbos A & B buttons under L=A option mode.
 - [x] Healing is now faster.
