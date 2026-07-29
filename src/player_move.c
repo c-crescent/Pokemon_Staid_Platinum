@@ -2464,10 +2464,10 @@ static BOOL MovementAction_IsWalkOnSpotSlow(enum MovementAction movementAction)
 BOOL PlayerAvatar_IsRunButtonHeld(PlayerAvatar *playerAvatar, u16 pad)
 {
     if (pad & PAD_BUTTON_B) {
-        return TRUE;
+        return FALSE;
     }
 
-    return FALSE;
+    return TRUE;
 }
 
 /**
