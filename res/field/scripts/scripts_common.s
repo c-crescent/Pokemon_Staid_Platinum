@@ -370,12 +370,9 @@ CommonScript_TrySaveGame:
     CheckSaveType VAR_RESULT
     GoToIfEq VAR_RESULT, SAVE_TYPE_OVERWRITE, CommonScript_SaveTypeOverwrite
     OpenSaveInfo
-    Message CommonStrings_Text_WouldYouLikeToSave
-    ShowYesNoMenu VAR_RESULT
-    GoToIfEq VAR_RESULT, MENU_NO, CommonScript_CancelSave
     CheckSaveType VAR_RESULT
     GoToIfEq VAR_RESULT, SAVE_TYPE_NO_DATA_EXISTS, CommonScript_SavingALotOfData
-    GoToIfEq VAR_RESULT, SAVE_TYPE_FULL_SAVE, CommonScript_FullSaveAskOverwrite
+    GoToIfEq VAR_RESULT, SAVE_TYPE_FULL_SAVE, CommonScript_SavingALotOfData
     GoToIfEq VAR_RESULT, SAVE_TYPE_QUICK_SAVE, CommonScript_QuickSaveAskOverwrite
     End
 
@@ -385,18 +382,11 @@ CommonScript_SaveTypeOverwrite:
     SetVar VAR_RESULT, 0
     Return
 
-CommonScript_FullSaveAskOverwrite:
-    Message CommonStrings_Text_OKToOverwriteSavedFile
-    ShowYesNoMenu VAR_RESULT
-    GoToIfEq VAR_RESULT, MENU_NO, CommonScript_CancelSave
 CommonScript_SavingALotOfData:
     Message CommonStrings_Text_SavingALotOfData
     GoTo CommonScript_StartSave
 
 CommonScript_QuickSaveAskOverwrite:
-    Message CommonStrings_Text_OKToOverwriteSavedFile
-    ShowYesNoMenu VAR_RESULT
-    GoToIfEq VAR_RESULT, MENU_NO, CommonScript_CancelSave
     GoToIfUnset FLAG_MAP_LOCAL_SAVE_EXTRA_BLOCK, CommonScript_StartQuickSave
     GoToIfSet FLAG_MAP_LOCAL_SAVE_EXTRA_BLOCK, CommonScript_QuickSaveCheckMiscFlag
     End

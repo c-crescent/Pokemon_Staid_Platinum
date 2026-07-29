@@ -13,9 +13,9 @@
 - [x] Text Speed now defaults to Fast.
 - [ ] L & R now turbos A & B buttons
 - [ ] Healing is now faster.
-- [ ] Saving is now faster.
-- [ ] Player can now run indoors.
-- [ ] Girl is now the default gender option.
+- [x] Saving is now faster.
+- [x] Player can now run indoors.
+- [x] Girl is now the default gender option.
 - [ ] All move tutors now offer repeated services for free.
 
 ### Story
