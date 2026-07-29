@@ -51,6 +51,8 @@
 - [ ] There is now an enforced level cap.
 - [ ] Battle style is now always Set.
 - [ ] All trainer battles now scale with the number of badges the player has.
+- [ ] No items in battle for the player.
+- [ ] No items in battle for enemy trainers.
 
 ### Trainers
 
