@@ -28,6 +28,8 @@
 ### Bug Fixes
 - [x] HM05 Fly now uses the correct Flying type pallette. 
 - [x] Trainers now use the correct stats for Pokemon forms.
+- [x] Fixed Post-KO Switch-In AI Scoring Overflow.
+- [x] Fire Fang no longer bypasses Wonder Guard.
 
 ### Abilities
 
