@@ -411,6 +411,15 @@ static void ApplyButtonModeToInput(void)
         CONVERT_KEY(gSystem.pressedKeys, PAD_BUTTON_L, PAD_BUTTON_A);
         CONVERT_KEY(gSystem.heldKeys, PAD_BUTTON_L, PAD_BUTTON_A);
         CONVERT_KEY(gSystem.pressedKeysRepeatable, PAD_BUTTON_L, PAD_BUTTON_A);
+        CONVERT_KEY(gSystem.pressedKeys, PAD_BUTTON_R, PAD_BUTTON_B);
+        CONVERT_KEY(gSystem.heldKeys, PAD_BUTTON_R, PAD_BUTTON_B);
+        CONVERT_KEY(gSystem.pressedKeysRepeatable, PAD_BUTTON_R, PAD_BUTTON_B);
+        if (gSystem.pressedKeysRepeatable & PAD_BUTTON_A) {
+            gSystem.pressedKeys |= PAD_BUTTON_A;
+        }
+        if (gSystem.pressedKeysRepeatable & PAD_BUTTON_B) {
+            gSystem.pressedKeys |= PAD_BUTTON_B;
+        }
         CLEAR_KEY(gSystem.pressedKeys, (PAD_BUTTON_L | PAD_BUTTON_R));
         CLEAR_KEY(gSystem.heldKeys, (PAD_BUTTON_L | PAD_BUTTON_R));
         CLEAR_KEY(gSystem.pressedKeysRepeatable, (PAD_BUTTON_L | PAD_BUTTON_R));

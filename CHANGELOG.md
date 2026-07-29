@@ -11,7 +11,7 @@
 - [ ] EVs and IVs are now shown in the Summary Screen.
 - [ ] Reversed Running Shoes behaviour. Press B to walk.
 - [x] Text Speed now defaults to Fast.
-- [ ] L & R now turbos A & B buttons
+- [x] L & R now turbos A & B buttons under L=A option mode.
 - [x] Healing is now faster.
 - [x] Saving is now faster.
 - [x] Player can now run indoors.
@@ -52,7 +52,7 @@
 - [ ] Battle style is now always Set.
 - [ ] All trainer battles now scale with the number of badges the player has.
 - [ ] No items in battle for the player.
-- [ ] No items in battle for enemy trainers.
+- [x] No items in battle for enemy trainers.
 
 ### Trainers
 
