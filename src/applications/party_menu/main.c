@@ -2746,7 +2746,9 @@ static int ApplyItemEffectOnPokemon(PartyMenuApplication *app)
     }
 
     if (Party_CheckItemEffectsOnMember(app->partyMenu->party, app->partyMenu->usedItemID, app->currPartySlot, 0, HEAP_ID_PARTY_MENU, MAX_POKEMON_LEVEL) == TRUE) {
-        Bag_TryRemoveItem(app->partyMenu->bag, app->partyMenu->usedItemID, 1, HEAP_ID_PARTY_MENU);
+        if (app->partyMenu->usedItemID != ITEM_RARE_CANDY) {
+            Bag_TryRemoveItem(app->partyMenu->bag, app->partyMenu->usedItemID, 1, HEAP_ID_PARTY_MENU);
+        }
 
         if (Item_Get(itemData, ITEM_PARAM_EVOLVE) != FALSE) {
             Pokemon *mon = Party_GetPokemonBySlotIndex(app->partyMenu->party, app->currPartySlot);
