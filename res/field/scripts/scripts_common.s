@@ -98,19 +98,7 @@ CommonScript_PokecenterNurse:
     FacePlayer
     GetTrainerCardLevel VAR_RESULT
     GoToIfGe VAR_RESULT, TRAINER_CARD_LEVEL_GOLD, CommonScript_NurseGoldCard
-    SetVar VAR_0x8004, CommonStrings_Text_PokecenterGreeting_Day
-    GetTimeOfDay VAR_RESULT
-    Dummy1F9 VAR_RESULT
-    SetVar VAR_0x8004, CommonStrings_Text_PokecenterGreeting_Morning
-    GoToIfEq VAR_RESULT, TIMEOFDAY_MORNING, CommonScript_NurseGreeting
-    SetVar VAR_0x8004, CommonStrings_Text_PokecenterGreeting_Night
-    GoToIfEq VAR_RESULT, TIMEOFDAY_DAY, CommonScript_NurseGreeting
-    SetVar VAR_0x8004, CommonStrings_Text_PokecenterGreeting_Day
-CommonScript_NurseGreeting:
-    MessageVar VAR_0x8004
-    ShowYesNoMenu VAR_RESULT
-    GoToIfEq VAR_RESULT, MENU_YES, CommonScript_NurseAcceptHealPokemon
-    GoToIfEq VAR_RESULT, MENU_NO, CommonScript_NurseDeclineHealPokemon
+    GoTo CommonScript_NurseAcceptHealPokemon
     End
 
 CommonScript_NurseDeclineHealPokemon:
@@ -160,8 +148,6 @@ CommonScript_NurseFarewellAfterHeal:
     ChangePlayerState
     ApplyMovement VAR_0x8007, CommonScript_Movement_NurseBow
     WaitMovement
-    Message CommonStrings_Text_PokecenterHopeToSeeYouAgain1
-    WaitButton
     CloseMessage
     ReleaseAll
     ReturnCommonScript
@@ -217,14 +203,7 @@ CommonScript_NurseGoldCard:
 
 CommonScript_NurseGoldCardPreviouslySeen:
     BufferPlayerName 0
-    Message CommonStrings_Text_PokecenterGreatToSeeYou
-    ShowYesNoMenu VAR_RESULT
-    GoToIfEq VAR_RESULT, MENU_YES, CommonScript_NurseAcceptHealPokemonGoldCard
-    Message CommonStrings_Text_PokecenterHopeToSeeYouAgain2
-    WaitButton
-    CloseMessage
-    ReleaseAll
-    ReturnCommonScript
+    GoTo CommonScript_NurseAcceptHealPokemonGoldCard
     End
 
 CommonScript_NurseAcceptHealPokemonGoldCard:
@@ -234,7 +213,6 @@ CommonScript_NurseAcceptHealPokemonGoldCard:
     .balign 4, 0
 CommonScript_Movement_NurseBow:
     PokecenterNurseBow
-    Delay4
     EndMovement
 
     .balign 4, 0

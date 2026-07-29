@@ -12,7 +12,7 @@
 - [ ] Reversed Running Shoes behaviour. Press B to walk.
 - [x] Text Speed now defaults to Fast.
 - [ ] L & R now turbos A & B buttons
-- [ ] Healing is now faster.
+- [x] Healing is now faster.
 - [x] Saving is now faster.
 - [x] Player can now run indoors.
 - [x] Girl is now the default gender option.
