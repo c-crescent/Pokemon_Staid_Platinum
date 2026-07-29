@@ -30,6 +30,7 @@
 - [x] Trainers now use the correct stats for Pokemon forms.
 - [x] Fixed Post-KO Switch-In AI Scoring Overflow.
 - [x] Fire Fang no longer bypasses Wonder Guard.
+- [x] Using a non-Rage Move After Rage No Longer Clears Every Volatile Status Except Rage
 
 ### Abilities
 
