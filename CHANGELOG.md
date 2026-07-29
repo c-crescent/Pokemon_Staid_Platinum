@@ -27,6 +27,7 @@
 
 ### Bug Fixes
 - [x] HM05 Fly now uses the correct Flying type pallette. 
+- [x] Trainers now use the correct stats for Pokemon forms.
 
 ### Abilities
 
