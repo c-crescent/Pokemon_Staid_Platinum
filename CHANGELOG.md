@@ -35,7 +35,7 @@
 
 ### Abilities
 
-- [ ] Storm Drain now makes you immune to water attacks like in gen 5.
+- [x] Storm Drain now makes you immune to water attacks like in gen 5.
 - [ ] Lightning Rod now makes you immune to electric attacks like in gen 5.
 - [ ] Sturdy now acts like a Focus Sash like in gen 5.
 

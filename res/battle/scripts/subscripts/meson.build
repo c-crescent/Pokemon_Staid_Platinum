@@ -180,6 +180,7 @@ subscript_files = files(
     'subscript_move_fail_missed.s',
     'subscript_mold_breaker.s',
     'subscript_ability_restores_hp.s',
+    'subscript_absorb_and_spatk_up_1_stage.s',
     'subscript_absorb_and_boost_fire_type_moves.s',
     'subscript_lightning_rod_redirected.s',
     'subscript_blocked_by_soundproof.s',

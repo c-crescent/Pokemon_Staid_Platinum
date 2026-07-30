@@ -3512,6 +3512,13 @@ int BattleSystem_TriggerImmunityAbility(BattleContext *battleCtx, int attacker, 
         subscript = subscript_ability_restores_hp;
     }
 
+    if (Battler_IgnorableAbility(battleCtx, attacker, defender, ABILITY_STORM_DRAIN) == TRUE
+        && moveType == TYPE_WATER
+        && (battleCtx->battleStatusMask & SYSCTL_FIRST_OF_MULTI_TURN) == FALSE // do not proc on first turn of Dive
+        && CURRENT_MOVE_DATA.power) {
+        subscript = subscript_absorb_and_spatk_up_1_stage;
+    }
+
     if (Battler_IgnorableAbility(battleCtx, attacker, defender, ABILITY_FLASH_FIRE) == TRUE
         && moveType == TYPE_FIRE
         && (battleCtx->battleMons[defender].status & MON_CONDITION_FREEZE) == FALSE
