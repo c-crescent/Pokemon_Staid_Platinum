@@ -43,15 +43,17 @@
 
 ## Balance Changes
 
-### Typings
-
-### Stats
+### Pokemon
+> Lopunny
+> - Type: Normal / Fighting
+> - ATK: 96(+20) 
+> - BST: 500(+20)
+> - Abilities: Scrappy / Klutz
+> - Learns Mach Punch, Jump Kick, and Hi Jump Kick
 
 ### Moves
 
 ### Abilities
-
-### Learnsets
 
 ## Difficulty
 
