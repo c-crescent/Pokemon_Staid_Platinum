@@ -55,6 +55,11 @@
 > - ATK: 145(+30)
 > - BST: 485 (+30)
 
+> Chimecho
+> - HP: 75(+10)
+> - DEF: 80(+10)
+> - SPD: 90(+10)
+
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
 
