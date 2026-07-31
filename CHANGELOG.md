@@ -59,6 +59,13 @@
 > - HP: 75(+10)
 > - DEF: 80(+10)
 > - SPD: 90(+10)
+> - BST: 485(+30)
+
+> Mawile
+> - Abilities: Huge Power / Intimidate
+> - DEF: 95(+10)
+> - SPD: 75(+20)
+> - BST: 410(+30)
 
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
