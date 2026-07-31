@@ -13,7 +13,12 @@ OreburghCityMart_CommonVendor:
     End
 
 OreburghCityMart_SpecialtyVendor:
+    GoToIfBadgeAcquired BADGE_ID_MINE, OreburghCityMart_SpecialtyFossils
     PokeMartSpecialtiesWithGreeting MART_SPECIALTIES_ID_OREBURGH
+    End
+
+OreburghCityMart_SpecialtyFossils:
+    PokeMartSpecialtiesWithGreeting MART_SPECIALTIES_ID_OREBURGH_FOSSILS
     End
 
 OreburghCityMart_Hiker:

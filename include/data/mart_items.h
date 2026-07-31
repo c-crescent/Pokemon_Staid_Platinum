@@ -46,6 +46,20 @@ const u16 OreburghMartSpecialties[] = {
     SHOP_ITEM_END
 };
 
+const u16 OreburghMartSpecialtiesFossils[] = {
+    ITEM_TUNNEL_MAIL,
+    ITEM_HEAL_BALL,
+    ITEM_NET_BALL,
+    ITEM_SKULL_FOSSIL,
+    ITEM_ARMOR_FOSSIL,
+    ITEM_ROOT_FOSSIL,
+    ITEM_CLAW_FOSSIL,
+    ITEM_DOME_FOSSIL,
+    ITEM_HELIX_FOSSIL,
+    ITEM_OLD_AMBER,
+    SHOP_ITEM_END
+};
+
 const u16 FloaromaMartSpecialties[] = {
     ITEM_BLOOM_MAIL,
     ITEM_HEAL_BALL,
@@ -221,6 +235,7 @@ const u16 VeilstoneDeptStoreStock_B1F_DOWN_LEFT[] = {
 const u16 *PokeMartSpecialties[] = {
     [MART_SPECIALTIES_ID_JUBILIFE] = JubilifeMartSpecialties,
     [MART_SPECIALTIES_ID_OREBURGH] = OreburghMartSpecialties,
+    [MART_SPECIALTIES_ID_OREBURGH_FOSSILS] = OreburghMartSpecialtiesFossils,
     [MART_SPECIALTIES_ID_FLOAROMA] = FloaromaMartSpecialties,
     [MART_SPECIALTIES_ID_ETERNA_MART] = EternaMartSpecialties,
     [MART_SPECIALTIES_ID_ETERNA_HOUSE] = EternaHerbShopStock,

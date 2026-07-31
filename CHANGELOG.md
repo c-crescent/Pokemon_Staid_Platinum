@@ -82,6 +82,7 @@ Added various super bosses to the game, accessible after beating the Elite 4 rem
 ### Common
 All non-mythical & non-legendary pokemon are now avaible before the first Elite 4.
 - [x] All starter Pokemon are available before gym 2.
+- [ ] Fossils are now buyable from Oreburgh Speciality Mart after beating Byron.
 
 ### Mythicals
 All mythicals are available after the second Elite 4 fight.
