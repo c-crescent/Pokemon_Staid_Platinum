@@ -76,6 +76,15 @@
 > - SPA: 25(-20)
 > - SPE: 95(+20)
 
+> Pikachu
+> - DEF: 40(+10)
+> - SPD: 50(+10)
+
+> Pikachu
+> - ATK: 100(+10)
+> - SPA: 100(+10)
+> - SPE: 110(+10)
+
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
 
