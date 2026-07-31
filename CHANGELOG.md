@@ -101,6 +101,10 @@
 > FarFetch'd
 > - ATK: 125(+60)
 
+> Electrode
+> - SPE: 150(+150)
+> - SPA: 90(+80)
+
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
 
