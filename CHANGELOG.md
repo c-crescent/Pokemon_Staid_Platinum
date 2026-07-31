@@ -90,6 +90,11 @@
 > - DEF: 60(+15)
 > - SPD: 65(+15)
 
+> Vileplume
+> - SPA: 110(+10)
+> - ATK: 90(+10)
+> - DEF: 95(+10)
+
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
 
