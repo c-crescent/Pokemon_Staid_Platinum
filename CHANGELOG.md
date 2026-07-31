@@ -85,6 +85,11 @@
 > - SPA: 100(+10)
 > - SPE: 110(+10)
 
+> Wigglytuff
+> - SPA: 85(+10)
+> - DEF: 60(+15)
+> - SPD: 65(+15)
+
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
 
