@@ -57,15 +57,15 @@
       "en_US": [
         "Gwahahahaha!\n",
         "The Sinnoh region is vast!\r",
-        "Tough Trainers like you and\n",
-        "{STRVAR_1 3, 1, 0} crop up constantly\f",
+        "Tough Trainers like you crop up\n",
         "to challenge the old guard!\r",
-        "With more young Trainers like my son\n",
-        "and you two taking charge, the\f",
-        "future of Pokémon is bright!\r",
         "But I’m not stepping aside just yet!\r",
         "I merely need to rededicate myself\n",
-        "to training on Iron Island."
+        "to training on Iron Island.\r",
+        "In the mean time, feel free to\n",
+        "visit the shop in Oreburgh City.\r",
+        "I will tell a friend to sell you\n",
+        "something special.\r"
       ]
     },
     {
