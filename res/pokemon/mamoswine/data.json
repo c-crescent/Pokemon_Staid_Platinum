@@ -48,6 +48,7 @@
             [ 28, "MOVE_ICE_FANG" ],
             [ 32, "MOVE_TAKE_DOWN" ],
             [ 33, "MOVE_DOUBLE_HIT" ],
+            [ 36, "MOVE_ICICLE_CRASH" ],
             [ 40, "MOVE_EARTHQUAKE" ],
             [ 48, "MOVE_MIST" ],
             [ 56, "MOVE_BLIZZARD" ],

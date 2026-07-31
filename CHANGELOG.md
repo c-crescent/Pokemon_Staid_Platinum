@@ -189,4 +189,7 @@ There are no longer roaming Pokemon. All legendaries are available after the fir
 ### Story
 - [ ] Replaced Barry with a different rival.
 
+### Mechanics
+- [x] Added Icicle Crash
+
 ### Post Game

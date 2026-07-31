@@ -47,6 +47,7 @@
             [ 21, "MOVE_FURY_SWIPES" ],
             [ 24, "MOVE_NASTY_PLOT" ],
             [ 28, "MOVE_ICY_WIND" ],
+            [ 33, "MOVE_ICICLE_CRASH" ],
             [ 35, "MOVE_NIGHT_SLASH" ],
             [ 38, "MOVE_FLING" ],
             [ 42, "MOVE_METAL_CLAW" ],

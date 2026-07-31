@@ -40,6 +40,7 @@
             [ 1, "MOVE_AURORA_BEAM" ],
             [ 1, "MOVE_PROTECT" ],
             [ 28, "MOVE_SPIKES" ],
+            [ 33, "MOVE_ICICLE_CRASH" ],
             [ 40, "MOVE_SPIKE_CANNON" ]
         ],
         "by_tm": [
