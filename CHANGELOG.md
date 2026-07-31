@@ -47,29 +47,29 @@
 > Lopunny
 > - Type: Normal / Fighting
 > - ATK: 96(+20) 
-> - BST: 500(+20)
 > - Abilities: Scrappy / Klutz
 > - Learns Mach Punch, Jump Kick, and Hi Jump Kick
 
 > Banette
 > - ATK: 145(+30)
-> - BST: 485 (+30)
 
 > Chimecho
 > - HP: 75(+10)
 > - DEF: 80(+10)
 > - SPD: 90(+10)
-> - BST: 485(+30)
 
 > Mawile
-> - Abilities: Huge Power / Intimidate
 > - DEF: 95(+10)
 > - SPD: 75(+20)
-> - BST: 410(+30)
+> - Abilities: Huge Power / Intimidate
 
 > Meganium
 > - SPA: 113(+30)
-> - BST: 555(+30)
+
+> Butterfree
+> - HP: 65(+5)
+> - DEF: 55(+5)
+> - SPA: 95(+15)
 
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
