@@ -95,6 +95,9 @@
 > - ATK: 90(+10)
 > - DEF: 95(+10)
 
+> Dugtrio
+> - ATK: 100(+20)
+
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
 
