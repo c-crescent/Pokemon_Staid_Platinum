@@ -67,6 +67,10 @@
 > - SPD: 75(+20)
 > - BST: 410(+30)
 
+> Meganium
+> - SPA: 113(+30)
+> - BST: 555(+30)
+
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
 
