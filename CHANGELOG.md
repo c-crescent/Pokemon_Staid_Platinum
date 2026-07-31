@@ -51,6 +51,10 @@
 > - Abilities: Scrappy / Klutz
 > - Learns Mach Punch, Jump Kick, and Hi Jump Kick
 
+> Banette
+> - ATK: 145(+30)
+> - BST: 485 (+30)
+
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
 
