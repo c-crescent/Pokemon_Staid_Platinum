@@ -16,7 +16,7 @@
         "type": "BATTLE_EFFECT_NATURE_POWER",
         "chance": 0
     },
-    "range": "RANGE_SINGLE_TARGET_SPECIAL",
+    "range": "RANGE_ALL_ADJACENT",
     "priority": 0,
     "flags": [
         "MOVE_FLAG_HIDES_HP_GAUGES"

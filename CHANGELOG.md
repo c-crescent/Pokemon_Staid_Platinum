@@ -52,6 +52,7 @@
 > - Learns Mach Punch, Jump Kick, and Hi Jump Kick
 
 ### Moves
+- [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
 
 ### Abilities
 
