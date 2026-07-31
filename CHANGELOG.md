@@ -113,6 +113,11 @@
 > - Abilities: Static / Mold Breaker
 > - Learns Dragon Pulse, Outrage
 
+> Bellossom
+> - DEF: 95(+10)
+> - HP: 90(+15)
+
+
 
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
