@@ -105,6 +105,15 @@
 > - SPE: 150(+150)
 > - SPA: 90(+80)
 
+> Ampharos
+> - DEF: 85(+10)
+> - SPA: 135(+20)
+> - SPE: 45(-10)
+> - Type: Electric / Dragon
+> - Abilities: Static / Mold Breaker
+> - Learns Dragon Pulse, Outrage
+
+
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
 
