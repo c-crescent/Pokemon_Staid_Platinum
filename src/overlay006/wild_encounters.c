@@ -821,48 +821,48 @@ static u8 GetGroundEncounterSlot(void)
 {
     u8 roll = LCRNG_RandMod(100);
 
-    if (roll < 14) {
+    if (roll < 12) {       // 12%
         return 0;
-    } else if (roll < 27) {
+    } else if (roll < 23) { // 11%
         return 1;
-    } else if (roll < 39) {
+    } else if (roll < 33) { // 10%
         return 2;
-    } else if (roll < 50) {
+    } else if (roll < 42) { // 9%
         return 3;
-    } else if (roll < 59) {
+    } else if (roll < 50) { // 8%
         return 4;
-    } else if (roll < 68) {
+    } else if (roll < 58) { // 8%
         return 5;
-    } else if (roll < 75) {
+    } else if (roll < 66) { // 8%
         return 6;
-    } else if (roll < 81) {
+    } else if (roll < 74) { // 8%
         return 7;
-    } else if (roll < 87) {
+    } else if (roll < 81) { // 7%
         return 8;
-    } else if (roll < 92) {
+    } else if (roll < 88) { // 7%
         return 9;
-    } else if (roll < 96) {
+    } else if (roll < 95) { // 7%
         return 10;
     }
 
-    return 11;
+    return 11; // 5% (95-99)
 }
 
 static u8 GetWaterEncounterSlot(void)
 {
     u8 roll = LCRNG_RandMod(100);
 
-    if (roll < 30) {
+    if (roll < 23) {       // 23%
         return 0;
-    } else if (roll < 60) {
+    } else if (roll < 45) { // 22%
         return 1;
-    } else if (roll < 75) {
+    } else if (roll < 66) { // 21%
         return 2;
-    } else if (roll < 88) {
+    } else if (roll < 85) { // 19%
         return 3;
     }
 
-    return 4;
+    return 4; // 15% (85-99)
 }
 
 static u8 GetRodEncounterSlot(const int fishingRodType)
@@ -872,42 +872,42 @@ static u8 GetRodEncounterSlot(const int fishingRodType)
 
     switch (fishingRodType) {
     case FISHING_TYPE_OLD_ROD:
-        if (roll < 30) {
+        if (roll < 23) {       // 23%
             encSlot = 0;
-        } else if (roll < 60) {
+        } else if (roll < 45) { // 22%
             encSlot = 1;
-        } else if (roll < 75) {
+        } else if (roll < 66) { // 21%
             encSlot = 2;
-        } else if (roll < 88) {
+        } else if (roll < 85) { // 19%
             encSlot = 3;
         } else {
-            encSlot = 4;
+            encSlot = 4;       // 15% (85-99)
         }
         break;
     case FISHING_TYPE_GOOD_ROD:
-        if (roll < 30) {
+        if (roll < 23) {       // 23%
             encSlot = 0;
-        } else if (roll < 60) {
+        } else if (roll < 45) { // 22%
             encSlot = 1;
-        } else if (roll < 75) {
+        } else if (roll < 66) { // 21%
             encSlot = 2;
-        } else if (roll < 88) {
+        } else if (roll < 85) { // 19%
             encSlot = 3;
         } else {
-            encSlot = 4;
+            encSlot = 4;       // 15% (85-99)
         }
         break;
     case FISHING_TYPE_SUPER_ROD:
-        if (roll < 30) {
+        if (roll < 23) {       // 23%
             encSlot = 0;
-        } else if (roll < 60) {
+        } else if (roll < 45) { // 22%
             encSlot = 1;
-        } else if (roll < 75) {
+        } else if (roll < 66) { // 21%
             encSlot = 2;
-        } else if (roll < 88) {
+        } else if (roll < 85) { // 19%
             encSlot = 3;
         } else {
-            encSlot = 4;
+            encSlot = 4;       // 15% (85-99)
         }
         break;
     default:
