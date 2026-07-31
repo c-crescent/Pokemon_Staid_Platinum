@@ -112,9 +112,9 @@
         ]
     },
     "evolutions": [
-        [
-            "EVO_TRADE_WITH_HELD_ITEM",
-            "ITEM_METAL_COAT",
+        [ 
+            "EVO_LEVEL",
+            32,
             "SPECIES_STEELIX"
         ]
     ],

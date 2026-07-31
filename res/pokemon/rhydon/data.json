@@ -124,9 +124,9 @@
         ]
     },
     "evolutions": [
-        [
-            "EVO_TRADE_WITH_HELD_ITEM",
-            "ITEM_PROTECTOR",
+        [ 
+            "EVO_LEVEL",
+            48,
             "SPECIES_RHYPERIOR"
         ]
     ],

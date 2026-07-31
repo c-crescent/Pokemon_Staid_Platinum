@@ -91,7 +91,23 @@ All mythicals are available after the second Elite 4 fight.
 There are no longer roaming Pokemon. All legendaries are available after the first Elite 4 fight in a static location.
 
 ### Evolutions
-Replaced all trade, friendship, move, location, time, item evolutions with level-threshold or item-usage evolutions.
+- [x] Replaced all trade, friendship, move, location, time, item evolutions with level-threshold or item-usage evolutions.
+
+- All baby Pokemon evolve at 12.
+- Aipom, Golbat evolve at 30.
+- Buneary evolves at 24.
+- Clamperl evolves to Huntail with Deep Sea Tooth and Gorebyss with Deep Sea Scale as evolution items.
+- Dusclops, Rhydon evolve at 48.
+- Eevee evolves to Leafeon, Glaceon, Espeon, and Umbreon with Leaf Stone, Never Melt Ice, Dawn Stone, and Dusk Stone as evolution items.
+- Electabuzz, Magmar, Machoke, Graveler, Lickitung, Nosepass, Tangela evolve at 36.
+- Haunter, Kadabra, Magneton, Piloswine, Seadra evolve at 42.
+- Poliwhirl, Scyther evolve with King's Rock, Metal Coat as evolution items.
+- Slowpoke evolves to Slowking with King's Rock as an evolution item.
+- Feebas evolves at 20.
+- Gligar, Sneasel, Yanma evolve at 38.
+- Onix evolves at 32.
+- Porygon evolves 20.
+- Porygon evolves at 26.
 
 ## New Content
 

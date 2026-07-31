@@ -119,8 +119,8 @@
     },
     "evolutions": [
         [
-            "EVO_TRADE_WITH_HELD_ITEM",
-            "ITEM_REAPER_CLOTH",
+            "EVO_LEVEL",
+            48,
             "SPECIES_DUSKNOIR"
         ]
     ],

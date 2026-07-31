@@ -126,8 +126,8 @@
     },
     "evolutions": [
         [
-            "EVO_LEVEL_KNOW_MOVE",
-            "MOVE_ROLLOUT",
+            "EVO_LEVEL",
+            36,
             "SPECIES_LICKILICKY"
         ]
     ],

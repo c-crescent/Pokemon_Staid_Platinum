@@ -125,8 +125,8 @@
     },
     "evolutions": [
         [
-            "EVO_LEVEL_KNOW_MOVE",
-            "MOVE_DOUBLE_HIT",
+            "EVO_LEVEL",
+            30,
             "SPECIES_AMBIPOM"
         ]
     ],
