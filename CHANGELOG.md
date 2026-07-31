@@ -71,6 +71,11 @@
 > - DEF: 55(+5)
 > - SPA: 95(+15)
 
+> Beedrill
+> - ATK: 120(+40)
+> - SPA: 25(-20)
+> - SPE: 95(+20)
+
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
 
