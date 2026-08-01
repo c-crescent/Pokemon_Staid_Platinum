@@ -45,10 +45,12 @@
             [ 24, "MOVE_PAYBACK" ],
             [ 25, "MOVE_PROTECT" ],
             [ 31, "MOVE_ROOST" ],
+            [ 35, "MOVE_AIR_SLASH" ],
             [ 38, "MOVE_STOCKPILE" ],
             [ 38, "MOVE_SWALLOW" ],
             [ 38, "MOVE_SPIT_UP" ],
             [ 43, "MOVE_FLING" ],
+            [ 46, "MOVE_HURRICANE" ],
             [ 50, "MOVE_TAILWIND" ],
             [ 57, "MOVE_HYDRO_PUMP" ]
         ],

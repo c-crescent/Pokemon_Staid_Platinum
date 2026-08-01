@@ -38,6 +38,7 @@
             [ 1, "MOVE_WHIRLWIND" ],
             [ 1, "MOVE_NASTY_PLOT" ],
             [ 1, "MOVE_RAZOR_LEAF" ],
+            [ 42, "MOVE_HURRICANE" ],
             [ 49, "MOVE_LEAF_STORM" ]
         ],
         "by_tm": [

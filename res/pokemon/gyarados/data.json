@@ -44,7 +44,8 @@
             [ 38, "MOVE_RAIN_DANCE" ],
             [ 41, "MOVE_HYDRO_PUMP" ],
             [ 44, "MOVE_DRAGON_DANCE" ],
-            [ 47, "MOVE_HYPER_BEAM" ]
+            [ 47, "MOVE_HYPER_BEAM" ],
+            [ 52, "MOVE_HURRICANE" ]
         ],
         "by_tm": [
             "TM03",

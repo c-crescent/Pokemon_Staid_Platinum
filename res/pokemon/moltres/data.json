@@ -44,6 +44,7 @@
             [ 43, "MOVE_SAFEGUARD" ],
             [ 50, "MOVE_AIR_SLASH" ],
             [ 57, "MOVE_ROOST" ],
+            [ 61, "MOVE_HURRICANE" ],
             [ 64, "MOVE_HEAT_WAVE" ],
             [ 71, "MOVE_SOLAR_BEAM" ],
             [ 78, "MOVE_SKY_ATTACK" ],

@@ -44,6 +44,7 @@
             [ 51, "MOVE_NATURAL_GIFT" ],
             [ 57, "MOVE_ANCIENT_POWER" ],
             [ 65, "MOVE_EXTRASENSORY" ],
+            [ 68, "MOVE_HURRICANE" ],
             [ 71, "MOVE_PUNISHMENT" ],
             [ 79, "MOVE_FUTURE_SIGHT" ],
             [ 85, "MOVE_AEROBLAST" ],

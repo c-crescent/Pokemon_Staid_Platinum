@@ -45,6 +45,7 @@
             [ 50, "MOVE_REFLECT" ],
             [ 57, "MOVE_ROOST" ],
             [ 64, "MOVE_TAILWIND" ],
+            [ 68, "MOVE_HURRICANE" ],
             [ 71, "MOVE_BLIZZARD" ],
             [ 78, "MOVE_SHEER_COLD" ],
             [ 85, "MOVE_HAIL" ]

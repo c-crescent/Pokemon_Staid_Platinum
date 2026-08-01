@@ -41,6 +41,7 @@
             [ 20, "MOVE_RAIN_DANCE" ],
             [ 20, "MOVE_SUNNY_DAY" ],
             [ 20, "MOVE_HAIL" ],
+            [ 25, "MOVE_HURRICANE" ],
             [ 30, "MOVE_WEATHER_BALL" ]
         ],
         "by_tm": [

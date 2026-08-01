@@ -191,5 +191,6 @@ There are no longer roaming Pokemon. All legendaries are available after the fir
 
 ### Mechanics
 - [x] Added Icicle Crash
+- [x] Added Hurricane
 
 ### Post Game

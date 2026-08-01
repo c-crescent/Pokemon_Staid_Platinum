@@ -48,6 +48,7 @@
             [ 32, "MOVE_AIR_SLASH" ],
             [ 37, "MOVE_ZEN_HEADBUTT" ],
             [ 42, "MOVE_EXTRASENSORY" ],
+            [ 45, "MOVE_HURRICANE" ],
             [ 47, "MOVE_PSYCHO_SHIFT" ],
             [ 52, "MOVE_ROOST" ],
             [ 57, "MOVE_DREAM_EATER" ]
