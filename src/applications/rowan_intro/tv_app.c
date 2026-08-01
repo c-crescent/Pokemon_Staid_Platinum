@@ -145,9 +145,7 @@ BOOL RowanIntroTv_Main(ApplicationManager *appMan, enum RowanIntroTvAppState *st
         break;
     case RIT_APP_STATE_DISPLAY_TEXT_WAIT_INPUT:
         RowanIntroTv_ShiftCrtOverlay(tv);
-
-        if (RowanIntroTv_Run(tv, RowanIntroTv_TextId, 5 * 8, 6 * 8) == TRUE) {
-            StartScreenFade(
+        StartScreenFade(
                 FADE_BOTH_SCREENS,
                 FADE_TYPE_BRIGHTNESS_OUT,
                 FADE_TYPE_BRIGHTNESS_OUT,
@@ -156,7 +154,6 @@ BOOL RowanIntroTv_Main(ApplicationManager *appMan, enum RowanIntroTvAppState *st
                 1,
                 tv->heapID);
             *state = RIT_APP_STATE_EXIT_AFTER_FADE;
-        }
         break;
     case RIT_APP_STATE_EXIT_AFTER_FADE:
         RowanIntroTv_ShiftCrtOverlay(tv);
