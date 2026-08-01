@@ -101,7 +101,7 @@
     "evolutions": [
         [
             "EVO_LEVEL",
-            18,
+            14,
             "SPECIES_PIDGEOTTO"
         ]
     ],

@@ -126,6 +126,9 @@
 > - SPA: 105(+35)
 > - SPE: 112(+20)
 
+> Pidgeotto
+> - SPA: 60(+10)
+
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
 
@@ -186,6 +189,8 @@ There are no longer roaming Pokemon. All legendaries are available after the fir
 - Onix evolves at 32.
 - Porygon evolves 20.
 - Porygon evolves at 26.
+- Pidgey evolves at 14.
+- Pidgeotto evolves at 25.
 
 ## New Content
 

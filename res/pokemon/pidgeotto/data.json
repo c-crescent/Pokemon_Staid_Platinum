@@ -4,7 +4,7 @@
         "attack": 60,
         "defense": 55,
         "speed": 71,
-        "special_attack": 50,
+        "special_attack": 60,
         "special_defense": 50
     },
     "types": [ "TYPE_NORMAL", "TYPE_FLYING" ],
@@ -93,7 +93,7 @@
     "evolutions": [
         [
             "EVO_LEVEL",
-            36,
+            25,
             "SPECIES_PIDGEOT"
         ]
     ],
