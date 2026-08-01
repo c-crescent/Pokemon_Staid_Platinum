@@ -122,6 +122,9 @@
 > - SPE: 100(+30)
 > - SPD: 65(+5)
 
+> Pidgeot
+> - SPA: 105(+35)
+> - SPE: 112(+20)
 
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
