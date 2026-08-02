@@ -41,6 +41,8 @@
 
 ### Items
 
+- [x] Using party menu items now stay on the party menu if the used item still exists in bag.
+
 ## Balance Changes
 
 ### Pokemon
