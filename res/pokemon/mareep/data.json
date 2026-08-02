@@ -36,15 +36,18 @@
         "by_level": [
             [ 1, "MOVE_TACKLE" ],
             [ 5, "MOVE_GROWL" ],
-            [ 10, "MOVE_THUNDER_SHOCK" ],
-            [ 14, "MOVE_THUNDER_WAVE" ],
-            [ 19, "MOVE_COTTON_SPORE" ],
-            [ 23, "MOVE_CHARGE" ],
-            [ 28, "MOVE_DISCHARGE" ],
-            [ 32, "MOVE_SIGNAL_BEAM" ],
-            [ 37, "MOVE_LIGHT_SCREEN" ],
-            [ 41, "MOVE_POWER_GEM" ],
-            [ 46, "MOVE_THUNDER" ]
+            [ 7, "MOVE_THUNDER_SHOCK" ],
+            [ 9, "MOVE_THUNDER_WAVE" ],
+            [ 12, "MOVE_COTTON_SPORE" ],
+            [ 15, "MOVE_CHARGE" ],
+            [ 18, "MOVE_THUNDER_PUNCH" ],
+            [ 20, "MOVE_DISCHARGE" ],
+            [ 22, "MOVE_DRAGON_PULSE" ],
+            [ 25, "MOVE_SIGNAL_BEAM" ],
+            [ 30, "MOVE_LIGHT_SCREEN" ],
+            [ 33, "MOVE_OUTRAGE" ],
+            [ 36, "MOVE_POWER_GEM" ],
+            [ 45, "MOVE_THUNDER" ]
         ],
         "by_tm": [
             "TM06",
