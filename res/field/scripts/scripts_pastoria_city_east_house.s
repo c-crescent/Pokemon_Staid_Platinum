@@ -10,17 +10,12 @@ PastoriaCityEastHouse_MoveManiac:
     PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
-    BufferItemNameWithArticle 4, ITEM_HEART_SCALE
     GoToIfUnset FLAG_TALKED_TO_PASTORIA_CITY_EAST_HOUSE_MOVE_MANIAC, PastoriaCityEastHouse_CheckHeartScale
-    CheckItem ITEM_HEART_SCALE, 1, VAR_RESULT
-    GoToIfEq VAR_RESULT, FALSE, PastoriaCityEastHouse_ComeBackWithHeartScale
     GoTo PastoriaCityEastHouse_TryTeachMove
 
 PastoriaCityEastHouse_CheckHeartScale:
     SetFlag FLAG_TALKED_TO_PASTORIA_CITY_EAST_HOUSE_MOVE_MANIAC
     Message PastoriaCityEastHouse_Text_TeachMoveForHeartScale
-    CheckItem ITEM_HEART_SCALE, 1, VAR_RESULT
-    GoToIfEq VAR_RESULT, FALSE, PastoriaCityEastHouse_ComeBackWithHeartScale
     GoTo PastoriaCityEastHouse_TryTeachMove
 
 PastoriaCityEastHouse_ComeBackWithHeartScale:

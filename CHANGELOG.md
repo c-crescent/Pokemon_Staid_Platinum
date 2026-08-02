@@ -19,6 +19,7 @@
 - [x] Girl is now the default gender option.
 - [ ] All move tutors now offer repeated services for free.
 - [x] Rare Candy is now a permanent key item that is given to you when you receive the Pokedex.
+- [x] Pastoria Move Reminder is now free.
 
 ### Story
 
