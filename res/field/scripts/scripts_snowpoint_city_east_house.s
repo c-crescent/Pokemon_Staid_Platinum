@@ -77,8 +77,6 @@ SnowpointCityEastHouse_TryTeachMove:
     ShowMoveTutorMoveSelectionMenu VAR_0x8000, TUTOR_LOCATION_SNOWPOINT_CITY, VAR_RESULT
     SetVar VAR_0x8003, VAR_RESULT
     GoToIfEq VAR_0x8003, MENU_CANCEL, SnowpointCityEastHouse_BeSeeingYou
-    CheckCanAffordMove VAR_0x8003, VAR_RESULT
-    GoToIfEq VAR_RESULT, FALSE, SnowpointCityEastHouse_NotEnoughShards
     GetPartyMonMoveCount VAR_RESULT, VAR_0x8000
     SetVar VAR_0x8002, VAR_RESULT
     GoToIfEq VAR_RESULT, LEARNED_MOVES_MAX, SnowpointCityEastHouse_TryReplaceMove
@@ -119,7 +117,7 @@ SnowpointCityEastHouse_TryReplaceMove:
     Message SnowpointCityEastHouse_Text_PokemonLearnedMove2
     WaitFanfare
     WaitTime 16, VAR_RESULT
-    GoTo SnowpointCityEastHouse_PayShards
+    GoTo SnowpointCityEastHouse_BeSeeingYou
     End
 
 SnowpointCityEastHouse_StopTryingToTeachMove:
@@ -145,7 +143,7 @@ SnowpointCityEastHouse_TeachMove:
     PlayFanfare SEQ_FANFA1
     WaitFanfare
     WaitTime 16, VAR_RESULT
-    GoTo SnowpointCityEastHouse_PayShards
+    GoTo SnowpointCityEastHouse_BeSeeingYou
     End
 
 SnowpointCityEastHouse_PayShards:

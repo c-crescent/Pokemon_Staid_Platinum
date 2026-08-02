@@ -20,6 +20,7 @@
 - [ ] All move tutors now offer repeated services for free.
 - [x] Rare Candy is now a permanent key item that is given to you when you receive the Pokedex.
 - [x] Pastoria Move Reminder is now free.
+- [x] All move tutors are now free. Ultimate moves no longer require max friendship.
 
 ### Story
 

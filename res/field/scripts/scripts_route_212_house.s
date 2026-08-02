@@ -56,8 +56,6 @@ Route212House_TryTeachMove:
     ShowMoveTutorMoveSelectionMenu VAR_0x8000, TUTOR_LOCATION_ROUTE_212, VAR_RESULT
     SetVar VAR_0x8003, VAR_RESULT
     GoToIfEq VAR_0x8003, MENU_CANCEL, Route212House_SeeYouThen
-    CheckCanAffordMove VAR_0x8003, VAR_RESULT
-    GoToIfEq VAR_RESULT, FALSE, Route212House_NotEnoughShards
     GetPartyMonMoveCount VAR_RESULT, VAR_0x8000
     SetVar VAR_0x8002, VAR_RESULT
     GoToIfEq VAR_RESULT, LEARNED_MOVES_MAX, Route212House_TryReplaceMove
@@ -98,7 +96,7 @@ Route212House_TryReplaceMove:
     Message Route212House_Text_PokemonLearnedMove2
     WaitFanfare
     WaitTime 16, VAR_RESULT
-    GoTo Route212House_PayShards
+    GoTo Route212House_SeeYouThen
     End
 
 Route212House_StopTryingToTeachMove:
@@ -124,7 +122,7 @@ Route212House_TeachMove:
     PlayFanfare SEQ_FANFA1
     WaitFanfare
     WaitTime 16, VAR_RESULT
-    GoTo Route212House_PayShards
+    GoTo Route212House_SeeYouThen
     End
 
 Route212House_PayShards:

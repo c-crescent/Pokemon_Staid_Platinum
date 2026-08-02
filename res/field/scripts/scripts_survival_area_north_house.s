@@ -42,8 +42,6 @@ SurvivalAreaNorthHouse_TryTeachMove:
     ShowMoveTutorMoveSelectionMenu VAR_0x8000, TUTOR_LOCATION_SURVIVAL_AREA, VAR_RESULT
     SetVar VAR_0x8003, VAR_RESULT
     GoToIfEq VAR_0x8003, MENU_CANCEL, SurvivalAreaNorthHouse_SeeYouThen
-    CheckCanAffordMove VAR_0x8003, VAR_RESULT
-    GoToIfEq VAR_RESULT, FALSE, SurvivalAreaNorthHouse_NotEnoughShards
     GetPartyMonMoveCount VAR_RESULT, VAR_0x8000
     SetVar VAR_0x8002, VAR_RESULT
     GoToIfEq VAR_RESULT, LEARNED_MOVES_MAX, SurvivalAreaNorthHouse_TryReplaceMove
@@ -84,7 +82,7 @@ SurvivalAreaNorthHouse_TryReplaceMove:
     Message SurvivalAreaNorthHouse_Text_PokemonLearnedMove2
     WaitFanfare
     WaitTime 16, VAR_RESULT
-    GoTo SurvivalAreaNorthHouse_PayShards
+    GoTo SurvivalAreaNorthHouse_SeeYouThen
     End
 
 SurvivalAreaNorthHouse_StopTryingToTeachMove:
@@ -110,7 +108,7 @@ SurvivalAreaNorthHouse_TeachMove:
     PlayFanfare SEQ_FANFA1
     WaitFanfare
     WaitTime 16, VAR_RESULT
-    GoTo SurvivalAreaNorthHouse_PayShards
+    GoTo SurvivalAreaNorthHouse_SeeYouThen
     End
 
 SurvivalAreaNorthHouse_PayShards:
