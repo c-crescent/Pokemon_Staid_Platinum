@@ -21,6 +21,7 @@
 - [x] Rare Candy is now a permanent key item that is given to you when you receive the Pokedex.
 - [x] Pastoria Move Reminder is now free.
 - [x] All move tutors are now free. Ultimate moves no longer require max friendship.
+- [ ] The route 228 move tutor and Survival Area move tutor has been moved to Sunyshore City and Route 213, respectively.
 
 ### Story
 
@@ -135,6 +136,7 @@
 
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
+- [ ] Most Pokemon now complete their learnsets at level 45. Level 55 for some exceptions. Most evolution lines share their learnset with some exceptions.
 
 ### Abilities
 

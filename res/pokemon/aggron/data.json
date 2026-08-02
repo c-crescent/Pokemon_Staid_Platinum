@@ -46,11 +46,11 @@
             [ 22, "MOVE_ROAR" ],
             [ 25, "MOVE_TAKE_DOWN" ],
             [ 29, "MOVE_IRON_HEAD" ],
-            [ 34, "MOVE_PROTECT" ],
-            [ 40, "MOVE_METAL_SOUND" ],
-            [ 48, "MOVE_IRON_TAIL" ],
-            [ 57, "MOVE_DOUBLE_EDGE" ],
-            [ 65, "MOVE_METAL_BURST" ]
+            [ 32, "MOVE_PROTECT" ],
+            [ 36, "MOVE_METAL_SOUND" ],
+            [ 39, "MOVE_IRON_TAIL" ],
+            [ 43, "MOVE_DOUBLE_EDGE" ],
+            [ 46, "MOVE_METAL_BURST" ]
         ],
         "by_tm": [
             "TM01",

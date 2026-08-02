@@ -42,14 +42,14 @@
             [ 1, "MOVE_BITE" ],
             [ 1, "MOVE_SCARY_FACE" ],
             [ 9, "MOVE_ROAR" ],
-            [ 17, "MOVE_AGILITY" ],
-            [ 25, "MOVE_ANCIENT_POWER" ],
-            [ 33, "MOVE_CRUNCH" ],
-            [ 41, "MOVE_TAKE_DOWN" ],
-            [ 49, "MOVE_IRON_HEAD" ],
-            [ 57, "MOVE_HYPER_BEAM" ],
-            [ 65, "MOVE_ROCK_SLIDE" ],
-            [ 73, "MOVE_GIGA_IMPACT" ]
+            [ 13, "MOVE_AGILITY" ],
+            [ 17, "MOVE_ANCIENT_POWER" ],
+            [ 21, "MOVE_CRUNCH" ],
+            [ 25, "MOVE_TAKE_DOWN" ],
+            [ 29, "MOVE_IRON_HEAD" ],
+            [ 33, "MOVE_HYPER_BEAM" ],
+            [ 39, "MOVE_ROCK_SLIDE" ],
+            [ 45, "MOVE_GIGA_IMPACT" ]
         ],
         "by_tm": [
             "TM02",
