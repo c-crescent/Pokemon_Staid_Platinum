@@ -736,6 +736,11 @@ TwinleafTownPlayerHouse1F_Movement_PlayerWatchRivalsMomLeaveEast:
 TwinleafTownPlayerHouse1F_CoordEvent_DontGoIntoTallGrass:
     LockAll
     GoTo TwinleafTownPlayerHouse1F_PlayerAndMomFaceEachOther
+    SetFlag FLAG_RIVAL_LEFT_HOME
+    SetVar VAR_RIVAL_HOUSE_STATE, 1
+    SetVar VAR_TWINLEAF_TOWN_GUITARIST_TRIGGER_STATE, 2
+    SetFlag FLAG_TALKED_TO_RIVAL_HOUSE_RIVAL_MOM_RIVAL_LEFT
+    SetVar VAR_TWINLEAF_TOWN_RIVAL_TRIGGER_STATE, 1
     End
 
 TwinleafTownPlayerHouse1F_PlayerAndMomFaceEachOther:

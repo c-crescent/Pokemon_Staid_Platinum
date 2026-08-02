@@ -72,18 +72,7 @@ TwinleafTown_RivalWentTearingOff:
     End
 
 TwinleafTown_CoordEvent_RivalWasLookingForYou:
-    LockAll
-    ApplyMovement LOCALID_GUITARIST, TwinleafTown_Movement_GuitaristNoticePlayer
-    WaitMovement
-    GetPlayerMapPos VAR_0x8004, VAR_0x8005
-    GoToIfEq VAR_0x8004, 108, TwinleafTown_GuitaristStopPlayerX108
-    GoToIfEq VAR_0x8004, 109, TwinleafTown_GuitaristStopPlayerX109
-    GoToIfEq VAR_0x8004, 110, TwinleafTown_GuitaristStopPlayerX110
-    GoToIfEq VAR_0x8004, 111, TwinleafTown_GuitaristStopPlayerX111
-    GoToIfEq VAR_0x8004, 112, TwinleafTown_GuitaristStopPlayerX112
-    GoToIfEq VAR_0x8004, 113, TwinleafTown_GuitaristStopPlayerX113
-    GoToIfEq VAR_0x8004, 114, TwinleafTown_GuitaristStopPlayerX114
-    GoTo TwinleafTown_GuitaristStopPlayerX115
+    End
 
 TwinleafTown_GuitaristStopPlayerX108:
     ApplyMovement LOCALID_PLAYER, TwinleafTown_Movement_PlayerGetPushedBackX108
