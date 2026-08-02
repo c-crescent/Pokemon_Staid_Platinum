@@ -1117,7 +1117,27 @@ BOOL StartMenu_ExitPartyMenu(FieldTask *fieldTask)
         StartMenu_SetCallback(menu, StartMenu_ExitBag);
         break;
     default:
-        if (partyMenu->mode == PARTY_MENU_MODE_USE_ITEM || partyMenu->mode == PARTY_MENU_MODE_TEACH_MOVE || partyMenu->mode == PARTY_MENU_MODE_TEACH_MOVE_DONE || partyMenu->mode == PARTY_MENU_MODE_USE_EVO_ITEM || partyMenu->mode == PARTY_MENU_MODE_LEVEL_MOVE_DONE) {
+        if ((partyMenu->mode == PARTY_MENU_MODE_USE_ITEM || partyMenu->mode == PARTY_MENU_MODE_USE_EVO_ITEM)
+            && Bag_GetItemQuantity(SaveData_GetBag(fieldSystem->saveData), partyMenu->usedItemID, HEAP_ID_FIELD2) != 0) {
+            PartyMenu *nextPartyMenu = Heap_Alloc(HEAP_ID_FIELD2, sizeof(PartyMenu));
+
+            memset(nextPartyMenu, 0, sizeof(PartyMenu));
+            nextPartyMenu->party = SaveData_GetParty(fieldSystem->saveData);
+            nextPartyMenu->bag = SaveData_GetBag(fieldSystem->saveData);
+            nextPartyMenu->mailbox = SaveData_GetMailbox(fieldSystem->saveData);
+            nextPartyMenu->options = SaveData_GetOptions(fieldSystem->saveData);
+            nextPartyMenu->broadcast = SaveData_GetTVBroadcast(fieldSystem->saveData);
+            nextPartyMenu->fieldMoveContext = &menu->fieldMoveContext;
+            nextPartyMenu->type = PARTY_MENU_TYPE_BASIC;
+            nextPartyMenu->mode = PARTY_MENU_MODE_USE_ITEM;
+            nextPartyMenu->fieldSystem = fieldSystem;
+            nextPartyMenu->usedItemID = partyMenu->usedItemID;
+            nextPartyMenu->selectedMonSlot = partyMenu->selectedMonSlot;
+
+            FieldSystem_StartChildProcess(fieldSystem, &gPokemonPartyAppTemplate, nextPartyMenu);
+            menu->taskData = nextPartyMenu;
+            StartMenu_SetCallback(menu, StartMenu_ExitPartyMenu);
+        } else if (partyMenu->mode == PARTY_MENU_MODE_USE_ITEM || partyMenu->mode == PARTY_MENU_MODE_TEACH_MOVE || partyMenu->mode == PARTY_MENU_MODE_TEACH_MOVE_DONE || partyMenu->mode == PARTY_MENU_MODE_USE_EVO_ITEM || partyMenu->mode == PARTY_MENU_MODE_LEVEL_MOVE_DONE) {
             menu->taskData = FieldSystem_OpenBag(fieldSystem, &menu->itemUseCtx);
 
             if (partyMenu->selectedMonSlot >= MAX_PARTY_SIZE) {

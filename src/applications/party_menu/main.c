@@ -551,7 +551,12 @@ static int HandleUseItem(PartyMenuApplication *application)
         Sprite_SetExplicitPalette2(application->sprites[PARTY_MENU_SPRITE_CURSOR_NORMAL], 1);
         return ApplyItemEffectOnPokemon(application);
     } else if (input == PARTY_MENU_INPUT_CANCEL) {
-        application->partyMenu->menuSelectionResult = PARTY_MENU_EXIT_CODE_DONE;
+        if (application->partyMenu->mode == PARTY_MENU_MODE_USE_ITEM || application->partyMenu->mode == PARTY_MENU_MODE_USE_EVO_ITEM) {
+            application->partyMenu->menuSelectionResult = PARTY_MENU_EXIT_CODE_RETURN_TO_BAG;
+        } else {
+            application->partyMenu->menuSelectionResult = PARTY_MENU_EXIT_CODE_DONE;
+        }
+
         return PARTY_MENU_STATE_FADE_OUT;
     }
 
