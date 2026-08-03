@@ -1,9 +1,9 @@
 {
     "base_stats": {
         "hp": 70,
-        "attack": 65,
+        "attack": 80,
         "defense": 65,
-        "speed": 70,
+        "speed": 100,
         "special_attack": 55,
         "special_defense": 55
     },
@@ -37,7 +37,21 @@
             [ 1, "MOVE_FAKE_OUT" ],
             [ 1, "MOVE_ATTRACT" ],
             [ 1, "MOVE_SING" ],
-            [ 1, "MOVE_DOUBLE_SLAP" ]
+            [ 1, "MOVE_DOUBLE_SLAP" ],
+            [ 4, "MOVE_FORESIGHT" ],
+            [ 7, "MOVE_ATTRACT" ],
+            [ 10, "MOVE_SING" ],
+            [ 13, "MOVE_DOUBLE_SLAP" ],
+            [ 16, "MOVE_COPYCAT" ],
+            [ 19, "MOVE_ASSIST" ],
+            [ 22, "MOVE_CHARM" ],
+            [ 24, "MOVE_BODY_SLAM" ],
+            [ 25, "MOVE_FAINT_ATTACK" ],
+            [ 28, "MOVE_WAKE_UP_SLAP" ],
+            [ 31, "MOVE_COVET" ],
+            [ 34, "MOVE_HEAL_BELL" ],
+            [ 37, "MOVE_DOUBLE_EDGE" ],
+            [ 40, "MOVE_CAPTIVATE" ]
         ],
         "by_tm": [
             "TM03",

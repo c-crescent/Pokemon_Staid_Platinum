@@ -159,6 +159,14 @@
 > Corsola
 > - HP: 105(+60)
 
+> Delcatty
+> - ATK: 80(+15)
+> - SPE: 100(+30)
+
+> Delibrd
+> - SPA: 115(+50)
+> - SPE: 125(+50)
+
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
 - [ ] Most Pokemon now complete their learnsets at level 45. Level 55 for some exceptions. Most evolution lines share their learnset with some exceptions.
@@ -173,6 +181,9 @@
 
 > Flower Gifts
 > If Sunny Day is active, the Attack and Special Defense of this Pokemon and its allies are multiplied by 2(+0.5).
+
+> Normalize
+> This Pokemon's moves are changed to be Normal type (and have their power multiplied by 1.2). This effect comes before other effects that change a move's type.
 
 ## Difficulty
 
