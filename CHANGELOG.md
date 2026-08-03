@@ -138,6 +138,24 @@
 > - SPA: 100(+10)
 > - Abilities: Swarm / Rivalry
 
+> Carnivine
+> - ATK: 120(+20)
+> - DEF: 92(+20)
+
+> Carvanha
+> - Abilities: Rough Skin / Speed Boost
+
+> Sharpedo
+> - Abilities: Rough Skin / Speed Boost
+
+> Castform
+> - ATK: 87(+17)
+> - DEF: 87(+17)
+> - SPA: 87(+17)
+> - SPD: 87(+17)
+> - HP: 87(+17)
+> - SPE: 87(+17)
+
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
 - [ ] Most Pokemon now complete their learnsets at level 45. Level 55 for some exceptions. Most evolution lines share their learnset with some exceptions.
