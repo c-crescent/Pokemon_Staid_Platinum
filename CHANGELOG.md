@@ -168,6 +168,9 @@
 
 ### Abilities
 
+> Flower Gifts
+> If Sunny Day is active, the Attack and Special Defense of this Pokemon and its allies are multiplied by 2(+0.5).
+
 ## Difficulty
 
 ### General

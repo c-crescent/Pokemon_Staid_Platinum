@@ -6944,13 +6944,13 @@ int BattleSystem_CalcMoveDamage(BattleSystem *battleSys,
 
         if ((fieldConditions & FIELD_CONDITION_SUNNY)
             && BattleSystem_CountAbility(battleSys, battleCtx, COUNT_ALIVE_BATTLERS_OUR_SIDE, attacker, ABILITY_FLOWER_GIFT)) {
-            attackStat = attackStat * 15 / 10;
+            attackStat = attackStat * 20 / 10;
         }
 
         if ((fieldConditions & FIELD_CONDITION_SUNNY)
             && Battler_Ability(battleCtx, attacker) != ABILITY_MOLD_BREAKER
             && BattleSystem_CountAbility(battleSys, battleCtx, COUNT_ALIVE_BATTLERS_OUR_SIDE, defender, ABILITY_FLOWER_GIFT)) {
-            spDefenseStat = spDefenseStat * 15 / 10;
+            spDefenseStat = spDefenseStat * 20 / 10;
         }
     }
 
