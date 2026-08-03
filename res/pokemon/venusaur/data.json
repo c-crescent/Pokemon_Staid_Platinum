@@ -49,9 +49,10 @@
             [ 28, "MOVE_GROWTH" ],
             [ 31, "MOVE_DOUBLE_EDGE" ],
             [ 32, "MOVE_PETAL_DANCE" ],
+            [ 37, "MOVE_SEED_BOMB" ],
             [ 39, "MOVE_WORRY_SEED" ],
-            [ 45, "MOVE_SYNTHESIS" ],
-            [ 53, "MOVE_SOLAR_BEAM" ]
+            [ 41, "MOVE_SYNTHESIS" ],
+            [ 45, "MOVE_SOLAR_BEAM" ]
         ],
         "by_tm": [
             "TM05",

@@ -42,9 +42,11 @@
             [ 10, "MOVE_PURSUIT" ],
             [ 15, "MOVE_SWIFT" ],
             [ 21, "MOVE_AQUA_JET" ],
-            [ 28, "MOVE_AGILITY" ],
-            [ 36, "MOVE_WHIRLPOOL" ],
-            [ 45, "MOVE_RAZOR_WIND" ]
+            [ 26, "MOVE_CRUNCH" ],
+            [ 29, "MOVE_AGILITY" ],
+            [ 33, "MOVE_AQUA_TAIL" ],
+            [ 39, "MOVE_WHIRLPOOL" ],
+            [ 42, "MOVE_RAZOR_WIND" ]
         ],
         "by_tm": [
             "TM01",

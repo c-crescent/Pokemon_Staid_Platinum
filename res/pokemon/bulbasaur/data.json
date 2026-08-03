@@ -41,13 +41,15 @@
             [ 13, "MOVE_POISON_POWDER" ],
             [ 13, "MOVE_SLEEP_POWDER" ],
             [ 15, "MOVE_TAKE_DOWN" ],
-            [ 19, "MOVE_RAZOR_LEAF" ],
-            [ 21, "MOVE_SWEET_SCENT" ],
-            [ 25, "MOVE_GROWTH" ],
-            [ 27, "MOVE_DOUBLE_EDGE" ],
-            [ 31, "MOVE_WORRY_SEED" ],
-            [ 33, "MOVE_SYNTHESIS" ],
-            [ 37, "MOVE_SEED_BOMB" ]
+            [ 20, "MOVE_RAZOR_LEAF" ],
+            [ 23, "MOVE_SWEET_SCENT" ],
+            [ 28, "MOVE_GROWTH" ],
+            [ 31, "MOVE_DOUBLE_EDGE" ],
+            [ 32, "MOVE_PETAL_DANCE" ],
+            [ 37, "MOVE_SEED_BOMB" ],
+            [ 39, "MOVE_WORRY_SEED" ],
+            [ 41, "MOVE_SYNTHESIS" ],
+            [ 45, "MOVE_SOLAR_BEAM" ]
         ],
         "by_tm": [
             "TM06",
