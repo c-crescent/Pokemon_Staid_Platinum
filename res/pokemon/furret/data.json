@@ -1,11 +1,11 @@
 {
     "base_stats": {
         "hp": 85,
-        "attack": 76,
+        "attack": 96,
         "defense": 64,
         "speed": 90,
         "special_attack": 45,
-        "special_defense": 55
+        "special_defense": 64
     },
     "types": [ "TYPE_NORMAL", "TYPE_NORMAL" ],
     "catch_rate": 90,
@@ -39,17 +39,18 @@
             [ 1, "MOVE_DEFENSE_CURL" ],
             [ 1, "MOVE_QUICK_ATTACK" ],
             [ 4, "MOVE_DEFENSE_CURL" ],
-            [ 7, "MOVE_QUICK_ATTACK" ],
-            [ 13, "MOVE_FURY_SWIPES" ],
-            [ 17, "MOVE_HELPING_HAND" ],
-            [ 21, "MOVE_FOLLOW_ME" ],
-            [ 28, "MOVE_SLAM" ],
-            [ 32, "MOVE_REST" ],
-            [ 36, "MOVE_SUCKER_PUNCH" ],
-            [ 42, "MOVE_AMNESIA" ],
-            [ 46, "MOVE_BATON_PASS" ],
-            [ 50, "MOVE_ME_FIRST" ],
-            [ 56, "MOVE_HYPER_VOICE" ]
+            [ 6, "MOVE_QUICK_ATTACK" ],
+            [ 10, "MOVE_FURY_SWIPES" ],
+            [ 13, "MOVE_HELPING_HAND" ],
+            [ 16, "MOVE_FOLLOW_ME" ],
+            [ 21, "MOVE_SLAM" ],
+            [ 24, "MOVE_REST" ],
+            [ 27, "MOVE_SUCKER_PUNCH" ],
+            [ 31, "MOVE_AMNESIA" ],
+            [ 34, "MOVE_BATON_PASS" ],
+            [ 37, "MOVE_ME_FIRST" ],
+            [ 39, "MOVE_EXTREME_SPEED" ],
+            [ 41, "MOVE_HYPER_VOICE" ]
         ],
         "by_tm": [
             "TM01",

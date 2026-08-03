@@ -38,13 +38,16 @@
             [ 1, "MOVE_SAND_ATTACK" ],
             [ 3, "MOVE_SAND_ATTACK" ],
             [ 7, "MOVE_DRAGON_RAGE" ],
-            [ 13, "MOVE_SANDSTORM" ],
-            [ 15, "MOVE_TAKE_DOWN" ],
-            [ 19, "MOVE_SAND_TOMB" ],
-            [ 28, "MOVE_SLASH" ],
-            [ 33, "MOVE_DRAGON_CLAW" ],
-            [ 40, "MOVE_DIG" ],
-            [ 49, "MOVE_DRAGON_RUSH" ]
+            [ 12, "MOVE_SANDSTORM" ],
+            [ 14, "MOVE_TAKE_DOWN" ],
+            [ 17, "MOVE_SAND_TOMB" ],
+            [ 26, "MOVE_SLASH" ],
+            [ 30, "MOVE_DRAGON_CLAW" ],
+            [ 36, "MOVE_DIG" ],
+            [ 39, "MOVE_CRUNCH" ],
+            [ 44, "MOVE_EARTHQUAKE" ],
+            [ 47, "MOVE_OUTRAGE" ],
+            [ 50, "MOVE_DRAGON_RUSH" ]
         ],
         "by_tm": [
             "TM02",
