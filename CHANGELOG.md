@@ -156,6 +156,9 @@
 > - HP: 87(+17)
 > - SPE: 87(+17)
 
+> Corsola
+> - HP: 105(+60)
+
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
 - [ ] Most Pokemon now complete their learnsets at level 45. Level 55 for some exceptions. Most evolution lines share their learnset with some exceptions.

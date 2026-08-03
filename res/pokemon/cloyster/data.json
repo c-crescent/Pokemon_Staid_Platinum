@@ -35,13 +35,25 @@
     "learnset": {
         "by_level": [
             [ 1, "MOVE_TOXIC_SPIKES" ],
-            [ 1, "MOVE_WITHDRAW" ],
-            [ 1, "MOVE_SUPERSONIC" ],
             [ 1, "MOVE_AURORA_BEAM" ],
             [ 1, "MOVE_PROTECT" ],
-            [ 28, "MOVE_SPIKES" ],
+            [ 4, "MOVE_WITHDRAW" ],
+            [ 8, "MOVE_SUPERSONIC" ],
+            [ 11, "MOVE_WATER_GUN" ],
+            [ 13, "MOVE_ICICLE_SPEAR" ],
+            [ 16, "MOVE_PROTECT" ],
+            [ 20, "MOVE_LEER" ],
+            [ 25, "MOVE_CLAMP" ],
+            [ 26, "MOVE_SPIKES" ],
+            [ 28, "MOVE_ICE_SHARD" ],
+            [ 30, "MOVE_AURORA_BEAM" ],
+            [ 32, "MOVE_WATER_PULSE" ],
             [ 33, "MOVE_ICICLE_CRASH" ],
-            [ 40, "MOVE_SPIKE_CANNON" ]
+            [ 37, "MOVE_WHIRLPOOL" ],
+            [ 39, "MOVE_SPIKE_CANNON" ],
+            [ 40, "MOVE_IRON_DEFENSE" ],
+            [ 42, "MOVE_BRINE" ],
+            [ 45, "MOVE_ICE_BEAM" ]
         ],
         "by_tm": [
             "TM03",
