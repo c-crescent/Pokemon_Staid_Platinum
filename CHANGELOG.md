@@ -271,6 +271,7 @@ There are no longer roaming Pokemon. All legendaries are available after the fir
 - Porygon evolves at 26.
 - Pidgey evolves at 14.
 - Pidgeotto evolves at 25.
+- Ralts evolves at 16.
 
 ## New Content
 
