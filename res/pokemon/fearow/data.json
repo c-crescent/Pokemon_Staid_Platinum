@@ -47,7 +47,7 @@
             [ 29, "MOVE_AGILITY" ],
             [ 35, "MOVE_ASSURANCE" ],
             [ 41, "MOVE_ROOST" ],
-            [ 47, "MOVE_DRILL_PECK" ]
+            [ 45, "MOVE_DRILL_PECK" ]
         ],
         "by_tm": [
             "TM06",

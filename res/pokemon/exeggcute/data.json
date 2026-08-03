@@ -43,11 +43,14 @@
             [ 19, "MOVE_STUN_SPORE" ],
             [ 21, "MOVE_POISON_POWDER" ],
             [ 23, "MOVE_SLEEP_POWDER" ],
-            [ 27, "MOVE_CONFUSION" ],
-            [ 33, "MOVE_WORRY_SEED" ],
-            [ 37, "MOVE_NATURAL_GIFT" ],
-            [ 43, "MOVE_SOLAR_BEAM" ],
-            [ 47, "MOVE_PSYCHIC" ]
+            [ 24, "MOVE_CONFUSION" ],
+            [ 27, "MOVE_EGG_BOMB" ],
+            [ 32, "MOVE_WORRY_SEED" ],
+            [ 34, "MOVE_NATURAL_GIFT" ],
+            [ 36, "MOVE_WOOD_HAMMER" ],
+            [ 42, "MOVE_SOLAR_BEAM" ],
+            [ 44, "MOVE_PSYCHIC" ],
+            [ 46, "MOVE_LEAF_STORM" ]
         ],
         "by_tm": [
             "TM06",

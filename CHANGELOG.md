@@ -175,6 +175,17 @@
 > - DEF: 90(+20)
 > - SPD: 110(+20)
 
+> Exploud
+> - SPA: 131(+40)
+
+> Loudred
+> - SPA: 91(+20)
+
+> Lumineon
+> - DEF: 96(+20)
+> - SPD: 96(+10)
+> - SPE: 96(+5)
+
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
 - [ ] Most Pokemon now complete their learnsets at level 45. Level 55 for some exceptions. Most evolution lines share their learnset with some exceptions.
