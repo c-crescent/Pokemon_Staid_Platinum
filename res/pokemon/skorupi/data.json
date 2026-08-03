@@ -38,14 +38,14 @@
             [ 1, "MOVE_POISON_STING" ],
             [ 1, "MOVE_LEER" ],
             [ 6, "MOVE_KNOCK_OFF" ],
-            [ 12, "MOVE_PIN_MISSILE" ],
-            [ 17, "MOVE_ACUPRESSURE" ],
-            [ 23, "MOVE_SCARY_FACE" ],
-            [ 28, "MOVE_TOXIC_SPIKES" ],
-            [ 34, "MOVE_BUG_BITE" ],
-            [ 39, "MOVE_POISON_FANG" ],
-            [ 45, "MOVE_CRUNCH" ],
-            [ 50, "MOVE_CROSS_POISON" ]
+            [ 10, "MOVE_PIN_MISSILE" ],
+            [ 14, "MOVE_ACUPRESSURE" ],
+            [ 18, "MOVE_SCARY_FACE" ],
+            [ 22, "MOVE_TOXIC_SPIKES" ],
+            [ 26, "MOVE_BUG_BITE" ],
+            [ 30, "MOVE_POISON_FANG" ],
+            [ 37, "MOVE_CRUNCH" ],
+            [ 44, "MOVE_CROSS_POISON" ]
         ],
         "by_tm": [
             "TM06",

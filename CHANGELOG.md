@@ -163,9 +163,17 @@
 > - ATK: 80(+15)
 > - SPE: 100(+30)
 
-> Delibrd
+> DelibIrd
 > - SPA: 115(+50)
 > - SPE: 125(+50)
+
+> Dunsparce
+> - HP: 125(+25)
+> - ATK: 100(+30)
+
+> Dustox
+> - DEF: 90(+20)
+> - SPD: 110(+20)
 
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.

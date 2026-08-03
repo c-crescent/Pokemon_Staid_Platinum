@@ -37,14 +37,14 @@
             [ 1, "MOVE_DRAGON_BREATH" ],
             [ 1, "MOVE_SCARY_FACE" ],
             [ 10, "MOVE_METAL_CLAW" ],
-            [ 20, "MOVE_ANCIENT_POWER" ],
-            [ 30, "MOVE_DRAGON_CLAW" ],
-            [ 40, "MOVE_ROAR_OF_TIME" ],
-            [ 50, "MOVE_HEAL_BLOCK" ],
-            [ 60, "MOVE_EARTH_POWER" ],
-            [ 70, "MOVE_SLASH" ],
-            [ 80, "MOVE_FLASH_CANNON" ],
-            [ 90, "MOVE_AURA_SPHERE" ]
+            [ 16, "MOVE_ANCIENT_POWER" ],
+            [ 23, "MOVE_DRAGON_CLAW" ],
+            [ 29, "MOVE_ROAR_OF_TIME" ],
+            [ 35, "MOVE_HEAL_BLOCK" ],
+            [ 41, "MOVE_EARTH_POWER" ],
+            [ 48, "MOVE_SLASH" ],
+            [ 54, "MOVE_FLASH_CANNON" ],
+            [ 60, "MOVE_AURA_SPHERE" ]
         ],
         "by_tm": [
             "TM02",

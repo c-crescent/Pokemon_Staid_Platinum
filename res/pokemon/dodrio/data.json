@@ -45,10 +45,11 @@
             [ 19, "MOVE_PURSUIT" ],
             [ 23, "MOVE_UPROAR" ],
             [ 28, "MOVE_ACUPRESSURE" ],
-            [ 34, "MOVE_TRI_ATTACK" ],
-            [ 41, "MOVE_AGILITY" ],
-            [ 47, "MOVE_DRILL_PECK" ],
-            [ 54, "MOVE_ENDEAVOR" ]
+            [ 32, "MOVE_DOUBLE_HIT" ],
+            [ 37, "MOVE_AGILITY" ],
+            [ 41, "MOVE_DRILL_PECK" ],
+            [ 44, "MOVE_JUMP_KICK" ],
+            [ 46, "MOVE_ENDEAVOR" ]
         ],
         "by_tm": [
             "TM06",

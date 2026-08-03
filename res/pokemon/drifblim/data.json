@@ -45,10 +45,10 @@
             [ 22, "MOVE_STOCKPILE" ],
             [ 27, "MOVE_SWALLOW" ],
             [ 27, "MOVE_SPIT_UP" ],
-            [ 32, "MOVE_OMINOUS_WIND" ],
-            [ 37, "MOVE_BATON_PASS" ],
-            [ 44, "MOVE_SHADOW_BALL" ],
-            [ 51, "MOVE_EXPLOSION" ]
+            [ 30, "MOVE_OMINOUS_WIND" ],
+            [ 33, "MOVE_BATON_PASS" ],
+            [ 38, "MOVE_SHADOW_BALL" ],
+            [ 43, "MOVE_EXPLOSION" ]
         ],
         "by_tm": [
             "TM04",
