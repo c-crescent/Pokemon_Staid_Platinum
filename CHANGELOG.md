@@ -145,6 +145,9 @@
 > Twinneedle
 > BP: 30(+5)
 
+> Needle Arm
+> BP: 90(+30)
+
 ### Abilities
 
 ## Difficulty
