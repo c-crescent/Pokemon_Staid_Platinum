@@ -37,13 +37,14 @@
             [ 1, "MOVE_TACKLE" ],
             [ 1, "MOVE_SAND_ATTACK" ],
             [ 7, "MOVE_BITE" ],
-            [ 13, "MOVE_YAWN" ],
-            [ 19, "MOVE_TAKE_DOWN" ],
-            [ 25, "MOVE_SAND_TOMB" ],
-            [ 31, "MOVE_CRUNCH" ],
-            [ 37, "MOVE_EARTHQUAKE" ],
-            [ 44, "MOVE_DOUBLE_EDGE" ],
-            [ 50, "MOVE_FISSURE" ]
+            [ 12, "MOVE_YAWN" ],
+            [ 18, "MOVE_TAKE_DOWN" ],
+            [ 23, "MOVE_SAND_TOMB" ],
+            [ 28, "MOVE_CRUNCH" ],
+            [ 34, "MOVE_EARTHQUAKE" ],
+            [ 36, "MOVE_SLACK_OFF" ],
+            [ 40, "MOVE_DOUBLE_EDGE" ],
+            [ 45, "MOVE_FISSURE" ]
         ],
         "by_tm": [
             "TM03",

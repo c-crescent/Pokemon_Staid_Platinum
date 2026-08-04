@@ -230,6 +230,10 @@
 > Swalot
 > - DEF: 113(+40)
 
+> Noctowl:
+> - SPA: 96(+20)
+> - Type: Flying / Psychic
+
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
 - [ ] Most Pokemon now complete their learnsets at level 45. Level 55 for some exceptions. Most evolution lines share their learnset with some exceptions.

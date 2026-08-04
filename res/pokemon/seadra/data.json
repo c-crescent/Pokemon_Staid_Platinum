@@ -43,12 +43,14 @@
             [ 11, "MOVE_WATER_GUN" ],
             [ 14, "MOVE_FOCUS_ENERGY" ],
             [ 18, "MOVE_BUBBLE_BEAM" ],
-            [ 23, "MOVE_AGILITY" ],
+            [ 21, "MOVE_WATER_PULSE" ],
+            [ 24, "MOVE_AGILITY" ],
             [ 26, "MOVE_TWISTER" ],
             [ 30, "MOVE_BRINE" ],
-            [ 40, "MOVE_HYDRO_PUMP" ],
-            [ 48, "MOVE_DRAGON_DANCE" ],
-            [ 57, "MOVE_DRAGON_PULSE" ]
+            [ 33, "MOVE_DRAGON_BREATH" ],
+            [ 35, "MOVE_HYDRO_PUMP" ],
+            [ 38, "MOVE_DRAGON_DANCE" ],
+            [ 42, "MOVE_DRAGON_PULSE" ]
         ],
         "by_tm": [
             "TM03",

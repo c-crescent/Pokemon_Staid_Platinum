@@ -38,10 +38,19 @@
             [ 1, "MOVE_PURSUIT" ],
             [ 1, "MOVE_HAZE" ],
             [ 1, "MOVE_WING_ATTACK" ],
-            [ 25, "MOVE_SWAGGER" ],
-            [ 35, "MOVE_NASTY_PLOT" ],
-            [ 45, "MOVE_NIGHT_SLASH" ],
-            [ 55, "MOVE_DARK_PULSE" ]
+            [ 5, "MOVE_PURSUIT" ],
+            [ 10, "MOVE_HAZE" ],
+            [ 13, "MOVE_WING_ATTACK" ],
+            [ 18, "MOVE_NIGHT_SHADE" ],
+            [ 19, "MOVE_ASSURANCE" ],
+            [ 21, "MOVE_SWAGGER" ],
+            [ 26, "MOVE_TAUNT" ],
+            [ 27, "MOVE_FAINT_ATTACK" ],
+            [ 29, "MOVE_NASTY_PLOT" ],
+            [ 34, "MOVE_MEAN_LOOK" ],
+            [ 35, "MOVE_SUCKER_PUNCH" ],
+            [ 37, "MOVE_NIGHT_SLASH" ],
+            [ 45, "MOVE_DARK_PULSE" ]
         ],
         "by_tm": [
             "TM04",
