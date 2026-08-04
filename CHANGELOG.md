@@ -196,6 +196,20 @@
 > - SPD: 77(+22)
 > - SPA: 105(+50)
 
+> Girafarig
+> - HP: 110(+40)
+
+> Glaceon
+> - SPE: 95(+30)
+> - SPD: 65(-30)
+
+> Seaking
+> - ATK: 112(+20)
+> - SPE: 88(+20)
+
+> Golduck
+> Type: Water / Psychic
+
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
 - [ ] Most Pokemon now complete their learnsets at level 45. Level 55 for some exceptions. Most evolution lines share their learnset with some exceptions.

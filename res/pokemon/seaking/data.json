@@ -1,9 +1,9 @@
 {
     "base_stats": {
         "hp": 80,
-        "attack": 92,
+        "attack": 112,
         "defense": 65,
-        "speed": 68,
+        "speed": 88,
         "special_attack": 65,
         "special_defense": 80
     },
@@ -40,15 +40,18 @@
             [ 1, "MOVE_WATER_SPORT" ],
             [ 1, "MOVE_SUPERSONIC" ],
             [ 7, "MOVE_SUPERSONIC" ],
-            [ 11, "MOVE_HORN_ATTACK" ],
-            [ 17, "MOVE_WATER_PULSE" ],
-            [ 21, "MOVE_FLAIL" ],
-            [ 27, "MOVE_AQUA_RING" ],
-            [ 31, "MOVE_FURY_ATTACK" ],
-            [ 40, "MOVE_WATERFALL" ],
-            [ 47, "MOVE_HORN_DRILL" ],
-            [ 56, "MOVE_AGILITY" ],
-            [ 63, "MOVE_MEGAHORN" ]
+            [ 10, "MOVE_HORN_ATTACK" ],
+            [ 13, "MOVE_WATER_PULSE" ],
+            [ 16, "MOVE_FLAIL" ],
+            [ 20, "MOVE_AQUA_RING" ],
+            [ 22, "MOVE_FURY_ATTACK" ],
+            [ 24, "MOVE_KNOCK_OFF" ],
+            [ 26, "MOVE_MAGNITUDE" ],
+            [ 28, "MOVE_WATERFALL" ],
+            [ 30, "MOVE_DOUBLE_EDGE" ],
+            [ 32, "MOVE_HORN_DRILL" ],
+            [ 38, "MOVE_AGILITY" ],
+            [ 42, "MOVE_MEGAHORN" ]
         ],
         "by_tm": [
             "TM03",

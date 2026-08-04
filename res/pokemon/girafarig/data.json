@@ -1,6 +1,6 @@
 {
     "base_stats": {
-        "hp": 70,
+        "hp": 110,
         "attack": 80,
         "defense": 65,
         "speed": 85,
@@ -49,6 +49,7 @@
             [ 32, "MOVE_DOUBLE_HIT" ],
             [ 37, "MOVE_PSYCHIC" ],
             [ 41, "MOVE_ZEN_HEADBUTT" ],
+            [ 41, "MOVE_NASTY_PLOT" ],
             [ 46, "MOVE_CRUNCH" ]
         ],
         "by_tm": [
