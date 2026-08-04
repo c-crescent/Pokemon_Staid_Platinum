@@ -210,6 +210,23 @@
 > Golduck
 > Type: Water / Psychic
 
+> Gorebyss
+> - HP: 70(+15)
+> - SPE: 72(+20)
+
+> Huntail
+> - HP: 60(+5)
+> - ATK: 114(+10)
+> - SPE: 72(+20)
+
+> Sceptile
+> - SPA: 110(+5)
+> - ATK: 80(-5)
+
+> Grumpig
+> - DEF: 85(+20)
+> - SPA: 95(+5)
+
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
 - [ ] Most Pokemon now complete their learnsets at level 45. Level 55 for some exceptions. Most evolution lines share their learnset with some exceptions.

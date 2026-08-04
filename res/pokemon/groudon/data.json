@@ -36,16 +36,16 @@
         "by_level": [
             [ 1, "MOVE_MUD_SHOT" ],
             [ 5, "MOVE_SCARY_FACE" ],
-            [ 15, "MOVE_ANCIENT_POWER" ],
-            [ 20, "MOVE_SLASH" ],
-            [ 30, "MOVE_BULK_UP" ],
-            [ 35, "MOVE_EARTHQUAKE" ],
-            [ 45, "MOVE_FIRE_BLAST" ],
-            [ 50, "MOVE_REST" ],
-            [ 60, "MOVE_FISSURE" ],
-            [ 65, "MOVE_SOLAR_BEAM" ],
-            [ 75, "MOVE_EARTH_POWER" ],
-            [ 80, "MOVE_ERUPTION" ]
+            [ 12, "MOVE_ANCIENT_POWER" ],
+            [ 16, "MOVE_SLASH" ],
+            [ 23, "MOVE_BULK_UP" ],
+            [ 27, "MOVE_EARTHQUAKE" ],
+            [ 34, "MOVE_FIRE_BLAST" ],
+            [ 38, "MOVE_REST" ],
+            [ 45, "MOVE_FISSURE" ],
+            [ 49, "MOVE_SOLAR_BEAM" ],
+            [ 56, "MOVE_EARTH_POWER" ],
+            [ 60, "MOVE_ERUPTION" ]
         ],
         "by_tm": [
             "TM02",

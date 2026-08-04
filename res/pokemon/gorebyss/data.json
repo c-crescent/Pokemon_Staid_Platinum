@@ -1,9 +1,9 @@
 {
     "base_stats": {
-        "hp": 55,
+        "hp": 70,
         "attack": 84,
         "defense": 105,
-        "speed": 52,
+        "speed": 72,
         "special_attack": 114,
         "special_defense": 75
     },
@@ -36,16 +36,17 @@
         "by_level": [
             [ 1, "MOVE_WHIRLPOOL" ],
             [ 6, "MOVE_CONFUSION" ],
-            [ 10, "MOVE_AGILITY" ],
-            [ 15, "MOVE_WATER_PULSE" ],
-            [ 19, "MOVE_AMNESIA" ],
-            [ 24, "MOVE_AQUA_RING" ],
-            [ 28, "MOVE_CAPTIVATE" ],
-            [ 33, "MOVE_BATON_PASS" ],
-            [ 37, "MOVE_DIVE" ],
-            [ 42, "MOVE_PSYCHIC" ],
-            [ 46, "MOVE_AQUA_TAIL" ],
-            [ 51, "MOVE_HYDRO_PUMP" ]
+            [ 9, "MOVE_AGILITY" ],
+            [ 14, "MOVE_WATER_PULSE" ],
+            [ 17, "MOVE_AMNESIA" ],
+            [ 21, "MOVE_AQUA_RING" ],
+            [ 25, "MOVE_CAPTIVATE" ],
+            [ 27, "MOVE_ICY_WIND" ],
+            [ 29, "MOVE_BATON_PASS" ],
+            [ 32, "MOVE_DIVE" ],
+            [ 36, "MOVE_PSYCHIC" ],
+            [ 40, "MOVE_AQUA_TAIL" ],
+            [ 44, "MOVE_HYDRO_PUMP" ]
         ],
         "by_tm": [
             "TM03",
