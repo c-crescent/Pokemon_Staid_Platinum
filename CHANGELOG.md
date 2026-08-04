@@ -241,6 +241,15 @@
 > - DEF: 81(+30)
 > - SPD: 81(+30)
 
+> Ledian
+> - ATK: 135(+100)
+> - Type: Bug / Fighting
+
+> Luvdisc
+> - DEF: 75(+20)
+> - SPA: 80(+40)
+> - SPE: 127(+30)
+
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
 - [ ] Most Pokemon now complete their learnsets at level 45. Level 55 for some exceptions. Most evolution lines share their learnset with some exceptions.

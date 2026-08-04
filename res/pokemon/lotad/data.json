@@ -42,8 +42,10 @@
             [ 15, "MOVE_NATURAL_GIFT" ],
             [ 19, "MOVE_MEGA_DRAIN" ],
             [ 25, "MOVE_BUBBLE_BEAM" ],
+            [ 27, "MOVE_WATER_PULSE" ],
             [ 31, "MOVE_ZEN_HEADBUTT" ],
             [ 37, "MOVE_RAIN_DANCE" ],
+            [ 40, "MOVE_HYDRO_PUMP" ],
             [ 45, "MOVE_ENERGY_BALL" ]
         ],
         "by_tm": [
