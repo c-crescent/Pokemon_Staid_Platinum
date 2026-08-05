@@ -37,12 +37,16 @@
             [ 1, "MOVE_SCRATCH" ],
             [ 1, "MOVE_YAWN" ],
             [ 7, "MOVE_ENCORE" ],
-            [ 13, "MOVE_SLACK_OFF" ],
-            [ 19, "MOVE_FAINT_ATTACK" ],
-            [ 25, "MOVE_AMNESIA" ],
-            [ 31, "MOVE_COVET" ],
-            [ 37, "MOVE_COUNTER" ],
-            [ 43, "MOVE_FLAIL" ]
+            [ 11, "MOVE_SLACK_OFF" ],
+            [ 15, "MOVE_FAINT_ATTACK" ],
+            [ 20, "MOVE_AMNESIA" ],
+            [ 24, "MOVE_COVET" ],
+            [ 27, "MOVE_SWAGGER" ],
+            [ 28, "MOVE_COUNTER" ],
+            [ 32, "MOVE_FLAIL" ],
+            [ 37, "MOVE_FLING" ],
+            [ 41, "MOVE_PUNISHMENT" ],
+            [ 45, "MOVE_HAMMER_ARM" ]
         ],
         "by_tm": [
             "TM01",
