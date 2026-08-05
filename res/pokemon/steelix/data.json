@@ -43,7 +43,6 @@
             [ 1, "MOVE_BIND" ],
             [ 6, "MOVE_SCREECH" ],
             [ 8, "MOVE_ROCK_THROW" ],
-            [ 12, "MOVE_RAGE" ],
             [ 15, "MOVE_ROCK_TOMB" ],
             [ 19, "MOVE_SANDSTORM" ],
             [ 21, "MOVE_SLAM" ],

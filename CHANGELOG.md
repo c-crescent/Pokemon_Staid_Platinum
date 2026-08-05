@@ -260,6 +260,20 @@
 > Parasect
 > - SPE: 50(+20)
 
+> Raticate
+> - ATK: 91(+10)
+
+> Sableye
+> - DEF: 115(+40)
+> - SPD: 105(+40)
+> - SPE: 20(-30)
+
+> Sandslash
+> - SPE: 80(+15)
+
+> Sandshrew
+> - SPE: 55(+15)
+
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
 - [ ] Most Pokemon now complete their learnsets at level 45. Level 55 for some exceptions. Most evolution lines share their learnset with some exceptions.

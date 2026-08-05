@@ -36,16 +36,16 @@
         "by_level": [
             [ 1, "MOVE_TWISTER" ],
             [ 5, "MOVE_SCARY_FACE" ],
-            [ 15, "MOVE_ANCIENT_POWER" ],
-            [ 20, "MOVE_DRAGON_CLAW" ],
-            [ 30, "MOVE_DRAGON_DANCE" ],
-            [ 35, "MOVE_CRUNCH" ],
-            [ 45, "MOVE_FLY" ],
-            [ 50, "MOVE_REST" ],
-            [ 60, "MOVE_EXTREME_SPEED" ],
-            [ 65, "MOVE_HYPER_BEAM" ],
-            [ 75, "MOVE_DRAGON_PULSE" ],
-            [ 80, "MOVE_OUTRAGE" ]
+            [ 12, "MOVE_ANCIENT_POWER" ],
+            [ 16, "MOVE_DRAGON_CLAW" ],
+            [ 23, "MOVE_DRAGON_DANCE" ],
+            [ 27, "MOVE_CRUNCH" ],
+            [ 34, "MOVE_FLY" ],
+            [ 38, "MOVE_REST" ],
+            [ 45, "MOVE_EXTREME_SPEED" ],
+            [ 49, "MOVE_HYPER_BEAM" ],
+            [ 56, "MOVE_DRAGON_PULSE" ],
+            [ 60, "MOVE_OUTRAGE" ]
         ],
         "by_tm": [
             "TM02",
