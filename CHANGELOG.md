@@ -250,6 +250,13 @@
 > - SPA: 80(+40)
 > - SPE: 127(+30)
 
+> Masquerain
+> - HP: 82(+12)
+> - DEF: 82(+20)
+
+> Persian
+> - ATK: 95(+25)
+
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
 - [ ] Most Pokemon now complete their learnsets at level 45. Level 55 for some exceptions. Most evolution lines share their learnset with some exceptions.

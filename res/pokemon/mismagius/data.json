@@ -39,7 +39,18 @@
             [ 1, "MOVE_GROWL" ],
             [ 1, "MOVE_PSYWAVE" ],
             [ 1, "MOVE_SPITE" ],
-            [ 1, "MOVE_ASTONISH" ]
+            [ 1, "MOVE_ASTONISH" ],
+            [ 5, "MOVE_SPITE" ],
+            [ 9, "MOVE_ASTONISH" ],
+            [ 13, "MOVE_CONFUSE_RAY" ],
+            [ 17, "MOVE_MEAN_LOOK" ],
+            [ 21, "MOVE_PSYBEAM" ],
+            [ 25, "MOVE_PAIN_SPLIT" ],
+            [ 29, "MOVE_PAYBACK" ],
+            [ 33, "MOVE_SHADOW_BALL" ],
+            [ 37, "MOVE_PERISH_SONG" ],
+            [ 41, "MOVE_GRUDGE" ],
+            [ 45, "MOVE_POWER_GEM" ]
         ],
         "by_tm": [
             "TM04",
