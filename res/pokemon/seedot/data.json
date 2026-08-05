@@ -36,11 +36,18 @@
         "by_level": [
             [ 1, "MOVE_BIDE" ],
             [ 3, "MOVE_HARDEN" ],
+            [ 3, "MOVE_HARDEN" ],
             [ 7, "MOVE_GROWTH" ],
             [ 13, "MOVE_NATURE_POWER" ],
-            [ 21, "MOVE_SYNTHESIS" ],
-            [ 31, "MOVE_SUNNY_DAY" ],
-            [ 43, "MOVE_EXPLOSION" ]
+            [ 19, "MOVE_FAKE_OUT" ],
+            [ 25, "MOVE_TORMENT" ],
+            [ 28, "MOVE_SEED_BOMB" ],
+            [ 31, "MOVE_FAINT_ATTACK" ],
+            [ 37, "MOVE_RAZOR_WIND" ],
+            [ 39, "MOVE_SWAGGER" ],
+            [ 40, "MOVE_EXTRASENSORY" ],
+            [ 42, "MOVE_HURRICANE" ],
+            [ 49, "MOVE_LEAF_STORM" ]
         ],
         "by_tm": [
             "TM06",

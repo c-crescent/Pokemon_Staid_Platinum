@@ -3,7 +3,7 @@
         "hp": 60,
         "attack": 95,
         "defense": 80,
-        "speed": 30,
+        "speed": 50,
         "special_attack": 60,
         "special_defense": 80
     },
@@ -44,10 +44,10 @@
             [ 11, "MOVE_LEECH_LIFE" ],
             [ 17, "MOVE_SPORE" ],
             [ 22, "MOVE_SLASH" ],
-            [ 30, "MOVE_GROWTH" ],
-            [ 39, "MOVE_GIGA_DRAIN" ],
-            [ 47, "MOVE_AROMATHERAPY" ],
-            [ 55, "MOVE_X_SCISSOR" ]
+            [ 27, "MOVE_GROWTH" ],
+            [ 33, "MOVE_GIGA_DRAIN" ],
+            [ 38, "MOVE_AROMATHERAPY" ],
+            [ 43, "MOVE_X_SCISSOR" ]
         ],
         "by_tm": [
             "TM06",

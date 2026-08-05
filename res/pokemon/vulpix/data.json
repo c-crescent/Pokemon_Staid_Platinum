@@ -34,7 +34,10 @@
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_EMBER" ],
+            [ 1, "MOVE_EMBER" ],            
+            [ 1, "MOVE_QUICK_ATTACK" ],
+            [ 1, "MOVE_NASTY_PLOT" ],
+            [ 1, "MOVE_SAFEGUARD" ],
             [ 4, "MOVE_TAIL_WHIP" ],
             [ 7, "MOVE_ROAR" ],
             [ 11, "MOVE_QUICK_ATTACK" ],
@@ -47,8 +50,8 @@
             [ 34, "MOVE_FIRE_SPIN" ],
             [ 37, "MOVE_CAPTIVATE" ],
             [ 41, "MOVE_GRUDGE" ],
-            [ 44, "MOVE_EXTRASENSORY" ],
-            [ 47, "MOVE_FIRE_BLAST" ]
+            [ 43, "MOVE_EXTRASENSORY" ],
+            [ 45, "MOVE_FIRE_BLAST" ]
         ],
         "by_tm": [
             "TM05",

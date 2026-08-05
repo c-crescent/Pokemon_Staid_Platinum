@@ -37,7 +37,18 @@
             [ 1, "MOVE_THUNDER_SHOCK" ],
             [ 1, "MOVE_TAIL_WHIP" ],
             [ 1, "MOVE_QUICK_ATTACK" ],
-            [ 1, "MOVE_THUNDERBOLT" ]
+            [ 1, "MOVE_THUNDERBOLT" ],
+            [ 5, "MOVE_TAIL_WHIP" ],
+            [ 10, "MOVE_THUNDER_WAVE" ],
+            [ 13, "MOVE_QUICK_ATTACK" ],
+            [ 18, "MOVE_DOUBLE_TEAM" ],
+            [ 21, "MOVE_SLAM" ],
+            [ 26, "MOVE_THUNDERBOLT" ],
+            [ 29, "MOVE_FEINT" ],
+            [ 34, "MOVE_AGILITY" ],
+            [ 37, "MOVE_DISCHARGE" ],
+            [ 42, "MOVE_LIGHT_SCREEN" ],
+            [ 45, "MOVE_THUNDER" ]
         ],
         "by_tm": [
             "TM01",
