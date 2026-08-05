@@ -39,13 +39,14 @@
             [ 1, "MOVE_QUICK_ATTACK" ],
             [ 5, "MOVE_QUICK_ATTACK" ],
             [ 9, "MOVE_WING_ATTACK" ],
-            [ 13, "MOVE_DOUBLE_TEAM" ],
-            [ 18, "MOVE_ENDEAVOR" ],
-            [ 23, "MOVE_WHIRLWIND" ],
-            [ 28, "MOVE_AERIAL_ACE" ],
-            [ 33, "MOVE_TAKE_DOWN" ],
+            [ 12, "MOVE_DOUBLE_TEAM" ],
+            [ 17, "MOVE_ENDEAVOR" ],
+            [ 21, "MOVE_WHIRLWIND" ],
+            [ 26, "MOVE_AERIAL_ACE" ],
+            [ 30, "MOVE_TAKE_DOWN" ],
+            [ 31, "MOVE_CLOSE_COMBAT" ],
             [ 38, "MOVE_AGILITY" ],
-            [ 43, "MOVE_BRAVE_BIRD" ]
+            [ 45, "MOVE_BRAVE_BIRD" ]
         ],
         "by_tm": [
             "TM06",

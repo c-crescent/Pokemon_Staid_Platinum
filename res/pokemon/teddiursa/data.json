@@ -40,14 +40,14 @@
             [ 1, "MOVE_LICK" ],
             [ 1, "MOVE_FAKE_TEARS" ],
             [ 8, "MOVE_FURY_SWIPES" ],
-            [ 15, "MOVE_FAINT_ATTACK" ],
-            [ 22, "MOVE_SWEET_SCENT" ],
-            [ 29, "MOVE_SLASH" ],
-            [ 36, "MOVE_CHARM" ],
-            [ 43, "MOVE_REST" ],
-            [ 43, "MOVE_SNORE" ],
-            [ 50, "MOVE_THRASH" ],
-            [ 57, "MOVE_FLING" ]
+            [ 12, "MOVE_FAINT_ATTACK" ],
+            [ 17, "MOVE_SWEET_SCENT" ],
+            [ 21, "MOVE_SLASH" ],
+            [ 27, "MOVE_SCARY_FACE" ],
+            [ 32, "MOVE_REST" ],
+            [ 34, "MOVE_SNORE" ],
+            [ 39, "MOVE_THRASH" ],
+            [ 45, "MOVE_HAMMER_ARM" ]
         ],
         "by_tm": [
             "TM01",

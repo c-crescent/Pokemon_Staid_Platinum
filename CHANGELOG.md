@@ -274,6 +274,14 @@
 > Sandshrew
 > - SPE: 55(+15)
 
+> Spinda
+> - HP: 66(+6)
+> - ATK: 66(+6)
+> - DEF: 66(+6)
+> - SPA: 66(+6)
+> - SPD: 66(+6)
+> - SPE: 66(+6)
+
 ### Moves
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
 - [ ] Most Pokemon now complete their learnsets at level 45. Level 55 for some exceptions. Most evolution lines share their learnset with some exceptions.

@@ -41,13 +41,12 @@
             [ 16, "MOVE_SCREECH" ],
             [ 21, "MOVE_GLARE" ],
             [ 23, "MOVE_CRUNCH" ],
-            [ 26, "MOVE_VENOSHOCK" ],
             [ 28, "MOVE_POISON_FANG" ],
             [ 30, "MOVE_SWAGGER" ],
             [ 32, "MOVE_POISON_JAB" ],
             [ 35, "MOVE_HAZE" ],
             [ 37, "MOVE_NIGHT_SLASH" ],
-            [ 42, "MOVE_SLUDGE_WAVE" ],
+            [ 42, "MOVE_SLUDGE_BOMB" ],
             [ 44, "MOVE_WRING_OUT" ]
         ],
         "by_tm": [

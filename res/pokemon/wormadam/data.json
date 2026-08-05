@@ -44,9 +44,9 @@
             [ 32, "MOVE_PSYBEAM" ],
             [ 35, "MOVE_CAPTIVATE" ],
             [ 38, "MOVE_FLAIL" ],
-            [ 41, "MOVE_ATTRACT" ],
-            [ 44, "MOVE_PSYCHIC" ],
-            [ 47, "MOVE_LEAF_STORM" ]
+            [ 40, "MOVE_ATTRACT" ],
+            [ 43, "MOVE_PSYCHIC" ],
+            [ 45, "MOVE_LEAF_STORM" ]
         ],
         "by_tm": [
             "TM06",

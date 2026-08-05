@@ -1,11 +1,11 @@
 {
     "base_stats": {
-        "hp": 60,
-        "attack": 60,
-        "defense": 60,
-        "speed": 60,
-        "special_attack": 60,
-        "special_defense": 60
+        "hp": 66,
+        "attack": 66,
+        "defense": 66,
+        "speed": 66,
+        "special_attack": 66,
+        "special_defense": 66
     },
     "types": [ "TYPE_NORMAL", "TYPE_NORMAL" ],
     "catch_rate": 255,
@@ -36,17 +36,17 @@
         "by_level": [
             [ 1, "MOVE_TACKLE" ],
             [ 5, "MOVE_UPROAR" ],
-            [ 10, "MOVE_COPYCAT" ],
-            [ 14, "MOVE_FAINT_ATTACK" ],
-            [ 19, "MOVE_PSYBEAM" ],
-            [ 23, "MOVE_HYPNOSIS" ],
-            [ 28, "MOVE_DIZZY_PUNCH" ],
-            [ 32, "MOVE_SUCKER_PUNCH" ],
-            [ 37, "MOVE_TEETER_DANCE" ],
-            [ 41, "MOVE_PSYCH_UP" ],
-            [ 46, "MOVE_DOUBLE_EDGE" ],
-            [ 50, "MOVE_FLAIL" ],
-            [ 55, "MOVE_THRASH" ]
+            [ 9, "MOVE_COPYCAT" ],
+            [ 12, "MOVE_FAINT_ATTACK" ],
+            [ 16, "MOVE_PSYBEAM" ],
+            [ 19, "MOVE_HYPNOSIS" ],
+            [ 23, "MOVE_DIZZY_PUNCH" ],
+            [ 26, "MOVE_SUCKER_PUNCH" ],
+            [ 30, "MOVE_TEETER_DANCE" ],
+            [ 33, "MOVE_PSYCH_UP" ],
+            [ 37, "MOVE_DOUBLE_EDGE" ],
+            [ 40, "MOVE_FLAIL" ],
+            [ 44, "MOVE_THRASH" ]
         ],
         "by_tm": [
             "TM01",
