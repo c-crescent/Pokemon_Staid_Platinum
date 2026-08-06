@@ -5,7 +5,7 @@
 ### Quality of Life
 
 - [x] HM moves are now deletable like normal moves.
-- [x] HM moves no longer prompt you for confirmation.
+- [ ] HM moves no longer prompt you for confirmation.
 - [x] Obstacles no longer require HMs to be known by a party member, just the HM in the player's bag.
 - [x] TMs are now infinitely reuseable. You can only get one copy of each TM.
 - [x] Natures now have stat colours in the Summary Screen.
@@ -328,7 +328,6 @@ Added various super bosses to the game, accessible after beating the Elite 4 rem
 
 ### Common
 All non-mythical & non-legendary pokemon are now avaible before the first Elite 4.
-- [x] All starter Pokemon are available before gym 2.
 - [x] Fossils are now buyable from Oreburgh Speciality Mart after acquiring the Mine Badge.
 
 ### Mythicals
