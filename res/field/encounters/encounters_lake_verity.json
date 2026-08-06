@@ -42,12 +42,12 @@
             "species": "SPECIES_BIDOOF"
         },
         {
-            "level": 4,
-            "species": "SPECIES_STARLY"
+            "level": 5,
+            "species": "SPECIES_TORCHIC"
         },
         {
-            "level": 4,
-            "species": "SPECIES_BIDOOF"
+            "level": 5,
+            "species": "SPECIES_TREECKO"
         }
     ],
     "swarms": [
@@ -145,9 +145,9 @@
             "species": "SPECIES_MAGIKARP"
         },
         {
-            "level_max": 15,
+            "level_max": 5,
             "level_min": 5,
-            "species": "SPECIES_MAGIKARP"
+            "species": "SPECIES_MUDKIP"
         }
     ],
     "good_rod_rate": 100,
