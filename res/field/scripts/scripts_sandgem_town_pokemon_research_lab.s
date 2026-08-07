@@ -250,6 +250,7 @@ SandgemTownLab_ObtainPokedex:
     Message SandgemTownLab_Text_PlayerObtainedThePokedex
     PlayFanfare SEQ_FANFA4
     WaitFanfare
+    SetNationalDexEnabled
     SetVar VAR_0x8004, ITEM_RARE_CANDY
     SetVar VAR_0x8005, 1
     Common_GiveItemQuantity
@@ -537,7 +538,6 @@ SandgemTownLab_EnableNationalDex:
     Message SandgemTownLab_Text_LetMeUpgradeYourPokedex
     CallIfSet FLAG_GAME_COMPLETED, SandgemTownLab_GameCompletedReturn
     CallIfGe VAR_FIGHT_AREA_STATE, 2, SandgemTownLab_HideFightAreaBlockade
-    SetNationalDexEnabled
     BufferPlayerName 0
     PlayFanfare SEQ_FANFA4
     Message SandgemTownLab_Text_PokedexUpgradedWithNationalMode

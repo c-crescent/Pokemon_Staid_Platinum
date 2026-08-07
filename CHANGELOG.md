@@ -326,6 +326,7 @@ Added various super bosses to the game, accessible after beating the Elite 4 rem
 - [x] All wild pokemon levels now scale with the number of badges the player has & whether the game is completed.
 - [x] All encounter slots now have a higher minimum rate. 5% for land and 10% for water / fishing.
 - [x] Nidoqueen now has an egg group.
+- [x] The player receives the National Dex when they receive the Pokedex.
 
 ### Common
 All non-mythical & non-legendary pokemon are now avaible before the first Elite 4.
