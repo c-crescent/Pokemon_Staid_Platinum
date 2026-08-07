@@ -42,12 +42,12 @@
             "species": "SPECIES_BIDOOF"
         },
         {
-            "level": 2,
-            "species": "SPECIES_STARLY"
+            "level": 5,
+            "species": "SPECIES_PICHU"
         },
         {
             "level": 5,
-            "species": "SPECIES_CHIMCHAR"
+            "species": "SPECIES_EEVEE"
         }
     ],
     "swarms": [
