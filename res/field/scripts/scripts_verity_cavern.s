@@ -39,19 +39,33 @@ VerityCavern_Mesprit:
     ClearFlag FLAG_HIDE_VERITY_CAVERN_MESPRIT
     AddObject LOCALID_MESPRIT
     WaitTime 8, VAR_RESULT
+    SetFlag FLAG_MAP_LOCAL_REMOVE_OBJECT
     SetFlag FLAG_HIDE_VERITY_CAVERN_MESPRIT
-    RemoveObject LOCALID_MESPRIT
-    ActivateRoamingPokemon ROAMING_SLOT_MESPRIT
-    Message VerityCavern_Text_MespritFlewOff
-    CloseMessage
-    GoToIfEq VAR_ROAMING_MESPRIT_STATE, ROAMER_STATE_RESET, VerityCavern_ResetRoamingMespritState
-    WaitTime 30, VAR_RESULT
-    GetPlayerDir VAR_RESULT
-    GoToIfEq VAR_RESULT, DIR_NORTH, VerityCavern_EnterProfRowanNorth
-    GoToIfEq VAR_RESULT, DIR_SOUTH, VerityCavern_EnterProfRowanSouth
-    GoToIfEq VAR_RESULT, DIR_WEST, VerityCavern_EnterProfRowanWest
-    GoToIfEq VAR_RESULT, DIR_EAST, VerityCavern_EnterProfRowanEast
+    StartLegendaryBattle SPECIES_MESPRIT, 50
+    ClearFlag FLAG_MAP_LOCAL_REMOVE_OBJECT
+    CheckWonBattle VAR_RESULT
+    GoToIfEq VAR_RESULT, FALSE, VerityCavern_LostBattle
+    CheckDidNotCapture VAR_RESULT
+    GoToIfEq VAR_RESULT, TRUE, VerityCavern_MespritDisappeared
+    SetVar VAR_ROAMING_MESPRIT_STATE, ROAMER_STATE_CAPTURED
+    ReleaseAll
     End
+
+VerityCavern_MespritDisappeared:
+    SetVar VAR_ROAMING_MESPRIT_STATE, ROAMER_STATE_DEFEATED
+    Message VerityCavern_Text_MespritDisappeared
+    WaitButton
+    CloseMessage
+    ReleaseAll
+    End
+
+VerityCavern_LostBattle:
+    ClearFlag FLAG_HIDE_VERITY_CAVERN_MESPRIT
+    BlackOutFromBattle
+    ReleaseAll
+    End
+
+    .balign 4, 0    
 
 VerityCavern_EnterProfRowanNorth:
     SetObjectEventPos LOCALID_PROF_ROWAN, 12, 22

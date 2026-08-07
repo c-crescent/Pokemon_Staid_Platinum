@@ -336,7 +336,8 @@ All non-mythical & non-legendary pokemon are now avaible before the first Elite 
 All mythicals are available after the second Elite 4 fight.
 
 ### Legendaries
-There are no longer roaming Pokemon. All legendaries are available after the first Elite 4 fight in a static location.
+There are no longer roaming Pokemon. All legendaries are available after the first Elite 4 fight in a static location. Some legendaries are available earlier.
+- [x] Mesprit is now a static encounter similar to Azelf and Uxie.
 
 ### Evolutions
 - [x] Replaced all trade, friendship, move, location, time, item evolutions with level-threshold or item-usage evolutions.
