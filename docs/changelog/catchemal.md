@@ -1,0 +1,42 @@
+### General
+
+- [x] Fishing can no longer fail.
+- [x] All wild pokemon levels now scale with the number of badges the player has & whether the game is completed.
+- [x] All encounter slots now have a higher minimum rate. 5% for land and 10% for water / fishing.
+- [x] Nidoqueen now has an egg group.
+- [x] The player receives the National Dex when they receive the Pokedex.
+
+### Common
+All non-mythical & non-legendary pokemon are now avaible before the first Elite 4.
+- [x] Fossils are now buyable from Oreburgh Speciality Mart after acquiring the Mine Badge.
+- [x] All starters Pokemon are available before the 1st gym (including Eevee & Pichus).
+
+### Mythicals
+All mythicals are available after the second Elite 4 fight.
+
+### Legendaries
+There are no longer roaming Pokemon. All legendaries are available after the first Elite 4 fight in a static location. Some legendaries are available earlier.
+- [x] Mesprit is now a static encounter similar to Azelf and Uxie.
+
+### Evolutions
+- [x] Replaced all trade, friendship, move, location, time, item evolutions with level-threshold or item-usage evolutions.
+
+- All baby Pokemon evolve at 12.
+- Aipom, Golbat evolve at 30.
+- Buneary evolves at 24.
+- Clamperl evolves to Huntail with Deep Sea Tooth and Gorebyss with Deep Sea Scale as evolution items.
+- Dusclops, Rhydon evolve at 48.
+- Eevee evolves to Leafeon, Glaceon, Espeon, and Umbreon with Leaf Stone, Never Melt Ice, Dawn Stone, and Dusk Stone as evolution items.
+- Electabuzz, Magmar, Machoke, Graveler, Lickitung, Nosepass, Tangela evolve at 36.
+- Haunter, Kadabra, Magneton, Piloswine, Seadra evolve at 42.
+- Poliwhirl, Scyther evolve with King's Rock, Metal Coat as evolution items.
+- Slowpoke evolves to Slowking with King's Rock as an evolution item.
+- Feebas evolves at 20.
+- Gligar, Sneasel, Yanma evolve at 38.
+- Onix evolves at 32.
+- Porygon evolves 20.
+- Porygon evolves at 26.
+- Pidgey evolves at 14.
+- Pidgeotto evolves at 25.
+- Ralts evolves at 16.
+

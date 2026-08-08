@@ -47,7 +47,7 @@
         },
         {
             "level": 30,
-            "species": "SPECIES_GASTRODON"
+            "species": "SPECIES_SHUCKLE"
         }
     ],
     "swarms": [
@@ -55,8 +55,8 @@
         "SPECIES_VOLTORB"
     ],
     "day": [
-        "SPECIES_CHATOT",
-        "SPECIES_CHATOT"
+        "SPECIES_SHUCKLE",
+        "SPECIES_SHUCKLE"
     ],
     "night": [
         "SPECIES_GASTRODON",

@@ -39,15 +39,15 @@
         },
         {
             "level": 20,
-            "species": "SPECIES_BIBAREL"
+            "species": "SPECIES_SEVIPER"
         },
         {
             "level": 20,
-            "species": "SPECIES_ROSELIA"
+            "species": "SPECIES_ZANGOOSE"
         },
         {
             "level": 20,
-            "species": "SPECIES_BIBAREL"
+            "species": "SPECIES_ZANGOOSE"
         }
     ],
     "swarms": [
@@ -59,8 +59,8 @@
         "SPECIES_RALTS"
     ],
     "night": [
-        "SPECIES_ZUBAT",
-        "SPECIES_RALTS"
+        "SPECIES_SEVIPER",
+        "SPECIES_SEVIPER"
     ],
     "radar": [
         "SPECIES_SMEARGLE",

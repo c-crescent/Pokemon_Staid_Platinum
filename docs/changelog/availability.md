@@ -1,0 +1,55 @@
+- [X] Murkrow, Honchkrow
+- [X] Misdreavus, Mismagius
+- [X] Trapinch, Vibrava, Flygon
+- [X] Clamperl
+- [X] Glameow, Purugly
+- [X] Stunky, Skuntank
+- [x] Caterpie, Metapod, Butterfree
+- [x] Weedle, Kakuna, Beedrill
+- [x] Ekans, Arbok
+- [X] Sandshrew, Sandslash
+- [X] Vulpix, Ninetales
+- [X] Growlithe, Arcanine
+- [X] Pineco, Forretress
+- [X] Shuckle
+- [X] Teddiursa, Ursaring
+- [X] Lotad, Lombre, Ludicolo
+- [X] Seedot, Nuzleaf, Shiftry
+- [X] Sableye
+- [X] Mawile
+- [x] Zangoose
+- [x] Seviper
+- [x] Lunatone
+- [x] Solrock
+- [x] Bulbasaur, Ivysaur, Venusaur
+- [x] Charmander, Charmeleon, Charizard
+- [x] Squirtle, Wartortle, Blastoise
+- [ ] Mewtwo
+- [x] Chikorita, Bayleef, Meganium
+- [x] Cyndaquil, Quilava, Typhlosion
+- [x] Totodile, Croconaw, Feraligatr
+- [ ] Raikou
+- [ ] Entei
+- [ ] Suicune
+- [ ] Lugia
+- [ ] Ho-Oh
+- [x] Treecko, Grovyle, Sceptile
+- [x] Torchic, Combusken, Blaziken
+- [x] Mudkip, Marshtomp, Swampert
+- [ ] Regirock
+- [ ] Regice
+- [ ] Registeel
+- [ ] Latias
+- [ ] Latios
+- [ ] Kyogre
+- [ ] Groudon
+- [ ] Rayquaza
+- [ ] Mew
+- [ ] Celebi
+- [ ] Jirachi
+- [ ] Deoxys
+- [ ] Phione
+- [ ] Manaphy
+- [ ] Darkrai
+- [ ] Shaymin
+- [ ] Arceus

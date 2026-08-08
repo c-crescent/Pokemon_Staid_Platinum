@@ -3,11 +3,11 @@
     "land_encounters": [
         {
             "level": 20,
-            "species": "SPECIES_GASTLY"
+            "species": "SPECIES_MURKROW"
         },
         {
             "level": 19,
-            "species": "SPECIES_ZUBAT"
+            "species": "SPECIES_MISDREAVUS"
         },
         {
             "level": 21,

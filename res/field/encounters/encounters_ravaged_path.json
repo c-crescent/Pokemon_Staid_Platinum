@@ -47,7 +47,7 @@
         },
         {
             "level": 6,
-            "species": "SPECIES_ZUBAT"
+            "species": "SPECIES_TRAPINCH"
         }
     ],
     "swarms": [
@@ -60,7 +60,7 @@
     ],
     "night": [
         "SPECIES_ZUBAT",
-        "SPECIES_PSYDUCK"
+        "SPECIES_TRAPINCH"
     ],
     "radar": [
         "SPECIES_ZUBAT",

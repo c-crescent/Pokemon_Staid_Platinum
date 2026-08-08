@@ -55,12 +55,12 @@
         "SPECIES_BIBAREL"
     ],
     "day": [
-        "SPECIES_STARAVIA",
-        "SPECIES_BIBAREL"
+        "SPECIES_SOLROCK",
+        "SPECIES_SOLROCK"
     ],
     "night": [
-        "SPECIES_STARAVIA",
-        "SPECIES_BIBAREL"
+        "SPECIES_LUNATONE",
+        "SPECIES_LUNATONE"
     ],
     "radar": [
         "SPECIES_WOBBUFFET",

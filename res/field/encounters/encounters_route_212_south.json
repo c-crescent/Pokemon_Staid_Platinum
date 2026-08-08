@@ -11,11 +11,11 @@
         },
         {
             "level": 25,
-            "species": "SPECIES_BUIZEL"
+            "species": "SPECIES_EKANS"
         },
         {
             "level": 24,
-            "species": "SPECIES_SHELLOS"
+            "species": "SPECIES_EKANS"
         },
         {
             "level": 26,
@@ -47,7 +47,7 @@
         },
         {
             "level": 26,
-            "species": "SPECIES_SHELLOS"
+            "species": "SPECIES_STUNKY"
         }
     ],
     "swarms": [
@@ -59,8 +59,8 @@
         "SPECIES_SHELLOS"
     ],
     "night": [
-        "SPECIES_BUIZEL",
-        "SPECIES_SHELLOS"
+        "SPECIES_EKANS",
+        "SPECIES_EKANS"
     ],
     "radar": [
         "SPECIES_GRIMER",

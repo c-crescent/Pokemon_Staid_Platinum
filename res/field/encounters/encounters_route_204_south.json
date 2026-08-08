@@ -19,7 +19,7 @@
         },
         {
             "level": 4,
-            "species": "SPECIES_BUDEW"
+            "species": "SPECIES_SEEDOT"
         },
         {
             "level": 4,
@@ -55,7 +55,7 @@
         "SPECIES_BIDOOF"
     ],
     "day": [
-        "SPECIES_WURMPLE",
+        "SPECIES_SEEDOT",
         "SPECIES_BUDEW"
     ],
     "night": [
