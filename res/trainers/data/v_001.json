@@ -1,9 +1,11 @@
 {
-    "name": "Mickey",
-    "class": "TRAINER_CLASS_CAMPER",
+    "name": "V",
+    "class": "TRAINER_CLASS_ARCADE_STAR",
     "items": [],
     "ai_flags": [
-        "AI_FLAG_BASIC"
+        "AI_FLAG_BASIC",
+        "AI_FLAG_EVAL_ATTACK",
+        "AI_FLAG_EXPERT"
     ],
     "double_battle": false,
     "party": [
