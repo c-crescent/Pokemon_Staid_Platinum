@@ -35,19 +35,19 @@
         },
         {
             "level": 30,
-            "species": "SPECIES_YANMA"
+            "species": "SPECIES_EXEGGCUTE"
         },
         {
             "level": 30,
-            "species": "SPECIES_TANGELA"
+            "species": "SPECIES_EXEGGCUTE"
         },
         {
             "level": 31,
-            "species": "SPECIES_YANMA"
+            "species": "SPECIES_KECLEON"
         },
         {
             "level": 31,
-            "species": "SPECIES_TANGELA"
+            "species": "SPECIES_KECLEON"
         }
     ],
     "swarms": [

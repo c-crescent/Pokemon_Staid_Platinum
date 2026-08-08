@@ -35,19 +35,19 @@
         },
         {
             "level": 28,
-            "species": "SPECIES_YANMA"
+            "species": "SPECIES_CARNIVINE"
         },
         {
             "level": 28,
-            "species": "SPECIES_TANGELA"
+            "species": "SPECIES_CARNIVINE"
         },
         {
             "level": 29,
-            "species": "SPECIES_YANMA"
+            "species": "SPECIES_KANGASKHAN"
         },
         {
             "level": 29,
-            "species": "SPECIES_TANGELA"
+            "species": "SPECIES_KANGASKHAN"
         }
     ],
     "swarms": [

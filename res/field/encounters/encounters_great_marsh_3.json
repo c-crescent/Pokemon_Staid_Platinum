@@ -35,19 +35,19 @@
         },
         {
             "level": 29,
-            "species": "SPECIES_YANMA"
+            "species": "SPECIES_SHROOMISH"
         },
         {
             "level": 29,
-            "species": "SPECIES_TANGELA"
+            "species": "SPECIES_SHROOMISH"
         },
         {
             "level": 30,
-            "species": "SPECIES_YANMA"
+            "species": "SPECIES_GULPIN"
         },
         {
             "level": 30,
-            "species": "SPECIES_TANGELA"
+            "species": "SPECIES_GULPIN"
         }
     ],
     "swarms": [

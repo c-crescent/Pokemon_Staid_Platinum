@@ -35,19 +35,19 @@
         },
         {
             "level": 30,
-            "species": "SPECIES_YANMA"
+            "species": "SPECIES_SKORUPI"
         },
         {
             "level": 30,
-            "species": "SPECIES_TANGELA"
+            "species": "SPECIES_SKORUPI"
         },
         {
             "level": 31,
-            "species": "SPECIES_YANMA"
+            "species": "SPECIES_PARAS"
         },
         {
             "level": 31,
-            "species": "SPECIES_TANGELA"
+            "species": "SPECIES_PARAS"
         }
     ],
     "swarms": [
