@@ -9,7 +9,43 @@
 ### Trainers
 
 ### Boss Fights
-All boss fights now feature 6 pokemon. All bosses now have a 2nd rematch team.
+All boss fights now have scaling IVs.
 
-### Super Bosses
-Added various super bosses to the game, accessible after beating the Elite 4 rematches.
+- [x] Roark
+- [ ] Roark Rematch
+- [ ] Gardenia
+- [ ] Gardenia Rematch
+- [ ] Fantina
+- [ ] Fantina Rematch
+- [ ] Maylene
+- [ ] Maylene Rematch
+- [ ] Wake
+- [ ] Wake Rematch
+- [ ] Byron
+- [ ] Byron Rematch
+- [ ] Candice
+- [ ] Candice Rematch
+- [ ] Volkner
+- [ ] Volkner Rematch
+- [ ] Aaron
+- [ ] Aaron Rematch
+- [ ] Bertha
+- [ ] Bertha Rematch
+- [ ] Flint
+- [ ] Flint Rematch
+- [ ] Lucian
+- [ ] Lucian Rematch
+- [ ] Cynthia
+- [ ] Cynthia Rematch
+
+### Rival
+- [ ] Route 201
+- [ ] Route 203
+- [ ] Route 209
+- [ ] Spear Pillar
+- [ ] Survival Area 1
+- [ ] Survival Area 2
+- [ ] Canalave City
+- [ ] Fight Area
+- [ ] Patoria City
+- [ ] Pokemon League
