@@ -10,45 +10,59 @@
     "double_battle": false,
     "party": [
         {
-            "species": "SPECIES_TURTWIG",
+            "species": "SPECIES_PARASECT",
             "form": 0,
-            "level": 20,
-            "item": "ITEM_NONE",
+            "level": 22,
+            "item": "ITEM_LIFE_ORB",
             "moves": [
-                "MOVE_GRASS_KNOT",
-                "MOVE_RAZOR_LEAF",
+                "MOVE_SPORE",
+                "MOVE_X_SCISSOR",
                 "MOVE_SUNNY_DAY",
-                "MOVE_REFLECT"
+                "MOVE_SEED_BOMB"
             ],
-            "iv_scale": 50,
+            "iv_scale": 100,
             "ball_seal": 0
         },
         {
             "species": "SPECIES_CHERRIM",
             "form": 0,
-            "level": 20,
-            "item": "ITEM_NONE",
+            "level": 22,
+            "item": "ITEM_HEAT_ROCK",
             "moves": [
-                "MOVE_GRASS_KNOT",
-                "MOVE_LEECH_SEED",
-                "MOVE_MAGICAL_LEAF",
-                "MOVE_SAFEGUARD"
+                "MOVE_SUNNY_DAY",
+                "MOVE_ENERGY_BALL",
+                "MOVE_WEATHER_BALL",
+                "MOVE_TOXIC"
             ],
-            "iv_scale": 50,
+            "iv_scale": 100,
+            "ball_seal": 0
+        },
+        {
+            "species": "SPECIES_SUNFLORA",
+            "form": 0,
+            "level": 22,
+            "item": "ITEM_LIFE_ORB",
+            "moves": [
+                "MOVE_SUNNY_DAY",
+                "MOVE_SOLAR_BEAM",
+                "MOVE_EARTH_POWER",
+                "MOVE_GRASS_KNOT"
+            ],
+            "iv_scale": 100,
             "ball_seal": 0
         },
         {
             "species": "SPECIES_ROSERADE",
             "form": 0,
             "level": 22,
-            "item": "ITEM_SITRUS_BERRY",
+            "item": "ITEM_BLACK_SLUDGE",
             "moves": [
-                "MOVE_GRASS_KNOT",
-                "MOVE_MAGICAL_LEAF",
-                "MOVE_POISON_STING",
-                "MOVE_STUN_SPORE"
+                "MOVE_SPIKES",
+                "MOVE_SLUDGE_BOMB",
+                "MOVE_ENERGY_BALL",
+                "MOVE_LEAF_STORM"
             ],
-            "iv_scale": 50,
+            "iv_scale": 100,
             "ball_seal": 0
         }
     ],
