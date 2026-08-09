@@ -22,8 +22,6 @@ SnowpointTempleB5F_Regigigas:
     PlaySE SEQ_SE_CONFIRM
     WaitSE SEQ_SE_CONFIRM
     GoToIfSet FLAG_AWAKENED_REGIGIGAS, SnowpointTempleB5F_EncounterRegigigas
-    CheckHasAllLegendaryTitansInParty VAR_RESULT
-    GoToIfEq VAR_RESULT, FALSE, SnowpointTempleB5F_GatherThreePokemon
     SetFlag FLAG_AWAKENED_REGIGIGAS
     BufferPlayerName 0
     Message SnowpointTempleB5F_Text_KingShallAppear
@@ -48,7 +46,7 @@ SnowpointTempleB5F_EncounterRegigigas:
     PlayCry SPECIES_REGIGIGAS
     WaitCry
     SetFlag FLAG_MAP_LOCAL_REMOVE_OBJECT
-    StartLegendaryBattle SPECIES_REGIGIGAS, 1
+    StartLegendaryBattle SPECIES_REGIGIGAS, 70
     ClearFlag FLAG_MAP_LOCAL_REMOVE_OBJECT
     CheckWonBattle VAR_RESULT
     GoToIfEq VAR_RESULT, FALSE, SnowpointTempleB5F_BlackOut

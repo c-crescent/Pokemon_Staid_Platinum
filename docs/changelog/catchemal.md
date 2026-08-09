@@ -18,6 +18,7 @@ All mythicals are available after the second Elite 4 fight.
 There are no longer roaming Pokemon. All legendaries are available after the first Elite 4 fight in a static location. Some legendaries are available earlier.
 - [x] Mesprit is now a static encounter similar to Azelf and Uxie.
 - [x] Cresselia is now a static encounter on Fullmoon Island.
+- [x] Regigigas no longer requires the 3 titans and spawns at lvl 70.
 
 ### Evolutions
 - [x] Replaced all trade, friendship, move, location, time, item evolutions with level-threshold or item-usage evolutions.
