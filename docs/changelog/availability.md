@@ -50,6 +50,6 @@
 - [ ] Deoxys
 - [ ] Phione
 - [ ] Manaphy
-- [ ] Darkrai
-- [ ] Shaymin
-- [ ] Arceus
+- [x] Darkrai
+- [x] Shaymin
+- [x] Arceus

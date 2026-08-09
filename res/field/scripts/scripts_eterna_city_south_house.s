@@ -75,7 +75,9 @@ EternaCitySouthHouse_ReactivateRoamingArticuno:
 EternaCitySouthHouse_CaughtAllRoamingLegendaryBirds:
     Message EternaCitySouthHouse_Text_YouveCaughtLegendaryBirds
     SetFlag FLAG_CAUGHT_ROAMING_LEGENDARY_BIRDS
-    CallCommonScript 0x26E1
+    SetVar VAR_0x8004, ITEM_OAKS_LETTER
+    SetVar VAR_0x8005, 1
+    Common_GiveItemQuantity
     End
 
 EternaCitySouthHouse_PokedexRatingsCheckOak2:
