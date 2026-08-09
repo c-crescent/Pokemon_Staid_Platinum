@@ -1,6 +1,5 @@
 ### Abilities
 
-- [x] Lightning Rod now makes you immune to electric attacks like in gen 5.
 - [ ] Sturdy now acts like a Focus Sash like in gen 5.
 
 > Storm Drain

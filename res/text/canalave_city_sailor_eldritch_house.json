@@ -103,7 +103,9 @@
       "id": "CanalaveCitySailorEldritchHouse_Text_CantThankYouEnough",
       "en_US": [
         "Thank you! We can’t thank you\n",
-        "enough, but thank you!"
+        "enough, but thank you!\r",
+        "I have something for you...\n",
+        "Please take this.\r"
       ]
     }
   ]

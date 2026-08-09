@@ -55,6 +55,9 @@ CanalaveCitySailorEldritchHouse_WeFeelFrustrated:
 
 CanalaveCitySailorEldritchHouse_CantThankYouEnough:
     NPCMessage CanalaveCitySailorEldritchHouse_Text_CantThankYouEnough
+    SetVar VAR_0x8004, ITEM_MEMBER_CARD
+    SetVar VAR_0x8005, 1
+    Common_GiveItemQuantity
     End
 
 CanalaveCitySailorEldritchHouse_LittleBoy:
