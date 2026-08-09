@@ -13,12 +13,12 @@
 - [x] Saving is now faster.
 - [x] Player can now run indoors.
 - [x] Girl is now the default gender option.
-- [ ] All move tutors now offer repeated services for free.
 - [x] Rare Candy is now a permanent key item that is given to you when you receive the Pokedex.
 - [x] Pastoria Move Reminder is now free.
 - [x] All move tutors are now free. Ultimate moves no longer require max friendship.
-- [ ] The route 228 move tutor and Survival Area move tutor has been moved to Sunyshore City and Route 213, respectively.
+- [ ] Every move tutor is now in the same house at room 212.
 - [x] Using party menu items now stay on the party menu if the used item still exists in bag.
+- [x] Eterna City now sells evolution items.
 
 ### Story
 
