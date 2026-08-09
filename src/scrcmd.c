@@ -7122,10 +7122,8 @@ static BOOL ScrCmd_CheckPartyHasFatefulEncounterRegigigas(ScriptContext *ctx)
 
         if (!Pokemon_GetValue(mon, MON_DATA_IS_EGG, NULL)) {
             if (Pokemon_GetValue(mon, MON_DATA_SPECIES, NULL) == SPECIES_REGIGIGAS) {
-                if (Pokemon_GetValue(mon, MON_DATA_FATEFUL_ENCOUNTER, NULL) == TRUE) {
-                    *destVar = TRUE;
-                    return FALSE;
-                }
+                *destVar = TRUE;
+                return FALSE;
             }
         }
     }

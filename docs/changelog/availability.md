@@ -36,9 +36,9 @@
 - [x] Treecko, Grovyle, Sceptile
 - [x] Torchic, Combusken, Blaziken
 - [x] Mudkip, Marshtomp, Swampert
-- [ ] Regirock
-- [ ] Regice
-- [ ] Registeel
+- [x] Regirock
+- [x] Regice
+- [x] Registeel
 - [ ] Latias
 - [ ] Latios
 - [ ] Kyogre
