@@ -18,11 +18,40 @@
 > This Pokemon's moves are changed to be Normal type (and have their power multiplied by 1.2). This effect comes before other effects that change a move's type.
 
 ### Pokemon
+
+> Aggron
+> - Type: Steel
+
+> Froslass
+> - SPA: 90(+10)
+
+> Illumise
+> - Type: Bug / Electric
+
 > Lopunny
 > - Type: Normal / Fighting
 > - ATK: 96(+20) 
 > - Abilities: Scrappy / Klutz
 > - Learns Mach Punch, Jump Kick, and Hi Jump Kick
+
+> Ninetales
+> - Type: Fire / Psychic
+> - SPA: 91(+10)
+
+> Seviper
+> - Type: Poison / Dark
+
+> Trapinch
+> - Type: Bug / Ground
+
+> Vibrava
+> - Type: Bug / Dragon
+
+> Flygon
+> - Type: Bug / Dragon
+
+> Volbeat
+> - Type: Bug / Electric
 
 > Banette
 > - ATK: 145(+30)
@@ -31,6 +60,7 @@
 > - HP: 75(+10)
 > - DEF: 80(+10)
 > - SPD: 90(+10)
+> - Type: Psychic / Steel
 
 > Mawile
 > - DEF: 95(+10)
@@ -74,6 +104,7 @@
 
 > FarFetch'd
 > - ATK: 125(+60)
+> - Type: Flying / Fighting
 
 > Electrode
 > - SPE: 150(+150)
@@ -192,6 +223,7 @@
 > Sceptile
 > - SPA: 110(+5)
 > - ATK: 80(-5)
+> - Type: Grass / Dragon
 
 > Grumpig
 > - DEF: 85(+20)
