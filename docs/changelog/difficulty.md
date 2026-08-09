@@ -19,7 +19,7 @@ All boss fights now have scaling IVs.
 - [ ] Fantina Rematch
 - [X] Maylene
 - [ ] Maylene Rematch
-- [ ] Wake
+- [X] Wake
 - [ ] Wake Rematch
 - [ ] Byron
 - [ ] Byron Rematch
