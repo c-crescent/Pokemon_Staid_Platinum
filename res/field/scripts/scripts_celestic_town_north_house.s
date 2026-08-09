@@ -39,9 +39,22 @@ CelesticTownNorthHouse_Elder:
     PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
-    GoToIfSet FLAG_GAME_COMPLETED, CelesticTownNorthHouse_IDidSomeResearch
+    GoToIfSet FLAG_GAME_COMPLETED, CelesticTownNorthHouse_TryGiveAzureFlute
     GoToIfSet FLAG_FIRST_ARRIVAL_CANALAVE_CITY, CelesticTownNorthHouse_CelesticOldestTown
     Message CelesticTownNorthHouse_Text_UsingSurfGoPlaces
+    GoTo CelesticTownNorthHouse_ElderEnd
+    End
+
+CelesticTownNorthHouse_TryGiveAzureFlute:
+    GoToIfUnset FLAG_CAUGHT_DIALGA, CelesticTownNorthHouse_IDidSomeResearch
+    GoToIfUnset FLAG_CAUGHT_PALKIA, CelesticTownNorthHouse_IDidSomeResearch
+    GoToIfUnset FLAG_CAUGHT_GIRATINA, CelesticTownNorthHouse_IDidSomeResearch
+    CheckItem ITEM_AZURE_FLUTE, 1, VAR_MAP_LOCAL_0x00
+    GoToIfEq VAR_MAP_LOCAL_0x00, TRUE, CelesticTownNorthHouse_IDidSomeResearch
+    Message CelesticTownNorthHouse_Text_AzureFlute
+    SetVar VAR_0x8004, ITEM_AZURE_FLUTE
+    SetVar VAR_0x8005, 1
+    Common_GiveItemQuantity
     GoTo CelesticTownNorthHouse_ElderEnd
     End
 

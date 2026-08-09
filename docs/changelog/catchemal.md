@@ -14,6 +14,7 @@ All non-mythical & non-legendary pokemon are now avaible before the first Elite 
 ### Mythicals
 All mythicals are available after the second Elite 4 fight.
 - [x] The Member Card for Darkrai is now available after curing Sailor Eldritch's son.
+- [x] The Azure Flute for Arceus is now available after catching all 3 of the creation trio.
 
 ### Legendaries
 There are no longer roaming Pokemon. All legendaries are available after the first Elite 4 fight in a static location. Some legendaries are available earlier.
