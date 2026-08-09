@@ -1,6 +1,7 @@
 ### Abilities
 
 - [ ] Sturdy now acts like a Focus Sash like in gen 5.
+- [X] A large amount of Pokemon now has their Hidden Ability from Gen V.
 
 > Storm Drain
 > If this Pokemon is not the target of a single-target Water-type move used by another Pokemon, this Pokemon redirects that move to itself. (+This Pokemon is immune to Water-type moves and raises its Special Attack by 1 stage when hit by a Water-type move.)
