@@ -23,7 +23,7 @@
         },
         {
             "level": 19,
-            "species": "SPECIES_PONYTA"
+            "species": "SPECIES_ODDISH"
         },
         {
             "level": 19,
@@ -55,8 +55,8 @@
         "SPECIES_GEODUDE"
     ],
     "day": [
-        "SPECIES_PONYTA",
-        "SPECIES_PONYTA"
+        "SPECIES_ODDISH",
+        "SPECIES_ODDISH"
     ],
     "night": [
         "SPECIES_NOCTOWL",

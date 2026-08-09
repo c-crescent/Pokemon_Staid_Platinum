@@ -39,15 +39,15 @@
         },
         {
             "level": 26,
-            "species": "SPECIES_SHELLOS"
+            "species": "SPECIES_TAILLOW"
         },
         {
             "level": 25,
-            "species": "SPECIES_BUIZEL"
+            "species": "SPECIES_SWELLOW"
         },
         {
             "level": 26,
-            "species": "SPECIES_SHELLOS"
+            "species": "SPECIES_SWELLOW"
         }
     ],
     "swarms": [
@@ -59,8 +59,8 @@
         "SPECIES_CHATOT"
     ],
     "night": [
-        "SPECIES_SHELLOS",
-        "SPECIES_BUIZEL"
+        "SPECIES_HERACROSS",
+        "SPECIES_HERACROSS"
     ],
     "radar": [
         "SPECIES_SWELLOW",

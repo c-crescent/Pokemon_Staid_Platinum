@@ -39,7 +39,7 @@
         },
         {
             "level": 10,
-            "species": "SPECIES_BIDOOF"
+            "species": "SPECIES_COMBEE"
         },
         {
             "level": 11,
@@ -55,8 +55,8 @@
         "SPECIES_BIDOOF"
     ],
     "day": [
-        "SPECIES_WURMPLE",
-        "SPECIES_BUDEW"
+        "SPECIES_CHERUBI",
+        "SPECIES_CHERUBI"
     ],
     "night": [
         "SPECIES_KRICKETOT",

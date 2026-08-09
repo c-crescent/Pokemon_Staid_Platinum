@@ -3,15 +3,15 @@
     "land_encounters": [
         {
             "level": 21,
-            "species": "SPECIES_PICHU"
+            "species": "SPECIES_BONSLY"
         },
         {
             "level": 22,
-            "species": "SPECIES_ROSELIA"
+            "species": "SPECIES_MEOWTH"
         },
         {
             "level": 22,
-            "species": "SPECIES_STARAVIA"
+            "species": "SPECIES_MUNCHLAX"
         },
         {
             "level": 23,
@@ -19,31 +19,31 @@
         },
         {
             "level": 23,
-            "species": "SPECIES_ROSELIA"
+            "species": "SPECIES_CASTFORM"
         },
         {
             "level": 24,
-            "species": "SPECIES_STARAVIA"
+            "species": "SPECIES_AZURILL"
         },
         {
             "level": 22,
-            "species": "SPECIES_PIKACHU"
+            "species": "SPECIES_MIME_JR"
         },
         {
             "level": 22,
-            "species": "SPECIES_PICHU"
+            "species": "SPECIES_HAPPINY"
         },
         {
             "level": 24,
-            "species": "SPECIES_PIKACHU"
+            "species": "SPECIES_BURMY"
         },
         {
             "level": 22,
-            "species": "SPECIES_PICHU"
+            "species": "SPECIES_DITTO"
         },
         {
             "level": 24,
-            "species": "SPECIES_PIKACHU"
+            "species": "SPECIES_WYNAUT"
         },
         {
             "level": 22,
@@ -55,12 +55,12 @@
         "SPECIES_ROSELIA"
     ],
     "day": [
-        "SPECIES_STARAVIA",
-        "SPECIES_STARAVIA"
+        "SPECIES_PLUSLE",
+        "SPECIES_PLUSLE"
     ],
     "night": [
-        "SPECIES_KRICKETUNE",
-        "SPECIES_KRICKETUNE"
+        "SPECIES_MINUN",
+        "SPECIES_MINUN"
     ],
     "radar": [
         "SPECIES_ROSELIA",

@@ -3,7 +3,7 @@
     "land_encounters": [
         {
             "level": 39,
-            "species": "SPECIES_ELECTABUZZ"
+            "species": "SPECIES_ELEKID"
         },
         {
             "level": 40,
@@ -15,7 +15,7 @@
         },
         {
             "level": 38,
-            "species": "SPECIES_CHATOT"
+            "species": "SPECIES_SKITTY"
         },
         {
             "level": 38,
@@ -31,7 +31,7 @@
         },
         {
             "level": 40,
-            "species": "SPECIES_LUXIO"
+            "species": "SPECIES_SKITTY"
         },
         {
             "level": 40,

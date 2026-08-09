@@ -3,7 +3,7 @@
     "land_encounters": [
         {
             "level": 28,
-            "species": "SPECIES_MAGMAR"
+            "species": "SPECIES_MAGBY"
         },
         {
             "level": 29,
@@ -35,7 +35,7 @@
         },
         {
             "level": 31,
-            "species": "SPECIES_FLOATZEL"
+            "species": "SPECIES_SLUGMA"
         },
         {
             "level": 31,
@@ -43,11 +43,11 @@
         },
         {
             "level": 31,
-            "species": "SPECIES_FLOATZEL"
+            "species": "SPECIES_SLUGMA"
         },
         {
             "level": 31,
-            "species": "SPECIES_GASTRODON"
+            "species": "SPECIES_ARON"
         }
     ],
     "swarms": [
@@ -55,7 +55,7 @@
         "SPECIES_MAGNEMITE"
     ],
     "day": [
-        "SPECIES_MAGMAR",
+        "SPECIES_MAGBY",
         "SPECIES_FLOATZEL"
     ],
     "night": [

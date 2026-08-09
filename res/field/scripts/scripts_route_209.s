@@ -40,7 +40,7 @@ Route209_PokefanM:
 Route209_HallowedTower:
     PlaySE SEQ_SE_CONFIRM
     LockAll
-    GoToIfEq VAR_HALLOWED_TOWER_STATE, 1, Route209_CheckSpiritombCounter
+    GoToIfEq VAR_HALLOWED_TOWER_STATE, 1, Route209_EncounterSpiritomb
     CheckItem ITEM_ODD_KEYSTONE, 1, VAR_RESULT
     GoToIfEq VAR_RESULT, FALSE, Route209_ThereIsABrokenTower
     Message Route209_Text_UseTheOddKeystone

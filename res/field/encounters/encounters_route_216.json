@@ -11,7 +11,7 @@
         },
         {
             "level": 32,
-            "species": "SPECIES_MEDITITE"
+            "species": "SPECIES_SMOOCHUM"
         },
         {
             "level": 33,
@@ -19,7 +19,7 @@
         },
         {
             "level": 33,
-            "species": "SPECIES_MEDITITE"
+            "species": "SPECIES_SMOOCHUM"
         },
         {
             "level": 34,
@@ -55,7 +55,7 @@
         "SPECIES_SNEASEL"
     ],
     "day": [
-        "SPECIES_MEDITITE",
+        "SPECIES_SMOOCHUM",
         "SPECIES_SNOVER"
     ],
     "night": [

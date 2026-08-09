@@ -43,11 +43,11 @@
         },
         {
             "level": 30,
-            "species": "SPECIES_MACHOKE"
+            "species": "SPECIES_ILLUMISE"
         },
         {
             "level": 29,
-            "species": "SPECIES_BRONZOR"
+            "species": "SPECIES_VOLBEAT"
         }
     ],
     "swarms": [
@@ -55,12 +55,12 @@
         "SPECIES_GRAVELER"
     ],
     "day": [
-        "SPECIES_MEDITITE",
-        "SPECIES_MEDITITE"
+        "SPECIES_ILLUMISE",
+        "SPECIES_VOLBEAT"
     ],
     "night": [
-        "SPECIES_ZUBAT",
-        "SPECIES_NOCTOWL"
+        "SPECIES_ILLUMISE",
+        "SPECIES_VOLBEAT"
     ],
     "radar": [
         "SPECIES_CHINGLING",

@@ -35,11 +35,11 @@
         },
         {
             "level": 4,
-            "species": "SPECIES_STARLY"
+            "species": "SPECIES_SPEAROW"
         },
         {
             "level": 4,
-            "species": "SPECIES_BIDOOF"
+            "species": "SPECIES_SPEAROW"
         },
         {
             "level": 5,
@@ -55,8 +55,8 @@
         "SPECIES_BIDOOF"
     ],
     "day": [
-        "SPECIES_STARLY",
-        "SPECIES_BIDOOF"
+        "SPECIES_SPEAROW",
+        "SPECIES_SPEAROW"
     ],
     "night": [
         "SPECIES_STARLY",
