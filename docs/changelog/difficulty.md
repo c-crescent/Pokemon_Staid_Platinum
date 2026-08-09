@@ -23,7 +23,7 @@ All boss fights now have scaling IVs.
 - [ ] Wake Rematch
 - [X] Byron
 - [ ] Byron Rematch
-- [ ] Candice
+- [x] Candice
 - [ ] Candice Rematch
 - [ ] Volkner
 - [ ] Volkner Rematch
