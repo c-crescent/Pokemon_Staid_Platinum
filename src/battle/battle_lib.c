@@ -6720,12 +6720,6 @@ int BattleSystem_CalcMoveDamage(BattleSystem *battleSys,
     if (attackerParams.ability == ABILITY_HUGE_POWER || attackerParams.ability == ABILITY_PURE_POWER) {
         attackStat = attackStat * 2;
     }
-    if (attackerParams.ability == ABILITY_SLOW_START
-        && BattleContext_Get(battleSys, battleCtx, BATTLECTX_TOTAL_TURNS, NULL)
-                - BattleMon_Get(battleCtx, attacker, BATTLEMON_SLOW_START_TURN_NUMBER, NULL)
-            < 5) {
-        attackStat /= 2;
-    }
 
     for (i = 0; i < NELEMS(sTypeBoostingItems); i++) {
         if (attackerParams.heldItemEffect == sTypeBoostingItems[i].itemEffect

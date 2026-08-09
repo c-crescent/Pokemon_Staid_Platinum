@@ -1,8 +1,16 @@
 ### Abilities
 
-- [x] Storm Drain now makes you immune to water attacks like in gen 5.
 - [x] Lightning Rod now makes you immune to electric attacks like in gen 5.
 - [ ] Sturdy now acts like a Focus Sash like in gen 5.
+
+> Storm Drain
+> If this Pokemon is not the target of a single-target Water-type move used by another Pokemon, this Pokemon redirects that move to itself. (+This Pokemon is immune to Water-type moves and raises its Special Attack by 1 stage when hit by a Water-type move.)
+
+> Lightning Rod
+> If this Pokemon is not the target of a single-target Electric-type move used by another Pokemon, this Pokemon redirects that move to itself. (+This Pokemon is immune to Electric-type moves and raises its Special Attack by 1 stage when hit by an Electric-type move.)
+
+> Slow Start
+> On switch-in, this Pokemon's (-Attack and) Speed is halved for 5 turns.
 
 > Flower Gifts
 > If Sunny Day is active, the Attack and Special Defense of this Pokemon and its allies are multiplied by 2(+0.5).
