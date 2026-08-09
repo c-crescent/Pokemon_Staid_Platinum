@@ -4,9 +4,20 @@
     {
       "id": "FullmoonIslandForest_Text_SomethingSparkling",
       "en_US": [
-        "The Pokémon flew off somewhere...\r",
         "There is something sparkling where\n",
         "the Pokémon once was..."
+      ]
+    },
+    {
+      "id": "FullmoonIslandForest_Text_CresseliaCry",
+      "en_US": [
+        "Kyouuuun\r"
+      ]
+    },    
+    {
+      "id": "FullmoonIslandForest_Text_CresseliaDisappeared",
+      "en_US": [
+        "Cresselia flew away...\r"
       ]
     }
   ]

@@ -14,42 +14,43 @@ FullmoonIslandForest_Cresselia:
     PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
-    DrawPokemonPreview SPECIES_CRESSELIA, GENDER_FEMALE
-    WaitABPress
-    RemovePokemonPreview
     PlayCry SPECIES_CRESSELIA
-    GetPlayerDir VAR_RESULT
-    CallIfEq VAR_RESULT, DIR_NORTH, FullmoonIslandForest_CresseliaMoveAwayForLunarWing
-    ReleaseObject LOCALID_CRESSELIA
-    FlickerObject LOCALID_CRESSELIA, 6, 8
-    LockObject LOCALID_CRESSELIA
+    Message FullmoonIslandForest_Text_CresseliaCry
+    CloseMessage
     SetFlag FLAG_HIDE_FULLMOON_ISLAND_FOREST_CRESSELIA
     RemoveObject LOCALID_CRESSELIA
-    ActivateRoamingPokemon ROAMING_SLOT_CRESSELIA
-    GoToIfEq VAR_ROAMING_CRESSELIA_STATE, ROAMER_STATE_RESET, FullmoonIslandForest_ResetCresseliaRoamingState
+    StartLegendaryBattle SPECIES_CRESSELIA, 60
+    CheckWonBattle VAR_RESULT
+    GoToIfEq VAR_RESULT, FALSE, FullmoonIslandForest_LostBattle
     ClearFlag FLAG_OBTAINED_FULLMOON_ISLAND_FOREST_LUNAR_WING
-    AddObject LOCALID_ITEM_LUNAR_WING
     SetFlag FLAG_MET_CRESSELIA
-    Message FullmoonIslandForest_Text_SomethingSparkling
-    WaitButton
-    CloseMessage
+    CheckDidNotCapture VAR_RESULT
+    GoToIfEq VAR_RESULT, TRUE, FullmoonIslandForest_CresseliaDisappeared
+    SetVar VAR_ROAMING_CRESSELIA_STATE, ROAMER_STATE_CAPTURED
+    CallIfUnset FLAG_WOKE_UP_CANALAVE_CITY_SAILOR_ELDRITCH_HOUSE_LITTLE_BOY,FullmoonIslandForest_CresseliaMoveAwayForLunarWing
     ReleaseAll
     End
 
-FullmoonIslandForest_ResetCresseliaRoamingState:
-    SetVar VAR_ROAMING_CRESSELIA_STATE, ROAMER_STATE_ROAMING
+FullmoonIslandForest_CresseliaDisappeared:
+    SetVar VAR_ROAMING_CRESSELIA_STATE, ROAMER_STATE_DEFEATED
+    Message FullmoonIslandForest_Text_CresseliaDisappeared
+    WaitButton
+    CloseMessage
+    CallIfUnset FLAG_WOKE_UP_CANALAVE_CITY_SAILOR_ELDRITCH_HOUSE_LITTLE_BOY,FullmoonIslandForest_CresseliaMoveAwayForLunarWing
     ReleaseAll
     End
+
+FullmoonIslandForest_LostBattle:
+    BlackOutFromBattle
+    ReleaseAll
+    End
+
+    .balign 4, 0
 
 FullmoonIslandForest_CresseliaMoveAwayForLunarWing:
     SetObjectEventPos LOCALID_ITEM_LUNAR_WING, 16, 14
-    ApplyMovement LOCALID_CRESSELIA, FullmoonIslandForest_Movement_CresseliaMoveBackNorth
-    WaitMovement
+    AddObject LOCALID_ITEM_LUNAR_WING    
+    Message FullmoonIslandForest_Text_SomethingSparkling
+    WaitButton
+    CloseMessage
     Return
-
-    .balign 4, 0
-FullmoonIslandForest_Movement_CresseliaMoveBackNorth:
-    LockDir
-    WalkNormalNorth
-    UnlockDir
-    EndMovement
