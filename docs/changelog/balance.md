@@ -91,7 +91,8 @@
 
 > Pidgeot
 > - SPA: 105(+35)
-> - SPE: 112(+20)
+> - SPE: 112(+10)
+> - Abilities: Keen Eye / No Guard
 
 > Pidgeotto
 > - SPA: 60(+10)
