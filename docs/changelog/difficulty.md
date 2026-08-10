@@ -17,7 +17,7 @@ All boss fights now have scaling IVs.
 - [X] Gardenia
 - [x] Gardenia Rematch
 - [X] Fantina
-- [ ] Fantina Rematch
+- [x] Fantina Rematch
 - [X] Maylene
 - [ ] Maylene Rematch
 - [X] Wake
