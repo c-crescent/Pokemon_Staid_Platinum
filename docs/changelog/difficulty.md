@@ -12,9 +12,9 @@
 All boss fights now have scaling IVs.
 
 - [x] Roark
-- [ ] Roark Rematch
+- [x] Roark Rematch
 - [X] Gardenia
-- [ ] Gardenia Rematch
+- [x] Gardenia Rematch
 - [X] Fantina
 - [ ] Fantina Rematch
 - [X] Maylene
