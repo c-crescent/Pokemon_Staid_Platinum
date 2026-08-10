@@ -19,6 +19,7 @@
 - [ ] Every move tutor is now in the same house at room 212.
 - [x] Using party menu items now stay on the party menu if the used item still exists in bag.
 - [x] Eterna City now sells evolution items.
+- [x] Jubilife Mart now sells Master Balls.
 
 ### Story
 
