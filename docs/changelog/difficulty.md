@@ -33,7 +33,7 @@ All boss fights now have scaling IVs.
 - [ ] Bertha Rematch
 - [X] Flint
 - [ ] Flint Rematch
-- [ ] Lucian
+- [x] Lucian
 - [ ] Lucian Rematch
 - [ ] Cynthia
 - [ ] Cynthia Rematch
