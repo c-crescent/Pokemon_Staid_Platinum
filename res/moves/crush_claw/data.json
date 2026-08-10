@@ -9,9 +9,9 @@
     ],
     "class": "CLASS_PHYSICAL",
     "type": "TYPE_NORMAL",
-    "power": 75,
+    "power": 80,
     "accuracy": 95,
-    "pp": 10,
+    "pp": 15,
     "effect": {
         "type": "BATTLE_EFFECT_LOWER_DEFENSE_HIT",
         "chance": 50

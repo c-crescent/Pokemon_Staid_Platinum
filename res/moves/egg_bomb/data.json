@@ -6,10 +6,10 @@
         "the foe to inflict\n",
         "damage.\n"
     ],
-    "class": "CLASS_PHYSICAL",
+    "class": "CLASS_SPECIAL",
     "type": "TYPE_NORMAL",
     "power": 100,
-    "accuracy": 75,
+    "accuracy": 90,
     "pp": 10,
     "effect": {
         "type": "BATTLE_EFFECT_HIT",

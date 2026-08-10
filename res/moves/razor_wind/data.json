@@ -8,8 +8,8 @@
         "critical-hit ratio."
     ],
     "class": "CLASS_SPECIAL",
-    "type": "TYPE_NORMAL",
-    "power": 80,
+    "type": "TYPE_FLYING",
+    "power": 130,
     "accuracy": 100,
     "pp": 10,
     "effect": {

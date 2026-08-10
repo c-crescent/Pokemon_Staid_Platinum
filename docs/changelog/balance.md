@@ -299,3 +299,108 @@
 
 > Triple Kick
 > BP: 20(+10)
+
+> Sky Attack
+> BP: 150(+10)
+
+> Barrage
+> BP: 20(+5)
+> Acc: 100(+15)
+
+> Bind
+> BP: 35(+20)
+> Acc: 100(+15)
+
+> Comet Punch
+> BP: 25(+7)
+> Acc: 100(+15)
+
+> Constrct
+> BP: 40(+30)
+> Chance: 30(+20)%
+
+> Crush Claw
+> BP: 80(+5)
+> PP: 15(+5)
+
+> Double Slap
+> BP: 30(+15)
+> Acc: 100(+15)
+> Now hits twice
+
+> Kinesis
+> Acc: 100(+20)
+
+> Fury Attack:
+> BP: 20(+5)
+> Acc: 100(+15)
+
+> Hyper Voice
+> BP: 100(+10)
+
+> Snore
+> BP: 70
+
+> Sonicboom
+> Acc: 100
+
+> Takedown
+> BP: 95(+5)
+> Acc: 100(+15)
+
+> Wrap
+> BP: 30(+15)
+> Acc: 100(+10)
+
+> Blaze Kick
+> Acc: 100(+10)
+
+> Fire Spin
+> Acc: 100(+15)
+
+> Will-O-Wisp
+> Acc: 100(+15)
+
+> Bounce
+> Acc: 95(+10)
+
+> Razor Wind
+> BP: 130(+50)
+> Type: Flying
+
+> Cut
+> Type: Bug
+
+> Leech Life
+> BP: 80(+60)
+
+> Pin Missile
+> Acc: 100(+5)
+
+> Absorb
+> BP: 30(+10)
+
+> Egg Bomb
+> Class: Special
+> Acc: 90(+15)
+
+> Astonish
+> BP: 45(+15)
+
+> Lick
+> BP: 40(+10)
+
+> Bone Club
+> Acc: 100(+15)
+
+> Bone Rush
+> Acc: 100(+10)
+
+> Bonemerang
+> Acc: 100(+10)
+
+> Mud Slap
+> BP: 35(+15)
+
+> Mud Bomb
+> Acc: 95(+10)
