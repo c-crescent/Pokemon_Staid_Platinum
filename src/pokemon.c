@@ -3534,12 +3534,15 @@ u8 Pokemon_GetLevelCap(const TrainerInfo *info, const VarsFlags *varsFlags)
     u8 clearedOnce = FALSE;
     u8 clearedTwice = FALSE;
 
-    if (varsFlags) {
-        if (VarsFlags_CheckFlag(varsFlags, FLAG_DEFEATED_TRAINER_CHAMPION_CYNTHIA)) {
-            return 80;
-        }
+    if (varsFlags) {        
         if (VarsFlags_CheckFlag(varsFlags, FLAG_DEFEATED_TRAINER_CHAMPION_CYNTHIA_REMATCH)) {
             return MAX_POKEMON_LEVEL;
+        }
+        if (VarsFlags_CheckFlag(varsFlags, FLAG_DAILY_DEFEATED_BATTLEGROUND_ALL_GYM_LEADERS)) {
+            return 80;
+        }
+        if (VarsFlags_CheckFlag(varsFlags, FLAG_DEFEATED_TRAINER_CHAMPION_CYNTHIA)) {
+            return 70;
         }
     }
 

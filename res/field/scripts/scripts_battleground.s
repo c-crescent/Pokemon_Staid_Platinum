@@ -1155,6 +1155,7 @@ Battleground_SetFlagDefeatedTrainer:
     CallIfEq VAR_MAP_LOCAL_0x01, OBJ_EVENT_GFX_MARLEY, Battleground_SetFlagDefeatedMarley
     CallIfEq VAR_MAP_LOCAL_0x01, OBJ_EVENT_GFX_BUCK, Battleground_SetFlagDefeatedBuck
     CallIfEq VAR_MAP_LOCAL_0x01, OBJ_EVENT_GFX_MIRA, Battleground_SetFlagDefeatedMira
+    Call Battleground_CheckSetAllGymLeadersDefeated
     Return
 
 Battleground_SetFlagDefeatedRoark:
@@ -1207,6 +1208,19 @@ Battleground_SetFlagDefeatedBuck:
 
 Battleground_SetFlagDefeatedMira:
     SetFlag FLAG_DAILY_DEFEATED_BATTLEGROUND_MIRA
+    Return
+
+Battleground_CheckSetAllGymLeadersDefeated:
+    GoToIfUnset FLAG_DAILY_DEFEATED_BATTLEGROUND_ROARK, Battleground_CheckSetAllGymLeadersDefeated_End
+    GoToIfUnset FLAG_DAILY_DEFEATED_BATTLEGROUND_GARDENIA, Battleground_CheckSetAllGymLeadersDefeated_End
+    GoToIfUnset FLAG_DAILY_DEFEATED_BATTLEGROUND_CRASHER_WAKE, Battleground_CheckSetAllGymLeadersDefeated_End
+    GoToIfUnset FLAG_DAILY_DEFEATED_BATTLEGROUND_MAYLENE, Battleground_CheckSetAllGymLeadersDefeated_End
+    GoToIfUnset FLAG_DAILY_DEFEATED_BATTLEGROUND_FANTINA, Battleground_CheckSetAllGymLeadersDefeated_End
+    GoToIfUnset FLAG_DAILY_DEFEATED_BATTLEGROUND_CANDICE, Battleground_CheckSetAllGymLeadersDefeated_End
+    GoToIfUnset FLAG_DAILY_DEFEATED_BATTLEGROUND_BYRON, Battleground_CheckSetAllGymLeadersDefeated_End
+    GoToIfUnset FLAG_DAILY_DEFEATED_BATTLEGROUND_VOLKNER, Battleground_CheckSetAllGymLeadersDefeated_End
+    SetFlag FLAG_DAILY_DEFEATED_BATTLEGROUND_ALL_GYM_LEADERS
+Battleground_CheckSetAllGymLeadersDefeated_End:
     Return
 
 Battleground_CheckDefeatedTrainer:
