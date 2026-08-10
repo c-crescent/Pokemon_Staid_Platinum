@@ -1,0 +1,30 @@
+0: Anorith, Ariados, Aron, Baltoy, Bayleef, Beldum, Bellsprout, Blastoise, Blaziken, Bulbasaur, Cacnea, Cacturne, Castform, Caterpie, Charmander, Charmeleon, Chikorita, Chinchou, Clamperl, Cloyster, Combusken, Cradily, Crawdaunt, Croconaw, Cubone, Cyndaquil, Diglett, Ditto, Doduo, Dunsparce, Ekans, Electrike, Exploud, Feraligatr, Furret, Gloom, Gorebyss, Grimer, Grovyle, Growlithe, Gulpin, Horsea, Huntail, Igglybuff, Illumise, Ivysaur, Jigglypuff, Jynx, Kabuto, Kabutops, Kakuna, Koffing, Ledian, Ledyba, Lileep, Lotad, Magcargo, Mareep, Marshtomp, Masquerain, Meganium, Metapod, Mudkip, Natu, Nidoking, Nidoqueen, Nidoran♀, Nidoran♂, Nidorina, Nidorino, Nincada, Numel, Oddish, Omanyte, Omastar, Paras, Phanpy, Pidgeotto, Pidgey, Pineco, Poliwag, Poochyena, Quilava, Rotom, Sableye, Sandshrew, Sceptile, Seedot, Seel, Sentret, Shroomish, Slakoth, Slugma, Smoochum, Snubbull, Spearow, Spinarak, Spoink, Squirtle, Stantler, Staryu, Sunkern, Swampert, Teddiursa, Torchic, Totodile, Treecko, Typhlosion, Unown, Venomoth, Venonat, Venusaur, Victreebel, Vigoroth, Vileplume, Volbeat, Voltorb, Vulpix, Wartortle, Weedle, Weepinbell, Weezing, Whismur, Wynaut, Zigzagoon
+1: Aggron, Armaldo, Azurill, Bagon, Beedrill, Butterfree, Camerupt, Cascoon, Chansey, Charizard, Corphish, Corsola, Delcatty, Dewgong, Dodrio, Dragonite, Drowzee, Duskull, Elekid, Exeggcute, Exeggutor, Flaaffy, Forretress, Granbull, Grumpig, Happiny, Hippopotas, Hitmonchan, Hitmonlee, Hoppip, Hypno, Kangaskhan, Kecleon, Kingdra, Kingler, Krabby, Lairon, Larvitar, Lombre, Loudred, Lunatone, Magby, Makuhita, Manectric, Mankey, Mawile, Meowth, Metang, Miltank, Minun, Muk, Nuzleaf, Persian, Pinsir, Plusle, Politoed, Poliwhirl, Poliwrath, Porygon, Primeape, Pupitar, Qwilfish, Raticate, Relicanth, Seadra, Sealeo, Seviper, Shedinja, Shellder, Shiftry, Shuckle, Shuppet, Silcoon, Skiploom, Skitty, Slaking, Slowking, Slowpoke, Smeargle, Solrock, Spheal, Spinda, Sunflora, Surskit, Swalot, Swellow, Taillow, Togepi, Trapinch, Tyranitar, Vaporeon, Wailord, Walrein, Wigglytuff, Wobbuffet, Wooper, Yanma
+2: Aerodactyl, Arbok, Arcanine, Banette, Bellossom, Carvanha, Chingling, Combee, Delibird, Donphan, Dragonair, Dratini, Dugtrio, Electrode, Fearow, Feebas, Flygon, Glaceon, Hariyama, Hitmontop, Honchkrow, Jumpluff, Lapras, Lickilicky, Linoone, Ludicolo, Luvdisc, Marowak, Mightyena, Milotic, Ninjask, Pidgeot, Porygon-Z, Porygon2, Rhydon, Rhyhorn, Rhyperior, Riolu, Salamence, Shelgon, Slowbro, Spiritomb, Starmie, Swablu, Tangrowth, Togetic, Torkoal, Ursaring, Vespiquen, Wailmer, Yanmega, Zangoose
+3: Abra, Ampharos, Bastiodon, Beautifly, Breloom, Burmy, Cherubi, Clefable, Cleffa, Cranidos, Drapion, Farfetch'd, Flareon, Froslass, Garchomp, Girafarig, Gligar, Golem, Jolteon, Magmar, Metagross, Mismagius, Mothim, Ninetales, Nosepass, Parasect, Piloswine, Probopass, Ralts, Sandslash, Scyther, Sharpedo, Shieldon, Skarmory, Skuntank, Swinub, Tangela, Tauros, Tentacool, Tyrogue, Vibrava, Whiscash, Wormadam, Wurmple
+4: Absol, Blissey, Chimecho, Claydol, Dusclops, Dustox, Eevee, Electabuzz, Electivire, Gible, Glalie, Gliscor, Houndoom, Lanturn, Leafeon, Lickitung, Lumineon, Magmortar, Mamoswine, Mantyke, Rampardos, Scizor, Togekiss, Tropius, Turtwig, Umbreon, Xatu
+5: Abomasnow, Barboach, Chimchar, Dusknoir, Espeon, Gallade, Gengar, Graveler, Grotle, Hippowdon, Kricketot, Mantine, Monferno, Octillery, Purugly, Quagsire, Skorupi, Tentacruel, Toxicroak
+6: Aipom, Altaria, Bidoof, Bronzong, Buneary, Carnivine, Crobat, Haunter, Lucario, Meditite, Misdreavus, Munchlax, Piplup, Prinplup, Psyduck, Snorunt, Weavile, Wingull
+7: Ambipom, Bonsly, Drifloon, Gabite, Gastly, Lopunny, Magnezone, Sudowoodo
+8: Chatot, Finneon, Kirlia, Marill, Mime Jr., Shinx, Snover
+9: Budew, Cherrim, Hoothoot, Infernape, Medicham
+10: Alakazam, Azumarill, Bibarel, Empoleon, Gardevoir, Houndour, Pachirisu, Shellos, Torterra
+11: Buizel, Drifblim, Gastrodon, Goldeen, Kricketune, Magneton, Noctowl, Pelipper, Sneasel, Steelix
+12: Magikarp, Murkrow, Onix
+13: Golduck, Machamp, Pichu, Remoraid, Seaking, Starly
+14: Raichu, Staravia
+15: Luxio, Snorlax
+16: Luxray, Ponyta
+17: Bronzor, Zubat
+18: Kadabra, Mr. Mime
+19: Geodude
+20: Machop, Stunky
+21: Glameow
+22: Magnemite, Roserade
+23: Rapidash, Roselia
+24: Croagunk
+25: Floatzel, Machoke, Pikachu
+26: Gyarados, Heracross
+31: Golbat
+34: Staraptor
+38: Clefairy
