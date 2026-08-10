@@ -20,6 +20,8 @@
 
 ### Pokemon
 
+- [x] Rotom forms now follow the types of later generations.
+
 > Aggron
 > - Type: Steel
 
