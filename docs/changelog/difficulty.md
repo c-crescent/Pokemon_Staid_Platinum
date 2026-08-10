@@ -35,7 +35,7 @@ All boss fights now have scaling IVs.
 - [ ] Flint Rematch
 - [x] Lucian
 - [ ] Lucian Rematch
-- [ ] Cynthia
+- [X] Cynthia
 - [ ] Cynthia Rematch
 
 ### Rival
