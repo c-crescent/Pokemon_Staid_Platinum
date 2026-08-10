@@ -18,6 +18,9 @@
 > Normalize
 > This Pokemon's moves are changed to be Normal type (and have their power multiplied by 1.2). This effect comes before other effects that change a move's type.
 
+### Weather
+- [x] Hail now gives Ice Type 50% Defence boost.
+
 ### Pokemon
 
 - [x] Rotom forms now follow the types of later generations.
