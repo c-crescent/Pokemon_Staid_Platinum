@@ -36,6 +36,7 @@ const PokeMartCommonItem PokeMartCommonItems[] = {
 const u16 JubilifeMartSpecialties[] = {
     ITEM_AIR_MAIL,
     ITEM_HEAL_BALL,
+    ITEM_MASTER_BALL,
     SHOP_ITEM_END
 };
 

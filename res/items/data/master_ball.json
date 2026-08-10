@@ -12,7 +12,7 @@
     "palette": "master_ball_NCLR"
   },
   "gbaID": "GBA_ITEM_MASTER_BALL",
-  "price": 0,
+  "price": 1,
   "effectParam": 0,
   "holdEffect": "HOLD_EFFECT_NONE",
   "pluckEffect": "PLUCK_EFFECT_NONE",
