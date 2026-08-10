@@ -50,6 +50,7 @@
             [ 29, "MOVE_ASSURANCE" ],
             [ 34, "MOVE_SUPER_FANG" ],
             [ 39, "MOVE_DOUBLE_EDGE" ],
+            [ 43, "MOVE_VOLT_TACKLE" ],
             [ 44, "MOVE_ENDEAVOR" ]
         ],
         "by_tm": [

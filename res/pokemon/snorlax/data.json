@@ -52,7 +52,7 @@
             [ 38, "MOVE_ROLLOUT" ],
             [ 40, "MOVE_CRUNCH" ],
             [ 40, "MOVE_NATURAL_GIFT" ],
-            [ 45, "MOVE_GIGA_IMPACT" ],
+            [ 44, "MOVE_GIGA_IMPACT" ],
             [ 45, "MOVE_LAST_RESORT" ]
         ],
         "by_tm": [

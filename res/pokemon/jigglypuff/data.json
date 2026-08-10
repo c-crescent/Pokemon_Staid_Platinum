@@ -46,6 +46,7 @@
             [ 33, "MOVE_WAKE_UP_SLAP" ],
             [ 37, "MOVE_MIMIC" ],
             [ 40, "MOVE_HYPER_VOICE" ],
+            [ 43, "MOVE_VOLT_TACKLE" ],
             [ 44, "MOVE_DOUBLE_EDGE" ]
         ],
         "by_tm": [

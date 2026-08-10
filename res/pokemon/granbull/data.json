@@ -51,6 +51,7 @@
             [ 33, "MOVE_TAKE_DOWN" ],
             [ 39, "MOVE_PAYBACK" ],
             [ 42, "MOVE_CLOSE_COMBAT" ],
+            [ 43, "MOVE_VOLT_TACKLE" ],
             [ 45, "MOVE_CRUNCH" ]
         ],
         "by_tm": [

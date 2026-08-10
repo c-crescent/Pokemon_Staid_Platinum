@@ -48,6 +48,7 @@
             [ 32, "MOVE_ZEN_HEADBUTT" ],
             [ 37, "MOVE_IMPRISON" ],
             [ 42, "MOVE_CAPTIVATE" ],
+            [ 43, "MOVE_VOLT_TACKLE" ],
             [ 45, "MOVE_ME_FIRST" ]
         ],
         "by_tm": [

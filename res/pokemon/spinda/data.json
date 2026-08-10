@@ -46,6 +46,7 @@
             [ 33, "MOVE_PSYCH_UP" ],
             [ 37, "MOVE_DOUBLE_EDGE" ],
             [ 40, "MOVE_FLAIL" ],
+            [ 43, "MOVE_VOLT_TACKLE" ],
             [ 44, "MOVE_THRASH" ]
         ],
         "by_tm": [

@@ -46,7 +46,8 @@
             [ 25, "MOVE_ASSURANCE" ],
             [ 28, "MOVE_SUPER_FANG" ],
             [ 31, "MOVE_DOUBLE_EDGE" ],
-            [ 34, "MOVE_ENDEAVOR" ]
+            [ 34, "MOVE_ENDEAVOR" ],
+            [ 43, "MOVE_VOLT_TACKLE" ]
         ],
         "by_tm": [
             "TM06",

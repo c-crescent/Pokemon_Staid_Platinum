@@ -49,7 +49,8 @@
             [ 30, "MOVE_CRUNCH" ],
             [ 33, "MOVE_HEAT_WAVE" ],
             [ 36, "MOVE_FLARE_BLITZ" ],
-            [ 39, "MOVE_EXTREME_SPEED" ]
+            [ 39, "MOVE_EXTREME_SPEED" ],
+            [ 43, "MOVE_VOLT_TACKLE" ]
         ],
         "by_tm": [
             "TM05",

@@ -48,6 +48,7 @@
             [ 37, "MOVE_BODY_SLAM" ],
             [ 39, "MOVE_THRASH" ],
             [ 42, "MOVE_DOUBLE_EDGE" ],
+            [ 43, "MOVE_VOLT_TACKLE" ],
             [ 45, "MOVE_GIGA_IMPACT" ]
         ],
         "by_tm": [
