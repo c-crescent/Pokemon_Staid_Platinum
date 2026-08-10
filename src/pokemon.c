@@ -3560,6 +3560,26 @@ u8 Pokemon_GetLevelCap(const TrainerInfo *info, const VarsFlags *varsFlags)
     }
 }
 
+void Pokemon_RaiseTrainerMonToMinLevel(Pokemon *mon, const TrainerInfo *info, const VarsFlags *varsFlags)
+{
+    if (mon == NULL || info == NULL) {
+        return;
+    }
+
+    u8 minLevel = Pokemon_GetLevelCap(info, varsFlags) - 5;
+    u8 curLevel = Pokemon_GetValue(mon, MON_DATA_LEVEL, NULL);
+
+    if (curLevel <= minLevel && minLevel > 15) {
+        curLevel = minLevel;
+    }
+
+    if (curLevel > 65) {
+        curLevel = 65;
+    }
+
+    Pokemon_SetValue(mon, MON_DATA_LEVEL, &curLevel);
+}
+
 u16 Pokemon_GetEvolutionTargetSpecies(Party *party, Pokemon *mon, u8 evoClass, u16 evoParam, int *evoTypeResult)
 {
     u16 targetSpecies = SPECIES_NONE;

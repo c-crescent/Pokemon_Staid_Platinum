@@ -7,6 +7,7 @@
 - [x] No items in battle for enemy trainers.
 
 ### Trainers
+- [x] All trainer fights after the first gym has their minimum pokemon levels scale with the amount of badges, capping out at 65.
 
 ### Boss Fights
 All boss fights now have scaling IVs.

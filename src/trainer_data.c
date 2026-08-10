@@ -21,6 +21,7 @@
 #include "string_gf.h"
 
 static void TrainerData_BuildParty(FieldBattleDTO *dto, int battler, enum HeapID heapID);
+void Pokemon_RaiseTrainerMonToMinLevel(Pokemon *mon, const TrainerInfo *info, const VarsFlags *varsFlags);
 
 void Trainer_Encounter(FieldBattleDTO *dto, const SaveData *saveData, enum HeapID heapID)
 {
@@ -216,6 +217,8 @@ static void TrainerData_BuildParty(FieldBattleDTO *dto, int battler, enum HeapID
             Pokemon_InitWith(mon, species, trmon[i].level, ivs, TRUE, rnd, OTID_NOT_SHINY, 0);
             Pokemon_SetBallSeal(trmon[i].cbSeal, mon, heapID);
             Pokemon_SetValue(mon, MON_DATA_FORM, &form);
+            Pokemon_RaiseTrainerMonToMinLevel(mon, dto->trainerInfo[battler], SaveData_GetVarsFlags(dto->saveData));
+            Pokemon_CalcLevelAndStats(mon);
             Party_AddPokemon(dto->parties[battler], mon);
         }
 
@@ -246,6 +249,8 @@ static void TrainerData_BuildParty(FieldBattleDTO *dto, int battler, enum HeapID
 
             Pokemon_SetBallSeal(trmon[i].cbSeal, mon, heapID);
             Pokemon_SetValue(mon, MON_DATA_FORM, &form);
+            Pokemon_RaiseTrainerMonToMinLevel(mon, dto->trainerInfo[battler], SaveData_GetVarsFlags(dto->saveData));
+            Pokemon_CalcLevelAndStats(mon);
             Party_AddPokemon(dto->parties[battler], mon);
         }
 
@@ -272,6 +277,8 @@ static void TrainerData_BuildParty(FieldBattleDTO *dto, int battler, enum HeapID
             Pokemon_SetValue(mon, MON_DATA_HELD_ITEM, &trmon[i].item);
             Pokemon_SetBallSeal(trmon[i].cbSeal, mon, heapID);
             Pokemon_SetValue(mon, MON_DATA_FORM, &form);
+            Pokemon_RaiseTrainerMonToMinLevel(mon, dto->trainerInfo[battler], SaveData_GetVarsFlags(dto->saveData));
+            Pokemon_CalcLevelAndStats(mon);
             Party_AddPokemon(dto->parties[battler], mon);
         }
 
@@ -303,6 +310,7 @@ static void TrainerData_BuildParty(FieldBattleDTO *dto, int battler, enum HeapID
 
             Pokemon_SetBallSeal(trmon[i].cbSeal, mon, heapID);
             Pokemon_SetValue(mon, MON_DATA_FORM, &form);
+            Pokemon_RaiseTrainerMonToMinLevel(mon, dto->trainerInfo[battler], SaveData_GetVarsFlags(dto->saveData));
             Pokemon_CalcStats(mon);
             Party_AddPokemon(dto->parties[battler], mon);
         }

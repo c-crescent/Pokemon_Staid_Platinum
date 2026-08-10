@@ -147,6 +147,7 @@ void Pokemon_CalcLevelAndStats(Pokemon *mon);
  * @param mon
  */
 void Pokemon_CalcStats(Pokemon *mon);
+void Pokemon_RaiseTrainerMonToMinLevel(Pokemon *mon, const TrainerInfo *info, const VarsFlags *varsFlags);
 
 /**
  * @brief Gets a value from a Pokemon, storing it in dest if neccessary
