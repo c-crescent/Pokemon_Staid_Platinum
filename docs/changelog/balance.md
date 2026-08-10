@@ -296,3 +296,6 @@
 
 > Needle Arm
 > BP: 90(+30)
+
+> Triple Kick
+> BP: 20(+10)
