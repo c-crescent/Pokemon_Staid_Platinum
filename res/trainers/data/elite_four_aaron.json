@@ -41,7 +41,7 @@
             "species": "SPECIES_SCIZOR",
             "form": 0,
             "level": 60,
-            "item": "ITEM_SWORDS_DANCE",
+            "item": "ITEM_LEFTOVERS",
             "moves": [
                 "MOVE_BULLET_PUNCH",
                 "MOVE_X_SCISSOR",
