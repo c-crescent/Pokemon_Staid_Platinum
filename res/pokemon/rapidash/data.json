@@ -50,6 +50,7 @@
             [ 28, "MOVE_FIRE_BLAST" ],
             [ 30, "MOVE_FURY_ATTACK" ],
             [ 36, "MOVE_BOUNCE" ],
+            [ 39, "MOVE_VOLT_TACKLE" ],
             [ 42, "MOVE_FLARE_BLITZ" ]
         ],
         "by_tm": [
