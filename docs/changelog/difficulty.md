@@ -29,13 +29,13 @@ All boss fights now have scaling IVs.
 - [x] Volkner
 - [x] Volkner Rematch
 - [x] Aaron
-- [ ] Aaron Rematch
+- [x] Aaron Rematch
 - [x] Bertha
-- [ ] Bertha Rematch
+- [x] Bertha Rematch
 - [X] Flint
-- [ ] Flint Rematch
+- [x] Flint Rematch
 - [x] Lucian
-- [ ] Lucian Rematch
+- [x] Lucian Rematch
 - [X] Cynthia
 - [ ] Cynthia Rematch
 

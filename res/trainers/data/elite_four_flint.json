@@ -82,7 +82,7 @@
         {
             "species": "SPECIES_MAGMORTAR",
             "form": 0,
-            "level": 57,
+            "level": 60,
             "item": "ITEM_LIFE_ORB",
             "moves": [
                 "MOVE_FLAMETHROWER",
