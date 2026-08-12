@@ -37,7 +37,7 @@ All boss fights now have scaling IVs.
 - [x] Lucian
 - [x] Lucian Rematch
 - [X] Cynthia
-- [ ] Cynthia Rematch
+- [x] Cynthia Rematch
 
 ### Rival
 - [ ] Route 201

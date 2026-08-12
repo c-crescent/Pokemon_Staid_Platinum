@@ -17,9 +17,9 @@ SurvivalAreaNorthHouse_Hiker:
     LockAll
     FacePlayer
     Message SurvivalAreaNorthHouse_Text_WantToTeachMove
-    ShowYesNoMenu VAR_RESULT
-    GoToIfEq VAR_RESULT, MENU_YES, SurvivalAreaNorthHouse_TryTeachMove
-    GoToIfEq VAR_RESULT, MENU_NO, SurvivalAreaNorthHouse_SeeYouThen
+    WaitButton
+    CloseMessage
+    ReleaseAll
     End
 
 SurvivalAreaNorthHouse_TryTeachMove:

@@ -13,7 +13,7 @@
         "blueCost": 4,
         "yellowCost": 0,
         "greenCost": 0,
-        "location": "TUTOR_LOCATION_SURVIVAL_AREA"
+        "location": "TUTOR_LOCATION_SNOWPOINT_CITY"
     },
     {
         "move": "MOVE_FURY_CUTTER",
@@ -37,7 +37,7 @@
         "blueCost": 2,
         "yellowCost": 0,
         "greenCost": 2,
-        "location": "TUTOR_LOCATION_SURVIVAL_AREA"
+        "location": "TUTOR_LOCATION_SNOWPOINT_CITY"
     },
     {
         "move": "MOVE_THUNDER_PUNCH",
@@ -61,7 +61,7 @@
         "blueCost": 0,
         "yellowCost": 0,
         "greenCost": 0,
-        "location": "TUTOR_LOCATION_SURVIVAL_AREA"
+        "location": "TUTOR_LOCATION_ROUTE_212"
     },
     {
         "move": "MOVE_ICE_PUNCH",
@@ -77,7 +77,7 @@
         "blueCost": 0,
         "yellowCost": 2,
         "greenCost": 0,
-        "location": "TUTOR_LOCATION_SURVIVAL_AREA"
+        "location": "TUTOR_LOCATION_ROUTE_212"
     },
     {
         "move": "MOVE_AQUA_TAIL",
@@ -85,7 +85,7 @@
         "blueCost": 0,
         "yellowCost": 0,
         "greenCost": 2,
-        "location": "TUTOR_LOCATION_SURVIVAL_AREA"
+        "location": "TUTOR_LOCATION_SNOWPOINT_CITY"
     },
     {
         "move": "MOVE_OMINOUS_WIND",
@@ -101,7 +101,7 @@
         "blueCost": 0,
         "yellowCost": 2,
         "greenCost": 2,
-        "location": "TUTOR_LOCATION_SURVIVAL_AREA"
+        "location": "TUTOR_LOCATION_ROUTE_212"
     },
     {
         "move": "MOVE_SNORE",
@@ -141,7 +141,7 @@
         "blueCost": 0,
         "yellowCost": 4,
         "greenCost": 0,
-        "location": "TUTOR_LOCATION_SURVIVAL_AREA"
+        "location": "TUTOR_LOCATION_ROUTE_212"
     },
     {
         "move": "MOVE_OUTRAGE",
@@ -149,7 +149,7 @@
         "blueCost": 0,
         "yellowCost": 2,
         "greenCost": 0,
-        "location": "TUTOR_LOCATION_SURVIVAL_AREA"
+        "location": "TUTOR_LOCATION_ROUTE_212"
     },
     {
         "move": "MOVE_ANCIENT_POWER",
@@ -157,7 +157,7 @@
         "blueCost": 0,
         "yellowCost": 0,
         "greenCost": 2,
-        "location": "TUTOR_LOCATION_SURVIVAL_AREA"
+        "location": "TUTOR_LOCATION_ROUTE_212"
     },
     {
         "move": "MOVE_SYNTHESIS",
@@ -173,7 +173,7 @@
         "blueCost": 2,
         "yellowCost": 2,
         "greenCost": 2,
-        "location": "TUTOR_LOCATION_SURVIVAL_AREA"
+        "location": "TUTOR_LOCATION_SNOWPOINT_CITY"
     },
     {
         "move": "MOVE_ZEN_HEADBUTT",
@@ -197,7 +197,7 @@
         "blueCost": 0,
         "yellowCost": 0,
         "greenCost": 2,
-        "location": "TUTOR_LOCATION_SURVIVAL_AREA"
+        "location": "TUTOR_LOCATION_SNOWPOINT_CITY"
     },
     {
         "move": "MOVE_GUNK_SHOT",
@@ -205,7 +205,7 @@
         "blueCost": 2,
         "yellowCost": 0,
         "greenCost": 2,
-        "location": "TUTOR_LOCATION_SURVIVAL_AREA"
+        "location": "TUTOR_LOCATION_SNOWPOINT_CITY"
     },
     {
         "move": "MOVE_TWISTER",
@@ -213,7 +213,7 @@
         "blueCost": 0,
         "yellowCost": 0,
         "greenCost": 2,
-        "location": "TUTOR_LOCATION_SURVIVAL_AREA"
+        "location": "TUTOR_LOCATION_SNOWPOINT_CITY"
     },
     {
         "move": "MOVE_SEED_BOMB",
@@ -221,7 +221,7 @@
         "blueCost": 0,
         "yellowCost": 0,
         "greenCost": 4,
-        "location": "TUTOR_LOCATION_SURVIVAL_AREA"
+        "location": "TUTOR_LOCATION_ROUTE_212"
     },
     {
         "move": "MOVE_IRON_DEFENSE",
@@ -229,7 +229,7 @@
         "blueCost": 2,
         "yellowCost": 2,
         "greenCost": 0,
-        "location": "TUTOR_LOCATION_SURVIVAL_AREA"
+        "location": "TUTOR_LOCATION_SNOWPOINT_CITY"
     },
     {
         "move": "MOVE_MAGNET_RISE",
@@ -253,7 +253,7 @@
         "blueCost": 0,
         "yellowCost": 2,
         "greenCost": 2,
-        "location": "TUTOR_LOCATION_SURVIVAL_AREA"
+        "location": "TUTOR_LOCATION_ROUTE_212"
     },
     {
         "move": "MOVE_TRICK",
@@ -269,7 +269,7 @@
         "blueCost": 2,
         "yellowCost": 0,
         "greenCost": 2,
-        "location": "TUTOR_LOCATION_SURVIVAL_AREA"
+        "location": "TUTOR_LOCATION_ROUTE_212"
     },
     {
         "move": "MOVE_KNOCK_OFF",

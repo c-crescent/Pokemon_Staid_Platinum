@@ -16,7 +16,7 @@
 - [x] Rare Candy is now a permanent key item that is given to you when you receive the Pokedex.
 - [x] Pastoria Move Reminder is now free.
 - [x] All move tutors are now free. Ultimate moves no longer require max friendship.
-- [ ] Every move tutor is now in the same house at room 212.
+- [x] All moves taught by the survival area move tutor are now taught by the ones on Route 212 and Snowpoint City instead.
 - [x] Using party menu items now stay on the party menu if the used item still exists in bag.
 - [x] Eterna City now sells evolution items.
 - [x] Jubilife Mart now sells Master Balls.
