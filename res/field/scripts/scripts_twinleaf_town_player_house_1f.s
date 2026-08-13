@@ -1,5 +1,6 @@
 #include "macros/scrcmd.inc"
 #include "res/text/bank/twinleaf_town_player_house_1f.h"
+#include "res/text/bank/special_met_location_names.h"
 #include "res/field/events/events_twinleaf_town_player_house_1f.h"
 
 
@@ -105,6 +106,22 @@ TwinleafTownPlayerHouse1F_IsYourProjectComingAlong:
     Return
 
     .balign 4, 0
+
+TwinleafTownPlayerHouse1F_MomTryGiveManaphyEgg:
+    GoToIfUnset FLAG_CAUGHT_MANAPHY, TwinleafTownPlayerHouse1F_MomGiveManaphyEgg
+    Return
+
+TwinleafTownPlayerHouse1F_MomGiveManaphyEgg:
+    Message TwinleafTownPlayerHouse1F_MomGiveManaphyEgg
+    GetPartyCount VAR_RESULT
+    GoToIfEq VAR_RESULT, MAX_PARTY_SIZE, TwinleafTownPlayerHouse1F_Text_NoRoomForEgg
+    GiveEgg SPECIES_MANAPHY, SPECIAL_METLOC_NAME_CYNTHIA
+    SetFlag FLAG_CAUGHT_MANAPHY
+    Message TwinleafTownPlayerHouse1F_Text_TakeCareOfEgg
+    CloseMessage
+    ReleaseAll
+    End
+
 TwinleafTownPlayerHouse1F_Movement_PlayerFaceMomPostgame:
     Delay4
     WalkOnSpotNormalSouth
@@ -115,6 +132,13 @@ TwinleafTownPlayerHouse1F_Movement_MomNoticePlayer:
     WalkOnSpotNormalNorth
     EmoteExclamationMark
     EndMovement
+
+TwinleafTownPlayerHouse1F_Text_NoRoomForEgg:
+    Message TwinleafTownPlayerHouse1F_Text_NoRoomForEgg
+    WaitButton
+    CloseMessage
+    ReleaseAll
+    End
 
 TwinleafTownPlayerHouse1F_OnFrame_CutsceneAfterRivalBattle:
     LockAll
@@ -168,6 +192,7 @@ TwinleafTownPlayerHouse1F_Mom:
     PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
+    GoToIfSet FLAG_DAILY_DEFEATED_BATTLEGROUND_ALL_GYM_LEADERS, TwinleafTownPlayerHouse1F_MomTryGiveManaphyEgg
     GoToIfSet FLAG_MAP_LOCAL_0x02, TwinleafTownPlayerHouse1F_DoMomMessage
     GoToIfGe VAR_PLAYER_HOUSE_STATE, 7, TwinleafTownPlayerHouse1F_CallTakeAQuickRest2
     GoToIfEq VAR_PLAYER_HOUSE_STATE, 6, TwinleafTownPlayerHouse1F_EnjoyYourAdventure

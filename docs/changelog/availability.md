@@ -48,8 +48,8 @@
 - [ ] Celebi
 - [ ] Jirachi
 - [ ] Deoxys
-- [ ] Phione
-- [ ] Manaphy
+- [x] Phione
+- [x] Manaphy
 - [x] Darkrai
 - [x] Shaymin
 - [x] Arceus

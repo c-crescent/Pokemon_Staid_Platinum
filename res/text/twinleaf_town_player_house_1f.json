@@ -282,7 +282,29 @@
       "en_US": [
         "Mom: {STRVAR_1 3, 0, 0}!\r",
         "{STRVAR_1 3, 1, 0} came looking for you\n",
-        "a little while ago.\r"      ]
+        "a little while ago.\r"
+      ]
+    },
+    {
+      "id": "TwinleafTownPlayerHouse1F_MomGiveManaphyEgg",
+      "en_US": [        
+        "Oh, a good friend of mine gave me\n",
+        "this a while ago. You should take it."      
+      ]
+    },
+    {
+      "id": "TwinleafTownPlayerHouse1F_Text_NoRoomForEgg",
+      "en_US": [
+        "Oh you do not have room for this.\n",
+        "Come back when you want this egg.\r"     
+      ]
+    },
+    {
+      "id": "TwinleafTownPlayerHouse1F_Text_TakeCareOfEgg",
+      "en_US": [
+        "Mom: I just know you will take good\n",
+        "care of this egg.\r"     
+      ]
     },
     {
       "id": "TwinleafTownPlayerHouse1F_Text_PokemonAreLookingGood",
