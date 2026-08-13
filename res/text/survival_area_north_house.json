@@ -2,19 +2,44 @@
   "key": 54295,
   "messages": [
     {
-      "id": "SurvivalAreaNorthHouse_Text_WantToTeachMove",
+      "id": "SurvivalAreaNorthHouse_Cynthia_Greeting",
       "en_US": [
-        "If you’d like share your Shards with\n",
-        "me, sorry. I am retired.\r"
+        "Cynthia: Hello there, you must be\n",
+        "confused as to why I am here.\r",
+        "It’s a secluded place to which I\n",
+        "retreat and consolidate research.\r"
       ]
     },
     {
-      "id": "SurvivalAreaNorthHouse_Text_SeeYouThen",
-      "en_US": "See you, then!"
+      "id": "SurvivalAreaNorthHouse_Cynthia_PrepareYourself",
+      "en_US": [
+        "Very well. Here it comes.\n",
+        "Prepare yourself.\r"
+      ]
     },
     {
-      "id": "SurvivalAreaNorthHouse_Text_TeachWhichPokemon",
-      "en_US": "Which Pokémon should I teach?\r"
+      "id": "SurvivalAreaNorthHouse_Cynthia_PokemonDisappeared",
+      "en_US": [
+        "Cynthia: The Pokémon disappered.\n",
+        "You best try your luck later.\r"
+      ]
+    },
+    {
+      "id": "SurvivalAreaNorthHouse_Cynthia_TryEncounter",
+      "en_US": [
+        "I have found a way to meet rare\n",
+        "Pokémon from distant lands.\r",
+        "I can show you if you’d like.\n",
+        "Which would you like to encounter?"
+      ]
+    },
+    {
+      "id": "SurvivalAreaNorthHouse_Cynthia_PokemonCaught",
+      "en_US": "Cynthia: Congratulations, you got it!\r"
+    },
+    {
+      "id": "SurvivalAreaNorthHouse_Cynthia_PokemonAlreadyCaught",
+      "en_US": "Cynthia: You have this Pokémon already.\r"
     },
     {
       "id": "SurvivalAreaNorthHouse_Text_NoMovesToTeach",

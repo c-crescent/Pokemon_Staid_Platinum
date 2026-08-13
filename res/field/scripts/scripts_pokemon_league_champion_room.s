@@ -73,6 +73,8 @@ PokemonLeagueChampionRoom_CreateJournalEventDefeatedCynthia:
 
 PokemonLeagueChampionRoom_CreateJournalEventDefeatedRematchCynthia:
     CreateJournalEvent LOCATION_EVENT_BEAT_CHAMPION, TRAINER_CHAMPION_CYNTHIA_REMATCH
+    SetFlag FLAG_DEFEATED_TRAINER_CHAMPION_CYNTHIA_REMATCH
+    ClearFlag FLAG_HIDE_CYNTHIA_SURVIVAL_AREA
     Return
 
 PokemonLeagueChampionRoom_BlackOut:

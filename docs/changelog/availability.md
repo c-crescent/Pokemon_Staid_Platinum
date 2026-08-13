@@ -24,30 +24,30 @@
 - [x] Bulbasaur, Ivysaur, Venusaur
 - [x] Charmander, Charmeleon, Charizard
 - [x] Squirtle, Wartortle, Blastoise
-- [ ] Mewtwo
 - [x] Chikorita, Bayleef, Meganium
 - [x] Cyndaquil, Quilava, Typhlosion
 - [x] Totodile, Croconaw, Feraligatr
-- [ ] Raikou
-- [ ] Entei
-- [ ] Suicune
-- [ ] Lugia
-- [ ] Ho-Oh
 - [x] Treecko, Grovyle, Sceptile
 - [x] Torchic, Combusken, Blaziken
 - [x] Mudkip, Marshtomp, Swampert
 - [x] Regirock
 - [x] Regice
 - [x] Registeel
-- [ ] Latias
-- [ ] Latios
-- [ ] Kyogre
-- [ ] Groudon
-- [ ] Rayquaza
-- [ ] Mew
-- [ ] Celebi
-- [ ] Jirachi
-- [ ] Deoxys
+- [x] Raikou
+- [x] Entei
+- [x] Suicune
+- [x] Lugia
+- [x] Ho-Oh
+- [x] Mewtwo
+- [x] Latias
+- [x] Latios
+- [x] Kyogre
+- [x] Groudon
+- [x] Rayquaza
+- [x] Mew
+- [x] Celebi
+- [x] Jirachi
+- [x] Deoxys
 - [x] Phione
 - [x] Manaphy
 - [x] Darkrai
