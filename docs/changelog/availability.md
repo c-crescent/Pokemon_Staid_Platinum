@@ -33,21 +33,21 @@
 - [x] Regirock
 - [x] Regice
 - [x] Registeel
-- [ ] Raikou
-- [ ] Entei
-- [ ] Suicune
-- [ ] Lugia
-- [ ] Ho-Oh
-- [ ] Mewtwo
-- [ ] Latias
-- [ ] Latios
-- [ ] Kyogre
-- [ ] Groudon
-- [ ] Rayquaza
-- [ ] Mew
-- [ ] Celebi
-- [ ] Jirachi
-- [ ] Deoxys
+- [x] Raikou
+- [x] Entei
+- [x] Suicune
+- [x] Lugia
+- [x] Ho-Oh
+- [x] Mewtwo
+- [x] Latias
+- [x] Latios
+- [x] Kyogre
+- [x] Groudon
+- [x] Rayquaza
+- [x] Mew
+- [x] Celebi
+- [x] Jirachi
+- [x] Deoxys
 - [ ] Phione
 - [ ] Manaphy
 - [x] Darkrai

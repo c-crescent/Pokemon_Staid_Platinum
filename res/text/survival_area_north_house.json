@@ -7,10 +7,7 @@
         "Cynthia: Hello there, you must be\n",
         "confused as to why I am here.\r",
         "It’s a secluded place to which I\n",
-        "retreat and consolidate research.\r",
-        "I have found a way to encounter rare\n",
-        "Pokémon from distant lands.\r",
-        "I can show you if you’d like.\r"
+        "retreat and consolidate research.\r"
       ]
     },
     {
@@ -25,6 +22,15 @@
       "en_US": [
         "Cynthia: The Pokémon disappered.\n",
         "You best try your luck later.\r"
+      ]
+    },
+    {
+      "id": "SurvivalAreaNorthHouse_Cynthia_TryEncounter",
+      "en_US": [
+        "I have found a way to meet rare\n",
+        "Pokémon from distant lands.\r",
+        "I can show you if you’d like.\n",
+        "Which would you like to encounter?"
       ]
     },
     {
