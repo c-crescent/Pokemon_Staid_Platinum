@@ -24,21 +24,21 @@
 - [x] Bulbasaur, Ivysaur, Venusaur
 - [x] Charmander, Charmeleon, Charizard
 - [x] Squirtle, Wartortle, Blastoise
-- [ ] Mewtwo
 - [x] Chikorita, Bayleef, Meganium
 - [x] Cyndaquil, Quilava, Typhlosion
 - [x] Totodile, Croconaw, Feraligatr
-- [ ] Raikou
-- [ ] Entei
-- [ ] Suicune
-- [ ] Lugia
-- [ ] Ho-Oh
 - [x] Treecko, Grovyle, Sceptile
 - [x] Torchic, Combusken, Blaziken
 - [x] Mudkip, Marshtomp, Swampert
 - [x] Regirock
 - [x] Regice
 - [x] Registeel
+- [ ] Raikou
+- [ ] Entei
+- [ ] Suicune
+- [ ] Lugia
+- [ ] Ho-Oh
+- [ ] Mewtwo
 - [ ] Latias
 - [ ] Latios
 - [ ] Kyogre

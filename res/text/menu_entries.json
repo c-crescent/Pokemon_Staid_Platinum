@@ -1144,6 +1144,90 @@
     {
       "id": "MenuEntries_Text_StarPieces_10",
       "en_US": "10"
+    },
+    {
+      "id": "MenuEntries_Text_Mewtwo",
+      "en_US": "MEWTWO"
+    },
+    {
+      "id": "MenuEntries_Text_Raikou",
+      "en_US": "RAIKOU"
+    },
+    {
+      "id": "MenuEntries_Text_Entei",
+      "en_US": "ENTEI"
+    },
+    {
+      "id": "MenuEntries_Text_Suicune",
+      "en_US": "SUICUNE"
+    },
+    {
+      "id": "MenuEntries_Text_Lugia",
+      "en_US": "LUGIA"
+    },
+    {
+      "id": "MenuEntries_Text_Hooh",
+      "en_US": "HO-OH"
+    },
+    {
+      "id": "MenuEntries_Text_Latias",
+      "en_US": "LATIAS"
+    },
+    {
+      "id": "MenuEntries_Text_Latios",
+      "en_US": "LATIOS"
+    },
+    {
+      "id": "MenuEntries_Text_Kyogre",
+      "en_US": "KYOGRE"
+    },
+    {
+      "id": "MenuEntries_Text_Groudon",
+      "en_US": "GROUDON"
+    },
+    {
+      "id": "MenuEntries_Text_Rayquaza",
+      "en_US": "RAYQUAZA"
+    },
+    {
+      "id": "MenuEntries_Text_Mew",
+      "en_US": "MEW"
+    },
+    {
+      "id": "MenuEntries_Text_Celebi",
+      "en_US": "CELEBI"
+    },
+    {
+      "id": "MenuEntries_Text_Jirachi",
+      "en_US": "JIRACHI"
+    },
+    {
+      "id": "MenuEntries_Text_Deoxys",
+      "en_US": "DEOXYS"
+    },
+    {
+      "id": "MenuEntries_Text_Phione",
+      "en_US": "PHIONE"
+    },
+    {
+      "id": "MenuEntries_Text_Manaphy",
+      "en_US": "MANAPHY"
+    },
+    {
+      "id": "MenuEntries_Text_Back",
+      "en_US": "BACK"
+    },
+    {
+      "id": "MenuEntries_Text_Kanto",
+      "en_US": "KANTO"
+    },
+    {
+      "id": "MenuEntries_Text_Johto",
+      "en_US": "JOHTO"
+    },
+    {
+      "id": "MenuEntries_Text_Hoenn",
+      "en_US": "HOENN"
     }
   ]
 }
