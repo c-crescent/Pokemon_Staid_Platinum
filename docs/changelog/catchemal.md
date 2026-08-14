@@ -26,6 +26,7 @@ There are no longer roaming Pokemon. All legendaries are available after the fir
 - [x] The 3 titans no longer requires a fateful encounter check for Regigigas.
 - [x] Manaphy egg can be received from Mom after beaing all the gym leader rematches.
 - [x] Mewtwo and legendaries from gen 2 and 3 can now be encountered after defeating the champion rematch where the move tutor in the Survival Area was
+- [x] Mew is now available in Celestic Cave after catching Mewtwo.
 
 ### Evolutions
 - [x] Replaced all trade, friendship, move, location, time, item evolutions with level-threshold or item-usage evolutions.

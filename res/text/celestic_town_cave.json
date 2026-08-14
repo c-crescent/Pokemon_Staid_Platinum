@@ -194,6 +194,18 @@
       ]
     },
     {
+      "id": "CelesticTownCave_EncounterMew",
+      "en_US": [
+        "A mischievous energy fills the air...\r"
+      ]
+    },
+    {
+      "id": "CelesticTownCave_MewGone",
+      "en_US": [
+        "MEW has disappeared...\r"
+      ]
+    },
+    {
       "id": "CelesticTownCave_Text_MayIContinue",
       "en_US": "May I continue?"
     },

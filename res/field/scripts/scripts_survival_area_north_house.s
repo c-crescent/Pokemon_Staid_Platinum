@@ -89,6 +89,7 @@ SurvivalAreaNorthHouse_Cynthia_HoennMenu:
 
 BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterMewtwo:
     CallIfSet FLAG_CAUGHT_MEWTWO, SurvivalAreaNorthHouse_Cynthia_PokemonAlreadyCaught
+    GoToIfSet FLAG_GONE_MEWTWO, BattleArcade_SurvivalAreaNorthHouse_Cynthia_MewtwoDisappeared
     PlayCry SPECIES_MEWTWO
     Message SurvivalAreaNorthHouse_Cynthia_PrepareYourself
     StartLegendaryBattle SPECIES_MEWTWO, 70
@@ -101,6 +102,7 @@ BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterMewtwo:
 
 BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterRaikou:
     CallIfSet FLAG_CAUGHT_RAIKOU, SurvivalAreaNorthHouse_Cynthia_PokemonAlreadyCaught
+    GoToIfSet FLAG_GONE_RAIKOU, BattleArcade_SurvivalAreaNorthHouse_Cynthia_RaikouDisappeared
     PlayCry SPECIES_RAIKOU
     Message SurvivalAreaNorthHouse_Cynthia_PrepareYourself
     StartLegendaryBattle SPECIES_RAIKOU, 70
@@ -113,6 +115,7 @@ BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterRaikou:
 
 BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterEntei:
     CallIfSet FLAG_CAUGHT_ENTEI, SurvivalAreaNorthHouse_Cynthia_PokemonAlreadyCaught
+    GoToIfSet FLAG_GONE_ENTEI, BattleArcade_SurvivalAreaNorthHouse_Cynthia_EnteiDisappeared
     PlayCry SPECIES_ENTEI
     Message SurvivalAreaNorthHouse_Cynthia_PrepareYourself
     StartLegendaryBattle SPECIES_ENTEI, 70
@@ -125,6 +128,7 @@ BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterEntei:
 
 BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterSuicune:
     CallIfSet FLAG_CAUGHT_SUICUNE, SurvivalAreaNorthHouse_Cynthia_PokemonAlreadyCaught
+    GoToIfSet FLAG_GONE_SUICUNE, BattleArcade_SurvivalAreaNorthHouse_Cynthia_SuicuneDisappeared
     PlayCry SPECIES_SUICUNE
     Message SurvivalAreaNorthHouse_Cynthia_PrepareYourself
     StartLegendaryBattle SPECIES_SUICUNE, 70
@@ -137,6 +141,7 @@ BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterSuicune:
 
 BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterLugia:
     CallIfSet FLAG_CAUGHT_LUGIA, SurvivalAreaNorthHouse_Cynthia_PokemonAlreadyCaught
+    GoToIfSet FLAG_GONE_LUGIA, BattleArcade_SurvivalAreaNorthHouse_Cynthia_LugiaDisappeared
     PlayCry SPECIES_LUGIA
     Message SurvivalAreaNorthHouse_Cynthia_PrepareYourself
     StartLegendaryBattle SPECIES_LUGIA, 70
@@ -149,6 +154,7 @@ BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterLugia:
 
 BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterHoOh:
     CallIfSet FLAG_CAUGHT_HOOH, SurvivalAreaNorthHouse_Cynthia_PokemonAlreadyCaught
+    GoToIfSet FLAG_GONE_HOOH, BattleArcade_SurvivalAreaNorthHouse_Cynthia_HoOhDisappeared
     PlayCry SPECIES_HO_OH
     Message SurvivalAreaNorthHouse_Cynthia_PrepareYourself
     StartLegendaryBattle SPECIES_HO_OH, 70
@@ -161,6 +167,7 @@ BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterHoOh:
 
 BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterCelebi:
     CallIfSet FLAG_CAUGHT_CELEBI, SurvivalAreaNorthHouse_Cynthia_PokemonAlreadyCaught
+    GoToIfSet FLAG_GONE_CELEBI, BattleArcade_SurvivalAreaNorthHouse_Cynthia_CelebiDisappeared
     PlayCry SPECIES_CELEBI
     Message SurvivalAreaNorthHouse_Cynthia_PrepareYourself
     StartLegendaryBattle SPECIES_CELEBI, 70
@@ -173,6 +180,7 @@ BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterCelebi:
 
 BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterLatias:
     CallIfSet FLAG_CAUGHT_LATIAS, SurvivalAreaNorthHouse_Cynthia_PokemonAlreadyCaught
+    GoToIfSet FLAG_GONE_LATIAS, BattleArcade_SurvivalAreaNorthHouse_Cynthia_LatiasDisappeared
     PlayCry SPECIES_LATIAS
     Message SurvivalAreaNorthHouse_Cynthia_PrepareYourself
     StartLegendaryBattle SPECIES_LATIAS, 70
@@ -185,6 +193,7 @@ BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterLatias:
 
 BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterLatios:
     CallIfSet FLAG_CAUGHT_LATIOS, SurvivalAreaNorthHouse_Cynthia_PokemonAlreadyCaught
+    GoToIfSet FLAG_GONE_LATIOS, BattleArcade_SurvivalAreaNorthHouse_Cynthia_LatiosDisappeared
     PlayCry SPECIES_LATIOS
     Message SurvivalAreaNorthHouse_Cynthia_PrepareYourself
     StartLegendaryBattle SPECIES_LATIOS, 70
@@ -197,6 +206,7 @@ BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterLatios:
 
 BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterKyogre:
     CallIfSet FLAG_CAUGHT_KYOGRE, SurvivalAreaNorthHouse_Cynthia_PokemonAlreadyCaught
+    GoToIfSet FLAG_GONE_KYOGRE, BattleArcade_SurvivalAreaNorthHouse_Cynthia_KyogreDisappeared
     PlayCry SPECIES_KYOGRE
     Message SurvivalAreaNorthHouse_Cynthia_PrepareYourself
     StartLegendaryBattle SPECIES_KYOGRE, 70
@@ -209,6 +219,7 @@ BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterKyogre:
 
 BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterGroudon:
     CallIfSet FLAG_CAUGHT_GROUDON, SurvivalAreaNorthHouse_Cynthia_PokemonAlreadyCaught
+    GoToIfSet FLAG_GONE_GROUDON, BattleArcade_SurvivalAreaNorthHouse_Cynthia_GroudonDisappeared
     PlayCry SPECIES_GROUDON
     Message SurvivalAreaNorthHouse_Cynthia_PrepareYourself
     StartLegendaryBattle SPECIES_GROUDON, 70
@@ -221,6 +232,7 @@ BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterGroudon:
 
 BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterRayquaza:
     CallIfSet FLAG_CAUGHT_RAYQUAZA, SurvivalAreaNorthHouse_Cynthia_PokemonAlreadyCaught
+    GoToIfSet FLAG_GONE_RAYQUAZA, BattleArcade_SurvivalAreaNorthHouse_Cynthia_RayquazaDisappeared
     PlayCry SPECIES_RAYQUAZA
     Message SurvivalAreaNorthHouse_Cynthia_PrepareYourself
     StartLegendaryBattle SPECIES_RAYQUAZA, 70
@@ -233,6 +245,7 @@ BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterRayquaza:
 
 BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterJirachi:
     CallIfSet FLAG_CAUGHT_JIRACHI, SurvivalAreaNorthHouse_Cynthia_PokemonAlreadyCaught
+    GoToIfSet FLAG_GONE_JIRACHI, BattleArcade_SurvivalAreaNorthHouse_Cynthia_JirachiDisappeared
     PlayCry SPECIES_JIRACHI
     Message SurvivalAreaNorthHouse_Cynthia_PrepareYourself
     StartLegendaryBattle SPECIES_JIRACHI, 70
@@ -245,6 +258,7 @@ BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterJirachi:
 
 BattleArcade_SurvivalAreaNorthHouse_Cynthia_EncounterDeoxys:
     CallIfSet FLAG_CAUGHT_DEOXYS, SurvivalAreaNorthHouse_Cynthia_PokemonAlreadyCaught
+    GoToIfSet FLAG_GONE_DEOXYS, BattleArcade_SurvivalAreaNorthHouse_Cynthia_DeoxysDisappeared
     PlayCry SPECIES_DEOXYS
     Message SurvivalAreaNorthHouse_Cynthia_PrepareYourself
     StartLegendaryBattle SPECIES_DEOXYS, 70

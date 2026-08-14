@@ -141,6 +141,23 @@ PokemonLeagueHallOfFame_SetHallOfFameVictoryFlagsAndVars:
     ClearFlag FLAG_HIDE_CANALAVE_LIBRARY_1F_LUCIAN
     ClearFlag FLAG_TALKED_TO_CELESTIC_TOWN_CAVE_CYNTHIA
     SetFlag FLAG_HIDE_SENDOFF_SPRING_CYNTHIA
+    ClearFlag FLAG_GONE_MEWTWO
+    ClearFlag FLAG_GONE_MEW
+    ClearFlag FLAG_GONE_RAIKOU
+    ClearFlag FLAG_GONE_ENTEI
+    ClearFlag FLAG_GONE_SUICUNE
+    ClearFlag FLAG_GONE_LUGIA
+    ClearFlag FLAG_GONE_HOOH
+    ClearFlag FLAG_GONE_CELEBI
+    ClearFlag FLAG_GONE_LATIAS
+    ClearFlag FLAG_GONE_LATIOS
+    ClearFlag FLAG_GONE_KYOGRE
+    ClearFlag FLAG_GONE_GROUDON
+    ClearFlag FLAG_GONE_RAYQUAZA
+    ClearFlag FLAG_GONE_JIRACHI
+    ClearFlag FLAG_GONE_DEOXYS
+    ClearFlag FLAG_GONE_MANAPHY
+    ClearFlag FLAG_GONE_PHIONE
     Return
 
 PokemonLeagueHallOfFame_IncreasePlayerHousePostgameState:

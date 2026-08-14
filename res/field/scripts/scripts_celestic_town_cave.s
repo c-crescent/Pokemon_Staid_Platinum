@@ -17,12 +17,38 @@ CelesticTownCave_Painting:
 
 CelesticTownCave_ExaminePainting:
     GoToIfUnset FLAG_EXAMINED_CELESTIC_TOWN_CAVE_PAINTING, CelesticTownCave_EnterCyrus
+    GoToIfSet FLAG_CAUGHT_MEWTWO, CelesticTownCave_EncounterMew
+CelesticTownCave_ExaminePainting_Normal:    
     BufferPlayerName 0
     Message CelesticTownCave_Text_PlayerExaminedPainting
     WaitButton
     CloseMessage
     ReleaseAll
     End
+
+CelesticTownCave_EncounterMew:
+    GoToIfSet FLAG_CAUGHT_MEW, CelesticTownCave_ExaminePainting_Normal
+    GoToIfSet FLAG_GONE_MEW, CelesticTownCave_ExaminePainting_Normal
+    LockAll
+    PlaySE SEQ_SE_CONFIRM
+    WaitSE SEQ_SE_CONFIRM
+    Message CelesticTownCave_EncounterMew
+    CloseMessage
+    StartLegendaryBattle SPECIES_MEW, 80
+    CheckWonBattle VAR_RESULT
+    GoToIfEq VAR_RESULT, FALSE, CelesticTownCave_Blackout
+    CheckDidNotCapture VAR_RESULT
+    GoToIfEq VAR_RESULT, TRUE, CelesticTownCave_MewGone
+    SetFlag FLAG_CAUGHT_MEW
+CelesticTownCave_PostMew:
+    WaitButton
+    ReleaseAll
+    End
+
+CelesticTownCave_MewGone:
+    Message CelesticTownCave_MewGone
+    CloseMessage
+    GoTo CelesticTownCave_PostMew
 
 CelesticTownCave_EnterCyrus:
     BufferPlayerName 0
