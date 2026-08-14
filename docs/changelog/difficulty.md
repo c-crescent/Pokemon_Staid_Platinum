@@ -48,7 +48,7 @@ Torterra (Victreebel) - Empoleon (Golduck) - Infernape (Arcanine)
 - [ ] Route 203
 - [ ] Route 209
 - [ ] Spear Pillar
-- [ ] Survival Area 1
+- [x] Survival Area 1
 - [x] Survival Area 2
 - [ ] Canalave City
 - [ ] Fight Area
