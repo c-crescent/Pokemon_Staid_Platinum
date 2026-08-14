@@ -40,12 +40,16 @@ All boss fights now have scaling IVs.
 - [x] Cynthia Rematch
 
 ### Rival
-- [ ] Route 201
+Final Team:
+Staratpr - Heracross - Snorlax
+Torterra (Victreebel) - Empoleon (Golduck) - Infernape (Arcanine)
+
+- [x] Route 201
 - [ ] Route 203
 - [ ] Route 209
 - [ ] Spear Pillar
 - [ ] Survival Area 1
-- [ ] Survival Area 2
+- [x] Survival Area 2
 - [ ] Canalave City
 - [ ] Fight Area
 - [ ] Patoria City
