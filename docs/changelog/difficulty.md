@@ -53,4 +53,4 @@ Torterra (Victreebel) - Empoleon (Golduck) - Infernape (Arcanine)
 - [ ] Canalave City
 - [x] Fight Area
 - [ ] Patoria City
-- [ ] Pokemon League
+- [x] Pokemon League
