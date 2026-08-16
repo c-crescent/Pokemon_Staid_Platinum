@@ -225,6 +225,8 @@ const u16 CelesticMartSpecialties[] = {
     ITEM_CHOICE_SCARF,
     ITEM_LEFTOVERS,
     ITEM_LIFE_ORB,
+    ITEM_FOCUS_SASH,
+    ITEM_EXPERT_BELT,
     ITEM_AIR_MAIL,
     ITEM_DUSK_BALL,
     ITEM_QUICK_BALL,
