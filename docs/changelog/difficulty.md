@@ -2,7 +2,7 @@
 
 - [x] There is now an enforced level cap.
 - [x] Battle style is now always Set.
-- [ ] All trainer battles now scale with the number of badges the player has.
+- [X] All trainer battles now scale with the number of badges the player has.
 - [x] No items in battle for the player, except for Pokeballs.
 - [x] No items in battle for enemy trainers.
 
@@ -12,20 +12,19 @@
 ### Misc. Boss Fights
 - [X] Mars (Valley Windworks) - 22
 - [X] Jupiter (Eterna Building) - 26
-- [ ] Cyrus (Celestic) - 41
+- [x] Cyrus (Celestic) - 41
 - [x] Saturn (Valor) - 45
 - [x] Mars (Verity) - 45
 - [x] Cyrus (Galactic) - 50
 - [x] Saturn (Galactic) - 50
 - [X] Mars & Jupiter (Spear Pillar) - 50
-- [ ] Cyrus (Distortion) - 50
+- [x] Cyrus (Distortion) - 50
 - [X] Mars (Stark Mountain) - 60
 - [X] Jupiter (Stark Mountain) - 60
 
 ### Lucas / Dawn
-- [ ] Route 207
-- [ ] Route 210
-- [ ] Route 224
+- [X] Jubilife
+- [X] Veilstone
 
 ### Battleground
 - [ ] Cheryl
