@@ -30,8 +30,8 @@
 - [x] Cheryl
 - [ ] Mira
 - [x] Riley
-- [ ] Marley
-- [ ] Buck
+- [X] Marley
+- [x] Buck
 
 ### Gym Leaders
 All gym leader fights now have scaling IVs.
