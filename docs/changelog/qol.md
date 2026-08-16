@@ -24,6 +24,7 @@
 - [x] Resistance Berries can be bought from the Veilstone Dept. Store
 - [x] Battle berries can be bought from Floaroma Mart
 - [x] Type-based damage boosting items can be bought from Pastoria Mart
+- [x] Egg hatch cyles are now near instant
 
 ### Story
 
