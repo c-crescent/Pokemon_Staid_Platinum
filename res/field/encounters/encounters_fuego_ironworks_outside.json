@@ -39,7 +39,7 @@
         },
         {
             "level": 31,
-            "species": "SPECIES_GASTRODON"
+            "species": "SPECIES_ARON"
         },
         {
             "level": 31,
@@ -59,8 +59,8 @@
         "SPECIES_FLOATZEL"
     ],
     "night": [
-        "SPECIES_GASTRODON",
-        "SPECIES_FLOATZEL"
+        "SPECIES_ARON",
+        "SPECIES_ARON"
     ],
     "radar": [
         "SPECIES_ARON",

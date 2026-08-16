@@ -1,55 +1,165 @@
-- [X] Murkrow, Honchkrow
-- [X] Misdreavus, Mismagius
-- [X] Trapinch, Vibrava, Flygon
-- [X] Clamperl
-- [X] Glameow, Purugly
-- [X] Stunky, Skuntank
-- [x] Caterpie, Metapod, Butterfree
-- [x] Weedle, Kakuna, Beedrill
-- [x] Ekans, Arbok
-- [X] Sandshrew, Sandslash
-- [X] Vulpix, Ninetales
-- [X] Growlithe, Arcanine
-- [X] Pineco, Forretress
-- [X] Shuckle
-- [X] Teddiursa, Ursaring
-- [X] Lotad, Lombre, Ludicolo
-- [X] Seedot, Nuzleaf, Shiftry
-- [X] Sableye
-- [X] Mawile
-- [x] Zangoose
-- [x] Seviper
-- [x] Lunatone
-- [x] Solrock
-- [x] Bulbasaur, Ivysaur, Venusaur
-- [x] Charmander, Charmeleon, Charizard
-- [x] Squirtle, Wartortle, Blastoise
-- [x] Chikorita, Bayleef, Meganium
-- [x] Cyndaquil, Quilava, Typhlosion
-- [x] Totodile, Croconaw, Feraligatr
-- [x] Treecko, Grovyle, Sceptile
-- [x] Torchic, Combusken, Blaziken
-- [x] Mudkip, Marshtomp, Swampert
-- [x] Regirock
-- [x] Regice
-- [x] Registeel
-- [x] Raikou
-- [x] Entei
-- [x] Suicune
-- [x] Lugia
-- [x] Ho-Oh
-- [x] Mewtwo
-- [x] Latias
-- [x] Latios
-- [x] Kyogre
-- [x] Groudon
-- [x] Rayquaza
-- [x] Mew
-- [x] Celebi
-- [x] Jirachi
-- [x] Deoxys
-- [x] Phione
-- [x] Manaphy
-- [x] Darkrai
-- [x] Shaymin
-- [x] Arceus
+Magikarp: 395
+Zubat: 350
+Unown: 288
+Gastly: 273
+Geodude: 148
+Psyduck: 109
+Chingling: 109
+Goldeen: 83
+Duskull: 77
+Wooper: 75
+Barboach: 70
+Bidoof: 65
+Finneon: 53
+Onix: 52
+Meditite: 51
+Shellos: 46
+Remoraid: 46
+Buizel: 40
+Bronzor: 40
+Tentacool: 38
+Snover: 32
+Budew: 30
+Machop: 30
+Wingull: 24
+Cleffa: 24
+Smoochum: 21
+Azurill: 21
+Sneasel: 20
+Kricketot: 19
+Marill: 19
+Carvanha: 18
+Gible: 18
+Hoothoot: 18
+Wurmple: 18
+Skorupi: 14
+Nosepass: 13
+Ralts: 12
+Tangela: 12
+Yanma: 12
+Croagunk: 11
+Ponyta: 10
+Shinx: 10
+Hippopotas: 9
+Carnivine: 8
+Rhyhorn: 8
+Magnemite: 8
+Snorunt: 7
+Munchlax: 7
+Happiny: 7
+Chatot: 7
+Swinub: 6
+Staryu: 6
+Tropius: 6
+Aipom: 6
+Scyther: 6
+Houndour: 6
+Abra: 6
+Oddish: 6
+Lapras: 5
+Mawile: 5
+Sableye: 5
+Murkrow: 5
+Misdreavus: 5
+Clamperl: 5
+Girafarig: 5
+Bellsprout: 5
+Mime_Jr: 5
+Bonsly: 5
+Paras: 4
+Cacnea: 4
+Exeggcute: 4
+Kecleon: 4
+Shroomish: 4
+Gulpin: 4
+Kangaskhan: 4
+Cherubi: 4
+Spheal: 4
+Spearow: 4
+Feebas: 4
+Absol: 4
+Luvdisc: 4
+Growlithe: 4
+Pachirisu: 4
+Ekans: 4
+Drifloon: 4
+Dewgong: 4
+Sandshrew: 4
+Dratini: 4
+Corphish: 4
+Shellder: 3
+Combee: 3
+Burmy: 3
+Heracross: 3
+Lotad: 3
+Gligar: 3
+Seviper: 3
+Shuppet: 3
+Illumise: 3
+Volbeat: 3
+Shuckle: 3
+Chinchou: 3
+Plusle: 3
+Minun: 3
+Magby: 3
+Taillow: 3
+Elekid: 3
+Wailmer: 3
+Buneary: 2
+Caterpie: 2
+Weedle: 2
+Beldum: 2
+Slugma: 2
+Teddiursa: 2
+Solrock: 2
+Lunatone: 2
+Whismur: 2
+Numel: 2
+Diglett: 2
+Rattata: 2
+Spinarak: 2
+Trapinch: 2
+Eevee: 2
+Pineco: 2
+Seedot: 2
+Koffing: 2
+Stunky: 2
+Ledyba: 2
+Zangoose: 2
+Vulpix: 2
+Swablu: 2
+Pinsir: 2
+Glameow: 2
+Poochyena: 2
+Skitty: 2
+Mantyke: 2
+Meowth: 2
+Castform: 2
+Ditto: 2
+Torkoal: 2
+Riolu: 1
+Pidgey: 1
+Torchic: 1
+Treecko: 1
+Mudkip: 1
+Chimchar: 1
+Turtwig: 1
+Pichu: 1
+Charmander: 1
+Bulbasaur: 1
+Squirtle: 1
+Cyndaquil: 1
+Chikorita: 1
+Totodile: 1
+Larvitar: 1
+Bagon: 1
+Spoink: 1
+Lickitung: 1
+Relicanth: 1
+Wynaut: 1
+Porygon: 1
+Igglybuff: 1
+Jigglypuff: 1
+Piplup: 1
+Aron: 1
+Qwilfish: 1

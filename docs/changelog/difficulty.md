@@ -9,8 +9,25 @@
 ### Trainers
 - [x] All trainer fights after the first gym has their minimum pokemon levels scale with the amount of badges, capping out at 65.
 
-### Boss Fights
-All boss fights now have scaling IVs.
+### Misc. Boss Fights
+- [ ] Mars (Valley Windworks) - 22
+- [ ] Jupiter (Eterna Building) - 26
+- [ ] Saturn  (212) - 37
+- [ ] Cyrus (Celestic) - 41
+- [ ] Saturn (Valor) - 45
+- [ ] Mars (Verity) - 45
+- [ ] Cyrus (Galactic) - 50
+- [ ] Saturn (Galactic) - 50
+- [ ] Mars & Jupiter (Spear Pillar) - 50
+- [ ] Cyrus (Distortion) - 50
+
+### Lucas / Dawn
+- [ ] Route 207
+- [ ] Route 210
+- [ ] Route 224
+
+### Gym Leaders
+All gym leader fights now have scaling IVs.
 
 - [x] Roark
 - [x] Roark Rematch
@@ -39,7 +56,7 @@ All boss fights now have scaling IVs.
 - [X] Cynthia
 - [x] Cynthia Rematch
 
-### Rival
+### Barry
 Final Team:
 Staratpr - Heracross - Snorlax
 Torterra (Victreebel) - Empoleon (Golduck) - Infernape (Arcanine)
@@ -54,3 +71,4 @@ Torterra (Victreebel) - Empoleon (Golduck) - Infernape (Arcanine)
 - [x] Fight Area
 - [x] Patoria City
 - [x] Pokemon League
+
