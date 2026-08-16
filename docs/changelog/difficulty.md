@@ -10,21 +10,29 @@
 - [x] All trainer fights after the first gym has their minimum pokemon levels scale with the amount of badges, capping out at 65.
 
 ### Misc. Boss Fights
-- [ ] Mars (Valley Windworks) - 22
+- [X] Mars (Valley Windworks) - 22
 - [ ] Jupiter (Eterna Building) - 26
 - [ ] Saturn  (212) - 37
 - [ ] Cyrus (Celestic) - 41
 - [ ] Saturn (Valor) - 45
-- [ ] Mars (Verity) - 45
+- [x] Mars (Verity) - 45
 - [ ] Cyrus (Galactic) - 50
 - [ ] Saturn (Galactic) - 50
-- [ ] Mars & Jupiter (Spear Pillar) - 50
+- [X] Mars & Jupiter (Spear Pillar) - 50
 - [ ] Cyrus (Distortion) - 50
+- [X] Mars (Stark Mountain) - Post-Game
 
 ### Lucas / Dawn
 - [ ] Route 207
 - [ ] Route 210
 - [ ] Route 224
+
+### Battleground
+- [ ] Cheryl
+- [ ] Mira
+- [ ] Riley
+- [ ] Marley
+- [ ] Buck
 
 ### Gym Leaders
 All gym leader fights now have scaling IVs.
