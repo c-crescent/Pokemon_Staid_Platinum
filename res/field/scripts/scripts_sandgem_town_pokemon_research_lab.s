@@ -463,8 +463,25 @@ SandgemTownLab_BookshelfReferenceMaterial:
     End
 
 SandgemTownLab_PC:
-    BufferPlayerName 0
-    EventMessage SandgemTownLab_Text_PlayerCheckedThePC
+    Message SandgemTownLab_Text_PlayerCheckedThePC
+    ShowYesNoMenu VAR_RESULT
+    GoToIfEq VAR_RESULT, MENU_YES, SandgemTownLab_PC_GeneShuffle
+    GoToIfEq VAR_RESULT, MENU_NO, SandgemTownLab_PC_GeneShuffleDenied
+    End
+
+SandgemTownLab_PC_GeneShuffleDenied:
+    CloseMessage
+    End
+
+SandgemTownLab_PC_GeneShuffle:
+    ShuffleLeadMonGenetics
+    Message SandgemTownLab_Text_GeneShuffleComplete
+    CloseMessage
+    End
+
+SandgemTownLab_PC_CantShuffleEgg:
+    Message SandgemTownLab_Text_CantShuffleEggs
+    CloseMessage
     End
 
 SandgemTownLab_ResearchMaterials_Unused:

@@ -348,10 +348,21 @@
     {
       "id": "SandgemTownLab_Text_PlayerCheckedThePC",
       "en_US": [
-        "{STRVAR_1 3, 0, 0} checked the PC.\r",
-        "The screen is filled with special terms\n",
-        "and academic writing that is impossible\f",
-        "to figure out."
+        "There’s a function to optimize the genes\n",
+        "of your leading Pokémon.\r",
+        "Run it?\r"
+      ]
+    },
+    {
+      "id": "SandgemTownLab_Text_GeneShuffleComplete",
+      "en_US": [
+        "Function Complete.\r"
+      ]
+    },
+    {
+      "id": "SandgemTownLab_Text_CantShuffleEggs",
+      "en_US": [
+        "An egg cannot be chosen for this function.\r"
       ]
     },
     {

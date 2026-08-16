@@ -825,3 +825,34 @@ BOOL ScrCmd_CheckPartyHasHeldItem(ScriptContext *ctx)
 
     return FALSE;
 }
+
+BOOL ScrCmd_ShuffleLeadMonGenetics(ScriptContext *ctx)
+{
+    FieldSystem *fieldSystem = ctx->fieldSystem;
+    Pokemon *mon = Party_GetPokemonBySlotIndex(SaveData_GetParty(fieldSystem->saveData), 0);
+    if (!Pokemon_GetValue(mon, MON_DATA_IS_EGG, NULL)) {
+        
+        u32 v1, v2;
+        v1 = 0xFFFFFFFF;
+        v2 = (v1 & (0x1f << 0)) >> 0;
+        Pokemon_SetValue(mon, MON_DATA_HP_IV, &v2);
+
+        v2 = (v1 & (0x1f << 5)) >> 5;
+        Pokemon_SetValue(mon, MON_DATA_ATK_IV, &v2);
+
+        v2 = (v1 & (0x1f << 10)) >> 10;
+        Pokemon_SetValue(mon, MON_DATA_DEF_IV, &v2);
+
+        v2 = (v1 & (0x1f << 0)) >> 0;
+        Pokemon_SetValue(mon, MON_DATA_SPEED_IV, &v2);
+
+        v2 = (v1 & (0x1f << 5)) >> 5;
+        Pokemon_SetValue(mon, MON_DATA_SPATK_IV, &v2);
+
+        v2 = (v1 & (0x1f << 10)) >> 10;
+        Pokemon_SetValue(mon, MON_DATA_SPDEF_IV, &v2);
+        
+        Pokemon_CalcStats(mon);
+    }   
+    return FALSE;
+}

@@ -821,6 +821,7 @@ ScriptCommand(SCRCMD_ACTIVATEREGIRUINSDOT,                                 ScrCm
 ScriptCommand(SCRCMD_32D,                                                  ScrCmd_32D)
 ScriptCommand(SCRCMD_32E,                                                  ScrCmd_32E)
 ScriptCommand(SCRCMD_CHECKPARTYHASHELDITEM,                                ScrCmd_CheckPartyHasHeldItem)
+ScriptCommand(SCRCMD_SHUFFLELEADMONGENETICS,                                ScrCmd_ShuffleLeadMonGenetics)
 ScriptCommand(SCRCMD_LOGLINKINFOINWIFIHISTORY,                             ScrCmd_LogLinkInfoInWiFiHistory)
 ScriptCommand(SCRCMD_331,                                                  ScrCmd_331)
 ScriptCommand(SCRCMD_332,                                                  ScrCmd_332)

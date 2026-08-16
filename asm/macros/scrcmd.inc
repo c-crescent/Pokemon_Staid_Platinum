@@ -4848,6 +4848,10 @@
     .short \destVar
     .endm
 
+    .macro ShuffleLeadMonGenetics
+    .short SCRCMD_SHUFFLELEADMONGENETICS
+    .endm
+
     .macro LogLinkInfoInWiFiHistory
     .short SCRCMD_LOGLINKINFOINWIFIHISTORY
     .endm
