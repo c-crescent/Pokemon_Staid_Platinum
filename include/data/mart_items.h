@@ -62,6 +62,14 @@ const u16 OreburghMartSpecialtiesFossils[] = {
 };
 
 const u16 FloaromaMartSpecialties[] = {
+    ITEM_CHERI_BERRY,
+    ITEM_CHESTO_BERRY,
+    ITEM_PECHA_BERRY,
+    ITEM_RAWST_BERRY,
+    ITEM_ASPEAR_BERRY,
+    ITEM_PERSIN_BERRY,
+    ITEM_LUM_BERRY,
+    ITEM_SITRUS_BERRY,
     ITEM_BLOOM_MAIL,
     ITEM_HEAL_BALL,
     ITEM_NET_BALL,
