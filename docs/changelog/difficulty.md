@@ -11,7 +11,7 @@
 
 ### Misc. Boss Fights
 - [X] Mars (Valley Windworks) - 22
-- [ ] Jupiter (Eterna Building) - 26
+- [X] Jupiter (Eterna Building) - 26
 - [ ] Saturn  (212) - 37
 - [ ] Cyrus (Celestic) - 41
 - [ ] Saturn (Valor) - 45
@@ -20,7 +20,8 @@
 - [ ] Saturn (Galactic) - 50
 - [X] Mars & Jupiter (Spear Pillar) - 50
 - [ ] Cyrus (Distortion) - 50
-- [X] Mars (Stark Mountain) - Post-Game
+- [X] Mars (Stark Mountain) - 60
+- [X] Jupiter (Stark Mountain) - 60
 
 ### Lucas / Dawn
 - [ ] Route 207
