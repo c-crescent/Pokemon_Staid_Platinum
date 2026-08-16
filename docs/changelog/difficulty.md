@@ -15,8 +15,8 @@
 - [ ] Cyrus (Celestic) - 41
 - [x] Saturn (Valor) - 45
 - [x] Mars (Verity) - 45
-- [ ] Cyrus (Galactic) - 50
-- [ ] Saturn (Galactic) - 50
+- [x] Cyrus (Galactic) - 50
+- [x] Saturn (Galactic) - 50
 - [X] Mars & Jupiter (Spear Pillar) - 50
 - [ ] Cyrus (Distortion) - 50
 - [X] Mars (Stark Mountain) - 60
