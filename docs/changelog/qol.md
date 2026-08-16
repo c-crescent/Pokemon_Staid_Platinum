@@ -21,6 +21,7 @@
 - [x] Eterna City now sells evolution items.
 - [x] Jubilife Mart now sells Master Balls.
 - [x] Life Orb, Leftovers, and Choice items now available at Celestic mart
+- [x] Resistance Berries can be bought from the Veilstone Dept. Store
 
 ### Story
 
