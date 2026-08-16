@@ -12,9 +12,8 @@
 ### Misc. Boss Fights
 - [X] Mars (Valley Windworks) - 22
 - [X] Jupiter (Eterna Building) - 26
-- [ ] Saturn  (212) - 37
 - [ ] Cyrus (Celestic) - 41
-- [ ] Saturn (Valor) - 45
+- [x] Saturn (Valor) - 45
 - [x] Mars (Verity) - 45
 - [ ] Cyrus (Galactic) - 50
 - [ ] Saturn (Galactic) - 50

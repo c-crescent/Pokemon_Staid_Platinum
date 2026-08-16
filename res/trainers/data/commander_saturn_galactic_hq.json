@@ -10,43 +10,85 @@
     "double_battle": false,
     "party": [
         {
-            "species": "SPECIES_GOLBAT",
+            "species": "SPECIES_SLAKING",
             "form": 0,
-            "level": 42,
-            "item": "ITEM_NONE",
-            "moves": [
-                "MOVE_AIR_CUTTER",
-                "MOVE_BITE",
-                "MOVE_POISON_FANG",
-                "MOVE_CONFUSE_RAY"
-            ],
-            "iv_scale": 200,
-            "ball_seal": 0
-        },
-        {
-            "species": "SPECIES_BRONZOR",
-            "form": 0,
-            "level": 42,
-            "item": "ITEM_NONE",
-            "moves": [
-                "MOVE_GYRO_BALL",
-                "MOVE_EXTRASENSORY",
-                "MOVE_SHADOW_BALL",
-                "MOVE_CONFUSE_RAY"
-            ],
-            "iv_scale": 200,
-            "ball_seal": 0
-        },
-        {
-            "species": "SPECIES_TOXICROAK",
-            "form": 0,
-            "level": 44,
+            "level": 47,
             "item": "ITEM_SITRUS_BERRY",
             "moves": [
-                "MOVE_POISON_JAB",
-                "MOVE_BRICK_BREAK",
-                "MOVE_X_SCISSOR",
-                "MOVE_FAINT_ATTACK"
+                "MOVE_DOUBLE_EDGE",
+                "MOVE_EARTHQUAKE",
+                "MOVE_PURSUIT",
+                "MOVE_SUCKER_PUNCH"
+            ],
+            "iv_scale": 200,
+            "ball_seal": 0
+        },
+        {
+            "species": "SPECIES_CACTURNE",
+            "form": 0,
+            "level": 47,
+            "item": "ITEM_SITRUS_BERRY",
+            "moves": [
+                "MOVE_SPIKES",
+                "MOVE_ENERGY_BALL",
+                "MOVE_DARK_PULSE",
+                "MOVE_ENCORE"
+            ],
+            "iv_scale": 200,
+            "ball_seal": 0
+        },
+        {
+            "species": "SPECIES_HUNTAIL",
+            "form": 0,
+            "level": 47,
+            "item": "ITEM_SITRUS_BERRY",
+            "moves": [
+                "MOVE_SURF",
+                "MOVE_ICE_BEAM",
+                "MOVE_RAIN_DANCE",
+                "MOVE_HYDRO_PUMP"
+            ],
+            "iv_scale": 200,
+            "ball_seal": 0
+        },
+        {
+            "species": "SPECIES_STANTLER",
+            "form": 0,
+            "level": 47,
+            "item": "ITEM_SITRUS_BERRY",
+            "moves": [
+                "MOVE_RETURN",
+                "MOVE_EARTHQUAKE",
+                "MOVE_MEGAHORN",
+                "MOVE_DOUBLE_EDGE"
+            ],
+            "iv_scale": 200,
+            "ball_seal": 0
+        },
+        {
+            "species": "SPECIES_DUNSPARCE",
+            "form": 0,
+            "level": 47,
+            "item": "ITEM_SITRUS_BERRY",
+            "moves": [
+                "MOVE_ROOST",
+                "MOVE_BODY_SLAM",
+                "MOVE_FLAIL",
+                "MOVE_GYRO_BALL"
+            ],
+            "iv_scale": 200,
+            "ball_seal": 0
+        },
+        {
+            "species": "SPECIES_EXPLOUD",
+            "form": 0,
+            "level": 47,
+            "item": "ITEM_SITRUS_BERRY",
+            "moves": [
+                "MOVE_HYPER_VOICE",
+                "MOVE_ICE_BEAM",
+                "MOVE_SHOCK_WAVE",
+                "MOVE_EXTRASENSORY"
             ],
             "iv_scale": 200,
             "ball_seal": 0
