@@ -20,7 +20,7 @@
                 "MOVE_QUICK_ATTACK",
                 "MOVE_THIEF"
             ],
-            "iv_scale": 250,
+            "iv_scale": 100,
             "ball_seal": 0
         },
         {
@@ -34,7 +34,7 @@
                 "MOVE_DOUBLE_KICK",
                 "MOVE_TAUNT"
             ],
-            "iv_scale": 250,
+            "iv_scale": 100,
             "ball_seal": 0
         },
         {
@@ -48,7 +48,7 @@
                 "MOVE_METAL_CLAW",
                 "MOVE_PLUCK"
             ],
-            "iv_scale": 250,
+            "iv_scale": 100,
             "ball_seal": 0
         },
         {
@@ -62,7 +62,7 @@
                 "MOVE_PURSUIT",
                 "MOVE_BLIZZARD"
             ],
-            "iv_scale": 250,
+            "iv_scale": 100,
             "ball_seal": 0
         }
     ],

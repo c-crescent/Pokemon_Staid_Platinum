@@ -20,7 +20,7 @@
                 "MOVE_QUICK_ATTACK",
                 "MOVE_U_TURN"
             ],
-            "iv_scale": 250,
+            "iv_scale": 200,
             "ball_seal": 0
         },
         {
@@ -34,7 +34,7 @@
                 "MOVE_SUCKER_PUNCH",
                 "MOVE_LEAF_BLADE"
             ],
-            "iv_scale": 250,
+            "iv_scale": 200,
             "ball_seal": 0
         },
         {
@@ -48,7 +48,7 @@
                 "MOVE_KNOCK_OFF",
                 "MOVE_STONE_EDGE"
             ],
-            "iv_scale": 250,
+            "iv_scale": 200,
             "ball_seal": 0
         },
         {
@@ -62,7 +62,7 @@
                 "MOVE_THUNDER_PUNCH",
                 "MOVE_U_TURN"
             ],
-            "iv_scale": 250,
+            "iv_scale": 200,
             "ball_seal": 0
         },
         {
@@ -76,7 +76,7 @@
                 "MOVE_EARTHQUAKE",
                 "MOVE_SELFDESTRUCT"
             ],
-            "iv_scale": 250,
+            "iv_scale": 200,
             "ball_seal": 0
         },
         {
@@ -90,7 +90,7 @@
                 "MOVE_AGILITY",
                 "MOVE_GRASS_KNOT"
             ],
-            "iv_scale": 250,
+            "iv_scale": 200,
             "ball_seal": 24
         }
     ],
