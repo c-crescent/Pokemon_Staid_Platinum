@@ -44,9 +44,9 @@ Final Team:
 Staratpr - Heracross - Snorlax
 Torterra (Victreebel) - Empoleon (Golduck) - Infernape (Arcanine)
 
-- [x] Route 201
+- [X] Route 201
 - [ ] Route 203
-- [ ] Route 209
+- [X] Route 209
 - [x] Spear Pillar
 - [x] Survival Area 1
 - [x] Survival Area 2

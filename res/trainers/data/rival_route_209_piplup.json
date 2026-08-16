@@ -12,57 +12,57 @@
         {
             "species": "SPECIES_STARAVIA",
             "form": 0,
-            "level": 25,
-            "item": null,
+            "level": 27,
+            "item": "ITEM_SITRUS_BERRY",
             "moves": [
-                "MOVE_WING_ATTACK",
+                "MOVE_STEEL_WING",
+                "MOVE_AERIAL_ACE",
                 "MOVE_QUICK_ATTACK",
-                "MOVE_ENDEAVOR",
-                "MOVE_DOUBLE_TEAM"
+                "MOVE_THIEF"
             ],
-            "iv_scale": 50,
-            "ball_seal": 0
-        },
-        {
-            "species": "SPECIES_BUIZEL",
-            "form": 0,
-            "level": 23,
-            "item": null,
-            "moves": [
-                "MOVE_WATER_GUN",
-                "MOVE_QUICK_ATTACK",
-                "MOVE_PURSUIT",
-                "MOVE_GROWL"
-            ],
-            "iv_scale": 50,
-            "ball_seal": 0
-        },
-        {
-            "species": "SPECIES_PONYTA",
-            "form": 0,
-            "level": 23,
-            "item": null,
-            "moves": [
-                "MOVE_EMBER",
-                "MOVE_TACKLE",
-                "MOVE_TAIL_WHIP",
-                "MOVE_GROWL"
-            ],
-            "iv_scale": 50,
+            "iv_scale": 250,
             "ball_seal": 0
         },
         {
             "species": "SPECIES_GROTLE",
             "form": 0,
             "level": 27,
-            "item": null,
+            "item": "ITEM_SITRUS_BERRY",
             "moves": [
-                "MOVE_RAZOR_LEAF",
-                "MOVE_TACKLE",
-                "MOVE_ABSORB",
-                "MOVE_WITHDRAW"
+                "MOVE_BODY_SLAM",
+                "MOVE_BITE",
+                "MOVE_BULLET_SEED",
+                "MOVE_ROCK_TOMB"
             ],
-            "iv_scale": 50,
+            "iv_scale": 250,
+            "ball_seal": 0
+        },
+        {
+            "species": "SPECIES_MONFERNO",
+            "form": 0,
+            "level": 27,
+            "item": "ITEM_SITRUS_BERRY",
+            "moves": [
+                "MOVE_FLAME_WHEEL",
+                "MOVE_MACH_PUNCH",
+                "MOVE_DOUBLE_KICK",
+                "MOVE_TAUNT"
+            ],
+            "iv_scale": 250,
+            "ball_seal": 0
+        },
+        {
+            "species": "SPECIES_MUNCHLAX",
+            "form": 0,
+            "level": 27,
+            "item": "ITEM_SITRUS_BERRY",
+            "moves": [
+                "MOVE_BODY_SLAM",
+                "MOVE_BRICK_BREAK",
+                "MOVE_PURSUIT",
+                "MOVE_BLIZZARD"
+            ],
+            "iv_scale": 250,
             "ball_seal": 0
         }
     ],
