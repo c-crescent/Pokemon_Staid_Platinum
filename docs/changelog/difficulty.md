@@ -29,7 +29,7 @@
 ### Battleground
 - [x] Cheryl
 - [ ] Mira
-- [ ] Riley
+- [x] Riley
 - [ ] Marley
 - [ ] Buck
 
