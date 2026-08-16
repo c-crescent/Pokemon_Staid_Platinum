@@ -45,7 +45,7 @@ Staratpr - Heracross - Snorlax
 Torterra (Victreebel) - Empoleon (Golduck) - Infernape (Arcanine)
 
 - [X] Route 201
-- [ ] Route 203
+- [x] Route 203
 - [X] Route 209
 - [x] Spear Pillar
 - [x] Survival Area 1
