@@ -27,7 +27,7 @@
 - [X] Veilstone
 
 ### Battleground
-- [ ] Cheryl
+- [x] Cheryl
 - [ ] Mira
 - [ ] Riley
 - [ ] Marley
