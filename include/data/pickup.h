@@ -13,7 +13,6 @@ static const u16 sCommonPickupItems[] = {
     ITEM_HYPER_POTION,
     ITEM_ULTRA_BALL,
     ITEM_REVIVE,
-    ITEM_RARE_CANDY,
     ITEM_DUSK_STONE,
     ITEM_SHINY_STONE,
     ITEM_DAWN_STONE,

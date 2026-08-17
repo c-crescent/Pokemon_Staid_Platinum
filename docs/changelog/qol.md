@@ -27,6 +27,7 @@
 - [x] Egg hatch cyles are now near instant
 - [x] Prof. Rowan's PC in Sandgem lab can now optimise IVs
 - [x] Vitamins no longer has an EV cap.
+- [x] Rare Candies in exploration now replaced by vitamins. Hidden ones replaced by Nuggets.
 
 ### Story
 

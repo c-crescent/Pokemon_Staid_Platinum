@@ -579,7 +579,7 @@ VisibleItems_WaywardCaveB1F_MaxEther:
     End
 
 VisibleItems_WaywardCaveB1F_RareCandy:
-    SetVar VAR_0x8008, ITEM_RARE_CANDY
+    SetVar VAR_0x8008, ITEM_NUGGET
     SetVar VAR_0x8009, 1
     GoTo VisibleItems_TryGiveItem
     End
@@ -993,7 +993,7 @@ VisibleItems_VeilstoneCity_FullIncense:
     End
 
 VisibleItems_VeilstoneCity_RareCandy:
-    SetVar VAR_0x8008, ITEM_RARE_CANDY
+    SetVar VAR_0x8008, ITEM_NUGGET
     SetVar VAR_0x8009, 1
     GoTo VisibleItems_TryGiveItem
     End
@@ -1023,7 +1023,7 @@ VisibleItems_Route214_MaxRepel:
     End
 
 VisibleItems_Route214_RareCandy:
-    SetVar VAR_0x8008, ITEM_RARE_CANDY
+    SetVar VAR_0x8008, ITEM_NUGGET
     SetVar VAR_0x8009, 1
     GoTo VisibleItems_TryGiveItem
     End
@@ -1125,7 +1125,7 @@ VisibleItems_Route221_TM81:
     End
 
 VisibleItems_Route218_RareCandy:
-    SetVar VAR_0x8008, ITEM_RARE_CANDY
+    SetVar VAR_0x8008, ITEM_NUGGET
     SetVar VAR_0x8009, 1
     GoTo VisibleItems_TryGiveItem
     End
@@ -1233,7 +1233,7 @@ VisibleItems_MtCoronet1FNorthRoom1_EscapeRope:
     End
 
 VisibleItems_MtCoronet1FNorthRoom1_RareCandy:
-    SetVar VAR_0x8008, ITEM_RARE_CANDY
+    SetVar VAR_0x8008, ITEM_NUGGET
     SetVar VAR_0x8009, 1
     GoTo VisibleItems_TryGiveItem
     End
@@ -1431,7 +1431,7 @@ VisibleItems_VictoryRoad1F_MaxRepel:
     End
 
 VisibleItems_VictoryRoad1F_RareCandy:
-    SetVar VAR_0x8008, ITEM_RARE_CANDY
+    SetVar VAR_0x8008, ITEM_NUGGET
     SetVar VAR_0x8009, 1
     GoTo VisibleItems_TryGiveItem
     End
@@ -1503,7 +1503,7 @@ VisibleItems_Route224_RazorClaw:
     End
 
 VisibleItems_Route224_RareCandy:
-    SetVar VAR_0x8008, ITEM_RARE_CANDY
+    SetVar VAR_0x8008, ITEM_NUGGET
     SetVar VAR_0x8009, 1
     GoTo VisibleItems_TryGiveItem
     End
@@ -1527,7 +1527,7 @@ VisibleItems_Route225_RazorFang:
     End
 
 VisibleItems_Route225_RareCandy:
-    SetVar VAR_0x8008, ITEM_RARE_CANDY
+    SetVar VAR_0x8008, ITEM_NUGGET
     SetVar VAR_0x8009, 1
     GoTo VisibleItems_TryGiveItem
     End
@@ -1653,7 +1653,7 @@ VisibleItems_StarkMountainRoom2_Nugget:
     End
 
 VisibleItems_StarkMountainRoom2_RareCandy:
-    SetVar VAR_0x8008, ITEM_RARE_CANDY
+    SetVar VAR_0x8008, ITEM_NUGGET
     SetVar VAR_0x8009, 1
     GoTo VisibleItems_TryGiveItem
     End
@@ -1731,7 +1731,7 @@ VisibleItems_ResortArea_Nugget:
     End
 
 VisibleItems_Route230_RareCandy:
-    SetVar VAR_0x8008, ITEM_RARE_CANDY
+    SetVar VAR_0x8008, ITEM_NUGGET
     SetVar VAR_0x8009, 1
     GoTo VisibleItems_TryGiveItem
     End
@@ -1929,7 +1929,7 @@ VisibleItems_TeamGalacticEternaBuilding4F_Upgrade:
     End
 
 VisibleItems_OldChateauDiningArea_RareCandy:
-    SetVar VAR_0x8008, ITEM_RARE_CANDY
+    SetVar VAR_0x8008, ITEM_NUGGET
     SetVar VAR_0x8009, 1
     GoTo VisibleItems_TryGiveItem
     End
@@ -1989,7 +1989,7 @@ VisibleItems_Route212South_Elixir:
     End
 
 VisibleItems_SolaceonTown_RareCandy:
-    SetVar VAR_0x8008, ITEM_RARE_CANDY
+    SetVar VAR_0x8008, ITEM_NUGGET
     SetVar VAR_0x8009, 1
     GoTo VisibleItems_TryGiveItem
     End
@@ -2043,7 +2043,7 @@ VisibleItems_FloaromaMeadow_UltraBall:
     End
 
 VisibleItems_FloaromaMeadow_RareCandy:
-    SetVar VAR_0x8008, ITEM_RARE_CANDY
+    SetVar VAR_0x8008, ITEM_NUGGET
     SetVar VAR_0x8009, 1
     GoTo VisibleItems_TryGiveItem
     End
@@ -2097,7 +2097,7 @@ VisibleItems_Route217_UltraBall:
     End
 
 VisibleItems_Route217_RareCandy:
-    SetVar VAR_0x8008, ITEM_RARE_CANDY
+    SetVar VAR_0x8008, ITEM_NUGGET
     SetVar VAR_0x8009, 1
     GoTo VisibleItems_TryGiveItem
     End
@@ -2139,7 +2139,7 @@ VisibleItems_Route222_PPUp:
     End
 
 VisibleItems_Route223_RareCandy:
-    SetVar VAR_0x8008, ITEM_RARE_CANDY
+    SetVar VAR_0x8008, ITEM_NUGGET
     SetVar VAR_0x8009, 1
     GoTo VisibleItems_TryGiveItem
     End
@@ -2217,7 +2217,7 @@ VisibleItems_VictoryRoadB1F_Calcium:
     End
 
 VisibleItems_SurvivalArea_RareCandy:
-    SetVar VAR_0x8008, ITEM_RARE_CANDY
+    SetVar VAR_0x8008, ITEM_NUGGET
     SetVar VAR_0x8009, 1
     GoTo VisibleItems_TryGiveItem
     End
