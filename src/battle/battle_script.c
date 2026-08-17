@@ -6618,6 +6618,8 @@ static BOOL BtlCmd_TryKnockOff(BattleSystem *battleSys, BattleContext *battleCtx
         battleCtx->msgBuffer.params[0] = BattleSystem_NicknameTag(battleCtx, battleCtx->defender);
         battleCtx->msgBuffer.params[1] = DEFENDING_MON.ability;
         battleCtx->msgBuffer.params[2] = battleCtx->moveCur;
+        
+        battleCtx->movePower = battleCtx->movePower * 15 / 10;
     } else if (DEFENDING_MON.heldItem) {
         battleCtx->msgBuffer.id = BattleStrings_Text_PokemonKnockedOffPokemonsItem_AllyAlly; // "{0} knocked off {1}'s {2}!"
         battleCtx->msgBuffer.tags = TAG_NICKNAME_NICKNAME_ITEM;
@@ -6628,7 +6630,6 @@ static BOOL BtlCmd_TryKnockOff(BattleSystem *battleSys, BattleContext *battleCtx
         DEFENDING_MON.heldItem = ITEM_NONE;
         battleCtx->sideConditions[defending].knockedOffItemsMask |= FlagIndex(battleCtx->selectedPartySlot[battleCtx->defender]);
 
-        // Increase move power by 50% when item is successfully knocked off
         battleCtx->movePower = battleCtx->movePower * 15 / 10;
     } else {
         BattleScript_Iter(battleCtx, jumpOnFail);
