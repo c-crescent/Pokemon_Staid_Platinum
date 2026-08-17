@@ -435,7 +435,7 @@ VisibleItems_Route205South_HealBall:
     End
 
 VisibleItems_Route205South_XSpDef:
-    SetVar VAR_0x8008, ITEM_X_SP_DEF
+    SetVar VAR_0x8008, ITEM_STARDUST
     SetVar VAR_0x8009, 1
     GoTo VisibleItems_TryGiveItem
     End
@@ -471,7 +471,7 @@ VisibleItems_OldChateauSideRooms_OldGateau:
     End
 
 VisibleItems_Route205North_GuardSpec:
-    SetVar VAR_0x8008, ITEM_GUARD_SPEC
+    SetVar VAR_0x8008, ITEM_STARDUST
     SetVar VAR_0x8009, 1
     GoTo VisibleItems_TryGiveItem
     End
@@ -1863,13 +1863,13 @@ VisibleItems_Route204North_Awakening:
     End
 
 VisibleItems_Route203_XDefense:
-    SetVar VAR_0x8008, ITEM_X_DEFENSE
+    SetVar VAR_0x8008, ITEM_STARDUST
     SetVar VAR_0x8009, 1
     GoTo VisibleItems_TryGiveItem
     End
 
 VisibleItems_Route218_XAccuracy:
-    SetVar VAR_0x8008, ITEM_X_ACCURACY
+    SetVar VAR_0x8008, ITEM_STARDUST
     SetVar VAR_0x8009, 1
     GoTo VisibleItems_TryGiveItem
     End
@@ -1881,13 +1881,13 @@ VisibleItems_JubilifeCity_Potion:
     End
 
 VisibleItems_TrainersSchool_XAttack:
-    SetVar VAR_0x8008, ITEM_X_ATTACK
+    SetVar VAR_0x8008, ITEM_STARDUST
     SetVar VAR_0x8009, 1
     GoTo VisibleItems_TryGiveItem
     End
 
 VisibleItems_OreburghCity_DireHit:
-    SetVar VAR_0x8008, ITEM_DIRE_HIT
+    SetVar VAR_0x8008, ITEM_STARDUST
     SetVar VAR_0x8009, 1
     GoTo VisibleItems_TryGiveItem
     End
@@ -1905,13 +1905,13 @@ VisibleItems_MtCoronet1FNorthRoom1_IceHeal:
     End
 
 VisibleItems_TeamGalacticEternaBuilding2F_XSpeed:
-    SetVar VAR_0x8008, ITEM_X_SPEED
+    SetVar VAR_0x8008, ITEM_STARDUST
     SetVar VAR_0x8009, 1
     GoTo VisibleItems_TryGiveItem
     End
 
 VisibleItems_TeamGalacticEternaBuilding3F_XSpecial:
-    SetVar VAR_0x8008, ITEM_X_SPECIAL
+    SetVar VAR_0x8008, ITEM_STARDUST
     SetVar VAR_0x8009, 1
     GoTo VisibleItems_TryGiveItem
     End

@@ -202,14 +202,14 @@ const u16 VeilstoneDeptStoreStock_2F_UP[] = {
     SHOP_ITEM_END
 };
 
-const u16 VeilstoneDeptStoreStock_2F_MID[] = {
-    ITEM_PROTEIN,
-    ITEM_IRON,
-    ITEM_CALCIUM,
-    ITEM_ZINC,
-    ITEM_CARBOS,
-    ITEM_HP_UP,
-    ITEM_PP_UP,
+const u16 VeilstoneDeptStoreStock_2F_MID[] = {    
+    ITEM_RAZOR_CLAW,
+    ITEM_RAZOR_FANG,
+    ITEM_SCOPE_LENS,
+    ITEM_SHED_SHELL,
+    ITEM_SHELL_BELL,
+    ITEM_FOCUS_BAND,    
+    ITEM_QUICK_CLAW,
     SHOP_ITEM_END
 };
 
@@ -241,14 +241,7 @@ const u16 CelesticMartSpecialties[] = {
     ITEM_LEFTOVERS,
     ITEM_LIFE_ORB,
     ITEM_FOCUS_SASH,
-    ITEM_FOCUS_BAND,
-    ITEM_QUICK_CLAW,
     ITEM_EXPERT_BELT,
-    ITEM_RAZOR_CLAW,
-    ITEM_RAZOR_FANG,
-    ITEM_SCOPE_LENS,
-    ITEM_SHED_SHELL,
-    ITEM_SHELL_BELL,
     SHOP_ITEM_END
 };
 
