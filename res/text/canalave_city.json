@@ -96,17 +96,8 @@
       "id": "CanalaveCity_Text_INeedYouAtLakeValor",
       "en_US": [
         "Rowan: ...That {STRVAR_1 3, 0, 0}...\n",
-        "Can’t sit still...\r",
         "{STRVAR_1 3, 1, 0}, I don’t like to demand,\n",
-        "but I need you at Lake Valor.\r",
-        "It’s impossible for things to be OK.\n",
-        "Not after an explosion like that.\r",
-        "But I have no idea what is taking\n",
-        "place...\r",
-        "But before you go, let me stress:\n",
-        "don’t get in over your head.\r",
-        "We will try to join you as soon as\n",
-        "we inspect Lake Verity.\r"
+        "but I need you at Lake Valor.\r"
       ]
     },
     {
@@ -146,11 +137,7 @@
       "en_US": [
         "Rowan: Hmm...\r",
         "What is taking place at Lake\n",
-        "Valor... You must find out!\r",
-        "But before you go, let me stress:\n",
-        "don’t get in over your head.\r",
-        "We will try to join you as soon as\n",
-        "we inspect Lake Verity."
+        "Valor... You must find out!\r"
       ]
     },
     {

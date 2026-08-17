@@ -82,35 +82,13 @@
       "en_US": [
         "Mars: That face...!\n",
         "It brings back bad memories!\r",
-        "I’m talking about the windworks!\r",
-        "I caught a whole lot of trouble\n",
-        "for that little incident.\r",
-        "What’s with that look on your face?\n",
-        "You do remember me, don’t you?\r",
-        "Fine, whatever.\n",
-        "I’ll tell you who I am again!\r",
-        "I’m Mars, one of Team Galactic’s\n",
-        "Commanders.\r",
-        "So, what is it? Are you some\n",
-        "lovey-dovey couple to the rescue?\r",
-        "Not a chance! Not even a teeny one!\n",
         "You’re all going down!\r"
       ]
     },
     {
       "id": "LakeVerity_Text_MarsDefeat",
       "en_US": [
-        "I lost again...\r",
-        "So, first the windworks, and now\n",
-        "Lake Verity that I owe you for!\r",
-        "This shouldn’t be happening to Team\n",
-        "Galactic’s Commander...\r",
-        "...Calm down, Mars...\n",
-        "I’ve done my part in all of this...\r",
-        "My mission was to transport the\n",
-        "lake’s Pokémon to our HQ...\r",
-        "...That’s right! I accomplished my\n",
-        "mission without a problem!\r"
+        "I lost again...\r"
       ]
     },
     {
@@ -125,21 +103,12 @@
       "en_US": [
         "The Pokémon of the three lakes are\n",
         "connected somehow.\r",
-        "Thanks to Saturn’s grandstanding at\n",
-        "Lake Valor, a cavern appeared here.\r",
-        "It was the cavern where the Pokémon\n",
-        "MESPRIT slept.\r",
-        "MESPRIT appeared, too, probably to\n",
-        "go help its friends.\r",
-        "That worked out well for us.\n",
         "It was super easy to catch.\r",
         "So, now we’ve got them all:\n",
         "MESPRIT, “The Being of Emotion.”\f",
         "AZELF, “The Being of Willpower.”\f",
         "UXIE, “The Being of Intelligence.”\r",
-        "Now that we have them all...\r",
-        "You can look forward to what plans\n",
-        "Team Galactic has for them!\r"
+        "Now that we have them all...\r"
       ]
     },
     {
@@ -147,15 +116,8 @@
       "en_US": [
         "Rowan: I see...\n",
         "This also occurred at Lake Valor...\r",
-        "Another legendary Pokémon was taken\n",
-        "away by Team Galactic...\r",
-        "Both of you went up against\n",
-        "full-fledged criminals...\r",
-        "The fact that you’re unharmed is\n",
-        "reason enough to celebrate.\r",
         "...But what about {STRVAR_1 3, 0, 0}?\r",
-        "What is happening at Lake Acuity?\n",
-        "Is {STRVAR_1 3, 0, 0} safe?"
+        "What is happening at Lake Acuity?\n"
       ]
     },
     {

@@ -19,12 +19,7 @@
     {
       "id": "CanalaveLibrary3F_Text_Ellipses",
       "en_US": [
-        "Rowan: ...\n",
-        "...\r",
-        "...\n",
-        "...\r",
-        "...\n",
-        "...\r"
+        "Rowan: ...\n"
       ]
     },
     {
@@ -38,7 +33,6 @@
       "id": "CanalaveLibrary3F_Text_EveryonesHereFinally",
       "en_US": [
         "Rowan: Hm! Everyone’s here finally.\n",
-        "{STRVAR_1 3, 0, 0}, everyone, listen.\r",
         "You may have forgotten already, but\n",
         "I study the evolution of Pokémon.\r"
       ]
@@ -46,16 +40,6 @@
     {
       "id": "CanalaveLibrary3F_Text_MoreIStudyMoreMysteries",
       "en_US": [
-        "But the more I study, the more\n",
-        "mysteries appear and multiply.\r",
-        "Pokémon that evolve, and those that\n",
-        "don’t...\r",
-        "What makes them different from each\n",
-        "other?\r",
-        "Do those that are immature as living\n",
-        "beings evolve to ones more mature?\r",
-        "If so, what do we make of the\n",
-        "legendary Pokémon that don’t evolve?\r",
         "Are we to assume that the legendary\n",
         "Pokémon are complete as creatures?\r"
       ]
@@ -64,13 +48,6 @@
       "id": "CanalaveLibrary3F_Text_HelpMeFindLakePokemon",
       "en_US": [
         "This is where you three come in.\r",
-        "In the three lakes of Sinnoh, there\n",
-        "are said to be mirage Pokémon.\r",
-        "If we can obtain data on them,\n",
-        "it may shed some light on how the\f",
-        "process of Pokémon evolution works.\r",
-        "I need help from each one of you\n",
-        "on this grand undertaking.\r",
         "Help me find these Pokémon that are\n",
         "considered to be mirages.\r"
       ]
@@ -87,11 +64,7 @@
       "en_US": [
         "Rowan: ...And who was it that bolted\n",
         "from the lab before I had a chance\f",
-        "to give you a Pokédex?\r",
-        "But that’s water under the bridge!\r",
-        "Seeing Pokémon with your own eyes is\n",
-        "important for you in becoming a better\f",
-        "Trainer, too.\r"
+        "to give you a Pokédex?\r"
       ]
     },
     {
@@ -145,34 +118,21 @@
         "Rowan: {STRVAR_1 3, 0, 0}, I want you to\n",
         "investigate Lake Acuity.\r",
         "That would take you almost to\n",
-        "Snowpoint City.\r",
-        "The road there is harsh. I need\n",
-        "a tough Trainer to go.\r"
+        "Snowpoint City.\r"
       ]
     },
     {
       "id": "CanalaveLibrary3F_Text_YeahOfCourse",
       "en_US": [
         "{STRVAR_1 3, 0, 0}: Uh... Yeah, of course!\n",
-        "Gramps, you know how to call it!\f",
-        "You can tell I’m the hotness!\r",
-        "And, you know what? I was going to\n",
-        "catch those legendary Pokémon for you.\r",
-        "You know, as thanks for giving us our\n",
-        "Pokémon back on Route 201.\r",
-        "...Even though I forgot completely\n",
-        "about it until just now.\r"
+        "Gramps, you know how to call it!\f"
       ]
     },
     {
       "id": "CanalaveLibrary3F_Text_ThatLeavesLakeValor",
       "en_US": [
         "Rowan: Very well.\n",
-        "I’m counting on you.\r",
-        "And that leaves {STRVAR_1 3, 0, 0} with\n",
-        "Lake Valor.\r",
-        "The lake is between Veilstone\n",
-        "and Pastoria, if memory serves...\r"
+        "I’m counting on you.\r"
       ]
     },
     {

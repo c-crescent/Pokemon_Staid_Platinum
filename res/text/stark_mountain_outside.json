@@ -64,19 +64,7 @@
       "id": "StarkMountainOutside_Text_WorkIsFinished",
       "en_US": [
         "Looker: That boy, he has quite the\n",
-        "energy, yes?\r",
-        "{STRVAR_1 3, 0, 0}, I should tell you why\n",
-        "I have arrived here.\r",
-        "After we parted at the Mt. Coronet,\n",
-        "I investigated their hideout.\r",
-        "I uncovered Charon’s plot, which led\n",
-        "me to a stakeout of this place.\r",
-        "That Charon is now securely within our\n",
-        "custody.\r",
-        "It is safe to say the Team Galactic is\n",
-        "a threat no longer.\r",
-        "That being said, it looks like my work\n",
-        "here is finally finished.\r"
+        "energy, yes?\r"
       ]
     },
     {
@@ -97,15 +85,7 @@
     {
       "id": "StarkMountainOutside_Text_FarewellMyFriend",
       "en_US": [
-        "Looker: I, also, will take my leave.\r",
-        "“The more wonderful the meeting, the\n",
-        "sadder the parting.”\r",
-        "That is a quote I have heard many years\n",
-        "ago in a foreign land.\r",
-        "Its meaning...\n",
-        "I understand it better now.\r",
-        "Farewell, {STRVAR_1 3, 0, 0}, my friend!\n",
-        "Long may you cherish Pokémon!\r"
+        "Looker: I, also, will take my leave.\r"
       ]
     },
     {

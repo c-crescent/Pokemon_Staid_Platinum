@@ -29,23 +29,14 @@
       "id": "GrandLakeRoute213Lobby_Text_GoSearchOutside",
       "en_US": [
         "Looker: Ah, my friend, it is you!\n",
-        "Yes, I am at this hotel now.\r",
-        "I am interviewing the people to see \n",
-        "if they have seen anyone suspicious.\r",
-        "I would like your assistance.\n",
-        "Go search outside, if you will.\r",
-        "The suspect, he may have already\n",
-        "slipped away ahead unnoticed."
+        "Yes, I am at this hotel now.\r"
       ]
     },
     {
       "id": "GrandLakeRoute213Lobby_Text_BraggingIsNotNecessary",
       "en_US": [
         "Looker: Is that so?\n",
-        "The champion of Hoenn has stayed here?\r",
-        "But that is of no importance!\r",
-        "A suspicion-arousing character, yes,\n",
-        "but your bragging is not necessary!\r"
+        "The champion of Hoenn has stayed here?\r"
       ]
     },
     {
