@@ -1,3 +1,6 @@
+### Status
+- [x] Nerfed Paralysis to 12.5% full paralysis chance.
+
 ### Abilities
 
 - [ ] Sturdy now acts like a Focus Sash like in gen 5.
