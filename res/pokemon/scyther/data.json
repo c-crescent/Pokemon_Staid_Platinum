@@ -46,6 +46,7 @@
             [ 22, "MOVE_SLASH" ],
             [ 25, "MOVE_RAZOR_WIND" ],
             [ 28, "MOVE_DOUBLE_TEAM" ],
+            [ 30, "MOVE_BUG_BITE" ],
             [ 31, "MOVE_X_SCISSOR" ],
             [ 34, "MOVE_NIGHT_SLASH" ],
             [ 36, "MOVE_DOUBLE_HIT" ],
@@ -85,6 +86,8 @@
             "TM89",
             "TM90",
             "HM01",
+            "HM02",
+            "HM04",
             "HM05",
             "HM06"
         ],
