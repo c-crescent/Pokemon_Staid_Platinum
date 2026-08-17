@@ -851,6 +851,13 @@ BOOL ScrCmd_ShuffleLeadMonGenetics(ScriptContext *ctx)
 
         v2 = (v1 & (0x1f << 10)) >> 10;
         Pokemon_SetValue(mon, MON_DATA_SPDEF_IV, &v2);
+
+        Pokemon_SetValue(mon, MON_DATA_HP_EV, 0);
+        Pokemon_SetValue(mon, MON_DATA_ATK_EV, 0);
+        Pokemon_SetValue(mon, MON_DATA_DEF_EV, 0);
+        Pokemon_SetValue(mon, MON_DATA_SPATK_EV, 0);
+        Pokemon_SetValue(mon, MON_DATA_SPDEF_EV, 0);
+        Pokemon_SetValue(mon, MON_DATA_SPEED_EV, 0);
         
         Pokemon_CalcStats(mon);
     }   
