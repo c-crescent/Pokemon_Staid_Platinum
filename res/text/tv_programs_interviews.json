@@ -781,24 +781,7 @@
       "id": "TVProgramInterviews_Text_BattleFrontierFrontlineNews_Single",
       "en_US": [
         "Reporter: The Battle Frontier\n",
-        "Frontline News!\r",
-        "We bring you this report from the\n",
-        "Battle Hall.\r",
-        "Today, I have before me an astounding\n",
-        "Trainer who managed a 50-win streak!\r",
-        "It’s {STRVAR_1 3, 0, 0} and the {STRVAR_1 0, 1, 0}\n",
-        "{STRVAR_1 1, 2, 0}!\r",
-        "Congratulations, {STRVAR_1 3, 0, 0}.\n",
-        "You seem suitably happy!\r",
-        "How do you suppose your {STRVAR_1 1, 2, 0}\n",
-        "feels now?\r",
-        "{STRVAR_1 3, 0, 0}: {STRVAR_1 28, 3, 0}.\r",
-        "Reporter: ...I ...I see!\n",
-        "That’s how a tough Trainer’s Pokémon\f",
-        "thinks.\r",
-        "I hope {STRVAR_1 1, 2, 0} will keep winning\n",
-        "with {STRVAR_1 28, 3, 0} power!\r",
-        "That’s all for now!"
+        "Frontline News!\r"
       ]
     },
     {

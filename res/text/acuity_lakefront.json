@@ -5,12 +5,7 @@
       "id": "AcuityLakefront_Text_CantClimbWithoutBadge",
       "en_US": [
         "{STRVAR_1 3, 0, 0}: Hey, {STRVAR_1 3, 1, 0}!\n",
-        "What, you finally come along now?\f",
         "Slooow! Way too slow!\r",
-        "Listen, {STRVAR_1 3, 1, 0}.\n",
-        "See how the rocks are all lumpy here?\r",
-        "You can’t climb those rocks until you\n",
-        "get the Snowpoint Gym Badge.\r",
         "Anyway, I’m off.\n",
         "Team Galactic! I’m coming for you!\r"
       ]

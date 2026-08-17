@@ -18,21 +18,14 @@
       "id": "FollowerPartners_Text_Rival_ThatPokemonBattle",
       "en_US": [
         "{STRVAR_1 3, 0, 0}: That Pokémon battle...\r",
-        "Wasn’t that wickedly fun or what?\r",
-        "I mean, I’d pick the moves, and my\n",
-        "Pokémon would use them!\r",
-        "Yeah, I’m going to battle tons and get\n",
-        "real close with Pokémon."
+        "Wasn’t that wickedly fun or what?\r"
       ]
     },
     {
       "id": "FollowerPartners_Text_Rival_PokemonHaveDifferentMoves",
       "en_US": [
         "{STRVAR_1 3, 0, 0}: Pokémon all have\n",
-        "different moves, huh?\r",
-        "A Trainer makes his Pokémon battle\n",
-        "by ordering them to use moves.\r",
-        "That’s so awesomely cool."
+        "different moves, huh?\r"
       ]
     },
     {
@@ -41,13 +34,7 @@
         "{STRVAR_1 3, 0, 0}: Do you believe it?\n",
         "I can hardly believe it.\r",
         "You and me, we’re Pokémon Trainers all\n",
-        "of a sudden.\r",
-        "Man, we’ve got tons to learn about\n",
-        "being a Trainer.\r",
-        "But seeing this Poké Ball with this\n",
-        "{STRVAR_1 0, 1, 0} inside...\r",
-        "It makes me feel like I can do anything!\n",
-        "Nothing’s impossible!"
+        "of a sudden.\r"
       ]
     },
     {
@@ -65,11 +52,7 @@
         "{STRVAR_1 3, 0, 0}: Hey, do you know about\n",
         "the Champion?\r",
         "There’s this out-of-this-world tough\n",
-        "Trainer who gets called that.\r",
-        "Well, I’m gonna get so tough, the Champ\n",
-        "has to battle me. You watch!\r",
-        "With this little guy here, I’m sure I can\n",
-        "get that tough."
+        "Trainer who gets called that.\r"
       ]
     },
     {

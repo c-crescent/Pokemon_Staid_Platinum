@@ -33,10 +33,6 @@
       "id": "PastoriaCity_Text_IllTestYouUnused",
       "en_US": [
         "{STRVAR_1 3, 0, 0}: Whoops!\r",
-        "Hehehe! I’m not always going to plow\n",
-        "into you every time we meet!\r",
-        "So how’s it going, {STRVAR_1 3, 1, 0}?\n",
-        "Buffing up your Pokémon, eh?\r",
         "I’ll test you and your Pokémon out\n",
         "to see how buff and tough you are!\r"
       ]
@@ -45,17 +41,7 @@
       "id": "PastoriaCity_Text_YouDidGetTougherUnused",
       "en_US": [
         "{STRVAR_1 3, 0, 0}: Heh, yeah, maybe you\n",
-        "did get a bit tougher since last time.\r",
-        "That even shocked me a bit, so yeah,\n",
-        "I got beat ’cause I was careless.\r",
-        "So, hey, what was that Team Galactic\n",
-        "guy all freaking out about?\r",
-        "I don’t know what he’s up to, but\n",
-        "you should chase him down!\r",
-        "If you’re not a Pokémon, and you run\n",
-        "like that... You’re a bad guy.\r",
-        "All right, {STRVAR_1 3, 1, 0}!\n",
-        "Next time, I’m not holding back!\r"
+        "did get a bit tougher since last time.\r"
       ]
     },
     {
@@ -64,21 +50,13 @@
         "{STRVAR_1 3, 0, 0}: Oh, hey, {STRVAR_1 3, 1, 0}.\n",
         "You’re out of luck, though.\r",
         "The Gym Leader, Crasher Wake, I mean\n",
-        "Mr. Wake’s gone off to Veilstone.\r",
-        "They said he had a practice match with\n",
-        "Veilstone’s Gym Leader Maylene.\r",
-        "Sheesh!\n",
-        "I ended up missing him completely!"
+        "Mr. Wake’s gone off to Veilstone.\r"
       ]
     },
     {
       "id": "PastoriaCity_Text_IllTestYou",
       "en_US": [
         "{STRVAR_1 3, 0, 0}: Whoops!\r",
-        "Hehehe! I’m not always going to plow\n",
-        "into you every time we meet!\r",
-        "So how’s it going, {STRVAR_1 3, 1, 0}?\n",
-        "Buffing up your Pokémon, eh?\r",
         "I’ll test you and your Pokémon out\n",
         "to see how buff and tough you are!\r"
       ]
@@ -87,21 +65,14 @@
       "id": "PastoriaCity_Text_YouDidGetTougher",
       "en_US": [
         "{STRVAR_1 3, 0, 0}: Heh, yeah, maybe you\n",
-        "did get a bit tougher since last time.\r",
-        "That even shocked me a bit, so yeah,\n",
-        "I got beat ’cause I was careless.\r",
-        "Oh, yeah, I joined Mr. Wake as an\n",
-        "apprentice!\r",
-        "Like, I want my own theme song!\r"
+        "did get a bit tougher since last time.\r"
       ]
     },
     {
       "id": "PastoriaCity_Text_YouGotTheGymBadge",
       "en_US": [
         "{STRVAR_1 3, 0, 0}: Oh, hey!\n",
-        "You got the Gym Badge here, huh?\r",
-        "What’d I tell you? Mr. Wake--I mean,\n",
-        "the master--is pretty awesome, hey?\r"
+        "You got the Gym Badge here, huh?\r"
       ]
     },
     {
@@ -136,12 +107,7 @@
       "id": "PastoriaCity_Text_TheresTroubleBrewing",
       "en_US": [
         "{STRVAR_1 3, 0, 0}: It doesn’t matter.\n",
-        "I made you my master! I decided!\r",
-        "But forget that!\n",
-        "There’s trouble brewing!\r",
-        "There’s a Team Galactic goon in front \n",
-        "of the Observatory Gate.\r",
-        "He said something about using a bomb!\r"
+        "I made you my master! I decided!\r"
       ]
     },
     {

@@ -18,13 +18,7 @@
         "get into the Battle Frontier,\f",
         "which happens to be right here.\r",
         "Then these guys came along and got in\n",
-        "my face about it.\r",
-        "Like, they’re saying they want to test\n",
-        "me if I’m good enough and all that.\r",
-        "Like, as if I need to prove anything.\n",
-        "So, let’s team up.\r",
-        "Like we did at the Spear Pillar.\n",
-        "Let’s show those guys how good we are!\r"
+        "my face about it.\r"
       ]
     },
     {
@@ -186,14 +180,7 @@
     {
       "id": "FightArea_Text_DadIsTowerTycoon",
       "en_US": [
-        "{STRVAR_1 3, 0, 0}: My dad is cool, huh?\n",
-        "I mean, when it gets right down to it.\f",
-        "You think so too, right?\r",
-        "He’s a Frontier Brain, after all.\n",
-        "He’s the Tower Tycoon!\r",
-        "I want to be cool like my dad!\r",
-        "{STRVAR_1 3, 1, 0}, that’s the one reason\n",
-        "I decided to become a Trainer!\r"
+        "{STRVAR_1 3, 0, 0}: My dad is cool, huh?\r"
       ]
     },
     {
