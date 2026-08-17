@@ -26,6 +26,7 @@
 - [x] Type-based damage boosting items can be bought from Pastoria Mart
 - [x] Egg hatch cyles are now near instant
 - [x] Prof. Rowan's PC in Sandgem lab can now optimise IVs
+- [x] Vitamins no longer has an EV cap.
 
 ### Story
 
