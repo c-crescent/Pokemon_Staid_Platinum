@@ -32,6 +32,7 @@ There are no longer roaming Pokemon. All legendaries are available after the fir
 - [x] Replaced all trade, friendship, move, location, time, item evolutions with level-threshold or item-usage evolutions.
 
 - All baby Pokemon evolve at 12.
+- Tyrogue evolves to Hitmonchan, Hitmontop, and Hitmonlee with Dawn Stone, Shiny Stone, and Dusk Stone respectively.
 - Aipom, Golbat evolve at 30.
 - Buneary evolves at 24.
 - Clamperl evolves to Huntail with Deep Sea Tooth and Gorebyss with Deep Sea Scale as evolution items.
