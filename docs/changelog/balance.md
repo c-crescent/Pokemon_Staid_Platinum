@@ -410,3 +410,7 @@
 
 > Mud Bomb
 > Acc: 95(+10)
+
+> Knock Off
+> BP: 65
+> If the move removes an item, multiply its power by 1.5
