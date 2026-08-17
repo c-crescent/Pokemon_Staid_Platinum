@@ -209,6 +209,7 @@ const u16 VeilstoneDeptStoreStock_2F_MID[] = {
     ITEM_ZINC,
     ITEM_CARBOS,
     ITEM_HP_UP,
+    ITEM_PP_UP,
     SHOP_ITEM_END
 };
 

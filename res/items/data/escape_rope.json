@@ -12,7 +12,7 @@
     "palette": "escape_rope_NCLR"
   },
   "gbaID": "GBA_ITEM_ESCAPE_ROPE",
-  "price": 550,
+  "price": 1,
   "effectParam": 0,
   "holdEffect": "HOLD_EFFECT_NONE",
   "pluckEffect": "PLUCK_EFFECT_NONE",
