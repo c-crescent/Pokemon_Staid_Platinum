@@ -856,10 +856,9 @@ BOOL ScrCmd_ShuffleLeadMonGenetics(ScriptContext *ctx)
         Pokemon_GetValue(mon, MON_DATA_OT_NAME_STRING, string);
         u32 playerID = Pokemon_GetValue(mon, MON_DATA_OT_ID, NULL);
         u32 playerGender = Pokemon_GetValue(mon, MON_DATA_OT_GENDER, NULL);
-        u32 monPersonality = (LCRNG_Next() | (LCRNG_Next() << 16));
 
         Pokemon_Init(mon);
-        Pokemon_InitWith(mon, species, level, 31, TRUE, monPersonality, OTID_SET, &playerID);
+        Pokemon_InitWith(mon, species, level, 31, FALSE, 0, OTID_SET, &playerID);
         Pokemon_SetValue(mon, MON_DATA_EXPERIENCE, &exp);
         Pokemon_SetValue(mon, MON_DATA_HELD_ITEM, &item);
         
