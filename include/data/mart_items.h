@@ -191,14 +191,8 @@ const u16 VeilstoneDeptStoreStock_1F_LEFT[] = {
 };
 
 const u16 VeilstoneDeptStoreStock_2F_UP[] = {
-    ITEM_X_SPEED,
-    ITEM_X_ATTACK,
-    ITEM_X_DEFENSE,
-    ITEM_GUARD_SPEC,
-    ITEM_DIRE_HIT,
-    ITEM_X_ACCURACY,
-    ITEM_X_SPECIAL,
-    ITEM_X_SP_DEF,
+    ITEM_PP_UP,
+    ITEM_PP_MAX,
     SHOP_ITEM_END
 };
 
@@ -210,6 +204,7 @@ const u16 VeilstoneDeptStoreStock_2F_MID[] = {
     ITEM_SHELL_BELL,
     ITEM_FOCUS_BAND,    
     ITEM_QUICK_CLAW,
+    ITEM_POWER_HERB,
     SHOP_ITEM_END
 };
 
