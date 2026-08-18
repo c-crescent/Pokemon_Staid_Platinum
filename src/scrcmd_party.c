@@ -829,39 +829,50 @@ BOOL ScrCmd_CheckPartyHasHeldItem(ScriptContext *ctx)
 BOOL ScrCmd_ShuffleLeadMonGenetics(ScriptContext *ctx)
 {
     FieldSystem *fieldSystem = ctx->fieldSystem;
-    Pokemon *mon = Party_GetPokemonBySlotIndex(SaveData_GetParty(fieldSystem->saveData), 0);
+    Party *party = SaveData_GetParty(fieldSystem->saveData);
+    Pokemon *mon = Party_GetPokemonBySlotIndex(party, 0);
+    
     if (!Pokemon_GetValue(mon, MON_DATA_IS_EGG, NULL)) {
+
+        u16 species = Pokemon_GetValue(mon, MON_DATA_SPECIES, NULL);
+        u16 level = Pokemon_GetValue(mon, MON_DATA_LEVEL, NULL);
+        u32 item = Pokemon_GetValue(mon, MON_DATA_HELD_ITEM, NULL);
+        u8 hasNickname;
+        u16 nickname;
+        Pokemon_SetValue(mon, MON_DATA_HAS_NICKNAME, &hasNickname);
+
+        if (hasNickname) {            
+            Pokemon_GetValue(mon, MON_DATA_NICKNAME, nickname);
+        }
         
-        u32 v1, v2;
-        v1 = 0xFFFFFFFF;
-        v2 = (v1 & (0x1f << 0)) >> 0;
-        Pokemon_SetValue(mon, MON_DATA_HP_IV, &v2);
+        u32 exp = Pokemon_GetValue(mon, MON_DATA_EXPERIENCE, NULL);
+        u16 location = Pokemon_GetValue(mon, MON_DATA_MET_LOCATION, NULL);
+        u8 year = Pokemon_GetValue(mon, MON_DATA_MET_YEAR, NULL);
+        u8 month = Pokemon_GetValue(mon, MON_DATA_MET_MONTH, NULL);
+        u8 day = Pokemon_GetValue(mon, MON_DATA_MET_DAY, NULL);
+        int metLevel = Pokemon_GetValue(mon, MON_DATA_MET_LEVEL, NULL);
+        String *string;
+        string = String_Init(MON_NAME_LEN + 1, HEAP_ID_SYSTEM);
+        Pokemon_GetValue(mon, MON_DATA_OT_NAME_STRING, string);
+        u32 playerID = Pokemon_GetValue(mon, MON_DATA_OT_ID, NULL);
+        u32 playerGender = Pokemon_GetValue(mon, MON_DATA_OT_GENDER, NULL);
 
-        v2 = (v1 & (0x1f << 5)) >> 5;
-        Pokemon_SetValue(mon, MON_DATA_ATK_IV, &v2);
-
-        v2 = (v1 & (0x1f << 10)) >> 10;
-        Pokemon_SetValue(mon, MON_DATA_DEF_IV, &v2);
-
-        v2 = (v1 & (0x1f << 0)) >> 0;
-        Pokemon_SetValue(mon, MON_DATA_SPEED_IV, &v2);
-
-        v2 = (v1 & (0x1f << 5)) >> 5;
-        Pokemon_SetValue(mon, MON_DATA_SPATK_IV, &v2);
-
-        v2 = (v1 & (0x1f << 10)) >> 10;
-        Pokemon_SetValue(mon, MON_DATA_SPDEF_IV, &v2);
-
-        u32 zero = 0;
-
-        Pokemon_SetValue(mon, MON_DATA_HP_EV, &zero);
-        Pokemon_SetValue(mon, MON_DATA_ATK_EV, &zero);
-        Pokemon_SetValue(mon, MON_DATA_DEF_EV, &zero);
-        Pokemon_SetValue(mon, MON_DATA_SPATK_EV, &zero);
-        Pokemon_SetValue(mon, MON_DATA_SPDEF_EV, &zero);
-        Pokemon_SetValue(mon, MON_DATA_SPEED_EV, &zero);
+        Pokemon_Init(mon);
+        Pokemon_InitWith(mon, species, level, 31, FALSE, 0, OTID_SET, &playerID);
+        Pokemon_SetValue(mon, MON_DATA_EXPERIENCE, &exp);
+        Pokemon_SetValue(mon, MON_DATA_HELD_ITEM, &item);
         
-        Pokemon_CalcStats(mon);
+        if (hasNickname) {
+            Pokemon_SetValue(mon, MON_DATA_NICKNAME, nickname);
+            Pokemon_SetValue(mon, MON_DATA_HAS_NICKNAME, &hasNickname);
+        }        
+        Pokemon_SetValue(mon, MON_DATA_MET_LOCATION, &location);
+        Pokemon_SetValue(mon, MON_DATA_MET_YEAR, &year);
+        Pokemon_SetValue(mon, MON_DATA_MET_MONTH, &month);
+        Pokemon_SetValue(mon, MON_DATA_MET_DAY, &day);
+        Pokemon_SetValue(mon, MON_DATA_MET_LEVEL, &metLevel);
+        Pokemon_SetValue(mon, MON_DATA_OT_NAME_STRING, string);
+        Pokemon_SetValue(mon, MON_DATA_OT_GENDER, &playerGender);
     }   
     return FALSE;
 }
