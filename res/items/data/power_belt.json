@@ -12,7 +12,7 @@
     "palette": "power_belt_NCLR"
   },
   "gbaID": "GBA_ITEM_NONE",
-  "price": 3000,
+  "price": 300,
   "effectParam": 4,
   "holdEffect": "HOLD_EFFECT_LVLUP_DEF_EV_UP",
   "pluckEffect": "PLUCK_EFFECT_NONE",

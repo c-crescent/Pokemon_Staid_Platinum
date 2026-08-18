@@ -210,8 +210,7 @@
       "en_US": [
         "{STRVAR_1 74, 1, 0} {STRVAR_1 51, 2, 0}, 20{STRVAR_1 51, 0, 0}\n",
         "{COLOR 2}{STRVAR_1 4, 4, 0}{COLOR 0}\n",
-        "Apparently met at\n",
-        "Lv. {STRVAR_1 52, 3, 0}."
+        "Met at Lv. {STRVAR_1 52, 3, 0}."
       ]
     },
     {
