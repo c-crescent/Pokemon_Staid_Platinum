@@ -473,10 +473,10 @@ SandgemTownLab_PC_GeneShuffleDenied:
     CloseMessage
     End
 
-SandgemTownLab_PC_GeneShuffle:
-    ShuffleLeadMonGenetics
+SandgemTownLab_PC_GeneShuffle:   
     Message SandgemTownLab_Text_GeneShuffleComplete
     CloseMessage
+    ShuffleLeadMonGenetics
     End
 
 SandgemTownLab_PC_CantShuffleEgg:
