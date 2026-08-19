@@ -3,7 +3,7 @@
 
 ### Abilities
 
-- [ ] Sturdy now acts like a Focus Sash like in gen 5.
+- [x] Sturdy now acts like a Focus Sash like in gen 5.
 - [X] A large amount of Pokemon now has their Hidden Ability from Gen V.
 
 > Storm Drain

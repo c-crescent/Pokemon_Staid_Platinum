@@ -3382,6 +3382,10 @@ static void BattleControllerPlayer_UpdateHP(BattleSystem *battleSys, BattleConte
             if (itemEffect == HOLD_EFFECT_ENDURE && DEFENDING_MON.curHP == DEFENDING_MON.maxHP) {
                 DEFENDER_SELF_TURN_FLAGS.focusItemActivated = TRUE;
             }
+
+            if (Battler_Ability(battleCtx, battleCtx->defender) == ABILITY_STURDY && Battler_Ability(battleCtx, battleCtx->attacker) != ABILITY_MOLD_BREAKER && DEFENDING_MON.curHP == DEFENDING_MON.maxHP) {
+                DEFENDER_TURN_FLAGS.enduring = TRUE;
+            }
         }
 
         if ((DEFENDER_TURN_FLAGS.enduring || DEFENDER_SELF_TURN_FLAGS.focusItemActivated)
