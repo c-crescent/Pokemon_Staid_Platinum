@@ -2137,16 +2137,7 @@ static int BattleControllerPlayer_CheckObedience(BattleSystem *battleSys, Battle
         return OBEY_CHECK_SUCCESS;
     }
 
-    maxLevel = 10;
-    if (TrainerInfo_BadgeCount(trInfo) >= 2) {
-        maxLevel = 30;
-    }
-    if (TrainerInfo_BadgeCount(trInfo) >= 4) {
-        maxLevel = 50;
-    }
-    if (TrainerInfo_BadgeCount(trInfo) >= 6) {
-        maxLevel = 70;
-    }
+    maxLevel = 100;
 
     if (ATTACKING_MON.level <= maxLevel) {
         return OBEY_CHECK_SUCCESS;
