@@ -473,10 +473,12 @@ SandgemTownLab_PC_GeneShuffleDenied:
     CloseMessage
     End
 
-SandgemTownLab_PC_GeneShuffle:   
+SandgemTownLab_PC_GeneShuffle:
+    LockAll    
+    ShuffleLeadMonGenetics
     Message SandgemTownLab_Text_GeneShuffleComplete
     CloseMessage
-    ShuffleLeadMonGenetics
+    ReleaseAll
     End
 
 SandgemTownLab_PC_CantShuffleEgg:
@@ -647,8 +649,9 @@ SandgemTownLab_Movement_ProfRowanTurnOnSpot:
     WalkOnSpotNormalSouth
     EndMovement
 
+    .balign 4, 0
 SandgemTownLab_Movement_Unused2:
-    WalkOnSpotNormalWest
+    WalkFastSouth 2
     EndMovement
 
     .balign 4, 0

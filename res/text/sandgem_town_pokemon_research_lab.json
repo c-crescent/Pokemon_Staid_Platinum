@@ -348,21 +348,21 @@
     {
       "id": "SandgemTownLab_Text_PlayerCheckedThePC",
       "en_US": [
-        "There’s a function to optimize the genes\n",
-        "of your leading Pokémon.\r",
-        "Run it?\r"
+        "Regenerate your lead Pokémon?\n",
+        "WARNING: Prone to ERROR."
       ]
     },
     {
       "id": "SandgemTownLab_Text_GeneShuffleComplete",
       "en_US": [
-        "Function Complete.\r"
+        "FUNCTION COMPLETE.\r"
       ]
     },
     {
       "id": "SandgemTownLab_Text_CantShuffleEggs",
       "en_US": [
-        "An egg cannot be chosen for this function.\r"
+        "An egg cannot be chosen\n",
+        "for this function.\r"
       ]
     },
     {
