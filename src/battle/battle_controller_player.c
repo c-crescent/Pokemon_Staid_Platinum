@@ -2137,16 +2137,7 @@ static int BattleControllerPlayer_CheckObedience(BattleSystem *battleSys, Battle
         return OBEY_CHECK_SUCCESS;
     }
 
-    maxLevel = 10;
-    if (TrainerInfo_BadgeCount(trInfo) >= 2) {
-        maxLevel = 30;
-    }
-    if (TrainerInfo_BadgeCount(trInfo) >= 4) {
-        maxLevel = 50;
-    }
-    if (TrainerInfo_BadgeCount(trInfo) >= 6) {
-        maxLevel = 70;
-    }
+    maxLevel = 100;
 
     if (ATTACKING_MON.level <= maxLevel) {
         return OBEY_CHECK_SUCCESS;
@@ -3390,6 +3381,10 @@ static void BattleControllerPlayer_UpdateHP(BattleSystem *battleSys, BattleConte
 
             if (itemEffect == HOLD_EFFECT_ENDURE && DEFENDING_MON.curHP == DEFENDING_MON.maxHP) {
                 DEFENDER_SELF_TURN_FLAGS.focusItemActivated = TRUE;
+            }
+
+            if (Battler_Ability(battleCtx, battleCtx->defender) == ABILITY_STURDY && Battler_Ability(battleCtx, battleCtx->attacker) != ABILITY_MOLD_BREAKER && DEFENDING_MON.curHP == DEFENDING_MON.maxHP) {
+                DEFENDER_TURN_FLAGS.enduring = TRUE;
             }
         }
 
