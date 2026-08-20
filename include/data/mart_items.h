@@ -191,6 +191,13 @@ const u16 VeilstoneDeptStoreStock_1F_LEFT[] = {
 };
 
 const u16 VeilstoneDeptStoreStock_2F_UP[] = {
+    ITEM_TM04,
+    ITEM_TM08,
+    ITEM_TM59,
+    ITEM_TM61,
+    ITEM_TM71,
+    ITEM_TM73,
+    ITEM_TM87,
     ITEM_PP_UP,
     ITEM_PP_MAX,
     SHOP_ITEM_END

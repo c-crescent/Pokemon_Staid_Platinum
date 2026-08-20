@@ -28,6 +28,7 @@
 - [x] Prof. Rowan's PC in Sandgem lab can now re-randomise a Pokemon's nature, optimise IVs, and resets EVs.
 - [x] Vitamins no longer has an EV cap.
 - [x] Rare Candies in exploration now replaced by vitamins. Hidden ones replaced by Nuggets.
+- [x] Several TMs are now accessible in Veilstone including Battle Frontier ones.
 
 ### Story
 
