@@ -297,6 +297,19 @@
 - [x] All move properties (except Dark Void) are baselined to their latest counter parts in gen 9 / Champions.
 - [ ] Most Pokemon now complete their learnsets at level 45. Level 55 for some exceptions. Most evolution lines share their learnset with some exceptions.
 
+> Return
+> BP: 102
+> Damage no longer scales with friendship.
+
+> Hidden Power
+> BP: 60
+> BP no longer varies.
+
+> Frustration
+> BP: 102
+> Damage no longer scales with friendship.
+> Type: Special
+
 > Twinneedle
 > BP: 30(+5)
 
