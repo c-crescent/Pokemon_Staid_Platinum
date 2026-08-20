@@ -24,8 +24,8 @@ FieldMoves_CutTree:
     PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
-    FindPartySlotWithMove VAR_RESULT, MOVE_CUT
-    GoToIfEq VAR_RESULT, MAX_PARTY_SIZE, FieldMoves_CantUseCut
+    CheckItem ITEM_HM01, 1, VAR_RESULT
+    GoToIfEq VAR_RESULT, FALSE, FieldMoves_CantUseCut
     CheckBadgeAcquired BADGE_ID_FOREST, VAR_RESULT
     GoToIfEq VAR_RESULT, FALSE, FieldMoves_CantUseCut
     GoTo FieldMoves_UseCutFromField
@@ -124,9 +124,8 @@ FieldMoves_Rock:
     PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
-    FindPartySlotWithMove VAR_RESULT, MOVE_ROCK_SMASH
-    SetVar VAR_0x8004, VAR_RESULT
-    GoToIfEq VAR_RESULT, MAX_PARTY_SIZE, FieldMoves_CantUseRockSmash
+    CheckItem ITEM_HM06, 1, VAR_RESULT
+    GoToIfEq VAR_RESULT, FALSE, FieldMoves_CantUseRockSmash
     CheckBadgeAcquired BADGE_ID_COAL, VAR_RESULT
     GoToIfEq VAR_RESULT, FALSE, FieldMoves_CantUseRockSmash
     GoTo FieldMoves_UseRockSmashFromField
@@ -178,8 +177,8 @@ FieldMoves_Boulder:
     FacePlayer
     DoStrengthFunc FIELD_MOVE_FUNC_CHECK_ACTIVE, VAR_RESULT
     GoToIfEq VAR_RESULT, TRUE, FieldMoves_StrenghtAlreadyActive
-    FindPartySlotWithMove VAR_RESULT, MOVE_STRENGTH
-    GoToIfEq VAR_RESULT, MAX_PARTY_SIZE, FieldMoves_CantUseStrength
+    CheckItem ITEM_HM04, 1, VAR_RESULT
+    GoToIfEq VAR_RESULT, FALSE, FieldMoves_CantUseStrength
     CheckBadgeAcquired BADGE_ID_MINE, VAR_RESULT
     GoToIfEq VAR_RESULT, FALSE, FieldMoves_CantUseStrength
     GoTo FieldMoves_UseStrengthFromField
@@ -234,8 +233,8 @@ FieldMoves_UseStrengthFromMenu:
 FieldMoves_RockyWall:
     PlaySE SEQ_SE_CONFIRM
     LockAll
-    FindPartySlotWithMove VAR_RESULT, MOVE_ROCK_CLIMB
-    GoToIfEq VAR_RESULT, MAX_PARTY_SIZE, FieldMoves_CantUseRockClimb
+    CheckItem ITEM_HM08, 1, VAR_RESULT
+    GoToIfEq VAR_RESULT, FALSE, FieldMoves_CantUseRockSmash
     CheckBadgeAcquired BADGE_ID_ICICLE, VAR_RESULT
     GoToIfEq VAR_RESULT, FALSE, FieldMoves_CantUseRockClimb
     CheckHasPartner VAR_RESULT
@@ -393,8 +392,8 @@ FieldMoves_End3:
 FieldMoves_Waterfall:
     PlaySE SEQ_SE_CONFIRM
     LockAll
-    FindPartySlotWithMove VAR_RESULT, MOVE_WATERFALL
-    GoToIfEq VAR_RESULT, MAX_PARTY_SIZE, FieldMoves_CantUseWaterfall
+    CheckItem ITEM_HM07, 1, VAR_RESULT
+    GoToIfEq VAR_RESULT, FALSE, FieldMoves_CantUseWaterfall
     CheckBadgeAcquired BADGE_ID_BEACON, VAR_RESULT
     GoToIfEq VAR_RESULT, FALSE, FieldMoves_CantUseWaterfall
     GoTo FieldMoves_UseWaterfallFromField

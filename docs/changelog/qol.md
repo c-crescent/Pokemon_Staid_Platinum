@@ -1,7 +1,7 @@
 ### Quality of Life
 
 - [x] HM moves are now deletable like normal moves.
-- [ ] HM moves no longer prompt you for confirmation.
+- [X] HM moves no longer prompt you for confirmation.
 - [x] Obstacles no longer require HMs to be known by a party member, just the HM in the player's bag.
 - [x] TMs are now infinitely reuseable. You can only get one copy of each TM.
 - [x] Natures now have stat colours in the Summary Screen.
