@@ -1303,10 +1303,8 @@ static BOOL ScrCmd_MessageUnown(ScriptContext *ctx)
 static BOOL ScrCmd_Message(ScriptContext *ctx)
 {
     u8 messageID = ScriptContext_ReadByte(ctx);
-    // ScriptMessage_Show(ctx, ctx->loader, messageID, TRUE, NULL);
-    // ScriptContext_Pause(ctx, ScriptContext_WaitForFinishedPrinting);
-
-    ScriptMessage_ShowInstant(ctx, ctx->loader, messageID);
+    ScriptMessage_Show(ctx, ctx->loader, messageID, TRUE, NULL);
+    ScriptContext_Pause(ctx, ScriptContext_WaitForFinishedPrinting);
 
     return TRUE;
 }
