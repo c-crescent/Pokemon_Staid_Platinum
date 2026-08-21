@@ -1,13 +1,13 @@
 {
     "base_stats": {
-        "hp": 78,
+        "hp": 73,
         "attack": 84,
         "defense": 78,
-        "speed": 100,
-        "special_attack": 109,
+        "speed": 95,
+        "special_attack": 119,
         "special_defense": 85
     },
-    "types": [ "TYPE_FIRE", "TYPE_FIRE" ],
+    "types": [ "TYPE_FIRE", "TYPE_GHOST" ],
     "catch_rate": 45,
     "base_exp_reward": 209,
     "ev_yields": {
@@ -27,7 +27,7 @@
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_SLOW",
     "egg_groups": [ "EGG_GROUP_FIELD", "EGG_GROUP_FIELD" ],
-    "abilities": [ "ABILITY_BLAZE", "ABILITY_NONE" ],
+    "abilities": [ "ABILITY_BLAZE", "ABILITY_FLASH_FIRE" ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_YELLOW",
     "flip_sprite": false,
@@ -48,7 +48,7 @@
             [ 28, "MOVE_LAVA_PLUME" ],
             [ 33, "MOVE_FLAMETHROWER" ],
             [ 35, "MOVE_FOCUS_BLAST" ],
-            [ 36, "MOVE_ROLLOUT" ],
+            [ 36, "MOVE_SHADOW_BALL" ],
             [ 42, "MOVE_DOUBLE_EDGE" ],
             [ 45, "MOVE_ERUPTION" ]
         ],

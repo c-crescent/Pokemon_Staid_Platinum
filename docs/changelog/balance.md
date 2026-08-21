@@ -71,6 +71,15 @@
 > - SPD: 90(+10)
 > - Type: Psychic / Steel
 
+> Typhlosion
+> - Type: Fire / Ghost
+
+> Electivire
+> - Type: Electric / Fighting
+
+> Magmortar
+> - Type: Fire / Water
+
 > Mawile
 > - DEF: 95(+10)
 > - SPD: 75(+20)
@@ -264,6 +273,7 @@
 > Masquerain
 > - HP: 82(+12)
 > - DEF: 82(+20)
+> - Type: Bug / Water
 
 > Persian
 > - ATK: 95(+25)

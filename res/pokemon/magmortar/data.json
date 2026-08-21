@@ -7,7 +7,7 @@
         "special_attack": 125,
         "special_defense": 95
     },
-    "types": [ "TYPE_FIRE", "TYPE_FIRE" ],
+    "types": [ "TYPE_FIRE", "TYPE_WATER" ],
     "catch_rate": 30,
     "base_exp_reward": 199,
     "ev_yields": {
@@ -49,10 +49,11 @@
             [ 30, "MOVE_FLAMETHROWER" ],
             [ 36, "MOVE_SUNNY_DAY" ],
             [ 39, "MOVE_FIRE_BLAST" ],
-            [ 45, "MOVE_HYPER_BEAM" ]
+            [ 45, "MOVE_HYDRO_PUMP" ]
         ],
         "by_tm": [
             "TM01",
+            "TM03",
             "TM06",
             "TM10",
             "TM11",
@@ -89,6 +90,7 @@
             "TM83",
             "TM87",
             "TM90",
+            "HM03",
             "HM04",
             "HM06",
             "HM08"
