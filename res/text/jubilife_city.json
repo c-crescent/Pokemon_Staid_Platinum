@@ -571,48 +571,25 @@
       "id": "JubilifeCity_Text_MustYouBeSoDifficult",
       "en_US": [
         "Mystery man: Oh, professor of Pokémon,\n",
-        "must you be so difficult?\r",
-        "We are speaking to you on business.\n",
-        "Because this is work for us.\r",
-        "What we’re saying is--we demand\n",
-        "you comply with our demands.\r"
+        "must you be so difficult?\r"
       ]
     },
     {
       "id": "JubilifeCity_Text_WhyMustYouBeSuchANuisance",
       "en_US": [
-        "Rowan: Quiet, you lot!\n",
-        "Why must you be such a nuisance?\r",
-        "Let me list some lessons you still\n",
-        "need to learn.\r",
-        "#1: Don’t loiter about for no good\n",
-        "reason.\r",
-        "#2: Don’t interrupt others while they\n",
-        "are attempting to converse.\r",
-        "#3: If you don’t get your way, don’t\n",
-        "raise your voice to be intimidating.\r",
-        "#4: Don’t think you’ve grown strong\n",
-        "just because you’re in a group.\r",
-        "#5: What is with those outlandish\n",
-        "outfits you have on?\r"
+        "Rowan: Quiet, you lot!\r"
       ]
     },
     {
       "id": "JubilifeCity_Text_YouCallYourselvesAdults",
       "en_US": [
-        "My goodness...\n",
-        "You call yourselves adults?\r",
-        "You kids, don’t grow up to be like these\n",
-        "sorry specimens.\r"
+        "My goodness...\r"
       ]
     },
     {
       "id": "JubilifeCity_Text_RegretInsultingTeamGalactic",
       "en_US": [
-        "Mystery man: Eeeeeh!\n",
-        "You had to make this personal!\r",
-        "You have forced our hand into making\n",
-        "a show of force!\r",
+        "Mystery man: Eeeeeh!\r",
         "We will make you regret insulting\n",
         "Team Galactic!\r"
       ]
@@ -651,15 +628,7 @@
       "id": "JubilifeCity_Text_CalledThemselvesTeamGalactic",
       "en_US": [
         "Rowan: That lot...\n",
-        "They called themselves Team Galactic.\r",
-        "When Pokémon evolve, they seem to\n",
-        "release some type of energy...\r",
-        "However, I believe that it’s a mystic\n",
-        "power far beyond our control.\r",
-        "But Team Galactic seems to be studying\n",
-        "that power’s potential.\r",
-        "They want to know if it can be used as\n",
-        "energy for something...\r"
+        "They called themselves Team Galactic.\r"
       ]
     },
     {
@@ -667,13 +636,7 @@
       "en_US": [
         "Dawn: {STRVAR_1 3, 1, 0}, did you know?\r",
         "The professor studies the evolution\n",
-        "of Pokémon, too.\r",
-        "According to his research, 90% of all\n",
-        "Pokémon are somehow tied to evolution!\r",
-        "Well, maybe that’s the reason those\n",
-        "people tried to take the professor’s\f",
-        "research data by force.\r",
-        "That’s really unforgivable!\r"
+        "of Pokémon, too.\r"
       ]
     },
     {
@@ -682,47 +645,20 @@
         "Lucas: {STRVAR_1 3, 1, 0}, did you know\n",
         "about this?\r",
         "The professor studies the\n",
-        "evolution of Pokémon, too.\r",
-        "According to his research, 90% of all\n",
-        "Pokémon are somehow tied to evolution!\r",
-        "Maybe that’s the reason those goons\n",
-        "tried to take the professor’s\f",
-        "research data.\f",
-        "They’re not allowed to do that!\r"
+        "evolution of Pokémon, too.\r"
       ]
     },
     {
       "id": "JubilifeCity_Text_CollectAllGymBadges",
       "en_US": [
         "Rowan: It’s all over, so you can \n",
-        "relax now.\r",
-        "Still, thanks to you two, nothing came\n",
-        "of that situation. I appreciate that.\r",
-        "Incidentally, {STRVAR_1 3, 0, 0}.\n",
-        "Kudos to you for your battling skill.\r",
-        "It got me thinking. Why don’t you\n",
-        "collect all the Gym Badges of Sinnoh?\r",
-        "Doing so, you will be sure to encounter\n",
-        "lots of Pokémon.\r",
-        "That, of course, means your Pokédex\n",
-        "pages will continuously fill up.\r",
-        "In other words, it will be of great help\n",
-        "to my research.\r",
-        "That said, I’ve given you your first\n",
-        "Pokémon and Pokédex as yours to keep.\r",
-        "You’re free to do with them as you wish.\n",
-        "Take care now.\r"
+        "relax now.\r"
       ]
     },
     {
       "id": "JubilifeCity_Text_OhThatWasVeryGood",
       "en_US": [
-        "Oh, that was very good!\n",
-        "Nicely done! Truly excellent!\r",
-        "Oh, I beg your pardon, I’m from\n",
-        "Jubilife TV!\r",
-        "I’d like you to have something for\n",
-        "letting me see that smashing battle!\r"
+        "Oh, that was very good!\n"
       ]
     },
     {
@@ -730,14 +666,7 @@
       "en_US": [
         "Contained within that Fashion Case...\r",
         "You will find a whole spectrum of chic\n",
-        "Accessories and tasteful Backdrops!\r",
-        "Dress up your Pokémon and watch\n",
-        "their appeal grow!\r",
-        "And, right now the TV station is\n",
-        "offering its facilities so visitors\f",
-        "can dress up their Pokémon!\r",
-        "There are also prize giveaways, too!\n",
-        "Please do visit our TV station!\r"
+        "Accessories and tasteful Backdrops!\r"
       ]
     },
     {
