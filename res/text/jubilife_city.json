@@ -528,43 +528,28 @@
       "id": "JubilifeCity_Text_YouShouldStickAround",
       "en_US": [
         "Hi, there. You should stick around.\n",
-        "We’re doing a Pokétch campaign soon.\r",
-        "Before it starts, I think you should\n",
-        "brush up at the Trainers’ School."
+        "We’re doing a Pokétch campaign soon.\r"
       ]
     },
     {
       "id": "JubilifeCity_Text_PokemonMayHoldSingleItem2",
       "en_US": [
-        "A Pokémon may hold a single item.\r",
-        "Some items become effective as soon\n",
-        "as they are held by Pokémon.\r",
-        "Berries are eaten by Pokémon as\n",
-        "necessary during battle."
+        "A Pokémon may hold a single item.\r"
       ]
     },
     {
       "id": "JubilifeCity_Text_HandOverResearchFindings",
       "en_US": [
         "Mystery man: Now, now, now, now, now!\n",
-        "Professor Rowan, you must comply.\r",
-        "Hand over all your research findings.\n",
-        "For free, naturally.\r",
-        "Failure to comply will result in a painful\n",
-        "time for your assistant.\r"
+        "Professor Rowan, you must comply.\r"
       ]
     },
     {
       "id": "JubilifeCity_Text_ThatsOreburghsGymBadge",
       "en_US": [
-        "Rowan: Ah, {STRVAR_1 3, 0, 0}.\n",
-        "Well? How is the Pokédex progressing?\r",
+        "Rowan: Ah, {STRVAR_1 3, 0, 0}.\r",
         "Hm!\n",
-        "That’s Oreburgh’s Gym Badge, I see.\r",
-        "But hadn’t I given you your first\n",
-        "Pokémon only recently...?\r",
-        "Perhaps being a Trainer is like second\n",
-        "nature to you.\r"
+        "That’s Oreburgh’s Gym Badge, I see.\r"
       ]
     },
     {
