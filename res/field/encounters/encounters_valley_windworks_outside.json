@@ -43,11 +43,11 @@
         },
         {
             "level": 11,
-            "species": "SPECIES_BUIZEL"
+            "species": "SPECIES_ELECTRIKE"
         },
         {
             "level": 12,
-            "species": "SPECIES_SHELLOS"
+            "species": "SPECIES_ELECTRIKE"
         }
     ],
     "swarms": [
@@ -55,8 +55,8 @@
         "SPECIES_ELECTRIKE"
     ],
     "day": [
-        "SPECIES_DRIFLOON",
-        "SPECIES_DRIFLOON"
+        "SPECIES_MAREEP",
+        "SPECIES_MAREEP"
     ],
     "night": [
         "SPECIES_DRIFLOON",
