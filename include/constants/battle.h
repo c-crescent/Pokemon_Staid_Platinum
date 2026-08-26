@@ -66,7 +66,7 @@
 #define BATTLE_SCRIPT_STACK_MAX 4
 
 #define MAX_OPPONENTS     2
-#define MAX_TRAINER_ITEMS 4
+#define MAX_TRAINER_ITEMS 6
 
 #define BATTLE_IN_PROGRESS          0
 #define BATTLE_RESULT_WIN           (1 << 0)

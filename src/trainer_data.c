@@ -242,15 +242,14 @@ static void TrainerData_BuildParty(FieldBattleDTO *dto, int battler, enum HeapID
 
             rnd = (rnd << 8) + genderMod;
             ivs = trmon[i].ivScale * MAX_IVS_SINGLE_STAT / MAX_IV_SCALE;
+            finalLevel = (minLevel > trmon[i].level) ? minLevel : trmon[i].level;
 
-            Pokemon_InitWith(mon, species, trmon[i].level, ivs, TRUE, rnd, OTID_NOT_SHINY, 0);
+            Pokemon_InitWith(mon, species, finalLevel, ivs, TRUE, rnd, OTID_NOT_SHINY, 0);
 
             for (j = 0; j < 4; j++) {
                 Pokemon_SetMoveSlot(mon, trmon[i].moves[j], j);
             }
 
-            finalLevel = (minLevel > trmon[i].level) ? minLevel : trmon[i].level;
-            Pokemon_InitWith(mon, species, finalLevel, ivs, TRUE, rnd, OTID_NOT_SHINY, 0);
             Pokemon_SetBallSeal(trmon[i].cbSeal, mon, heapID);
             Pokemon_SetValue(mon, MON_DATA_FORM, &form);
             Pokemon_CalcLevelAndStats(mon);
@@ -303,16 +302,16 @@ static void TrainerData_BuildParty(FieldBattleDTO *dto, int battler, enum HeapID
 
             rnd = (rnd << 8) + genderMod;
             ivs = trmon[i].ivScale * MAX_IVS_SINGLE_STAT / MAX_IV_SCALE;
+            
+            finalLevel = (minLevel > trmon[i].level) ? minLevel : trmon[i].level;
 
-            Pokemon_InitWith(mon, species, trmon[i].level, ivs, TRUE, rnd, OTID_NOT_SHINY, 0);
+            Pokemon_InitWith(mon, species, finalLevel, ivs, TRUE, rnd, OTID_NOT_SHINY, 0);
             Pokemon_SetValue(mon, MON_DATA_HELD_ITEM, &trmon[i].item);
 
             for (j = 0; j < 4; j++) {
                 Pokemon_SetMoveSlot(mon, trmon[i].moves[j], j);
             }
             
-            finalLevel = (minLevel > trmon[i].level) ? minLevel : trmon[i].level;
-            Pokemon_InitWith(mon, species, finalLevel, ivs, TRUE, rnd, OTID_NOT_SHINY, 0);
             Pokemon_SetBallSeal(trmon[i].cbSeal, mon, heapID);
             Pokemon_SetValue(mon, MON_DATA_FORM, &form);
             Pokemon_CalcStats(mon);

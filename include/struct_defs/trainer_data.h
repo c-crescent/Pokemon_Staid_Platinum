@@ -11,7 +11,7 @@
 
 #define TRAINER_MON_FORM_SHIFT 10
 
-#define MAX_TRAINER_ITEMS 4
+#define MAX_TRAINER_ITEMS 6
 #define MAX_IV_SCALE      255
 
 enum TrainerDataType {
