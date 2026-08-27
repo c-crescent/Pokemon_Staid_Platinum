@@ -188,7 +188,10 @@ static void TrainerData_BuildParty(FieldBattleDTO *dto, int battler, enum HeapID
     Party_InitWithCapacity(dto->parties[battler], MAX_PARTY_SIZE);
     buf = Heap_Alloc(heapID, sizeof(TrainerMonWithMovesAndItem) * MAX_PARTY_SIZE);
     mon = Pokemon_New(heapID);
-    u8 minLevel = Pokemon_GetLevelCap(dto->trainerInfo[battler], SaveData_GetVarsFlags(dto->saveData)) - 2;
+    u8 minLevel = Pokemon_GetLevelCap(dto->trainerInfo[battler], SaveData_GetVarsFlags(dto->saveData));
+    if (minLevel > 65) {
+        minLevel = 65;
+    }
     u8 finalLevel;
 
     Trainer_LoadParty(dto->trainerIDs[battler], buf);
