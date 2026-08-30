@@ -292,6 +292,7 @@ Basic_CheckCannotSleep:
     LoadBattlerAbility AI_BATTLER_DEFENDER
     IfLoadedEqualTo ABILITY_INSOMNIA, ScoreMinus10
     IfLoadedEqualTo ABILITY_VITAL_SPIRIT, ScoreMinus10
+    AddToMoveScore 2
     PopOrEnd 
 
 Basic_CheckCannotExplode:
@@ -887,6 +888,7 @@ Basic_CheckCannotBurn:
     LoadTypeFrom LOAD_DEFENDER_TYPE_2
     IfLoadedEqualTo TYPE_FIRE, ScoreMinus10
     IfSideCondition AI_BATTLER_DEFENDER, SIDE_CONDITION_SAFEGUARD, ScoreMinus10
+    AddToMoveScore 1
     PopOrEnd 
 
 Basic_CheckHelpingHand:
@@ -1812,6 +1814,7 @@ Expert_StatusSleep:
     // effects), 50% chance of score +1.
     IfMoveEffectKnown AI_BATTLER_ATTACKER, BATTLE_EFFECT_RECOVER_DAMAGE_SLEEP, Expert_StatusSleep_TryScorePlus1
     IfMoveEffectKnown AI_BATTLER_ATTACKER, BATTLE_EFFECT_STATUS_NIGHTMARE, Expert_StatusSleep_TryScorePlus1
+    AddToMoveScore 3
     GoTo Expert_StatusSleep_End
 
 Expert_StatusSleep_TryScorePlus1:
@@ -2698,7 +2701,7 @@ Expert_ToxicLeechSeed_CheckMoveEffectsKnown:
     GoTo Expert_ToxicLeechSeed_End
 
 Expert_ToxicLeechSeed_TryScorePlus2:
-    IfRandomLessThan 60, Expert_ToxicLeechSeed_End
+    IfRandomLessThan 96, Expert_ToxicLeechSeed_End
     AddToMoveScore 2
 
 Expert_ToxicLeechSeed_End:
@@ -2926,6 +2929,7 @@ Expert_Reflect_PreSplitPhysicalTypes:
 Expert_StatusPoison:
     // If the attacker's HP is < 50% or the defender's HP is <= 50%, score -1.
     IfHPPercentLessThan AI_BATTLER_ATTACKER, 50, Expert_StatusPoison_ScoreMinus1
+    AddToMoveScore 1
     IfHPPercentGreaterThan AI_BATTLER_DEFENDER, 50, Expert_StatusPoison_End
 
 Expert_StatusPoison_ScoreMinus1:
@@ -2944,8 +2948,8 @@ Expert_StatusParalyze:
     GoTo Expert_StatusParalyze_End
 
 Expert_StatusParalyze_TryScorePlus3:
-    IfRandomLessThan 20, Expert_StatusParalyze_End
-    AddToMoveScore 3
+    IfRandomLessThan 128, Expert_StatusParalyze_End
+    AddToMoveScore 2
 
 Expert_StatusParalyze_End:
     PopOrEnd 

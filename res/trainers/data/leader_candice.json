@@ -12,7 +12,7 @@
         {
             "species": "SPECIES_ABOMASNOW",
             "form": 0,
-            "level": 45,
+            "level": 49,
             "item": "ITEM_EXPERT_BELT",
             "moves": [
                 "MOVE_BLIZZARD",
@@ -26,7 +26,7 @@
         {
             "species": "SPECIES_WEAVILE",
             "form": 0,
-            "level": 45,
+            "level": 49,
             "item": "ITEM_CHOICE_BAND",
             "moves": [
                 "MOVE_KNOCK_OFF",
@@ -40,7 +40,7 @@
         {
             "species": "SPECIES_MAMOSWINE",
             "form": 0,
-            "level": 45,
+            "level": 49,
             "item": "ITEM_LEFTOVERS",
             "moves": [
                 "MOVE_ICICLE_CRASH",
@@ -54,7 +54,7 @@
         {
             "species": "SPECIES_WALREIN",
             "form": 0,
-            "level": 45,
+            "level": 49,
             "item": "ITEM_LEFTOVERS",
             "moves": [
                 "MOVE_PROTECT",
@@ -68,7 +68,7 @@
         {
             "species": "SPECIES_FROSLASS",
             "form": 0,
-            "level": 45,
+            "level": 49,
             "item": "ITEM_CHOICE_SPECS",
             "moves": [
                 "MOVE_BLIZZARD",

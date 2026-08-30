@@ -12,7 +12,7 @@
         {
             "species": "SPECIES_LANTURN",
             "form": 0,
-            "level": 50,
+            "level": 54,
             "item": "ITEM_LEFTOVERS",
             "moves": [
                 "MOVE_THUNDER_WAVE",
@@ -26,7 +26,7 @@
         {
             "species": "SPECIES_AMPHAROS",
             "form": 0,
-            "level": 50,
+            "level": 54,
             "item": "ITEM_MAGNET",
             "moves": [
                 "MOVE_THUNDER_WAVE",
@@ -40,7 +40,7 @@
         {
             "species": "SPECIES_RAICHU",
             "form": 0,
-            "level": 50,
+            "level": 54,
             "item": "ITEM_CHOICE_SPECS",
             "moves": [
                 "MOVE_THUNDERBOLT",
@@ -54,7 +54,7 @@
         {
             "species": "SPECIES_LUXRAY",
             "form": 0,
-            "level": 50,
+            "level": 54,
             "item": "ITEM_CHOICE_BAND",
             "moves": [
                 "MOVE_ICE_FANG",
@@ -68,7 +68,7 @@
         {
             "species": "SPECIES_ELECTIVIRE",
             "form": 0,
-            "level": 50,
+            "level": 54,
             "item": "ITEM_EXPERT_BELT",
             "moves": [
                 "MOVE_THUNDERBOLT",

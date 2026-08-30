@@ -12,7 +12,7 @@
         {
             "species": "SPECIES_MEDICHAM",
             "form": 0,
-            "level": 32,
+            "level": 34,
             "item": "ITEM_CHOICE_SCARF",
             "moves": [
                 "MOVE_HI_JUMP_KICK",
@@ -26,7 +26,7 @@
         {
             "species": "SPECIES_MACHAMP",
             "form": 0,
-            "level": 32,
+            "level": 34,
             "item": "ITEM_TOXIC_ORB",
             "moves": [
                 "MOVE_CLOSE_COMBAT",
@@ -40,7 +40,7 @@
         {
             "species": "SPECIES_TOXICROAK",
             "form": 0,
-            "level": 32,
+            "level": 34,
             "item": "ITEM_LIFE_ORB",
             "moves": [
                 "MOVE_SWORDS_DANCE",
@@ -54,7 +54,7 @@
         {
             "species": "SPECIES_LUCARIO",
             "form": 0,
-            "level": 32,
+            "level": 34,
             "item": "ITEM_CHOICE_SPECS",
             "moves": [
                 "MOVE_AURA_SPHERE",

@@ -3547,8 +3547,8 @@ u8 Pokemon_GetLevelCap(const TrainerInfo *info, const VarsFlags *varsFlags)
     }
 
     switch (badgeCount) {
-        case 0:  return 15;
-        case 1:  return 22;
+        case 0:  return 14;
+        case 1:  return 21;
         case 2:  return 26;
         case 3:  return 32;
         case 4:  return 37;

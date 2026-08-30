@@ -12,7 +12,7 @@
         {
             "species": "SPECIES_STEELIX",
             "form": 0,
-            "level": 41,
+            "level": 44,
             "item": "ITEM_LEFTOVERS",
             "moves": [
                 "MOVE_STEALTH_ROCK",
@@ -26,7 +26,7 @@
         {
             "species": "SPECIES_BRONZONG",
             "form": 0,
-            "level": 41,
+            "level": 44,
             "item": "ITEM_LEFTOVERS",
             "moves": [
                 "MOVE_TRICK_ROOM",
@@ -40,7 +40,7 @@
         {
             "species": "SPECIES_MAGNEZONE",
             "form": 0,
-            "level": 41,
+            "level": 44,
             "item": "ITEM_LEFTOVERS",
             "moves": [
                 "MOVE_FLASH_CANNON",
@@ -54,7 +54,7 @@
         {
             "species": "SPECIES_MAWILE",
             "form": 0,
-            "level": 41,
+            "level": 44,
             "item": "ITEM_LEFTOVERS",
             "moves": [
                 "MOVE_IRON_HEAD",
@@ -68,7 +68,7 @@
         {
             "species": "SPECIES_BASTIODON",
             "form": 0,
-            "level": 41,
+            "level": 44,
             "item": "ITEM_LEFTOVERS",
             "moves": [
                 "MOVE_METAL_BURST",
