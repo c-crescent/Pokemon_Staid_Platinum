@@ -5,7 +5,7 @@
         "defense": 55,
         "speed": 85,
         "special_attack": 47,
-        "special_defense": 75
+        "special_defense": 95
     },
     "types": [ "TYPE_BUG", "TYPE_ELECTRIC" ],
     "catch_rate": 150,

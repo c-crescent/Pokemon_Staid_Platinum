@@ -3,8 +3,8 @@
         "hp": 79,
         "attack": 85,
         "defense": 60,
-        "speed": 71,
-        "special_attack": 55,
+        "speed": 79,
+        "special_attack": 85,
         "special_defense": 60
     },
     "types": [ "TYPE_NORMAL", "TYPE_WATER" ],

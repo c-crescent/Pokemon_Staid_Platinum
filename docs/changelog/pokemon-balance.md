@@ -99,6 +99,9 @@
 > Persian
 > - ATK: 95(+25)
 
+> Golduck
+> Type: Water / Psychic
+
 > Primeape
 > - HP: 85(+20)
 > - ATK: 115(+10)
@@ -194,6 +197,12 @@
 > - HP: 67(+19)
 > - HP: 67(+19)
 > - HP: 67(+19)
+
+> Omastar
+> - SPE: 75(+20)
+
+> Kabutops
+> - DEF: 125(+20)
 
 > Articuno
 > - SPE: 75(-10)
@@ -328,25 +337,128 @@
 > - ATK: 100(+20)
 > - SPD: 90(+20)
 ## Gen III
+
+> Sceptile
+> - HP: 75(+5)
+> - SPA: 110(+5)
+> - ATK: 80(-5)
+> - Type: Grass / Dragon
+
+> Blaziken
+> - HP: 85(+5)
+
+> Mightyena
+> - ATK: 105(+15)
+> - SPE: 100(+30)
+> - SPD: 65(+5)
+
+> Linoone
+> - SPA: 90(+40)
+
+> Beautifly
+> - SPA: 130(+40)
+> - Abilities: Swarm / Rivalry
+
+> Dustox
+> - DEF: 90(+20)
+> - SPD: 110(+20)
+
+> Ludicolo
+> - HP: 100(+20)
+
+> Shiftry
+> - DEF: 70(+10)
+> - SPA: 100(+10)
+
+> Swellow
+> SPA: 80(+30)
+
+> Pelipper
+> - Ability: Drizzle / Keen Eye
+
+> Kirlia
+> - DEF: 65(+30)
+> - SPE: 70(+20)
+> - SPD: 77(+22)
+> - SPA: 105(+50)
+
+> Masquerain
+> - HP: 82(+12)
+> - DEF: 82(+20)
+> - Type: Bug / Water
+
+> Loudred
+> - SPA: 91(+20)
+
+> Exploud
+> - SPA: 131(+40)
+
+> Delcatty
+> - ATK: 80(+15)
+> - SPE: 100(+30)
+
+> Sableye
+> - DEF: 115(+40)
+> - SPD: 105(+40)
+> - SPE: 20(-30)
+
+> Mawile
+> - DEF: 95(+10)
+> - SPD: 75(+20)
+> - Abilities: Huge Power / Intimidate
+
 > Aggron
 > - Type: Steel
-### Gen IV
-> Froslass
-> - SPA: 90(+10)
 
-> Illumise
+> Manectric
+> - ATK: 95(+20)
+
+> Plusle
+> - SPE: 135(+40)
+
+> Minun
+> - SPE: 135(+40)
+
+> Volbeat
+> - SPD: 95(+20)
 > - Type: Bug / Electric
 
-> Lopunny
-> - Type: Normal / Fighting
-> - ATK: 96(+20) 
-> - Abilities: Scrappy / Klutz
-> - Learns Mach Punch, Jump Kick, and Hi Jump Kick
+> Illumise
+> - DEF: 75(+20)
+> - Type: Bug / Electric
 
+> Swalot
+> - DEF: 113(+40)
 
+> Carvanha
+> - Abilities: Speed Boost / Rough Skin
 
-> Seviper
-> - Type: Poison / Dark
+> Sharpedo
+> - DEF: 50(+10)
+> - SPD: 50(+10)
+> - Abilities: Speed Boost / Rough Skin
+
+> Wailord
+> - SPA: 110(+20)
+
+> Camerupt
+> - ATK: 120(+20)
+> - SPA: 125(+20)
+
+> Torkoal
+> - Ability: Drought / White Smoke
+
+> Grumpig
+> - DEF: 85(+20)
+> - SPA: 95(+5)
+
+> Spinda
+> - HP: 66(+6)
+> - ATK: 66(+6)
+> - DEF: 66(+6)
+> - SPA: 66(+6)
+> - SPD: 66(+6)
+> - SPE: 66(+6)
 
 > Trapinch
 > - Type: Bug / Ground
@@ -355,69 +467,43 @@
 > - Type: Bug / Dragon
 
 > Flygon
+> - SPA: 110(+30)
 > - Type: Bug / Dragon
 
-> Volbeat
-> - Type: Bug / Electric
+> Cacture
+> - DEF: 80(+20)
+> - SPD: 80(+20)
 
-> Banette
-> - ATK: 145(+30)
+> Altaria
+> - HP: 95(+20)
+> - ATK: 90(+20)
+> - SPA: 90(+20)
 
-> Chimecho
-> - HP: 75(+10)
-> - DEF: 80(+10)
-> - SPD: 90(+10)
-> - Type: Psychic / Steel
+> Seviper
+> - Type: Poison / Dark
 
+> Lunatone
+> - HP: 90(+20)
+> - DEF: 105(+40)
 
+> Solrock
+> - HP: 90(+20)
+> - ATK: 135(+40)
 
-> Electivire
-> - Type: Electric / Fighting
+> Whiscash
+> - DEF: 78(+5)
+> - SPA: 78(+2)
+> - SPD: 78(+7)
 
-> Magmortar
-> - Type: Fire / Water
+> Claydol
+> - ATK: 80(+10)
+> - SPA: 80(+10)
 
-> Mawile
-> - DEF: 95(+10)
-> - SPD: 75(+20)
-> - Abilities: Huge Power / Intimidate
+> Cradily
+> - SPA: 101(+20)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-> Mightyena
-> - ATK: 105(+15)
-> - SPE: 100(+30)
-> - SPD: 65(+5)
-
-
-
-> Beautifly
-> - SPA: 100(+10)
-> - Abilities: Swarm / Rivalry
-
-> Carnivine
-> - ATK: 120(+20)
-> - DEF: 92(+20)
-
-> Carvanha
-> - Abilities: Rough Skin / Speed Boost
-
-> Sharpedo
-> - Abilities: Rough Skin / Speed Boost
+> Armaldo
+> - HP: 95(+20)
 
 > Castform
 > - ATK: 87(+17)
@@ -427,110 +513,143 @@
 > - HP: 87(+17)
 > - SPE: 87(+17)
 
+> Kecleon
+> - SPA: 120(+60)
 
+> Banette
+> - ATK: 145(+30)
 
-> Delcatty
-> - ATK: 80(+15)
-> - SPE: 100(+30)
+> Tropius
+> - HP: 109(+10)
+> - SPD: 117(+30)
 
+> Chimecho
+> - HP: 75(+10)
+> - DEF: 80(+10)
+> - SPD: 90(+10)
+> - Type: Psychic / Steel
 
+> Absol
+> - HP: 85(+20)
+> - SPA: 105(+30)
 
-
-
-> Dustox
-> - DEF: 90(+20)
-> - SPD: 110(+20)
-
-> Exploud
-> - SPA: 131(+40)
-
-> Loudred
-> - SPA: 91(+20)
-
-> Lumineon
-> - DEF: 96(+20)
-> - SPD: 96(+10)
-> - SPE: 96(+5)
-
-
-
-> Kirlia
-> - DEF: 65(+30)
-> - SPE: 70(+20)
-> - SPD: 77(+22)
-> - SPA: 105(+50)
-
-
-
-> Glaceon
-> - SPE: 95(+30)
-> - SPD: 65(-30)
-
-
-
-> Golduck
-> Type: Water / Psychic
-
-> Gorebyss
-> - HP: 70(+15)
-> - SPE: 72(+20)
+> Glalie
+> - HP: 85(+5)
+> - ATK: 85(+5)
+> - DEF: 85(+5)
+> - SPA: 85(+5)
+> - SPD: 85(+5)
+> - SPE: 85(+5)
 
 > Huntail
 > - HP: 60(+5)
 > - ATK: 114(+10)
 > - SPE: 72(+20)
 
-> Sceptile
-> - SPA: 110(+5)
-> - ATK: 80(-5)
-> - Type: Grass / Dragon
+> Gorebyss
+> - HP: 70(+15)
+> - SPE: 72(+20)
 
-> Grumpig
-> - DEF: 85(+20)
-> - SPA: 95(+5)
-
-> Swalot
-> - DEF: 113(+40)
-
-
-
-> Kecleon
-> - SPA: 120(+60)
-
-> Kricketune
-> - DEF: 81(+30)
-> - SPD: 81(+30)
-
-
+> Relicanth
+> - SPD: 95(+30)
 
 > Luvdisc
 > - DEF: 75(+20)
 > - SPA: 80(+40)
 > - SPE: 127(+30)
 
-> Masquerain
-> - HP: 82(+12)
-> - DEF: 82(+20)
-> - Type: Bug / Water
+### Gen IV
 
+> Torterra
+> - ATK: 119(+10)
+> - Ability: Overgrow / Shell Armor
 
+> Infernape
+> - DEF: 72(+1)
+> - Ability: Blaze / Iron Fist
 
+> Empoleon
+> - SPE: 65(+5)
+> - Ability: Torrent / Adaptability
 
+> Staraptor
+> - Type: Flying / Fighting
 
+> Bibarel
+> - SPA: 85(+30)
+> - SPE: 79(+8)
 
+> Kricketune
+> - DEF: 81(+30)
+> - SPD: 81(+30)
 
-> Sableye
-> - DEF: 115(+40)
-> - SPD: 105(+40)
-> - SPE: 20(-30)
+> Luxray
+> - SPA: 120(+25)
 
+> Rampardos
+> - ATK: 185(+20)
 
+> Bastiodon
+> - HP: 80(+20)
 
+> Wormadam
+> - ATK: 79(+20)
+> - DEF: 105(+20)
 
-> Spinda
-> - HP: 66(+6)
-> - ATK: 66(+6)
-> - DEF: 66(+6)
-> - SPA: 66(+6)
-> - SPD: 66(+6)
-> - SPE: 66(+6)
+> Vespiqueen
+> - ATK: 102(+22)
+> - SPA: 102(+22)
+> - SPE: 70(+30)
+
+> Cherrim
+> - HP: 85(+15)
+> - ATK: 87(+20)
+> - DEF: 78(+8)
+
+> Lopunny
+> - Type: Normal / Fighting
+> - ATK: 116(+40) 
+> - Abilities: Scrappy / Klutz
+
+> Purugly
+> - HP: 91(+20)
+> - SPD: 64(+5)
+
+> Skuntank
+> - SPA: 93(+22)
+> - SPD: 67(+6)
+
+> Chatot
+> - SPA: 122(+30)
+
+> Spritomb
+> - HP: 80(+30)
+
+> Toxicroak
+> - ATK: 116(+10)
+> - SPA: 96(+10)
+
+> Carnivine
+> - ATK: 120(+20)
+> - DEF: 92(+20)
+
+> Lumineon
+> - DEF: 96(+20)
+> - SPD: 96(+10)
+> - SPE: 96(+5)
+
+> Electivire
+> - Type: Electric / Fighting
+
+> Magmortar
+> - Type: Fire / Water
+
+> Glaceon
+> - SPE: 95(+30)
+> - SPD: 65(-30)
+
+> Dusknoir
+> HP: 65(+20)
+
+> Froslass
+> - SPA: 90(+10)

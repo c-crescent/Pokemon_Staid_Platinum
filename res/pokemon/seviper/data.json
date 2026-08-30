@@ -46,6 +46,7 @@
             [ 32, "MOVE_POISON_JAB" ],
             [ 35, "MOVE_HAZE" ],
             [ 37, "MOVE_NIGHT_SLASH" ],
+            [ 40, "MOVE_DARK_PULSE" ],
             [ 42, "MOVE_SLUDGE_BOMB" ],
             [ 44, "MOVE_WRING_OUT" ]
         ],
