@@ -2,12 +2,11 @@
     "name": "Return",
     "description": [
         "A full-power attack\n",
-        "that grows more\n",
-        "powerful the more\n",
-        "the user likes its\n",
-        "Trainer."
+        "that channels the\n",
+        "harmony of the body\n",
+        "of the user."
     ],
-    "class": "CLASS_SPECIAL",
+    "class": "CLASS_PHYSICAL",
     "type": "TYPE_NORMAL",
     "power": 102,
     "accuracy": 100,
