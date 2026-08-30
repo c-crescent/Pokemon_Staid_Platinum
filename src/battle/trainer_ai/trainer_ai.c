@@ -499,11 +499,11 @@ static int GetHazardTurnBonus(int turn)
 {
     switch (turn) {
         case 0:  // First turn
-            return 150;
+            return 3;
         case 1:  // Second turn
-            return 50;
+            return 2;
         case 2:  // Third turn
-            return 20;
+            return 1;
         default: // Turn 4 and beyond
             return 0;
     }
@@ -549,13 +549,13 @@ static int GetHazardBaseScore(u16 move)
 {
     switch (move) {
         case MOVE_STEALTH_ROCK:
-            return 30;
+            return 3;
             
         case MOVE_SPIKES:
-            return 20;
+            return 2;
             
         case MOVE_TOXIC_SPIKES:
-            return 10;
+            return 1;
             
         default:
             return 0;  // Not a hazard
@@ -589,8 +589,6 @@ static void ApplyHazardScoring(BattleSystem *battleSys, BattleContext *battleCtx
     
     // Check if the hazard is already capped (fully set up)
     if (IsHazardCapped(battleCtx, move, opponentSide)) {
-        // Hazard is fully set up - penalise the usage
-        AI_CONTEXT.moveScore[AI_CONTEXT.moveSlot] -= 200;
         return;
     }
     
@@ -603,7 +601,7 @@ static void ApplyHazardScoring(BattleSystem *battleSys, BattleContext *battleCtx
     }
     
     // Calculate total score to add
-    int totalBonus = 100 + turnBonus;
+    int totalBonus = 10 + turnBonus;
     
     // Apply the bonus to the current move's score
     AI_CONTEXT.moveScore[AI_CONTEXT.moveSlot] += totalBonus;
@@ -611,259 +609,6 @@ static void ApplyHazardScoring(BattleSystem *battleSys, BattleContext *battleCtx
     // Store the bonus amount for debugging
     AI_CONTEXT.calcTemp = totalBonus;
     
-}
-
-/**
- * @brief Apply scoring bonuses for status-inflicting moves.
- * 
- * Rewards status moves with >70% accuracy against un-statused opponents.
- * Penalizes using status on already-statused opponents.
- * Ignores effect chance (only checks accuracy).
- */
-static void ApplyStatusScoring(BattleSystem *battleSys, BattleContext *battleCtx)
-{    
-    u16 move = AI_CONTEXT.move;
-    u8 defender = AI_CONTEXT.defender;
-    u16 effect = MOVE_DATA(move).effect;
-    u8 accuracy = MOVE_DATA(move).accuracy;
-    
-    // Check if this move inflicts a status condition
-    switch (effect) {
-        case BATTLE_EFFECT_STATUS_POISON:
-        case BATTLE_EFFECT_STATUS_BADLY_POISON:
-        case BATTLE_EFFECT_STATUS_PARALYZE:
-        case BATTLE_EFFECT_STATUS_SLEEP:
-        case BATTLE_EFFECT_STATUS_BURN:
-            break;
-        default:
-            return;  // Not a status move
-    }
-    
-    // Check if accuracy is >70%
-    // Note: accuracy 0 means "always hits" (e.g., Aerial Ace, but status moves don't use this)
-    if (accuracy != 0 && accuracy < 70) {
-        return;
-    }
-    
-    // Check if opponent is already statused
-    if (battleCtx->battleMons[defender].status & STATUS_CONDITIONS) {
-        AI_CONTEXT.moveScore[AI_CONTEXT.moveSlot] -= 200;
-        return;
-    }
-    
-    // Apply bonus for high-accuracy status move
-    AI_CONTEXT.moveScore[AI_CONTEXT.moveSlot] += 100;
-    
-}
-
-/**
- * @brief Apply scoring bonuses for setup and debuff moves.
- * 
- * Only applies when the user is at maximum health.
- * Points are assigned directly based on the SetupFirstTurn_SetupEffects list.
- * 
- * @param battleSys
- * @param battleCtx
- */
-static void ApplySetupScoring(BattleSystem *battleSys, BattleContext *battleCtx)
-{
-    u16 move = AI_CONTEXT.move;
-    u16 effect = MOVE_DATA(move).effect;
-    u8 attacker = AI_CONTEXT.attacker;
-    s16 bonus = 0;
-    BOOL isDebuff = FALSE;
-    
-    // Only use setup/debuff moves at full health
-    if (battleCtx->battleMons[attacker].curHP != battleCtx->battleMons[attacker].maxHP) {
-        return;
-    }
-    
-    // Base points for setup and debuff moves
-    const int SETUP_BASE_POINTS = 50;
-    const int DEBUFF_BASE_POINTS = 0;
-    
-    // Assign bonus points based on the SetupFirstTurn_SetupEffects list
-    switch (effect) {
-        // === OFFENSIVE BOOSTS (Setup) ===
-        case BATTLE_EFFECT_ATK_UP:
-        case BATTLE_EFFECT_SP_ATK_UP:
-            bonus = 20;
-            break;
-            
-        case BATTLE_EFFECT_ATK_UP_2:
-        case BATTLE_EFFECT_SP_ATK_UP_2:
-        case BATTLE_EFFECT_ATK_UP_2_STATUS_CONFUSION:
-        case BATTLE_EFFECT_SP_ATK_UP_CAUSE_CONFUSION:
-            bonus = 40;
-            break;
-            
-        case BATTLE_EFFECT_ATK_DEF_UP:
-        case BATTLE_EFFECT_SP_ATK_SP_DEF_UP:
-            bonus = 20;
-            break;         
-        
-        // === DEFENSIVE BOOSTS (Setup) ===
-        case BATTLE_EFFECT_DEF_UP:
-        case BATTLE_EFFECT_SP_DEF_UP:
-            bonus = 25;
-            break;
-            
-        case BATTLE_EFFECT_DEF_UP_2:
-        case BATTLE_EFFECT_SP_DEF_UP_2:
-            bonus = 35;
-            break;
-            
-        case BATTLE_EFFECT_DEF_SPD_UP:
-            bonus = 35;
-            break;
-            
-        case BATTLE_EFFECT_PREVENT_CRITS:
-        case BATTLE_EFFECT_GIVE_GROUND_IMMUNITY:
-            bonus = 10;
-            break;
-            
-        // === SPEED BOOSTS (Setup) ===
-        case BATTLE_EFFECT_SPEED_UP:
-            bonus = 25;
-            break;
-            
-        case BATTLE_EFFECT_SPEED_UP_2:
-            bonus = 35;
-            break;
-            
-        case BATTLE_EFFECT_DOUBLE_SPEED_3_TURNS:
-            bonus = 40;
-            break;
-            
-        // === ACCURACY/EVASION (Setup) ===
-        case BATTLE_EFFECT_ACC_UP:
-            bonus = 0;
-            break;
-            
-        case BATTLE_EFFECT_ACC_UP_2:
-            bonus = 0;
-            break;
-            
-        case BATTLE_EFFECT_EVA_UP:
-            bonus = 0;
-            break;
-            
-        case BATTLE_EFFECT_EVA_UP_2:
-            bonus = 0;
-            break;
-            
-        case BATTLE_EFFECT_EVA_UP_2_MINIMIZE:
-            bonus = 0;
-            break;
-            
-        // === SCREENS (Setup) ===
-        case BATTLE_EFFECT_SET_LIGHT_SCREEN:
-        case BATTLE_EFFECT_SET_REFLECT:
-            bonus = 30;
-            break;
-            
-        // === SUBSTITUTE (Setup) ===
-        case BATTLE_EFFECT_SET_SUBSTITUTE:
-            bonus = 30;
-            break;
-            
-        // === CURSE (Setup) ===
-        case BATTLE_EFFECT_CURSE:
-            bonus = 40;
-            break;
-            
-        case BATTLE_EFFECT_RANDOM_STAT_UP_2:
-            bonus = 30;
-            break;
-            
-        case BATTLE_EFFECT_CRIT_UP_2:  // Focus Energy
-            bonus = 0;
-            break;
-            
-        case BATTLE_EFFECT_DEF_UP_DOUBLE_ROLLOUT_POWER:  // Defense Curl
-            bonus = 5;
-            break;
-            
-        // === DEBUFFS (Lower opponent stats) ===
-
-        case BATTLE_EFFECT_ATK_DEF_DOWN:
-            bonus = 20;
-            isDebuff = TRUE;
-            break;
-
-        case BATTLE_EFFECT_ATK_DOWN:
-            bonus = 15;
-            isDebuff = TRUE;
-            break;
-            
-        case BATTLE_EFFECT_DEF_DOWN:
-            bonus = 15;  // Defense drops are more valuable (physical setup)
-            isDebuff = TRUE;
-            break;
-            
-        case BATTLE_EFFECT_SPEED_DOWN:
-            bonus = 20;  // Speed drops are valuable
-            isDebuff = TRUE;
-            break;
-            
-        case BATTLE_EFFECT_SP_ATK_DOWN:
-            bonus = 15;
-            isDebuff = TRUE;
-            break;
-            
-        case BATTLE_EFFECT_SP_DEF_DOWN:
-            bonus = 15;  // SpDef drops are valuable (special setup)
-            isDebuff = TRUE;
-            break;
-            
-        case BATTLE_EFFECT_ACC_DOWN:
-            bonus = 15;  // Accuracy drops are less reliable
-            isDebuff = TRUE;
-            break;
-            
-        case BATTLE_EFFECT_ATK_DOWN_2:
-            bonus = 30;  // -2 attack is very valuable
-            isDebuff = TRUE;
-            break;
-            
-        case BATTLE_EFFECT_DEF_DOWN_2:
-            bonus = 30;  // -2 defense (Screech) enables physical sweeps
-            isDebuff = TRUE;
-            break;
-            
-        case BATTLE_EFFECT_SPEED_DOWN_2:
-            bonus = 30;  // -2 speed (Cotton Spore) is very valuable
-            isDebuff = TRUE;
-            break;
-            
-        case BATTLE_EFFECT_SP_ATK_DOWN_2:
-            bonus = 30;
-            isDebuff = TRUE;
-            break;
-            
-        case BATTLE_EFFECT_SP_DEF_DOWN_2:
-            bonus = 30;  // -2 SpDef (Metal Sound) enables special sweeps
-            isDebuff = TRUE;
-            break;
-            
-        case BATTLE_EFFECT_ACC_DOWN_2:
-            bonus = 30;  // -2 accuracy (Mud-Slap, Sand Attack)
-            isDebuff = TRUE;
-            break;
-            
-        // === DEFAULT ===
-        default:
-            return;  // Not a recognized setup/debuff move
-    }
-    
-    // Apply the bonus
-    if (isDebuff) {
-        // Debuff moves get a smaller base + bonus
-        AI_CONTEXT.moveScore[AI_CONTEXT.moveSlot] += DEBUFF_BASE_POINTS + bonus;
-    } else {
-        // Setup moves get the full base + bonus
-        AI_CONTEXT.moveScore[AI_CONTEXT.moveSlot] += SETUP_BASE_POINTS + bonus;
-    }
 }
 
 /**
@@ -895,8 +640,6 @@ static void TrainerAI_EvalMoves(BattleSystem *battleSys, BattleContext *battleCt
             if (AI_CONTEXT.move != MOVE_NONE) {
 
                 ApplyHazardScoring(battleSys, battleCtx);
-                ApplyStatusScoring(battleSys, battleCtx);
-                ApplySetupScoring(battleSys, battleCtx);
                 
                 sAICommandTable[battleCtx->aiScriptTemp[battleCtx->aiScriptCursor]](battleSys, battleCtx);
             } else {

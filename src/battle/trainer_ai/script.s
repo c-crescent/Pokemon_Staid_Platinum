@@ -310,10 +310,10 @@ Basic_CheckLastMon:
     CountAlivePartyBattlers AI_BATTLER_ATTACKER
     IfLoadedNotEqualTo 0, Basic_Explode_Terminate
     CountAlivePartyBattlers AI_BATTLER_DEFENDER
-    IfLoadedNotEqualTo 0, ScoreMinus10
+    IfLoadedNotEqualTo 0, ScoreMinus3
 
-    // If the target is also on their last Pokemon, score -1 instead of -10.
-    GoTo ScoreMinus1
+    // If the target is also on their last Pokemon, score +1 instead of -10.
+    GoTo ScorePlus1
 
 Basic_Explode_Terminate:
     PopOrEnd 
@@ -1870,7 +1870,7 @@ Expert_Explosion_CheckUserMediumHP:
 Expert_Explosion_CheckUserLowHP:
     IfHPPercentGreaterThan AI_BATTLER_ATTACKER, 30, Expert_Explosion_End
     IfRandomLessThan 50, Expert_Explosion_End
-    AddToMoveScore 1
+    AddToMoveScore 2
     GoTo Expert_Explosion_End
 
 Expert_Explosion_TryScoreMinus1:
@@ -6382,9 +6382,6 @@ EvalAttack_TryScorePlus2:
     PopOrEnd 
 
 EvalAttack_ApplyKillBonuses:
-    // Do not evaluate kills with Explosion or Self-Destruct for this routine.
-    IfCurrentMoveEffectEqualTo BATTLE_EFFECT_HALVE_DEFENSE, EvalAttack_Terminate
-
     // Moves like Focus Punch, Sucker Punch, and Future Sight *may* get +4 score for a kill.
     // NOTE: Focus Punch and Sucker Punch can never actually reach this state, because the AI never
     // treats them as able to kill.
