@@ -68,6 +68,18 @@ enum AIEvalStep {
     AI_EVAL_STEP_END,
 };
 
+// ============================================================
+// STATUS INFLICTION SCORING CONFIGURATION
+// ============================================================
+
+#define STATUS_CONDITIONS (MON_CONDITION_POISON | \
+                          MON_CONDITION_TOXIC |  \
+                          MON_CONDITION_BURN |   \
+                          MON_CONDITION_PARALYSIS | \
+                          MON_CONDITION_SLEEP)
+
+// ============================================================
+
 static void AICmd_IfRandomLessThan(BattleSystem *battleSys, BattleContext *battleCtx);
 static void AICmd_IfRandomGreaterThan(BattleSystem *battleSys, BattleContext *battleCtx);
 static void AICmd_IfRandomEqualTo(BattleSystem *battleSys, BattleContext *battleCtx);
@@ -472,6 +484,389 @@ static u8 TrainerAI_MainDoubles(BattleSystem *battleSys, BattleContext *battleCt
 }
 
 /**
+ * @brief Get the turn-based bonus for hazard moves.
+ * 
+ * Returns a decreasing bonus for the first 3 turns:
+ * - Turn 0 (first turn): HAZARD_BONUS_TURN_0
+ * - Turn 1 (second turn): HAZARD_BONUS_TURN_1
+ * - Turn 2 (third turn): HAZARD_BONUS_TURN_2
+ * - Turn 3+: 0 (no bonus)
+ * 
+ * @param turn The current turn number (battleCtx->totalTurns)
+ * @return The bonus to apply
+ */
+static int GetHazardTurnBonus(int turn)
+{
+    switch (turn) {
+        case 0:  // First turn
+            return 150;
+        case 1:  // Second turn
+            return 50;
+        case 2:  // Third turn
+            return 20;
+        default: // Turn 4 and beyond
+            return 0;
+    }
+}
+
+/**
+ * @brief Check if a hazard is already capped (fully set up).
+ * 
+ * @param battleCtx
+ * @param move The move to check
+ * @param opponentSide The opponent's side
+ * @return TRUE if the hazard is capped, FALSE otherwise
+ */
+static BOOL IsHazardCapped(BattleContext *battleCtx, u16 move, u8 opponentSide)
+{
+    switch (move) {
+        case MOVE_STEALTH_ROCK:
+            // Stealth Rock is capped when it's present (1 layer)
+            return (battleCtx->sideConditionsMask[opponentSide] & SIDE_CONDITION_STEALTH_ROCK) != 0;
+            
+        case MOVE_SPIKES:
+            // Spikes is capped at 3 layers
+            return (battleCtx->sideConditions[opponentSide].spikesLayers >= 3);
+            
+        case MOVE_TOXIC_SPIKES:
+            // Toxic Spikes is capped at 2 layers
+            return (battleCtx->sideConditions[opponentSide].toxicSpikesLayers >= 2);
+            
+        default:
+            return FALSE;  // Not a hazard
+    }
+}
+
+/**
+ * @brief Get the base score for a hazard move.
+ * 
+ * Priority: Stealth Rock > Spikes > Toxic Spikes
+ * 
+ * @param move The move to score
+ * @return The base score for the hazard
+ */
+static int GetHazardBaseScore(u16 move)
+{
+    switch (move) {
+        case MOVE_STEALTH_ROCK:
+            return 30;
+            
+        case MOVE_SPIKES:
+            return 20;
+            
+        case MOVE_TOXIC_SPIKES:
+            return 10;
+            
+        default:
+            return 0;  // Not a hazard
+    }
+}
+
+/**
+ * @brief Apply scoring bonuses to hazard moves.
+ * 
+ * This function:
+ * 1. Checks if it's a hazard move
+ * 2. Checks if the hazard is already capped (fully set up)
+ * 3. If not capped, adds a base score + turn-based bonus
+ * 4. Turn bonus decreases over the first 3 turns
+ * 5. No bonus from turn 4 onward
+ * 
+ * @param battleSys
+ * @param battleCtx
+ */
+static void ApplyHazardScoring(BattleSystem *battleSys, BattleContext *battleCtx)
+{    
+    u16 move = AI_CONTEXT.move;
+    u8 opponentSide = BattleSystem_GetBattlerSide(battleSys, AI_CONTEXT.defender);
+    u8 currentTurn = battleCtx->totalTurns;
+    
+    // Check if this is a hazard move
+    int baseScore = GetHazardBaseScore(move);
+    if (baseScore == 0) {
+        return;  // Not a hazard move
+    }
+    
+    // Check if the hazard is already capped (fully set up)
+    if (IsHazardCapped(battleCtx, move, opponentSide)) {
+        // Hazard is fully set up - penalise the usage
+        AI_CONTEXT.moveScore[AI_CONTEXT.moveSlot] -= 200;
+        return;
+    }
+    
+    // Get the turn-based bonus (decreases over time)
+    int turnBonus = GetHazardTurnBonus(currentTurn);
+    
+    // If turn bonus is 0, don't add anything
+    if (turnBonus == 0) {
+        return;
+    }
+    
+    // Calculate total score to add
+    int totalBonus = 100 + turnBonus;
+    
+    // Apply the bonus to the current move's score
+    AI_CONTEXT.moveScore[AI_CONTEXT.moveSlot] += totalBonus;
+    
+    // Store the bonus amount for debugging
+    AI_CONTEXT.calcTemp = totalBonus;
+    
+}
+
+/**
+ * @brief Apply scoring bonuses for status-inflicting moves.
+ * 
+ * Rewards status moves with >70% accuracy against un-statused opponents.
+ * Penalizes using status on already-statused opponents.
+ * Ignores effect chance (only checks accuracy).
+ */
+static void ApplyStatusScoring(BattleSystem *battleSys, BattleContext *battleCtx)
+{    
+    u16 move = AI_CONTEXT.move;
+    u8 defender = AI_CONTEXT.defender;
+    u16 effect = MOVE_DATA(move).effect;
+    u8 accuracy = MOVE_DATA(move).accuracy;
+    
+    // Check if this move inflicts a status condition
+    switch (effect) {
+        case BATTLE_EFFECT_STATUS_POISON:
+        case BATTLE_EFFECT_STATUS_BADLY_POISON:
+        case BATTLE_EFFECT_STATUS_PARALYZE:
+        case BATTLE_EFFECT_STATUS_SLEEP:
+        case BATTLE_EFFECT_STATUS_BURN:
+            break;
+        default:
+            return;  // Not a status move
+    }
+    
+    // Check if accuracy is >70%
+    // Note: accuracy 0 means "always hits" (e.g., Aerial Ace, but status moves don't use this)
+    if (accuracy != 0 && accuracy < 70) {
+        return;
+    }
+    
+    // Check if opponent is already statused
+    if (battleCtx->battleMons[defender].status & STATUS_CONDITIONS) {
+        AI_CONTEXT.moveScore[AI_CONTEXT.moveSlot] -= 200;
+        return;
+    }
+    
+    // Apply bonus for high-accuracy status move
+    AI_CONTEXT.moveScore[AI_CONTEXT.moveSlot] += 100;
+    
+}
+
+/**
+ * @brief Apply scoring bonuses for setup and debuff moves.
+ * 
+ * Only applies when the user is at maximum health.
+ * Points are assigned directly based on the SetupFirstTurn_SetupEffects list.
+ * 
+ * @param battleSys
+ * @param battleCtx
+ */
+static void ApplySetupScoring(BattleSystem *battleSys, BattleContext *battleCtx)
+{
+    u16 move = AI_CONTEXT.move;
+    u16 effect = MOVE_DATA(move).effect;
+    u8 attacker = AI_CONTEXT.attacker;
+    s16 bonus = 0;
+    BOOL isDebuff = FALSE;
+    
+    // Only use setup/debuff moves at full health
+    if (battleCtx->battleMons[attacker].curHP != battleCtx->battleMons[attacker].maxHP) {
+        return;
+    }
+    
+    // Base points for setup and debuff moves
+    const int SETUP_BASE_POINTS = 50;
+    const int DEBUFF_BASE_POINTS = 0;
+    
+    // Assign bonus points based on the SetupFirstTurn_SetupEffects list
+    switch (effect) {
+        // === OFFENSIVE BOOSTS (Setup) ===
+        case BATTLE_EFFECT_ATK_UP:
+        case BATTLE_EFFECT_SP_ATK_UP:
+            bonus = 20;
+            break;
+            
+        case BATTLE_EFFECT_ATK_UP_2:
+        case BATTLE_EFFECT_SP_ATK_UP_2:
+        case BATTLE_EFFECT_ATK_UP_2_STATUS_CONFUSION:
+        case BATTLE_EFFECT_SP_ATK_UP_CAUSE_CONFUSION:
+            bonus = 40;
+            break;
+            
+        case BATTLE_EFFECT_ATK_DEF_UP:
+        case BATTLE_EFFECT_SP_ATK_SP_DEF_UP:
+            bonus = 20;
+            break;         
+        
+        // === DEFENSIVE BOOSTS (Setup) ===
+        case BATTLE_EFFECT_DEF_UP:
+        case BATTLE_EFFECT_SP_DEF_UP:
+            bonus = 25;
+            break;
+            
+        case BATTLE_EFFECT_DEF_UP_2:
+        case BATTLE_EFFECT_SP_DEF_UP_2:
+            bonus = 35;
+            break;
+            
+        case BATTLE_EFFECT_DEF_SPD_UP:
+            bonus = 35;
+            break;
+            
+        case BATTLE_EFFECT_PREVENT_CRITS:
+        case BATTLE_EFFECT_GIVE_GROUND_IMMUNITY:
+            bonus = 10;
+            break;
+            
+        // === SPEED BOOSTS (Setup) ===
+        case BATTLE_EFFECT_SPEED_UP:
+            bonus = 25;
+            break;
+            
+        case BATTLE_EFFECT_SPEED_UP_2:
+            bonus = 35;
+            break;
+            
+        case BATTLE_EFFECT_DOUBLE_SPEED_3_TURNS:
+            bonus = 40;
+            break;
+            
+        // === ACCURACY/EVASION (Setup) ===
+        case BATTLE_EFFECT_ACC_UP:
+            bonus = 0;
+            break;
+            
+        case BATTLE_EFFECT_ACC_UP_2:
+            bonus = 0;
+            break;
+            
+        case BATTLE_EFFECT_EVA_UP:
+            bonus = 0;
+            break;
+            
+        case BATTLE_EFFECT_EVA_UP_2:
+            bonus = 0;
+            break;
+            
+        case BATTLE_EFFECT_EVA_UP_2_MINIMIZE:
+            bonus = 0;
+            break;
+            
+        // === SCREENS (Setup) ===
+        case BATTLE_EFFECT_SET_LIGHT_SCREEN:
+        case BATTLE_EFFECT_SET_REFLECT:
+            bonus = 30;
+            break;
+            
+        // === SUBSTITUTE (Setup) ===
+        case BATTLE_EFFECT_SET_SUBSTITUTE:
+            bonus = 30;
+            break;
+            
+        // === CURSE (Setup) ===
+        case BATTLE_EFFECT_CURSE:
+            bonus = 40;
+            break;
+            
+        case BATTLE_EFFECT_RANDOM_STAT_UP_2:
+            bonus = 30;
+            break;
+            
+        case BATTLE_EFFECT_CRIT_UP_2:  // Focus Energy
+            bonus = 0;
+            break;
+            
+        case BATTLE_EFFECT_DEF_UP_DOUBLE_ROLLOUT_POWER:  // Defense Curl
+            bonus = 5;
+            break;
+            
+        // === DEBUFFS (Lower opponent stats) ===
+
+        case BATTLE_EFFECT_ATK_DEF_DOWN:
+            bonus = 20;
+            isDebuff = TRUE;
+            break;
+
+        case BATTLE_EFFECT_ATK_DOWN:
+            bonus = 15;
+            isDebuff = TRUE;
+            break;
+            
+        case BATTLE_EFFECT_DEF_DOWN:
+            bonus = 15;  // Defense drops are more valuable (physical setup)
+            isDebuff = TRUE;
+            break;
+            
+        case BATTLE_EFFECT_SPEED_DOWN:
+            bonus = 20;  // Speed drops are valuable
+            isDebuff = TRUE;
+            break;
+            
+        case BATTLE_EFFECT_SP_ATK_DOWN:
+            bonus = 15;
+            isDebuff = TRUE;
+            break;
+            
+        case BATTLE_EFFECT_SP_DEF_DOWN:
+            bonus = 15;  // SpDef drops are valuable (special setup)
+            isDebuff = TRUE;
+            break;
+            
+        case BATTLE_EFFECT_ACC_DOWN:
+            bonus = 15;  // Accuracy drops are less reliable
+            isDebuff = TRUE;
+            break;
+            
+        case BATTLE_EFFECT_ATK_DOWN_2:
+            bonus = 30;  // -2 attack is very valuable
+            isDebuff = TRUE;
+            break;
+            
+        case BATTLE_EFFECT_DEF_DOWN_2:
+            bonus = 30;  // -2 defense (Screech) enables physical sweeps
+            isDebuff = TRUE;
+            break;
+            
+        case BATTLE_EFFECT_SPEED_DOWN_2:
+            bonus = 30;  // -2 speed (Cotton Spore) is very valuable
+            isDebuff = TRUE;
+            break;
+            
+        case BATTLE_EFFECT_SP_ATK_DOWN_2:
+            bonus = 30;
+            isDebuff = TRUE;
+            break;
+            
+        case BATTLE_EFFECT_SP_DEF_DOWN_2:
+            bonus = 30;  // -2 SpDef (Metal Sound) enables special sweeps
+            isDebuff = TRUE;
+            break;
+            
+        case BATTLE_EFFECT_ACC_DOWN_2:
+            bonus = 30;  // -2 accuracy (Mud-Slap, Sand Attack)
+            isDebuff = TRUE;
+            break;
+            
+        // === DEFAULT ===
+        default:
+            return;  // Not a recognized setup/debuff move
+    }
+    
+    // Apply the bonus
+    if (isDebuff) {
+        // Debuff moves get a smaller base + bonus
+        AI_CONTEXT.moveScore[AI_CONTEXT.moveSlot] += DEBUFF_BASE_POINTS + bonus;
+    } else {
+        // Setup moves get the full base + bonus
+        AI_CONTEXT.moveScore[AI_CONTEXT.moveSlot] += SETUP_BASE_POINTS + bonus;
+    }
+}
+
+/**
  * @brief Evaluation loop for scoring each move available to the AI.
  *
  * This does NOT score the potential choices of using an item or switching
@@ -498,6 +893,11 @@ static void TrainerAI_EvalMoves(BattleSystem *battleSys, BattleContext *battleCt
 
         case AI_EVAL_STEP_EVAL:
             if (AI_CONTEXT.move != MOVE_NONE) {
+
+                ApplyHazardScoring(battleSys, battleCtx);
+                ApplyStatusScoring(battleSys, battleCtx);
+                ApplySetupScoring(battleSys, battleCtx);
+                
                 sAICommandTable[battleCtx->aiScriptTemp[battleCtx->aiScriptCursor]](battleSys, battleCtx);
             } else {
                 AI_CONTEXT.moveScore[AI_CONTEXT.moveSlot] = 0;
@@ -3252,8 +3652,9 @@ static int TrainerAI_MoveType(BattleSystem *battleSys, BattleContext *battleCtx,
  */
 static BOOL AI_PerishSongKO(BattleContext *battleCtx, int battler)
 {
-    if ((battleCtx->battleMons[battler].moveEffectsMask & MOVE_EFFECT_PERISH_SONG)
-        && battleCtx->battleMons[battler].moveEffectsData.perishSongTurns == 0) {
+    if ((battleCtx->battleMons[battler].moveEffectsMask & MOVE_EFFECT_PERISH_SONG
+        && Battler_Ability(battleCtx, battler) != ABILITY_SOUNDPROOF)
+        && battleCtx->battleMons[battler].moveEffectsData.perishSongTurns == 1) {
         battleCtx->aiSwitchedPartySlot[battler] = 6;
         return TRUE;
     }
@@ -3614,18 +4015,53 @@ static BOOL AI_HasSuperEffectiveMove(BattleSystem *battleSys, BattleContext *bat
 }
 
 /**
+ * @brief Configuration for type-absorbing abilities
+ * 
+ * For each type, list the abilities that absorb it.
+ * Add new entries to extend functionality.
+ */
+#define MAX_ABSORB_ABILITIES 4
+
+typedef struct {
+    u8 type;
+    u8 abilities[MAX_ABSORB_ABILITIES];
+} AbsorbAbilityTableEntry;
+
+static const AbsorbAbilityTableEntry sAbsorbAbilityTable[] = {
+    { TYPE_FIRE,    { ABILITY_FLASH_FIRE,      ABILITY_NONE } },
+    { TYPE_WATER,   { ABILITY_WATER_ABSORB,    ABILITY_STORM_DRAIN,    ABILITY_NONE } },
+    { TYPE_ELECTRIC,{ ABILITY_VOLT_ABSORB,     ABILITY_LIGHTNING_ROD,  ABILITY_NONE } },
+    { TYPE_GROUND,  { ABILITY_LEVITATE,         ABILITY_NONE } },
+    { TYPE_MYSTERY, { ABILITY_NONE } }  // Terminator
+};
+
+/**
+ * @brief Helper to check if an ability absorbs a given type
+ */
+static inline BOOL AI_AbilityAbsorbsType(u8 ability, u8 moveType)
+{
+    const AbsorbAbilityTableEntry *table = sAbsorbAbilityTable;
+    
+    while (table->type != TYPE_MYSTERY) {
+        if (table->type == moveType) {
+            const u8 *abilities = table->abilities;
+            while (*abilities != ABILITY_NONE) {
+                if (ability == *abilities) {
+                    return TRUE;
+                }
+                abilities++;
+            }
+            break;
+        }
+        table++;
+    }
+    
+    return FALSE;
+}
+
+/**
  * @brief Check if the AI's party has a Pokemon on the bench which has an "absorbing"
- * ability for the move which was last used on it (specifically, Volt Absorb, Water
- * Absorb, and Flash Fire).
- *
- * This routine will skip its checks roughly 33% of the time if the AI's battler has
- * a super-effective move. It will also skip its checks if the AI's active battler
- * is the one with the absorbing ability.
- *
- * @param battleSys
- * @param battleCtx
- * @param battler   The AI's battler.
- * @return BOOL
+ * ability for the move which was last used on it.
  */
 static BOOL AI_HasAbsorbAbilityInParty(BattleSystem *battleSys, BattleContext *battleCtx, int battler)
 {
@@ -3633,7 +4069,6 @@ static BOOL AI_HasAbsorbAbilityInParty(BattleSystem *battleSys, BattleContext *b
     u8 aiSlot1, aiSlot2;
     u8 moveType;
     u8 ability;
-    u8 checkAbility;
     int start, end;
     Pokemon *mon;
 
@@ -3653,18 +4088,24 @@ static BOOL AI_HasAbsorbAbilityInParty(BattleSystem *battleSys, BattleContext *b
     }
 
     moveType = MOVE_DATA(battleCtx->moveHit[battler]).type;
-    if (moveType == TYPE_FIRE) {
-        checkAbility = ABILITY_FLASH_FIRE;
-    } else if (moveType == TYPE_WATER) {
-        checkAbility = ABILITY_WATER_ABSORB;
-    } else if (moveType == TYPE_ELECTRIC) {
-        checkAbility = ABILITY_VOLT_ABSORB;
-    } else {
-        return ABILITY_NONE;
+    
+    // Quick check: is this type even in the table?
+    const AbsorbAbilityTableEntry *table = sAbsorbAbilityTable;
+    BOOL typeConfigured = FALSE;
+    while (table->type != TYPE_MYSTERY) {
+        if (table->type == moveType) {
+            typeConfigured = TRUE;
+            break;
+        }
+        table++;
+    }
+    
+    if (!typeConfigured || table->abilities[0] == ABILITY_NONE) {
+        return FALSE;  // No absorbing abilities configured for this type
     }
 
     // If our ability absorbs the type of the last move that hit us, do not switch.
-    if (Battler_Ability(battleCtx, battler) == checkAbility) {
+    if (AI_AbilityAbsorbsType(Battler_Ability(battleCtx, battler), moveType)) {
         return FALSE;
     }
 
@@ -3692,8 +4133,8 @@ static BOOL AI_HasAbsorbAbilityInParty(BattleSystem *battleSys, BattleContext *b
             && i != battleCtx->aiSwitchedPartySlot[aiSlot2]) {
             ability = Pokemon_GetValue(mon, MON_DATA_ABILITY, NULL);
 
-            // Switch to a matching Pokemon 50% of the time.
-            if (checkAbility == ability && (BattleSystem_RandNext(battleSys) & 1)) {
+            // Check if this Pokemon's ability absorbs the move type
+            if (AI_AbilityAbsorbsType(ability, moveType) && (BattleSystem_RandNext(battleSys) & 1)) {
                 battleCtx->aiSwitchedPartySlot[battler] = i;
                 return TRUE;
             }
