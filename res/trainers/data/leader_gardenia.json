@@ -57,7 +57,7 @@
             "level": 22,
             "item": "ITEM_BLACK_SLUDGE",
             "moves": [
-                "MOVE_SPIKES",
+                "MOVE_GRASS_KNOT",
                 "MOVE_SLUDGE_BOMB",
                 "MOVE_ENERGY_BALL",
                 "MOVE_LEAF_STORM"
