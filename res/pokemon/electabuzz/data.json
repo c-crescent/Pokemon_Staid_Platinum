@@ -4,7 +4,7 @@
         "attack": 83,
         "defense": 57,
         "speed": 105,
-        "special_attack": 95,
+        "special_attack": 100,
         "special_defense": 85
     },
     "types": [ "TYPE_ELECTRIC", "TYPE_ELECTRIC" ],

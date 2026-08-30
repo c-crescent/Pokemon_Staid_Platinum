@@ -4,7 +4,7 @@
         "attack": 75,
         "defense": 85,
         "speed": 45,
-        "special_attack": 155,
+        "special_attack": 135,
         "special_defense": 90
     },
     "types": [ "TYPE_ELECTRIC", "TYPE_DRAGON" ],
@@ -13,7 +13,7 @@
     "ev_yields": {
         "hp": 0,
         "attack": 0,
-        "defense": 0,
+    "defense": 0,
         "speed": 0,
         "special_attack": 3,
         "special_defense": 0

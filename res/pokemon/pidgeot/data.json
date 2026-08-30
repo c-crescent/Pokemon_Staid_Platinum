@@ -3,8 +3,8 @@
         "hp": 83,
         "attack": 80,
         "defense": 75,
-        "speed": 102,
-        "special_attack": 105,
+        "speed": 101,
+        "special_attack": 100,
         "special_defense": 70
     },
     "types": [ "TYPE_NORMAL", "TYPE_FLYING" ],

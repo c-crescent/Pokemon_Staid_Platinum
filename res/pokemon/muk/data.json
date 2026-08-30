@@ -5,7 +5,7 @@
         "defense": 75,
         "speed": 50,
         "special_attack": 65,
-        "special_defense": 100
+        "special_defense": 105
     },
     "types": [ "TYPE_POISON", "TYPE_POISON" ],
     "catch_rate": 75,

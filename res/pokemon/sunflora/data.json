@@ -3,8 +3,8 @@
         "hp": 75,
         "attack": 75,
         "defense": 55,
-        "speed": 30,
-        "special_attack": 105,
+        "speed": 55,
+        "special_attack": 135,
         "special_defense": 85
     },
     "types": [ "TYPE_GRASS", "TYPE_GRASS" ],
