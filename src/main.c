@@ -60,6 +60,7 @@ static Application sApplication;
 static PMBackLightSwitch sSavedBacklightState;
 BOOL gIgnoreCartridgeForWake;
 extern const ApplicationManagerTemplate gOpeningCutsceneAppTemplate;
+extern const ApplicationManagerTemplate Unk_020F8AB4;
 
 void NitroMain(void)
 {
@@ -94,7 +95,7 @@ void NitroMain(void)
         switch (OS_GetResetParameter()) {
         case RESET_CLEAN:
             sApplication.args.error = FALSE;
-            EnqueueApplication(FS_OVERLAY_ID(game_opening), &gOpeningCutsceneAppTemplate);
+            EnqueueApplication(FS_OVERLAY_ID_NONE, &Unk_020F8AB4);
             break;
 
         case RESET_ERROR:

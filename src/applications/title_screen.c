@@ -367,6 +367,12 @@ static BOOL TitleScreen_Main(ApplicationManager *appMan, int *state)
         *state = TITLE_SCREEN_APP_STATE_MAIN;
         break;
     case TITLE_SCREEN_APP_STATE_MAIN:
+        appData->nextApp = NEXT_APP_START_MENU;
+        Sound_FadeOutBGM(0, 60);
+        Sound_PlayPokemonCry(SPECIES_GIRATINA, 1);
+        TitleScreen_ShowBlurEffect(appData->bgConfig, appData->heapID);
+        *state = TITLE_SCREEN_APP_STATE_EXIT_NORMAL;
+        break;
         if (appData->inputEnableDelay) {
             appData->inputEnableDelay--;
 
@@ -1064,6 +1070,12 @@ static void TitleScreen_ShowBlurEffect(BgConfig *bgConfig, enum HeapID heapID)
 static BOOL TitleScreen_ShowIntro(TitleScreen *titleScreen, BgConfig *bgConfig, enum HeapID heapID)
 {
     BOOL done = FALSE;
+
+    titleScreen->giratinaShown = TRUE;
+    titleScreen->introShown = FALSE;
+    FinishScreenFade();
+    BrightnessController_ResetScreenController(BRIGHTNESS_BOTH_SCREENS);
+    return TRUE;
 
     if (TitleScreen_ShouldSkipIntro() == TRUE) {
         titleScreen->giratinaShown = TRUE;
