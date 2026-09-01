@@ -292,8 +292,18 @@ Basic_CheckCannotSleep:
     LoadBattlerAbility AI_BATTLER_DEFENDER
     IfLoadedEqualTo ABILITY_INSOMNIA, ScoreMinus10
     IfLoadedEqualTo ABILITY_VITAL_SPIRIT, ScoreMinus10
+    IfLoadedEqualTo ABILITY_LEAF_GUARD, Basic_CheckCannotSleep_LeafGuard
+    IfLoadedEqualTo ABILITY_HYDRATION, Basic_CheckCannotSleep_Hydration
     AddToMoveScore 2
     PopOrEnd 
+
+Basic_CheckCannotSleep_LeafGuard:
+    LoadCurrentWeather 
+    IfLoadedEqualTo AI_WEATHER_SUNNY, ScoreMinus10
+
+Basic_CheckCannotSleep_Hydration:    
+    LoadCurrentWeather 
+    IfLoadedEqualTo AI_WEATHER_RAINING, ScoreMinus10
 
 Basic_CheckCannotExplode:
     // If the target is immune, score -10.
@@ -624,12 +634,24 @@ Basic_CheckCannotParalyze:
 Basic_CheckCannotParalyze_ThunderWave:
     LoadBattlerAbility AI_BATTLER_DEFENDER
     IfLoadedEqualTo ABILITY_MOTOR_DRIVE, ScoreMinus10
+    IfLoadedEqualTo ABILITY_LIGHTNING_ROD, ScoreMinus10
     IfLoadedEqualTo ABILITY_VOLT_ABSORB, ScoreMinus10
 
 Basic_CheckCannotParalyze_ImmuneToStatus:
     IfStatus AI_BATTLER_DEFENDER, MON_CONDITION_ANY, ScoreMinus10
     IfSideCondition AI_BATTLER_DEFENDER, SIDE_CONDITION_SAFEGUARD, ScoreMinus10
+    LoadBattlerAbility AI_BATTLER_DEFENDER
+    IfLoadedEqualTo ABILITY_LEAF_GUARD, Basic_CheckCannotParalyze_ImmuneToStatus_LeafGuard
+    IfLoadedEqualTo ABILITY_HYDRATION, Basic_CheckCannotParalyze_ImmuneToStatus_Hydration
     PopOrEnd 
+
+Basic_CheckCannotParalyze_ImmuneToStatus_LeafGuard:
+    LoadCurrentWeather
+    IfLoadedEqualTo AI_WEATHER_SUNNY, ScoreMinus10
+
+Basic_CheckCannotParalyze_ImmuneToStatus_Hydration:
+    LoadCurrentWeather
+    IfLoadedEqualTo AI_WEATHER_RAINING, ScoreMinus10
 
 Basic_CheckCannotSubstitute:
     // If the attacker's Substitute would fail, score -8/-10.
@@ -709,8 +731,11 @@ Basic_CheckSpikes:
     // If the target already has 3 layers of Spikes or is on their last Pokemon, score -10.
     LoadSpikesLayers AI_BATTLER_DEFENDER, SIDE_CONDITION_SPIKES
     IfLoadedEqualTo 3, ScoreMinus10
+    IfLoadedEqualTo 2, ScorePlus2
+    IfLoadedEqualTo 1, ScorePlus1
     CountAlivePartyBattlers AI_BATTLER_DEFENDER
     IfLoadedEqualTo 0, ScoreMinus10
+    AddToMoveScore 2
     PopOrEnd 
 
 Basic_CheckForesight:
@@ -882,6 +907,8 @@ Basic_CheckCannotBurn:
     LoadBattlerAbility AI_BATTLER_DEFENDER
     IfLoadedEqualTo ABILITY_WATER_VEIL, ScoreMinus10
     IfLoadedEqualTo ABILITY_MAGIC_GUARD, ScoreMinus10
+    IfLoadedEqualTo ABILITY_LEAF_GUARD, Basic_CheckCannotBurn_LeafGuard
+    IfLoadedEqualTo ABILITY_HYDRATION, Basic_CheckCannotBurn_Hydration
     IfStatus AI_BATTLER_DEFENDER, MON_CONDITION_ANY, ScoreMinus10
     LoadTypeFrom LOAD_DEFENDER_TYPE_1
     IfLoadedEqualTo TYPE_FIRE, ScoreMinus10
@@ -890,6 +917,15 @@ Basic_CheckCannotBurn:
     IfSideCondition AI_BATTLER_DEFENDER, SIDE_CONDITION_SAFEGUARD, ScoreMinus10
     AddToMoveScore 1
     PopOrEnd 
+
+Basic_CheckCannotBurn_LeafGuard:
+    LoadCurrentWeather
+    IfLoadedEqualTo AI_WEATHER_SUNNY, ScoreMinus10
+
+Basic_CheckCannotBurn_Hydration:
+    LoadCurrentWeather
+    IfLoadedEqualTo AI_WEATHER_RAINING, ScoreMinus10    
+
 
 Basic_CheckHelpingHand:
     // If the battle type is not Doubles, score -10.
@@ -1448,10 +1484,12 @@ Basic_CheckToxicSpikes:
     // If the target's side of the field already has 2 layers of Toxic Spikes, score -10.
     LoadSpikesLayers AI_BATTLER_DEFENDER, SIDE_CONDITION_TOXIC_SPIKES
     IfLoadedEqualTo 2, ScoreMinus10
+    IfLoadedEqualTo 1, ScorePlus1
 
     // If the target is the last battler, score -10.
     CountAlivePartyBattlers AI_BATTLER_DEFENDER
     IfLoadedEqualTo 0, ScoreMinus10
+    AddToMoveScore 2
     PopOrEnd 
     PopOrEnd 
 
@@ -1546,6 +1584,7 @@ Basic_CheckStealthRock:
     // If the target is on their last Pokemon, score -10.
     CountAlivePartyBattlers AI_BATTLER_DEFENDER
     IfLoadedEqualTo 0, ScoreMinus10
+    AddToMoveScore 3
     PopOrEnd 
 
 Basic_CheckLunarDance:
@@ -1814,11 +1853,11 @@ Expert_StatusSleep:
     // effects), 50% chance of score +1.
     IfMoveEffectKnown AI_BATTLER_ATTACKER, BATTLE_EFFECT_RECOVER_DAMAGE_SLEEP, Expert_StatusSleep_TryScorePlus1
     IfMoveEffectKnown AI_BATTLER_ATTACKER, BATTLE_EFFECT_STATUS_NIGHTMARE, Expert_StatusSleep_TryScorePlus1
-    AddToMoveScore 3
+    AddToMoveScore 2
     GoTo Expert_StatusSleep_End
 
 Expert_StatusSleep_TryScorePlus1:
-    IfRandomLessThan 128, Expert_StatusSleep_End
+    IfRandomLessThan 64, Expert_StatusSleep_End
     AddToMoveScore 1
 
 Expert_StatusSleep_End:
@@ -2686,9 +2725,7 @@ Expert_ToxicLeechSeed:
     // Protect, 76.6% chance of score +2. (Note: no such move exists in Vanilla that only raises
     // Special Defense by 1 stage.)
     IfAttackerHasNoDamagingMoves Expert_ToxicLeechSeed_CheckMoveEffectsKnown
-    IfHPPercentGreaterThan AI_BATTLER_ATTACKER, 50, Expert_ToxicLeechSeed_CheckTargetHP
-    IfRandomLessThan 50, Expert_ToxicLeechSeed_CheckTargetHP
-    AddToMoveScore -3
+    AddToMoveScore 2
 
 Expert_ToxicLeechSeed_CheckTargetHP:
     IfHPPercentGreaterThan AI_BATTLER_DEFENDER, 50, Expert_ToxicLeechSeed_CheckMoveEffectsKnown
@@ -2701,8 +2738,7 @@ Expert_ToxicLeechSeed_CheckMoveEffectsKnown:
     GoTo Expert_ToxicLeechSeed_End
 
 Expert_ToxicLeechSeed_TryScorePlus2:
-    IfRandomLessThan 96, Expert_ToxicLeechSeed_End
-    AddToMoveScore 2
+    AddToMoveScore 3
 
 Expert_ToxicLeechSeed_End:
     PopOrEnd 
@@ -2948,8 +2984,8 @@ Expert_StatusParalyze:
     GoTo Expert_StatusParalyze_End
 
 Expert_StatusParalyze_TryScorePlus3:
-    IfRandomLessThan 128, Expert_StatusParalyze_End
-    AddToMoveScore 2
+    IfRandomLessThan 64, Expert_StatusParalyze_End
+    AddToMoveScore 3
 
 Expert_StatusParalyze_End:
     PopOrEnd 

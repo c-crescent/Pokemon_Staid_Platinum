@@ -68,18 +68,6 @@ enum AIEvalStep {
     AI_EVAL_STEP_END,
 };
 
-// ============================================================
-// STATUS INFLICTION SCORING CONFIGURATION
-// ============================================================
-
-#define STATUS_CONDITIONS (MON_CONDITION_POISON | \
-                          MON_CONDITION_TOXIC |  \
-                          MON_CONDITION_BURN |   \
-                          MON_CONDITION_PARALYSIS | \
-                          MON_CONDITION_SLEEP)
-
-// ============================================================
-
 static void AICmd_IfRandomLessThan(BattleSystem *battleSys, BattleContext *battleCtx);
 static void AICmd_IfRandomGreaterThan(BattleSystem *battleSys, BattleContext *battleCtx);
 static void AICmd_IfRandomEqualTo(BattleSystem *battleSys, BattleContext *battleCtx);
@@ -484,134 +472,6 @@ static u8 TrainerAI_MainDoubles(BattleSystem *battleSys, BattleContext *battleCt
 }
 
 /**
- * @brief Get the turn-based bonus for hazard moves.
- * 
- * Returns a decreasing bonus for the first 3 turns:
- * - Turn 0 (first turn): HAZARD_BONUS_TURN_0
- * - Turn 1 (second turn): HAZARD_BONUS_TURN_1
- * - Turn 2 (third turn): HAZARD_BONUS_TURN_2
- * - Turn 3+: 0 (no bonus)
- * 
- * @param turn The current turn number (battleCtx->totalTurns)
- * @return The bonus to apply
- */
-static int GetHazardTurnBonus(int turn)
-{
-    switch (turn) {
-        case 0:  // First turn
-            return 3;
-        case 1:  // Second turn
-            return 2;
-        case 2:  // Third turn
-            return 1;
-        default: // Turn 4 and beyond
-            return 0;
-    }
-}
-
-/**
- * @brief Check if a hazard is already capped (fully set up).
- * 
- * @param battleCtx
- * @param move The move to check
- * @param opponentSide The opponent's side
- * @return TRUE if the hazard is capped, FALSE otherwise
- */
-static BOOL IsHazardCapped(BattleContext *battleCtx, u16 move, u8 opponentSide)
-{
-    switch (move) {
-        case MOVE_STEALTH_ROCK:
-            // Stealth Rock is capped when it's present (1 layer)
-            return (battleCtx->sideConditionsMask[opponentSide] & SIDE_CONDITION_STEALTH_ROCK) != 0;
-            
-        case MOVE_SPIKES:
-            // Spikes is capped at 3 layers
-            return (battleCtx->sideConditions[opponentSide].spikesLayers >= 3);
-            
-        case MOVE_TOXIC_SPIKES:
-            // Toxic Spikes is capped at 2 layers
-            return (battleCtx->sideConditions[opponentSide].toxicSpikesLayers >= 2);
-            
-        default:
-            return FALSE;  // Not a hazard
-    }
-}
-
-/**
- * @brief Get the base score for a hazard move.
- * 
- * Priority: Stealth Rock > Spikes > Toxic Spikes
- * 
- * @param move The move to score
- * @return The base score for the hazard
- */
-static int GetHazardBaseScore(u16 move)
-{
-    switch (move) {
-        case MOVE_STEALTH_ROCK:
-            return 3;
-            
-        case MOVE_SPIKES:
-            return 2;
-            
-        case MOVE_TOXIC_SPIKES:
-            return 1;
-            
-        default:
-            return 0;  // Not a hazard
-    }
-}
-
-/**
- * @brief Apply scoring bonuses to hazard moves.
- * 
- * This function:
- * 1. Checks if it's a hazard move
- * 2. Checks if the hazard is already capped (fully set up)
- * 3. If not capped, adds a base score + turn-based bonus
- * 4. Turn bonus decreases over the first 3 turns
- * 5. No bonus from turn 4 onward
- * 
- * @param battleSys
- * @param battleCtx
- */
-static void ApplyHazardScoring(BattleSystem *battleSys, BattleContext *battleCtx)
-{    
-    u16 move = AI_CONTEXT.move;
-    u8 opponentSide = BattleSystem_GetBattlerSide(battleSys, AI_CONTEXT.defender);
-    u8 currentTurn = battleCtx->totalTurns;
-    
-    // Check if this is a hazard move
-    int baseScore = GetHazardBaseScore(move);
-    if (baseScore == 0) {
-        return;  // Not a hazard move
-    }
-    
-    // Check if the hazard is already capped (fully set up)
-    if (IsHazardCapped(battleCtx, move, opponentSide)) {
-        return;
-    }
-    
-    // Get the turn-based bonus (decreases over time)
-    int turnBonus = GetHazardTurnBonus(currentTurn);
-    
-    // If turn bonus is 0, don't add anything
-    if (turnBonus == 0) {
-        return;
-    }
-    
-    // Calculate total score to add
-    int totalBonus = 10 + turnBonus;
-    
-    // Apply the bonus to the current move's score
-    AI_CONTEXT.moveScore[AI_CONTEXT.moveSlot] += totalBonus;
-    
-    // Store the bonus amount for debugging
-    AI_CONTEXT.calcTemp = totalBonus;
-    
-}
-
-/**
  * @brief Evaluation loop for scoring each move available to the AI.
  *
  * This does NOT score the potential choices of using an item or switching
@@ -638,8 +498,6 @@ static void TrainerAI_EvalMoves(BattleSystem *battleSys, BattleContext *battleCt
 
         case AI_EVAL_STEP_EVAL:
             if (AI_CONTEXT.move != MOVE_NONE) {
-
-                ApplyHazardScoring(battleSys, battleCtx);
                 
                 sAICommandTable[battleCtx->aiScriptTemp[battleCtx->aiScriptCursor]](battleSys, battleCtx);
             } else {
