@@ -251,9 +251,6 @@ SandgemTownLab_ObtainPokedex:
     PlayFanfare SEQ_FANFA4
     WaitFanfare
     SetNationalDexEnabled
-    SetVar VAR_0x8004, ITEM_RARE_CANDY
-    SetVar VAR_0x8005, 1
-    Common_GiveItemQuantity
     BufferPlayerName 0
     Message SandgemTownLab_Text_MeetEveryKindOfPokemon
     CloseMessage

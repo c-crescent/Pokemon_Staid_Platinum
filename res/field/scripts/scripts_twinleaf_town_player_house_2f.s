@@ -41,7 +41,20 @@ TwinleafTownPlayerHouse2F_PC:
     LockAll
     BufferPlayerName 0
     Message TwinleafTownPlayerHouse2F_Text_PCPokemonBasics
+    CheckItem ITEM_RARE_CANDY, 1, VAR_RESULT
+    GoToIfEq VAR_RESULT, FALSE, TwinleafTownPlayerHouse2F_PC_GiveRareCandy
     WaitButton
+    CloseMessage
+    ReleaseAll
+    End
+
+TwinleafTownPlayerHouse2F_PC_GiveRareCandy:
+    SetVar VAR_0x8004, ITEM_RARE_CANDY
+    SetVar VAR_0x8005, 1
+    Common_GiveItemQuantity
+    SetVar VAR_0x8004, ITEM_MASTER_BALL
+    SetVar VAR_0x8005, 999
+    Common_GiveItemQuantity
     CloseMessage
     ReleaseAll
     End
