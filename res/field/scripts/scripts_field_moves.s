@@ -46,7 +46,6 @@ FieldMoves_UseCutFromField:
     BufferPartyMonNickname 0, VAR_RESULT
     Message FieldMoves_Text_PokemonUsedCut
     CloseMessage
-    PlayHMCutIn VAR_0x8004
     StartDestroyObstacleAnimation 0, VAR_0x8005
     WaitTime 7, VAR_RESULT
     RemoveObject VAR_LAST_TALKED
@@ -63,7 +62,6 @@ FieldMoves_UseCutFromMenu:
     BufferPartyMonNickname 0, VAR_0x8000
     Message FieldMoves_Text_PokemonUsedCut
     CloseMessage
-    PlayHMCutIn VAR_0x8000
     StartDestroyObstacleAnimation 0, VAR_0x8005
     WaitTime 7, VAR_RESULT
     RemoveObject VAR_LAST_TALKED
@@ -142,7 +140,6 @@ FieldMoves_UseRockSmashFromField:
     BufferPartyMonNickname 0, VAR_0x8004
     Message FieldMoves_Text_PokemonUsedRockSmash
     CloseMessage
-    PlayHMCutIn VAR_0x8004
     StartDestroyObstacleAnimation 1, VAR_0x8005
     WaitTime 10, VAR_RESULT
     RemoveObject VAR_LAST_TALKED
@@ -159,7 +156,6 @@ FieldMoves_UseRockSmashFromMenu:
     BufferPartyMonNickname 0, VAR_0x8000
     Message FieldMoves_Text_PokemonUsedRockSmash
     CloseMessage
-    PlayHMCutIn VAR_0x8000
     StartDestroyObstacleAnimation 1, VAR_0x8005
     WaitTime 10, VAR_RESULT
     RemoveObject VAR_LAST_TALKED
@@ -197,7 +193,6 @@ FieldMoves_UseStrengthFromField:
     SetVar VAR_0x8004, VAR_RESULT
     BufferPartyMonNickname 0, VAR_RESULT
     Message FieldMoves_Text_PokemonUsedStrength
-    PlayHMCutIn VAR_0x8004
     CloseMessage
     Message FieldMoves_Text_PokemonStrengthMadePossibleToMove
     WaitButton
@@ -222,7 +217,6 @@ FieldMoves_UseStrengthFromMenu:
     BufferPartyMonNickname 0, VAR_0x8000
     Message FieldMoves_Text_PokemonUsedStrength
     CloseMessage
-    PlayHMCutIn VAR_0x8000
     Message FieldMoves_Text_PokemonStrengthMadePossibleToMove
     WaitButton
     CloseMessage
@@ -339,7 +333,6 @@ FieldMoves_UseDefogFromField_Unused:
     BufferPartyMonNickname 0, VAR_RESULT
     Message FieldMoves_Text_PokemonUsedDefog
     CloseMessage
-    PlayHMCutIn VAR_0x8004
     GetCurrentMapID VAR_0x8004
     CreateJournalEvent LOCATION_EVENT_USED_DEFOG, VAR_0x8004
     GetCurrentMapID VAR_0x8004
@@ -356,7 +349,6 @@ FieldMoves_UseDefogFromMenu:
     BufferPartyMonNickname 0, VAR_0x8000
     Message FieldMoves_Text_PokemonUsedDefog
     CloseMessage
-    PlayHMCutIn VAR_0x8000
     DoDefogFunc FIELD_MOVE_FUNC_SET_ACTIVE
     PlaySE SEQ_SE_DP_FBRADE
     ScrCmd_0C4
@@ -371,7 +363,6 @@ FieldMoves_UseFlashFromMenu:
     BufferPartyMonNickname 0, VAR_0x8000
     Message FieldMoves_Text_PokemonUsedFlash
     CloseMessage
-    PlayHMCutIn VAR_0x8000
     DoFlashFunc FIELD_MOVE_FUNC_SET_ACTIVE
     ScrCmd_0C3
     WaitTime 42, VAR_RESULT
