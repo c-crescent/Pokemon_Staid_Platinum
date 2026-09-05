@@ -245,6 +245,8 @@ main = executable('main',
 ############################################################
 ichneumon_sub = subproject('NitroSDK'
     ).get_variable('ichneumon_sub')
+ichneumon_sub_defs = subproject('NitroSDK'
+    ).get_variable('ichneumon_sub_defs')
 
 
 ############################################################
@@ -257,6 +259,7 @@ pokeplatinum_nds = custom_target('pokeplatinum.us.nds',
         rom_header_template,
         icon_png,
         ichneumon_sub,
+        ichneumon_sub_defs,
         nitrofs_files,
     ],
     command : [
@@ -264,7 +267,8 @@ pokeplatinum_nds = custom_target('pokeplatinum.us.nds',
         'pack',
         '-DHEADER_TEMPLATE=@INPUT1@', # rom_header_template
         '-DICON_PNG=@INPUT2@',        # icon_png
-        '-DARM7_NEF=@INPUT3@',        # ichneumon_sub
+        '-DARM7_STATIC=@INPUT3@',     # ichneumon_sub
+        '-DARM7_DEFINE=@INPUT4@',     # ichneumon_sub_defs
         '--output=@OUTPUT0@',         # pokeplatinum.us.nds
         rom_ini,
         filesys_csv,

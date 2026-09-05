@@ -30,8 +30,6 @@ CelesticTownCave_EncounterMew:
     GoToIfSet FLAG_CAUGHT_MEW, CelesticTownCave_ExaminePainting_Normal
     GoToIfSet FLAG_GONE_MEW, CelesticTownCave_ExaminePainting_Normal
     LockAll
-    PlaySE SEQ_SE_CONFIRM
-    WaitSE SEQ_SE_CONFIRM
     Message CelesticTownCave_EncounterMew
     CloseMessage
     StartLegendaryBattle SPECIES_MEW, 80

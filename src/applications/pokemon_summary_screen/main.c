@@ -636,7 +636,7 @@ static int HandleInput_Main(PokemonSummaryScreen *summaryScreen)
             summaryScreen->data->returnMode = SUMMARY_RETURN_CANCEL;
             return SUMMARY_STATE_TRANSITION_OUT;
         } else if (summaryScreen->page == SUMMARY_PAGE_SKILLS) {
-            Sound_PlayEffect(SEQ_SE_DP_SYU01);
+            Sound_PlayEffect(SEQ_SE_DP_SYU01_sseq);
             CycleSkillsState(summaryScreen);
             return SUMMARY_STATE_HANDLE_INPUT;
         }
