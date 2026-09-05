@@ -606,33 +606,33 @@ static int HandleInput_Main(PokemonSummaryScreen *summaryScreen)
     }
 
     if (JOY_NEW(PAD_BUTTON_B)) {
-        Sound_PlayEffect(SEQ_SE_DP_DECIDE);
+        Sound_PlayEffect(SEQ_SE_DP_DECIDE_sseq);
         summaryScreen->data->returnMode = SUMMARY_RETURN_CANCEL;
         return SUMMARY_STATE_TRANSITION_OUT;
     }
 
     if (JOY_NEW(PAD_BUTTON_A)) {
         if (summaryScreen->data->mode == SUMMARY_MODE_FEED_POFFIN && summaryScreen->page == SUMMARY_MODE_SHOW_CONDITION_CHANGE) {
-            Sound_PlayEffect(SEQ_SE_DP_DECIDE);
+            Sound_PlayEffect(SEQ_SE_DP_DECIDE_sseq);
             return TryFeedPoffin(summaryScreen);
         }
 
         if (summaryScreen->page == SUMMARY_PAGE_BATTLE_MOVES) {
-            Sound_PlayEffect(SEQ_SE_DP_SYU01);
+            Sound_PlayEffect(SEQ_SE_DP_SYU01_sseq);
             summaryScreen->pageState = PAGE_STATE_INITIAL;
             return SUMMARY_STATE_SETUP_BATTLE_MOVE_INFO;
         } else if (summaryScreen->page == SUMMARY_PAGE_CONTEST_MOVES) {
-            Sound_PlayEffect(SEQ_SE_DP_SYU01);
+            Sound_PlayEffect(SEQ_SE_DP_SYU01_sseq);
             summaryScreen->pageState = PAGE_STATE_INITIAL;
             return SUMMARY_STATE_SETUP_CONTEST_MOVE_INFO;
         } else if (summaryScreen->page == SUMMARY_PAGE_RIBBONS) {
             if (summaryScreen->ribbonMax != 0) {
-                Sound_PlayEffect(SEQ_SE_DP_DECIDE);
+                Sound_PlayEffect(SEQ_SE_DP_DECIDE_sseq);
                 summaryScreen->pageState = PAGE_STATE_INITIAL;
                 return SUMMARY_STATE_SETUP_RIBBON_INFO;
             }
         } else if (summaryScreen->page == SUMMARY_PAGE_EXIT) {
-            Sound_PlayEffect(SEQ_SE_DP_DECIDE);
+            Sound_PlayEffect(SEQ_SE_DP_DECIDE_sseq);
             summaryScreen->data->returnMode = SUMMARY_RETURN_CANCEL;
             return SUMMARY_STATE_TRANSITION_OUT;
         } else if (summaryScreen->page == SUMMARY_PAGE_SKILLS) {
@@ -690,7 +690,7 @@ static int HandleInput_MoveDetails(PokemonSummaryScreen *summaryScreen)
 {
     if (JOY_NEW(PAD_KEY_UP)) {
         if (TryChangeSelectedMove(summaryScreen, -1) == TRUE) {
-            Sound_PlayEffect(SEQ_SE_CONFIRM);
+            Sound_PlayEffect(SE_CONFIRM_sseq_3);
             UpdateMoveAttributes(summaryScreen);
         }
 
@@ -699,7 +699,7 @@ static int HandleInput_MoveDetails(PokemonSummaryScreen *summaryScreen)
 
     if (JOY_NEW(PAD_KEY_DOWN)) {
         if (TryChangeSelectedMove(summaryScreen, 1) == TRUE) {
-            Sound_PlayEffect(SEQ_SE_CONFIRM);
+            Sound_PlayEffect(SE_CONFIRM_sseq_3);
             UpdateMoveAttributes(summaryScreen);
         }
 
@@ -708,7 +708,7 @@ static int HandleInput_MoveDetails(PokemonSummaryScreen *summaryScreen)
 
     if (JOY_NEW(PAD_BUTTON_A)) {
         if (summaryScreen->cursor == LEARNED_MOVES_MAX) {
-            Sound_PlayEffect(SEQ_SE_DP_SYU01);
+            Sound_PlayEffect(SEQ_SE_DP_SYU01_sseq);
             summaryScreen->pageState = PAGE_STATE_INITIAL;
 
             if (summaryScreen->page == SUMMARY_PAGE_BATTLE_MOVES) {
@@ -717,7 +717,7 @@ static int HandleInput_MoveDetails(PokemonSummaryScreen *summaryScreen)
                 return SUMMARY_STATE_HIDE_CONTEST_MOVE_INFO;
             }
         } else if (summaryScreen->data->mode != SUMMARY_MODE_LOCK_MOVES) {
-            Sound_PlayEffect(SEQ_SE_DP_DECIDE);
+            Sound_PlayEffect(SEQ_SE_DP_DECIDE_sseq);
             PokemonSummaryScreen_SetMoveSelector2Pos(summaryScreen);
             summaryScreen->cursorTmp = summaryScreen->cursor;
             return SUMMARY_STATE_MOVE_SWAP;
@@ -725,7 +725,7 @@ static int HandleInput_MoveDetails(PokemonSummaryScreen *summaryScreen)
     }
 
     if (JOY_NEW(PAD_BUTTON_B)) {
-        Sound_PlayEffect(SEQ_SE_DP_SYU01);
+        Sound_PlayEffect(SEQ_SE_DP_SYU01_sseq);
         summaryScreen->pageState = PAGE_STATE_INITIAL;
 
         if (summaryScreen->page == SUMMARY_PAGE_BATTLE_MOVES) {
@@ -742,7 +742,7 @@ static int HandleInput_MoveSwap(PokemonSummaryScreen *summaryScreen)
 {
     if (JOY_NEW(PAD_KEY_UP)) {
         if (TryChangeSelectedMove(summaryScreen, -1) == TRUE) {
-            Sound_PlayEffect(SEQ_SE_CONFIRM);
+            Sound_PlayEffect(SE_CONFIRM_sseq_3);
             UpdateMoveAttributes(summaryScreen);
         }
 
@@ -751,7 +751,7 @@ static int HandleInput_MoveSwap(PokemonSummaryScreen *summaryScreen)
 
     if (JOY_NEW(PAD_KEY_DOWN)) {
         if (TryChangeSelectedMove(summaryScreen, 1) == TRUE) {
-            Sound_PlayEffect(SEQ_SE_CONFIRM);
+            Sound_PlayEffect(SE_CONFIRM_sseq_3);
             UpdateMoveAttributes(summaryScreen);
         }
 
@@ -762,20 +762,20 @@ static int HandleInput_MoveSwap(PokemonSummaryScreen *summaryScreen)
         Sprite_SetDrawFlag(summaryScreen->sprites[SUMMARY_SPRITE_MOVE_SELECTOR_2], FALSE);
 
         if (summaryScreen->cursor != LEARNED_MOVES_MAX && summaryScreen->cursor != summaryScreen->cursorTmp) {
-            Sound_PlayEffect(SEQ_SE_DP_DECIDE);
+            Sound_PlayEffect(SEQ_SE_DP_DECIDE_sseq);
             SwapSelectedMoves(summaryScreen);
             PokemonSummaryScreen_SwapMoveTypeIcons(summaryScreen, summaryScreen->cursor, summaryScreen->cursorTmp);
             PokemonSummaryScreen_SwapMoveNameAndPP(summaryScreen);
             UpdateMoveAttributes(summaryScreen);
         } else {
-            Sound_PlayEffect(SEQ_SE_DP_DECIDE);
+            Sound_PlayEffect(SEQ_SE_DP_DECIDE_sseq);
         }
 
         return SUMMARY_STATE_MOVE_DETAILS;
     }
 
     if (JOY_NEW(PAD_BUTTON_B)) {
-        Sound_PlayEffect(SEQ_SE_DP_DECIDE);
+        Sound_PlayEffect(SEQ_SE_DP_DECIDE_sseq);
         Sprite_SetDrawFlag(summaryScreen->sprites[SUMMARY_SPRITE_MOVE_SELECTOR_2], FALSE);
         return SUMMARY_STATE_MOVE_DETAILS;
     }
@@ -797,7 +797,7 @@ static int HandleInput_SelectMove(PokemonSummaryScreen *summaryScreen)
 
     if (JOY_NEW(PAD_KEY_UP)) {
         if (TryChangeSelectedMove(summaryScreen, -1) == TRUE) {
-            Sound_PlayEffect(SEQ_SE_CONFIRM);
+            Sound_PlayEffect(SE_CONFIRM_sseq_3);
             UpdateMoveAttributes(summaryScreen);
         }
 
@@ -806,7 +806,7 @@ static int HandleInput_SelectMove(PokemonSummaryScreen *summaryScreen)
 
     if (JOY_NEW(PAD_KEY_DOWN)) {
         if (TryChangeSelectedMove(summaryScreen, 1) == TRUE) {
-            Sound_PlayEffect(SEQ_SE_CONFIRM);
+            Sound_PlayEffect(SE_CONFIRM_sseq_3);
             UpdateMoveAttributes(summaryScreen);
         }
 
@@ -814,7 +814,7 @@ static int HandleInput_SelectMove(PokemonSummaryScreen *summaryScreen)
     }
 
     if (JOY_NEW(PAD_BUTTON_A)) {
-        Sound_PlayEffect(SEQ_SE_DP_DECIDE);
+        Sound_PlayEffect(SEQ_SE_DP_DECIDE_sseq);
 
         summaryScreen->data->selectedMoveSlot = summaryScreen->cursor;
         summaryScreen->data->returnMode = SUMMARY_RETURN_SELECT;
@@ -822,7 +822,7 @@ static int HandleInput_SelectMove(PokemonSummaryScreen *summaryScreen)
     }
 
     if (JOY_NEW(PAD_BUTTON_B)) {
-        Sound_PlayEffect(SEQ_SE_DP_DECIDE);
+        Sound_PlayEffect(SEQ_SE_DP_DECIDE_sseq);
         summaryScreen->data->selectedMoveSlot = LEARNED_MOVES_MAX;
         summaryScreen->data->returnMode = SUMMARY_RETURN_CANCEL;
         return SUMMARY_STATE_TRANSITION_OUT;
@@ -882,7 +882,7 @@ static int HandleInput_RibbonSelect(PokemonSummaryScreen *summaryScreen)
     }
 
     if (JOY_NEW(PAD_BUTTON_B | PAD_BUTTON_A)) {
-        Sound_PlayEffect(SEQ_SE_DP_DECIDE);
+        Sound_PlayEffect(SEQ_SE_DP_DECIDE_sseq);
         summaryScreen->pageState = PAGE_STATE_INITIAL;
         return SUMMARY_STATE_HIDE_RIBBON_INFO;
     }
@@ -1359,7 +1359,7 @@ static void ChangePage(PokemonSummaryScreen *summaryScreen, s8 delta)
         return;
     }
 
-    Sound_PlayEffect(SEQ_SE_DP_SELECT5);
+    Sound_PlayEffect(SEQ_SE_DP_SELECT5_sseq);
     PokemonSummaryScreen_UpdateSubscreenButtonGfx(summaryScreen);
     PokemonSummaryScreen_UpdateConditionFlashSprites(summaryScreen, FALSE);
     SetupPageFromSubscreenButton(summaryScreen, page);
@@ -2132,7 +2132,7 @@ static void ChangeSelectedRibbon(PokemonSummaryScreen *summaryScreen, s8 delta)
     }
 
     if (originalCol != summaryScreen->ribbonCol || originalRow != summaryScreen->ribbonRow) {
-        Sound_PlayEffect(SEQ_SE_CONFIRM);
+        Sound_PlayEffect(SE_CONFIRM_sseq_3);
     }
 
     summaryScreen->ribbonID = PokemonSummaryScreen_RibbonIDAt(summaryScreen, summaryScreen->ribbonCol);

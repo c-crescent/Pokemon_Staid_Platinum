@@ -11,7 +11,7 @@ FullmoonIslandForest_Dummy1:
     End
 
 FullmoonIslandForest_Cresselia:
-    PlaySE SEQ_SE_CONFIRM
+    PlaySE SE_CONFIRM_sseq_3
     LockAll
     FacePlayer
     PlayCry SPECIES_CRESSELIA

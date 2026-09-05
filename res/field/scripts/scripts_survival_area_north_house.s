@@ -14,7 +14,7 @@ SurvivalAreaNorthHouse_Psychic:
     End
 
 SurvivalAreaNorthHouse_Cynthia:
-    PlaySE SEQ_SE_CONFIRM
+    PlaySE SE_CONFIRM_sseq_3
     LockAll
     FacePlayer
     CallIfSet FLAG_FIRST_MET_CYNTHIA_SURVIVAL_AREA, SurvivalAreaNorthHouse_Cynthia_TryEncounter

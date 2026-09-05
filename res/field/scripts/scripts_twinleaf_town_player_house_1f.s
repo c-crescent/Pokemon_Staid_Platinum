@@ -157,7 +157,7 @@ TwinleafTownPlayerHouse1F_OnFrame_CutsceneAfterRivalBattle:
     GiveRunningShoes
     BufferPlayerName 0
     Message TwinleafTownPlayerHouse1F_Text_PlayerReceivedRunningShoes
-    PlayFanfare SEQ_FANFA4
+    PlayFanfare SEQ_FANFA4_sseq
     WaitFanfare
     Message TwinleafTownPlayerHouse1F_Text_LetMeReadTheInstructions
     WaitButton
@@ -189,7 +189,7 @@ TwinleafTownPlayerHouse1F_Movement_PlayerFollowMomToCouch:
     EndMovement
 
 TwinleafTownPlayerHouse1F_Mom:
-    PlaySE SEQ_SE_CONFIRM
+    PlaySE SE_CONFIRM_sseq_3
     LockAll
     FacePlayer
     GoToIfSet FLAG_DAILY_DEFEATED_BATTLEGROUND_ALL_GYM_LEADERS, TwinleafTownPlayerHouse1F_MomTryGiveManaphyEgg
@@ -311,10 +311,10 @@ TwinleafTownPlayerHouse1F_RivalsMomEnters:
     BufferPlayerName 0
     Message TwinleafTownPlayerHouse1F_Text_GoEnjoyYourAdventure
     CloseMessage
-    PlaySE SEQ_SE_DP_DOOR_OPEN
+    PlaySE SEQ_SE_DP_DOOR_OPEN_sseq
     ClearFlag FLAG_HIDE_TWINLEAF_TOWN_PLAYER_HOUSE_1F_RIVAL_MOM
     AddObject LOCALID_RIVAL_MOM
-    WaitSE SEQ_SE_DP_DOOR_OPEN
+    WaitSE SEQ_SE_DP_DOOR_OPEN_sseq
     ApplyMovement LOCALID_PLAYER_HOUSE_MOM, TwinleafTownPlayerHouse1F_Movement_MomNoticeRivalsMom
     ApplyMovement LOCALID_PLAYER, TwinleafTownPlayerHouse1F_Movement_PlayerFaceRivalsMom
     WaitMovement
@@ -469,7 +469,7 @@ TwinleafTownPlayerHouse1F_RivalsMomLeaveEast:
     End
 
 TwinleafTownPlayerHouse1F_RemoveRivalsMom:
-    PlaySE SEQ_SE_DP_KAIDAN2
+    PlaySE SEQ_SE_DP_KAIDAN2_sseq
     RemoveObject LOCALID_RIVAL_MOM
     SetVar VAR_PLAYER_HOUSE_STATE, 6
     ReleaseAll
@@ -486,7 +486,7 @@ TwinleafTownPlayerHouse1F_TakeAQuickRest:
     CloseMessage
     FadeScreenOut
     WaitFadeScreen
-    PlayFanfare SEQ_ASA
+    PlayFanfare SEQ_ASA_sseq
     WaitFanfare
     HealParty
     FadeScreenIn
@@ -533,7 +533,7 @@ TwinleafTownPlayerHouse1F_Unused2:
     AddItem ITEM_POTION, 1, VAR_RESULT
     BufferPlayerName 0
     Message TwinleafTownPlayerHouse1F_Text_PlayerReceivedRunningShoes
-    PlayFanfare SEQ_FANFA4
+    PlayFanfare SEQ_FANFA4_sseq
     WaitFanfare
     Message TwinleafTownPlayerHouse1F_Text_LetMeReadTheInstructions
     WaitButton

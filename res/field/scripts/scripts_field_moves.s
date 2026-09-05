@@ -21,7 +21,7 @@
     ScriptEntryEnd
 
 FieldMoves_CutTree:
-    PlaySE SEQ_SE_CONFIRM
+    PlaySE SE_CONFIRM_sseq_3
     LockAll
     FacePlayer
     CheckItem ITEM_HM01, 1, VAR_RESULT
@@ -119,7 +119,7 @@ FieldMoves_DontEnableCherylCutscene:
     Return
 
 FieldMoves_Rock:
-    PlaySE SEQ_SE_CONFIRM
+    PlaySE SE_CONFIRM_sseq_3
     LockAll
     FacePlayer
     CheckItem ITEM_HM06, 1, VAR_RESULT
@@ -168,7 +168,7 @@ FieldMoves_WaitForRockSmashAnimFromMenu:
     End
 
 FieldMoves_Boulder:
-    PlaySE SEQ_SE_CONFIRM
+    PlaySE SE_CONFIRM_sseq_3
     LockAll
     FacePlayer
     DoStrengthFunc FIELD_MOVE_FUNC_CHECK_ACTIVE, VAR_RESULT
@@ -225,7 +225,7 @@ FieldMoves_UseStrengthFromMenu:
     GoTo FieldMoves_End3
 
 FieldMoves_RockyWall:
-    PlaySE SEQ_SE_CONFIRM
+    PlaySE SE_CONFIRM_sseq_3
     LockAll
     CheckItem ITEM_HM08, 1, VAR_RESULT
     GoToIfEq VAR_RESULT, FALSE, FieldMoves_CantUseRockSmash
@@ -274,7 +274,7 @@ FieldMoves_UseRockClimbFromMenu:
     End
 
 FieldMoves_Water:
-    PlaySE SEQ_SE_CONFIRM
+    PlaySE SE_CONFIRM_sseq_3
     LockAll
     CheckHasPartner VAR_RESULT
     GoToIfEq VAR_RESULT, TRUE, FieldMoves_CantUseSurf
@@ -313,7 +313,7 @@ FieldMoves_UseSurfFromMenu:
     End
 
 FieldMoves_Fog_Unused:
-    PlaySE SEQ_SE_CONFIRM
+    PlaySE SE_CONFIRM_sseq_3
     LockAll
     FindPartySlotWithMove VAR_RESULT, MOVE_DEFOG
     GoToIfEq VAR_RESULT, MAX_PARTY_SIZE, FieldMoves_CantUseDefog_Unused
@@ -350,7 +350,7 @@ FieldMoves_UseDefogFromMenu:
     Message FieldMoves_Text_PokemonUsedDefog
     CloseMessage
     DoDefogFunc FIELD_MOVE_FUNC_SET_ACTIVE
-    PlaySE SEQ_SE_DP_FBRADE
+    PlaySE SEQ_SE_DP_FBRADE_sseq
     ScrCmd_0C4
     GetCurrentMapID VAR_0x8004
     CreateJournalEvent LOCATION_EVENT_USED_DEFOG, VAR_0x8004
@@ -381,7 +381,7 @@ FieldMoves_End3:
     End
 
 FieldMoves_Waterfall:
-    PlaySE SEQ_SE_CONFIRM
+    PlaySE SE_CONFIRM_sseq_3
     LockAll
     CheckItem ITEM_HM07, 1, VAR_RESULT
     GoToIfEq VAR_RESULT, FALSE, FieldMoves_CantUseWaterfall

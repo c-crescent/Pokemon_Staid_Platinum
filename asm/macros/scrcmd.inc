@@ -23,7 +23,7 @@
 #include "generated/poketch_apps.h"
 #include "generated/roaming_slots.h"
 #include "generated/save_types.h"
-#include "generated/sdat.h"
+#include "res/sound/pl_sound_data.naix"
 #include "generated/signpost_commands.h"
 #include "generated/signpost_types.h"
 #include "generated/time_of_day.h"
@@ -1834,8 +1834,8 @@
     .short \word
     .endm
 
-    .macro ScrCmd_131
-    .short SCRCMD_131
+    .macro EnablePoketch
+    .short SCRCMD_ENABLEPOKETCH
     .endm
 
     .macro CheckPoketchEnabled destVar
@@ -2732,9 +2732,9 @@
     .short \destVar
     .endm
 
-    .macro ScrCmd_1D7 arg0
-    .short SCRCMD_1D7
-    .short \arg0
+    .macro OpenPoffinCooking isInGroup
+    .short SCRCMD_OPENPOFFINCOOKING
+    .short \isInGroup
     .endm
 
     .macro CheckCanCookPoffin destVar
@@ -4341,30 +4341,30 @@
     .byte \martID
     .endm
 
-    .macro ScrCmd_2D9 arg0, arg1, arg2
-    .short SCRCMD_2D9
-    .short \arg0
-    .short \arg1
-    .short \arg2
+    .macro CallBattleArcadeLobbyFunction action, arg, result
+    .short SCRCMD_CALLBATTLEARCADELOBBYFUNCTION
+    .short \action
+    .short \arg
+    .short \result
     .endm
 
-    .macro ScrCmd_2DA arg0, arg1, arg2
-    .short SCRCMD_2DA
-    .short \arg0
-    .short \arg1
-    .short \arg2
+    .macro CheckBattleArcadePartnerUsesDifferentSpecies species1, species2, result
+    .short SCRCMD_CHECKBATTLEARCADEPARTNERUSESDIFFERENTSPECIES
+    .short \species1
+    .short \species2
+    .short \result
     .endm
 
-    .macro ScrCmd_2DB arg0, arg1, arg2
-    .short SCRCMD_2DB
-    .short \arg0
-    .short \arg1
-    .short \arg2
+    .macro GetBattleArcadeSelectedSlots selectedSlot1, selectedSlot2, selectedSlot3
+    .short SCRCMD_GETBATTLEARCADESELECTEDSLOTS
+    .short \selectedSlot1
+    .short \selectedSlot2
+    .short \selectedSlot3
     .endm
 
-    .macro ScrCmd_2DC arg0
-    .short SCRCMD_2DC
-    .short \arg0
+    .macro DeleteActiveBattleArcadeStreak challengeType
+    .short SCRCMD_DELETEACTIVEBATTLEARCADESTREAK
+    .short \challengeType
     .endm
 
     .macro FindPartySlotWithSpecies destVarID, species
@@ -5193,7 +5193,7 @@
     .endm
 
     .macro NPCMessage messageID
-    PlaySE SEQ_SE_CONFIRM
+    PlaySE SE_CONFIRM_sseq_3
     LockAll
     FacePlayer
     Message \messageID
@@ -5203,7 +5203,7 @@
     .endm
 
     .macro EventMessage messageID
-    PlaySE SEQ_SE_CONFIRM
+    PlaySE SE_CONFIRM_sseq_3
     LockAll
     Message \messageID
     WaitButton
@@ -5212,10 +5212,10 @@
     .endm
 
     .macro PokemonCryAndMessage species, messageID, unused=0
-    PlaySE SEQ_SE_CONFIRM
+    PlaySE SE_CONFIRM_sseq_3
     LockAll
     FacePlayer
-    WaitSE SEQ_SE_CONFIRM
+    WaitSE SE_CONFIRM_sseq_3
     PlayCry \species, \unused
     Message \messageID
     WaitCry
@@ -5225,7 +5225,7 @@
     .endm
 
     .macro PokeMartCommonWithGreeting unused=1
-    PlaySE SEQ_SE_CONFIRM
+    PlaySE SE_CONFIRM_sseq_3
     LockAll
     FacePlayer
     Common_VendorGreeting
@@ -5235,7 +5235,7 @@
     .endm
 
     .macro PokeMartSpecialtiesWithGreeting martID
-    PlaySE SEQ_SE_CONFIRM
+    PlaySE SE_CONFIRM_sseq_3
     LockAll
     FacePlayer
     Common_VendorGreeting
