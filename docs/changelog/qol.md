@@ -35,6 +35,7 @@
 - [x] Significantly reduced the amount of text & animations in the early game.
 - [x] First rival battle now skippable.
 - [x] Lucas / Dawn no longer shows you how to catch Pokemon.
+- [x] Removed Foggy & Dark weather from the overworld
 
 ### Bug Fixes
 - [x] HM05 Fly now uses the correct Flying type pallette. 

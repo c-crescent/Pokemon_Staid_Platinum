@@ -1847,7 +1847,6 @@ static u8 GetContextMenuEntriesForPartyMon(PartyMenuApplication *application, u8
             } sHMFieldMoves[] = {
                 { MOVE_CUT, ITEM_HM01 },
                 { MOVE_FLY, ITEM_HM02 },
-                { MOVE_FLASH, ITEM_HM05 },
             };
 
             for (u16 j = 0; j < NELEMS(sHMFieldMoves); j++) {

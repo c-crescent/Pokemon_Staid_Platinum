@@ -120,6 +120,9 @@
 > BP: 130(+50)
 > Type: Flying
 
+> Flash:
+> Now lowers accuracy by 2
+
 > Cut
 > Type: Bug
 
