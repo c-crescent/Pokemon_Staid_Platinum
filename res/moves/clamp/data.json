@@ -9,7 +9,7 @@
     ],
     "class": "CLASS_PHYSICAL",
     "type": "TYPE_WATER",
-    "power": 35,
+    "power": 50,
     "accuracy": 85,
     "pp": 10,
     "effect": {

@@ -8,11 +8,11 @@
     ],
     "class": "CLASS_PHYSICAL",
     "type": "TYPE_NORMAL",
-    "power": 55,
+    "power": 80,
     "accuracy": 100,
     "pp": 30,
     "effect": {
-        "type": "BATTLE_EFFECT_HIT",
+        "type": "BATTLE_EFFECT_BIND_HIT",
         "chance": 0
     },
     "range": "RANGE_SINGLE_TARGET",

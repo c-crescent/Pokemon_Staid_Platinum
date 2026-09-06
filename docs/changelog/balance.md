@@ -60,8 +60,14 @@
 > Acc: 100(+15)
 
 > Bind
-> BP: 35(+20)
+> BP: 50(+35)
 > Acc: 100(+15)
+
+> Clamp
+> BP: 50(+15)
+
+> Sand Tomb
+> BP: 50(+15)
 
 > Comet Punch
 > BP: 25(+7)
@@ -101,8 +107,7 @@
 > Acc: 100(+15)
 
 > Wrap
-> BP: 30(+15)
-> Acc: 100(+10)
+> BP: 60(+45)
 
 > Blaze Kick
 > Acc: 100(+10)
@@ -120,8 +125,12 @@
 > BP: 130(+50)
 > Type: Flying
 
+Vice Grip
+> BP: 80(+25)
+> Now is a partial trapping move similar to Wrap
+
 > Flash:
-> Now lowers accuracy by 2
+> Now lowers accuracy by 2 stages
 
 > Cut
 > Type: Bug
