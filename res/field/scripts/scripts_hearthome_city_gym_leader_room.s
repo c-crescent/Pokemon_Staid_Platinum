@@ -23,7 +23,7 @@ HearthomeGym_RemoveBollards:
     End
 
 HearthomeGym_Fantina:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GetPlayerDir VAR_RESULT
@@ -66,7 +66,7 @@ HearthomeGym_FantinaMain:
     Message HearthomeGym_Text_BeatFantina
     BufferPlayerName 0
     Message HearthomeGym_Text_FantinaReceiveRelicBadge
-    PlayFanfare SEQ_BADGE_sseq
+    PlayFanfare SEQ_BADGE
     WaitFanfare
     GiveBadge BADGE_ID_RELIC
     IncrementTrainerScore2 TRAINER_SCORE_EVENT_BADGE_EARNED

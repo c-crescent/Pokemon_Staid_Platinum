@@ -2,7 +2,7 @@
 
 L_0:
     LoadParticleResource 0, wood_hammer_spa
-    PlaySoundEffectR SEQ_SE_DP_W452_sseq
+    PlaySoundEffectR SEQ_SE_DP_W452
     CreateEmitter 0, 4, EMITTER_CB_SET_POS_TO_DEFENDER
     CreateEmitter 0, 3, EMITTER_CB_SET_POS_TO_DEFENDER
     CreateEmitter 0, 0, EMITTER_CB_SET_POS_TO_DEFENDER

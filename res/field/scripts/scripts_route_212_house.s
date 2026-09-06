@@ -27,7 +27,7 @@ Route212House_Diary:
     End
 
 Route212House_Hiker:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     Message Route212House_Text_WantToTeachMove
@@ -86,12 +86,12 @@ Route212House_TryReplaceMove:
     GetPartyMonMove VAR_RESULT, VAR_0x8000, VAR_0x8002
     BufferMoveName 1, VAR_RESULT
     Message Route212House_Text_OneTwoThreePoof
-    PlaySE SEQ_SE_DP_KON_sseq
-    WaitSE SEQ_SE_DP_KON_sseq
+    PlaySE SEQ_SE_DP_KON
+    WaitSE SEQ_SE_DP_KON
     WaitTime 30, VAR_RESULT
     Message Route212House_Text_PokemonForgotMove
     WaitTime 32, VAR_RESULT
-    PlayFanfare SEQ_FANFA1_sseq
+    PlayFanfare SEQ_FANFA1
     BufferMoveName 1, VAR_0x8003
     Message Route212House_Text_PokemonLearnedMove2
     WaitFanfare
@@ -119,7 +119,7 @@ Route212House_TeachMove:
     BufferPartyMonNickname 0, VAR_0x8000
     BufferMoveName 1, VAR_0x8003
     Message Route212House_Text_PokemonLearnedMove
-    PlayFanfare SEQ_FANFA1_sseq
+    PlayFanfare SEQ_FANFA1
     WaitFanfare
     WaitTime 16, VAR_RESULT
     GoTo Route212House_SeeYouThen

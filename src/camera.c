@@ -4,6 +4,7 @@
 #include <nnsys.h>
 #include <string.h>
 
+#include "camera.h"
 #include "fx_util.h"
 #include "heap.h"
 

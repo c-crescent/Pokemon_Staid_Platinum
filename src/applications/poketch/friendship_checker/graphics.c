@@ -2,6 +2,8 @@
 
 #include <nitro.h>
 
+#include "generated/sdat.h"
+
 #include "applications/poketch/poketch_animation.h"
 #include "applications/poketch/poketch_graphics.h"
 #include "applications/poketch/poketch_system.h"
@@ -19,7 +21,6 @@
 #include "system.h"
 
 #include "res/graphics/poketch/poketch.naix"
-#include "res/sound/pl_sound_data.naix"
 
 #define TIME_STEPS_PER_FRAME 16
 
@@ -731,7 +732,7 @@ static void HandleJumpAction(FriendshipCheckerGraphics *graphics, const Friendsh
     case 0:
         VEC_Set(&monSprite->velocity, 0, 0, 0);
         ShowShadowSprite(graphics, slot);
-        PoketchSystem_PlaySoundEffect(SEQ_SE_DP_POKETCH_010_sseq);
+        PoketchSystem_PlaySoundEffect(SEQ_SE_DP_POKETCH_010);
         monSprite->jumpStarted++;
     case 1:
         monSprite->jumpProgress += 8;

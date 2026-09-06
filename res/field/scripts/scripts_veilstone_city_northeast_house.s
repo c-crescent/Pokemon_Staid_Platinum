@@ -7,7 +7,7 @@
     ScriptEntryEnd
 
 VeilstoneCityNortheastHouse_PokefanM:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_RECEIVED_VEILSTONE_CITY_NORTHEAST_HOUSE_PORYGON, VeilstoneCityNortheastHouse_GalacticsBuildingBugsMe
@@ -32,7 +32,7 @@ VeilstoneCityNortheastHouse_AcceptPorygon:
     GetPartyCount VAR_RESULT
     GoToIfEq VAR_RESULT, 6, VeilstoneCityNortheastHouse_PartyIsFull
     Message VeilstoneCityNortheastHouse_Text_Excellent
-    PlayFanfare SEQ_FANFA4_sseq
+    PlayFanfare SEQ_FANFA4
     BufferPlayerName 0
     Message VeilstoneCityNortheastHouse_Text_PlayerAcceptedThePorygon
     WaitFanfare

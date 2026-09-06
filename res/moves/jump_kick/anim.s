@@ -8,13 +8,13 @@ L_0:
     SetExtraParams 3, 0, 0, 0, 0
     WaitForAnimTasks
     Func_MoveBattlerX2 3, -24, BATTLE_ANIM_BATTLER_SPRITE_ATTACKER
-    PlaySoundEffectR SEQ_SE_DP_131_sseq
+    PlaySoundEffectR SEQ_SE_DP_131
     WaitForAnimTasks
     Delay 20
     CreateEmitter 0, 1, EMITTER_CB_SET_POS_TO_DEFENDER
     CreateEmitter 0, 0, EMITTER_CB_SET_POS_TO_DEFENDER
     Func_Shake 1, 0, 1, 2, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
-    PlaySoundEffectR SEQ_SE_DP_030_sseq
+    PlaySoundEffectR SEQ_SE_DP_030
     WaitForAllEmitters
     UnloadParticleSystem 0
     End

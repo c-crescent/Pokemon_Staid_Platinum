@@ -379,20 +379,20 @@ static u8 GetWindowGroup(u8 facility)
     u8 windowGroup = 0;
 
     switch (facility) {
-    case FACILITY_FACTORY:
-    case FACILITY_FACTORY_OPEN:
+    case FRONTIER_RECORDS_APP_FACTORY:
+    case 3:
         windowGroup = WINDOW_GROUP_FACTORY;
         break;
-    case FACILITY_HALL:
+    case FRONTIER_RECORDS_APP_HALL:
         windowGroup = WINDOW_GROUP_HALL;
         break;
-    case FACILITY_CASTLE:
+    case FRONTIER_RECORDS_APP_CASTLE:
         windowGroup = WINDOW_GROUP_CASTLE;
         break;
-    case FACILITY_ARCADE:
+    case FRONTIER_RECORDS_APP_ARCADE:
         windowGroup = WINDOW_GROUP_ARCADE;
         break;
-    case FACILITY_TOWER:
+    case FRONTIER_RECORDS_APP_TOWER:
         windowGroup = WINDOW_GROUP_TOWER;
         break;
     }
@@ -462,21 +462,21 @@ static void SetStringTemplateNumber(FrontierRecordsApp *app, u32 idx, s32 num)
 static void DisplayRecords(FrontierRecordsApp *app)
 {
     switch (app->facility) {
-    case FACILITY_FACTORY:
-    case FACILITY_FACTORY_OPEN:
+    case FRONTIER_RECORDS_APP_FACTORY:
+    case 3:
         DisplayBattleFactoryLevel50Record(app);
         DisplayBattleFactoryOpenLevelRecord(app);
         break;
-    case FACILITY_HALL:
+    case FRONTIER_RECORDS_APP_HALL:
         DisplayBattleHallRecord(app);
         break;
-    case FACILITY_CASTLE:
+    case FRONTIER_RECORDS_APP_CASTLE:
         DisplayBattleCastleRecord(app);
         break;
-    case FACILITY_ARCADE:
+    case FRONTIER_RECORDS_APP_ARCADE:
         DisplayBattleArcadeRecord(app);
         break;
-    case FACILITY_TOWER:
+    case FRONTIER_RECORDS_APP_TOWER:
         if (app->challengeType == FRONTIER_CHALLENGE_SINGLE || app->challengeType == FRONTIER_CHALLENGE_DOUBLE) {
             DisplayBattleTowerSoloRecord(app);
         } else {

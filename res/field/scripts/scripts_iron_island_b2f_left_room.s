@@ -45,7 +45,7 @@ IronIslandB2FLeftRoom_CoordEvent_RileyStartFollowing:
     CallIfUnset FLAG_TALKED_TO_IRON_ISLAND_B2F_LEFT_ROOM_RILEY, IronIslandB2FLeftRoom_LetsTeamUp
     CallIfSet FLAG_TALKED_TO_IRON_ISLAND_B2F_LEFT_ROOM_RILEY, IronIslandB2FLeftRoom_HiLetsTeamUp
     BufferPlayerName 0
-    PlayFanfare SEQ_GONIN_sseq
+    PlayFanfare SEQ_GONIN
     Message IronIslandB2FLeftRoom_Text_DecidedToGoWithRiley
     WaitFanfare
     SetFlag FLAG_TALKED_TO_IRON_ISLAND_B2F_LEFT_ROOM_RILEY
@@ -239,7 +239,7 @@ IronIslandB2FLeftRoom_WouldYouTakeEgg:
 IronIslandB2FLeftRoom_AcceptedEgg:
     GetPartyCount VAR_RESULT
     GoToIfEq VAR_RESULT, MAX_PARTY_SIZE, IronIslandB2FLeftRoom_NoRoomToTakeEgg
-    PlayFanfare SEQ_FANFA4_sseq
+    PlayFanfare SEQ_FANFA4
     WaitFanfare
     Message IronIslandB2FLeftRoom_Text_ShowEggPokemonPlaces
     GiveEgg SPECIES_RIOLU, SPECIAL_METLOC_NAME_RILEY
@@ -388,7 +388,7 @@ IronIslandB2FLeftRoom_Dummy7:
     End
 
 IronIslandB2FLeftRoom_Riley:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_COULD_NOT_RECEIVE_RIOLU_EGG, IronIslandB2FLeftRoom_TryGiveEgg

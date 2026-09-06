@@ -21,7 +21,7 @@ FightAreaSouthHouse_Torchic:
     End
 
 FightAreaSouthHouse_ItemExpert:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     Message FightAreaSouthHouse_Text_IAmTheItemExpert

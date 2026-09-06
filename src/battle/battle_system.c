@@ -2299,13 +2299,13 @@ static BOOL BattleMessage_Callback(TextPrinterTemplate *unused, u16 soundCommand
         result = Sound_IsBGMPausedByFanfare();
         break;
     case 3:
-        Sound_PlayFanfare(SEQ_FANFA5_sseq);
+        Sound_PlayFanfare(SEQ_FANFA5);
         break;
     case 4:
-        Sound_PlayEffect(SEQ_SE_DP_KON_sseq);
+        Sound_PlayEffect(SEQ_SE_DP_KON);
         break;
     case 5:
-        Sound_PlayFanfare(SEQ_FANFA1_sseq);
+        Sound_PlayFanfare(SEQ_FANFA1);
         break;
     default:
         break;

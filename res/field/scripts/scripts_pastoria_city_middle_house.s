@@ -11,7 +11,7 @@ PastoriaCityMiddleHouse_OldMan:
     End
 
 PastoriaCityMiddleHouse_BugCatcher:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_RECEIVED_PASTORIA_CITY_MIDDLE_HOUSE_MACHO_BRACE, PastoriaCityMiddleHouse_YoureGood

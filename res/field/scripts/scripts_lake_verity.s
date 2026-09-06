@@ -57,7 +57,7 @@ LakeVerity_Unused:
     End
 
 LakeVerity_ProfRowan:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     GoToIfSet FLAG_TEAM_GALACTIC_LEFT_LAKE_VERITY, LakeVerity_GoToLakeAcuity
     ApplyMovement LOCALID_PROF_ROWAN, LakeVerity_Movement_RowanWalkOnSpotEast
@@ -98,7 +98,7 @@ LakeVerity_GoToLakeAcuity:
     End
 
 LakeVerity_Counterpart:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_TEAM_GALACTIC_LEFT_LAKE_VERITY, LakeVerity_CounterpartWhatsGalacticUpTo
@@ -190,7 +190,7 @@ LakeVerity_Movement_RowanNoticePlayer:
     EndMovement
 
 LakeVerity_Mars:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     ApplyMovement LOCALID_COUNTERPART, LakeVerity_Movement_CounterpartWalkOnSpotEast

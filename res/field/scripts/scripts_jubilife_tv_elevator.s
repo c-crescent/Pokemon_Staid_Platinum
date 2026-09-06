@@ -8,7 +8,7 @@
     ScriptEntryEnd
 
 JubilifeTVElevator_Receptionist:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GetFloorsAbove VAR_ELEVATOR_FLOORS_ABOVE
@@ -120,7 +120,7 @@ JubilifeTVElevator_ElevatorAnimation:
     CloseMessage
     ApplyMovement LOCALID_RECEPTIONIST, JubilifeTVElevator_Movement_ReceptionistLookDown
     WaitMovement
-    WaitSE SE_CONFIRM_sseq_3
+    WaitSE SEQ_SE_CONFIRM
     PlayElevatorAnimation VAR_0x8004, 4
     Return
 

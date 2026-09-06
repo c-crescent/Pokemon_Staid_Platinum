@@ -7,7 +7,7 @@
     ScriptEntryEnd
 
 TwinleafTownSouthwestHouse_ExpertF:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_HAS_POKEDEX, TwinleafTownSouthwestHouse_ProfRowanGavePokedex
@@ -25,7 +25,7 @@ TwinleafTownSouthwestHouse_ProfRowanGavePokedex:
     End
 
 TwinleafTownSouthwestHouse_Twin:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     BufferPlayerName 0

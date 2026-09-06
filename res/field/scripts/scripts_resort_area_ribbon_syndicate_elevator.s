@@ -8,7 +8,7 @@
     ScriptEntryEnd
 
 ResortAreaRibbonSyndicateElevator_Receptionist:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GetFloorsAbove VAR_ELEVATOR_FLOORS_ABOVE
@@ -65,7 +65,7 @@ ResortAreaRibbonSyndicateElevator_ElevatorAnimation:
     CloseMessage
     ApplyMovement LOCALID_RECEPTIONIST, ResortAreaRibbonSyndicateElevator_Movement_ReceptionistWalkOnSpotSouth
     WaitMovement
-    WaitSE SE_CONFIRM_sseq_3
+    WaitSE SEQ_SE_CONFIRM
     PlayElevatorAnimation VAR_0x8004, 4
     Return
 

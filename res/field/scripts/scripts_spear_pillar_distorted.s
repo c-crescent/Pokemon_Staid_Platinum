@@ -118,7 +118,7 @@ SpearPillarDistorted_Movement_CameraMoveSouthWest:
     EndMovement
 
 SpearPillarDistorted_Cynthia:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     Message SpearPillarDistorted_Text_AreYouReady

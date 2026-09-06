@@ -13,7 +13,7 @@ Route226House_OnTransition:
     End
 
 Route226House_Meister:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_TRADED_FOR_FOPPA_MAGIKARP, Route226House_MakeFriendsAnywhere

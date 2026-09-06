@@ -114,7 +114,7 @@ Route201_GoIntoTallGrass:
     ApplyMovement LOCALID_PLAYER, Route201_Movement_NoticeProfRowan
     ApplyMovement LOCALID_RIVAL, Route201_Movement_NoticeProfRowan
     WaitMovement
-    PlayMusic SEQ_OPENING_sseq_1
+    PlayMusic SEQ_OPENING2
     ClearFlag FLAG_HIDE_ROUTE_201_PROF_ROWAN
     AddObject LOCALID_PROF_ROWAN
     LockObject LOCALID_PROF_ROWAN
@@ -1116,7 +1116,7 @@ Route201_SchoolKidM:
     End
 
 Route201_Lass:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_HAS_POKEDEX, Route201_IfHPIsLowGoToAPokemonCenter
@@ -1134,7 +1134,7 @@ Route201_IfHPIsLowGoToAPokemonCenter:
     GoTo Route201_LassCloseMessage
 
 Route201_Cashier:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_RECEIVED_ROUTE_201_POTION, Route201_FindMartsInCitiesAndTowns

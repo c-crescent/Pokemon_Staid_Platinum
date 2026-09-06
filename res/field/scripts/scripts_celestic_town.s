@@ -22,7 +22,7 @@ CelesticTown_OnTransition:
     End
 
 CelesticTown_GruntM:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     Message CelesticTown_Text_WillYouMessWithMe
@@ -95,7 +95,7 @@ CelesticTown_GiveOldCharm:
     Message CelesticTown_Text_ThatOldCharm
     BufferPlayerName 0
     BufferItemName 1, ITEM_OLD_CHARM
-    PlayFanfare SEQ_FANFA4_sseq
+    PlayFanfare SEQ_FANFA4
     Message CelesticTown_Text_PlayerHandedOverCharm
     WaitFanfare
     RemoveItem ITEM_OLD_CHARM, 1, VAR_RESULT
@@ -206,7 +206,7 @@ CelesticTown_Movement_PlayerFaceWest:
     EndMovement
 
 CelesticTown_Elder:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_DELIVERED_OLD_CHARM, CelesticTown_ExamineRuins

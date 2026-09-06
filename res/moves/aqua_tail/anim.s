@@ -3,7 +3,7 @@
 L_0:
     LoadParticleResource 0, aqua_tail_spa
     Delay 1
-    PlaySoundEffectL SEQ_SE_DP_W057_sseq
+    PlaySoundEffectL SEQ_SE_DP_W057
     InitPokemonSpriteManager
     LoadPokemonSpriteDummyResources 0
     LoadPokemonSpriteDummyResources 1
@@ -22,7 +22,7 @@ L_0:
     Delay 25
     SetPokemonSpriteVisible BATTLE_ANIM_MON_SPRITE_0, FALSE
     SetPokemonSpriteVisible BATTLE_ANIM_MON_SPRITE_1, FALSE
-    PlaySoundEffectR SEQ_SE_DP_W291_sseq
+    PlaySoundEffectR SEQ_SE_DP_W291
     CreateEmitter 0, 1, EMITTER_CB_SET_POS_TO_DEFENDER
     Func_Shake 1, 0, 1, 6, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
     WaitForAnimTasks

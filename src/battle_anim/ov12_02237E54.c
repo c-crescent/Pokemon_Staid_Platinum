@@ -5,19 +5,18 @@
 
 #include "struct_defs/seal_case.h"
 
-#include "applications/capsule_menu/main.h"
+#include "unk_0202C9F4.h"
+#include "unk_02097B18.h"
 
-#include "ball_seal_info.h"
-
-int SealAnim_GetDistance(s16 x1, s16 y1, s16 x2, s16 y2)
+int ov12_02237E54(s16 param0, s16 param1, s16 param2, s16 param3)
 {
-    int distance;
-    s16 dx = (x1 - x2);
-    s16 dy = (y1 - y2) * -1;
+    int v0;
+    s16 v1 = (param0 - param2);
+    s16 v2 = (param1 - param3) * -1;
 
-    distance = FX_Sqrt(((dy * dy) + (dx * dx)) * FX32_ONE) / FX32_ONE;
+    v0 = FX_Sqrt(((v2 * v2) + (v1 * v1)) * FX32_ONE) / FX32_ONE;
 
-    return distance;
+    return v0;
 }
 
 int ov12_02237E80(BallSeal *param0)
@@ -25,7 +24,7 @@ int ov12_02237E80(BallSeal *param0)
     int v0;
     s16 v1 = BallSeal_GetX(param0);
     s16 v2 = BallSeal_GetY(param0);
-    v0 = SealAnim_GetDistance(v1, v2, 190, 70);
+    v0 = ov12_02237E54(v1, v2, 190, 70);
 
     return v0;
 }
@@ -48,7 +47,7 @@ int ov12_02237EA0(BallSeal *param0)
     };
 
     v3 = BallSeal_GetSealType(param0);
-    v0 = CapsuleMenu_IsAlphabetSeal(v3);
+    v0 = sub_020981AC(v3);
 
     if (v0 == 0) {
         v2 = ov12_02237E80(param0);

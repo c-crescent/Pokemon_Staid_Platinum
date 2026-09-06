@@ -6,7 +6,7 @@
     ScriptEntryEnd
 
 Route217WestHouse_Hiker:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_RECEIVED_ROUTE_217_WEST_HOUSE_ICICLE_PLATE, Route217WestHouse_IFoundIciclePlate

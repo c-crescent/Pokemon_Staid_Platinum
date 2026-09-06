@@ -8,7 +8,7 @@
     End
 
 SolaceonTownEastHouse_NinjaBoy:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfUnset FLAG_RECEIVED_SOLACEON_TOWN_EAST_HOUSE_SEAL_CASE, SolaceonTownEastHouse_YouDontHaveASealCase
@@ -75,7 +75,7 @@ SolaceonTownEastHouse_YouDontHaveASealCase:
     End
 
 SolaceonTownEastHouse_PokefanF:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_RECEIVED_SOLACEON_TOWN_EAST_HOUSE_SEAL_CASE, SolaceonTownEastHouse_IllExplainHowSealsWork

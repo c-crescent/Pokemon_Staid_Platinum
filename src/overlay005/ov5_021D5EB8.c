@@ -4596,11 +4596,11 @@ static void ov5_021DA748(SysTask *param0, void *param1)
                 if ((MTRNG_Next() % 3) != 0) {
                     v1[2] = 36;
 
-                    Sound_PlayEffect(SEQ_SE_DP_T_KAMI2_sseq);
+                    Sound_PlayEffect(SEQ_SE_DP_T_KAMI2);
                 } else {
                     v1[2] = 200;
 
-                    Sound_PlayEffect(SEQ_SE_DP_T_KAMI_sseq);
+                    Sound_PlayEffect(SEQ_SE_DP_T_KAMI);
                 }
                 break;
             case 1:

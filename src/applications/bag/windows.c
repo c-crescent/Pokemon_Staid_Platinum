@@ -580,10 +580,10 @@ static BOOL BagUITextPrinterCallback(TextPrinterTemplate *template, u16 param1)
     case 2:
         return Sound_IsBGMPausedByFanfare();
     case 3:
-        Sound_PlayEffect(SEQ_SE_DP_PC_LOGIN_sseq);
+        Sound_PlayEffect(SEQ_SE_DP_PC_LOGIN);
         break;
     case 4:
-        return Sound_IsEffectPlaying(SEQ_SE_DP_PC_LOGIN_sseq);
+        return Sound_IsEffectPlaying(SEQ_SE_DP_PC_LOGIN);
     }
 
     return FALSE;

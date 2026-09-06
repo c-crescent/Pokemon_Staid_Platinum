@@ -22,7 +22,7 @@ CelesticTownPokecenter1F_Twin:
     End
 
 CelesticTownPokecenter1F_PokefanM:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_DAILY_RECEIVED_CELESTIC_TOWN_POKECENTER_1F_GREAT_BALL, CelesticTownPokecenter1F_ItsAboutTrust

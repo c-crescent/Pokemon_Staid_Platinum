@@ -9,7 +9,7 @@
     ScriptEntryEnd
 
 CelesticTownNorthwestHouse_Vendor_Unused:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     Message CelesticTownNorthwestHouse_Text_AWhileSinceCustomer
@@ -28,7 +28,7 @@ CelesticTownNorthwestHouse_ExpertM:
     End
 
 CelesticTownNorthwestHouse_GymGuide:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     Message CelesticTownNorthwestHouse_Text_GlassesChangeTheWorld

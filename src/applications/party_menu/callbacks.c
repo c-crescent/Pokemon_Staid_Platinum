@@ -425,7 +425,7 @@ static enum PartyMenuState PartyMenuCB_UseItem_Basic(PartyMenuApplication *appli
     PartyMenu_DrawMemberStatusCondition(application, application->currPartySlot, application->partyMembers[application->currPartySlot].statusIcon);
     BufferUsedItemMessage(application, application->partyMenu->usedItemID, 0);
     PartyMenu_PrintLongMessage(application, PRINT_MESSAGE_PRELOADED, TRUE);
-    Sound_PlayEffect(SEQ_SE_DP_KAIFUKU_sseq);
+    Sound_PlayEffect(SEQ_SE_DP_KAIFUKU);
 
     application->callback = PartyMenuCB_PrintThenWaitABPress;
     return PARTY_MENU_STATE_EXEC_CALLBACK;
@@ -518,7 +518,7 @@ static enum PartyMenuState PartyMenuCB_UseItem_RestoreHP(PartyMenuApplication *a
 
     PartyMenu_UpdateSlotPalette(application, application->currPartySlot);
     application->callback = PartyMenuCB_UpdateHPBar;
-    Sound_PlayEffect(SEQ_SE_DP_KAIFUKU_sseq);
+    Sound_PlayEffect(SEQ_SE_DP_KAIFUKU);
 
     return PARTY_MENU_STATE_EXEC_CALLBACK;
 }
@@ -618,7 +618,7 @@ enum PartyMenuState PartyMenuCB_HandleSacredAsh(PartyMenuApplication *applicatio
         PartyMenu_PrintMemberLevel(application, application->currPartySlot);
         PartyMenu_UpdateSlotPalette(application, application->currPartySlot);
         PartyMenu_UpdateCursor(application, application->currPartySlot, 1);
-        Sound_PlayEffect(SEQ_SE_DP_KAIFUKU_sseq);
+        Sound_PlayEffect(SEQ_SE_DP_KAIFUKU);
 
         application->sacredAshState++;
         break;
@@ -646,7 +646,7 @@ enum PartyMenuState PartyMenuCB_HandleSacredAsh(PartyMenuApplication *applicatio
         }
 
         if (JOY_NEW(PAD_BUTTON_A | PAD_BUTTON_B)) {
-            Sound_PlayEffect(SE_CONFIRM_sseq_3);
+            Sound_PlayEffect(SEQ_SE_CONFIRM);
             u8 prevSlot = application->currPartySlot;
             application->currPartySlot = FindNextFaintedMember(application, application->currPartySlot + 1);
 
@@ -747,7 +747,7 @@ static enum PartyMenuState PartyMenuCB_LevelUp(PartyMenuApplication *application
     case LEVELUP_STATE_START:
         if (Text_IsPrinterActive(application->textPrinterID) == FALSE) {
             if (JOY_NEW(PAD_BUTTON_A | PAD_BUTTON_B)) {
-                Sound_PlayEffect(SE_CONFIRM_sseq_3);
+                Sound_PlayEffect(SEQ_SE_CONFIRM);
                 PartyMenu_DrawLevelUpStatIncreases(application);
                 application->callbackState = LEVELUP_STATE_DRAW_STAT_CHANGES;
             }
@@ -756,7 +756,7 @@ static enum PartyMenuState PartyMenuCB_LevelUp(PartyMenuApplication *application
 
     case LEVELUP_STATE_DRAW_STAT_CHANGES:
         if (JOY_NEW(PAD_BUTTON_A | PAD_BUTTON_B)) {
-            Sound_PlayEffect(SE_CONFIRM_sseq_3);
+            Sound_PlayEffect(SEQ_SE_CONFIRM);
             PartyMenu_DrawLevelUpNewStatValues(application);
             application->callbackState = LEVELUP_STATE_DRAW_STAT_VALUES;
         }
@@ -764,7 +764,7 @@ static enum PartyMenuState PartyMenuCB_LevelUp(PartyMenuApplication *application
 
     case LEVELUP_STATE_DRAW_STAT_VALUES:
         if (JOY_NEW(PAD_BUTTON_A | PAD_BUTTON_B)) {
-            Sound_PlayEffect(SE_CONFIRM_sseq_3);
+            Sound_PlayEffect(SEQ_SE_CONFIRM);
             PartyMenu_RemoveContextWindow(application);
             application->callbackState = LEVELUP_STATE_CHECK_LEARNSET;
             application->partyMenu->levelUpMoveIndex = 0;
@@ -814,7 +814,7 @@ static enum PartyMenuState PartyMenuCB_LevelUp(PartyMenuApplication *application
     case LEVELUP_STATE_PRINT_AND_LOOPBACK:
         if (Text_IsPrinterActive(application->textPrinterID) == FALSE) {
             if (JOY_NEW(PAD_BUTTON_A | PAD_BUTTON_B)) {
-                Sound_PlayEffect(SE_CONFIRM_sseq_3);
+                Sound_PlayEffect(SEQ_SE_CONFIRM);
                 application->callbackState = LEVELUP_STATE_CHECK_LEARNSET;
             }
         }
@@ -1220,7 +1220,7 @@ int PartyMenu_MoveSelection_HandleInput(PartyMenuApplication *application)
             Pokemon *mon = Party_GetPokemonBySlotIndex(application->partyMenu->party, application->currPartySlot);
             BufferUsedItemMessage(application, application->partyMenu->usedItemID, Pokemon_GetValue(mon, MON_DATA_MOVE1 + menuAction, NULL));
             Bag_TryRemoveItem(application->partyMenu->bag, application->partyMenu->usedItemID, 1, HEAP_ID_PARTY_MENU);
-            Sound_PlayEffect(SEQ_SE_DP_KAIFUKU_sseq);
+            Sound_PlayEffect(SEQ_SE_DP_KAIFUKU);
         } else {
             MessageLoader_GetString(application->messageLoader, PartyMenu_Text_ItWontHaveAnyEffect, application->tmpString);
         }

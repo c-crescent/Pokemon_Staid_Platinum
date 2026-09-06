@@ -6,7 +6,7 @@
     ScriptEntryEnd
 
 JubilifeCityCondominiums4F_Beauty:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_RECEIVED_UNUSED_JUBILIFE_CITY_CONDOMINIUMS_4F_FOCUS_BAND, JubilifeCityCondominiums4F_ObtainedFocusBand

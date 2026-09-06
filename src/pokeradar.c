@@ -443,7 +443,7 @@ BOOL RefreshRadarChain(FieldTask *taskMan)
         }
         break;
     case 1:
-        Sound_PlayBGM(SEQ_KUSAGASA_sseq);
+        Sound_PlayBGM(SEQ_POKERADAR);
         *v1 = 2;
         break;
     case 2:

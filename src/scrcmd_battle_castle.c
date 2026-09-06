@@ -62,7 +62,7 @@ enum BattleCastleSelectionSubTask {
 static void BattleCastle_ClearActiveStreak(SaveData *saveData, BattleCastlePersistentSave *persistentSave, u8 challengeType);
 static void SelectBattleCastleChallengers(FieldTask *taskMan, void **partySelect, u8 challengeType);
 static BOOL BattleCastleSelectChallengersTask(FieldTask *taskMan);
-static int SubTask_SetupPartyMenu(BattleCastleTaskEnv *taskEnv, FieldSystem *fieldSystem, int unused);
+static int SubTask_SetupPartyMenu(BattleCastleTaskEnv *taskEnv, FieldSystem *fieldSystem, int param2);
 static int SubTask_ProcessPartyMenu(BattleCastleTaskEnv *taskEnv, FieldSystem *fieldSystem);
 static int SubTask_SetupMonSummary(BattleCastleTaskEnv *taskEnv, FieldSystem *fieldSystem, enum HeapID heapID);
 static int SubTask_ProcessMonSummary(BattleCastleTaskEnv *taskEnv, FieldSystem *fieldSystem);
@@ -155,15 +155,15 @@ BOOL ScrCmd_CheckBattleCastlePartnerUsesDifferentSpecies(ScriptContext *ctx)
 
 static void CheckPartnerUsesDifferentSpecies(FieldTask *task, u16 species1, u16 species2, u16 *speciesConflict)
 {
-    BattleCastleSpeciesCheck *speciesCheck = Heap_Alloc(HEAP_ID_FIELD2, sizeof(BattleCastleSpeciesCheck));
-    memset(speciesCheck, 0, sizeof(BattleCastleSpeciesCheck));
+    BattleCastleSpeciesCheck *v0 = Heap_Alloc(HEAP_ID_FIELD2, sizeof(BattleCastleSpeciesCheck));
+    memset(v0, 0, sizeof(BattleCastleSpeciesCheck));
 
-    speciesCheck->species[0] = species1;
-    speciesCheck->species[1] = species2;
-    speciesCheck->conflicts = speciesConflict;
+    v0->species[0] = species1;
+    v0->species[1] = species2;
+    v0->conflicts = speciesConflict;
 
-    CommFieldCmd_Init(speciesCheck);
-    FieldTask_InitCall(task, CheckPartnerUsesDifferentSpeciesTask, speciesCheck);
+    CommFieldCmd_Init(v0);
+    FieldTask_InitCall(task, CheckPartnerUsesDifferentSpeciesTask, v0);
 }
 
 static BOOL CheckPartnerUsesDifferentSpeciesTask(FieldTask *task)
@@ -238,7 +238,7 @@ static BOOL BattleCastleSelectChallengersTask(FieldTask *taskMan)
     return FALSE;
 }
 
-static int SubTask_SetupPartyMenu(BattleCastleTaskEnv *taskEnv, FieldSystem *fieldSystem, int unused)
+static int SubTask_SetupPartyMenu(BattleCastleTaskEnv *taskEnv, FieldSystem *fieldSystem, int param2)
 {
     PartyMenu *partyMenu = Heap_Alloc(HEAP_ID_FIELD2, sizeof(PartyMenu));
 

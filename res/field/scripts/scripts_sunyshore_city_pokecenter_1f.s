@@ -18,7 +18,7 @@ SunyshoreCityPokecenter1F_OldMan:
     End
 
 SunyshoreCityPokecenter1F_NinjaBoy:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfBadgeAcquired BADGE_ID_BEACON, SunyshoreCityPokecenter1F_AwesomelyCoolEightBadges

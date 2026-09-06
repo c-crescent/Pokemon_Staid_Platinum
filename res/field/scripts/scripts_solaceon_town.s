@@ -34,7 +34,7 @@ SolaceonTown_Rancher1:
     End
 
 SolaceonTown_Cowgirl1:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfBadgeAcquired BADGE_ID_RELIC, SolaceonTown_TakeATour
@@ -64,7 +64,7 @@ SolaceonTown_Rancher2:
     End
 
 SolaceonTown_RuinManiac:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     CheckPoketchAppRegistered POKETCH_APPID_POKEMONHISTORY, VAR_RESULT

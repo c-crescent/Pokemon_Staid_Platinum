@@ -3,7 +3,7 @@
 
 #include "overlay_manager.h"
 
-int VisualCompetitionScoring_Init(ApplicationManager *appMan, int *param1);
+int VisualCompetitonScoring_Init(ApplicationManager *appMan, int *param1);
 int VisualCompetitionScoring_Main(ApplicationManager *appMan, int *param1);
 int VisualCompetitionScoring_Exit(ApplicationManager *appMan, int *param1);
 

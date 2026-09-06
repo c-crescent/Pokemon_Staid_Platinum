@@ -6,7 +6,7 @@
     ScriptEntryEnd
 
 SolaceonRuinsManiacTunnnelRoom_Inscription:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     MessageUnown SolaceonRuinsManiacTunnnelRoom_Text_Interrobang
     WaitButton

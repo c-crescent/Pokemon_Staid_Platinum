@@ -29,7 +29,7 @@ SpearPillarPalkia_TryEnableHallOfOriginEnd:
     Return
 
 SpearPillarPalkia_Rift:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     GoToIfGe VAR_SPEAR_PILLAR_PALKIA_STATE, 1, SpearPillarPalkia_SpaceEmanatesFromRift
     GoToIfSet FLAG_CAUGHT_PALKIA, SpearPillarPalkia_SpaceEmanatesFromRift

@@ -11,7 +11,7 @@ DistortionWorldTurnbackCaveRoom_OnTransition:
     End
 
 DistortionWorldTurnbackCaveRoom_Portal:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     Message DistortionWorldTurnbackCaveRoom_Text_LeapIntoPortal
     ShowYesNoMenu VAR_RESULT
@@ -24,7 +24,7 @@ DistortionWorldTurnbackCaveRoom_GoToTurnbackCave:
     BufferPlayerName 0
     Message DistortionWorldTurnbackCaveRoom_Text_PlayerLeaptIntoPortal
     CloseMessage
-    PlaySE SEQ_SE_PL_SYUWA_sseq
+    PlaySE SEQ_SE_PL_SYUWA
     SetPartyGiratinaForm GIRATINA_FORM_ALTERED
     FadeScreenOut
     WaitFadeScreen

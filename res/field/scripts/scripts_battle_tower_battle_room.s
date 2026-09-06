@@ -31,7 +31,7 @@ BattleTowerBattleRoom_SetPlayerPositionForBattle:
 
 BattleTowerBattleRoom_OpponentEnterAndBattle_Unused:
     SetVar VAR_BATTLE_TOWER_BATTLE_ROOM_LOAD_ACTION, 0
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     Call BattleTowerBattleRoom_OpponentEnterAndBattle
@@ -40,7 +40,7 @@ BattleTowerBattleRoom_OpponentEnterAndBattle_Unused:
 
 BattleTowerBattleRoom_HealPokemon:
     Message BattleTowerBattleRoom_Text_HealPokemon
-    PlayFanfare SEQ_ASA_sseq
+    PlayFanfare SEQ_ASA
     WaitFanfare
     HealParty
     Return
@@ -118,8 +118,8 @@ BattleTowerBattleRoom_SaveAndQuit:
     ShowSavingIcon
     TrySaveGame VAR_RESULT
     HideSavingIcon
-    PlaySE SEQ_SE_DP_SAVE_sseq
-    WaitSE SEQ_SE_DP_SAVE_sseq
+    PlaySE SEQ_SE_DP_SAVE
+    WaitSE SEQ_SE_DP_SAVE
     FadeScreenOut
     WaitFadeScreen
     CloseMessage

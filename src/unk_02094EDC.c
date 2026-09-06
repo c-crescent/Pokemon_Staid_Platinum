@@ -401,19 +401,19 @@ void sub_02094F04(Contest *contest, enum HeapID heapID, int param2, enum Pokemon
     u16 v4;
     int v5 = 0;
     int v6;
-    int v7, isPracticeCompetition;
+    int v7, isPracticeCompetiton;
     UnkStruct_ov6_02248BE8 *v9;
     int v10, v11;
     UnkStruct_ov6_02248BE8 v12;
 
-    isPracticeCompetition = FALSE;
+    isPracticeCompetiton = FALSE;
     v7 = FALSE;
 
     switch (competitionType) {
     case CONTEST_COMPETITION_PRACTICE_VISUAL:
     case CONTEST_COMPETITION_PRACTICE_DANCE:
     case CONTEST_COMPETITION_PRACTICE_ACTING:
-        isPracticeCompetition = TRUE;
+        isPracticeCompetiton = TRUE;
         break;
     case CONTEST_COMPETITION_VISUAL:
     case CONTEST_COMPETITION_DANCE:
@@ -445,7 +445,7 @@ void sub_02094F04(Contest *contest, enum HeapID heapID, int param2, enum Pokemon
             }
         }
 
-        if (isPracticeCompetition == TRUE) {
+        if (isPracticeCompetiton == TRUE) {
             if (v9[v0].unk_20_9 == 0) {
                 continue;
             }

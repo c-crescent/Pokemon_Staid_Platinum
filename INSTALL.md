@@ -7,11 +7,9 @@ This document details the steps necessary to build a copy of Pokémon Platinum
 
 - [1. Setting Up Your Development Environment](#1-setting-up-your-development-environment)
   - [Windows Subsystem for Linux](#windows-subsystem-for-linux)
-    - [Windows WSL2](#windows-wsl2)
-        - [Developing in WSL2 from Windows](#developing-in-wsl2-from-windows)
-    - [Windows WSL1](#windows-wsl1)
-        - [Existing Installs](#existing-installs)
-        - [Install Build Dependencies](#install-build-dependencies)
+    - [New Installs](#new-installs)
+    - [Existing Installs](#existing-installs)
+    - [Install Build Dependencies](#install-build-dependencies)
   - [Windows with MSYS2](#windows-with-msys2)
   - [macOS](#macos)
   - [Linux](#linux)
@@ -28,72 +26,13 @@ This document details the steps necessary to build a copy of Pokémon Platinum
 
 ### Windows Subsystem for Linux
 
-It's recommended to use [WSL2](#windows-wsl2) rather than WSL1 as your development environment. 
-If you still want to use WSL1, go [here](#windows-wsl1).
+> [!IMPORTANT]
+> If you intend to store your project on the Windows file system (or do not know
+> what that means), then use these instructions, which will guide you through
+> installing WSL version 1. If you intend to use WSL version 2, then instead
+> follow the instructions for [Linux](#linux).
 
-#### Windows WSL2
-
-These instructions will enable you to build pokeplatinum using the more up-to-date WSL2 and
-develop on it with VSCode on Windows while it is stored in the Linux filesystem.
-
-1. In your start menu, search for `Windows PowerShell`. Open the Windows PowerShell app as administrator by right-clicking on it and selecting `Run as administrator`. 
-   Even if you're on an admin Windows profile, you always have to run it as admin.
-
-2. Install a new distro:
-    ```bash
-    wsl --install -d Ubuntu
-    ```
-    If this is your first time installing a WSL distro, then your computer will prompt
-    you to restart once finished. Do so, then open PowerShell as administrator again.
-
-    You can add `--name ` with a name on the end to the command to pick what name you'd like. 
-    By default it would be called `Ubuntu`.
-
-3. Check that `Ubuntu` (or whatever name you gave it) is installed in the list:
-    ```bash
-    wsl -l -v
-    ```
-    If the new distro you just made is not version 2, convert to version 2:
-    ```bash
-    wsl --set-version Ubuntu 2
-    ```
-
-4. Once the new distro is set up, enter it:
-    ```bash
-    wsl -d Ubuntu
-    ```
-
-5. Right now, you'll probably see your file system begin with `/mnt/c/`. That's the Windows file system.
-    Go to the Linux filesystem:
-    ```bash
-    cd ~
-    ```
-
-6. Install the pokeplatinum dependencies:
-    ```bash
-    sudo dpkg --add-architecture i386 && sudo apt update
-    sudo apt install bison flex g++ gcc-arm-none-eabi git make ninja-build pkg-config wget python3 xz-utils nasm libc6:i386 libpng-dev
-    ```
-
-7. Once that is done successfully, go to [Downloading the Repository](#2-downloading-the-repository) and continue from there.
-
-##### Developing in WSL2 from Windows
-
-With VSCode, you can modify files stored in Linux just like modifying files stored in Windows.
-
-1. Once you have cloned the pokeplatinum repo in your Linux filesystem and ensured that it is capable of building successfully, open VSCode in Windows (assuming you have downloaded it already). 
-
-   Go to extensions and find the WSL extension. Install it and make sure it's enabled.
-
-2. Back to your PowerShell terminal where you're running WSL2, run this command in the pokeplatinum directory to open it in VSCode on Windows:
-    ```bash
-    code .
-    ```
-    The first-time setup should automatically download the necessary extensions to develop against the Linux filesystem.
-
-3. You should now have pokeplatinum in Linux loaded in VSCode on Windows, standing by and ready for work!
-
-#### Windows WSL1
+#### New Installs
 
 Follow these instructions if you do not have an existing install of WSL.
 
@@ -134,7 +73,7 @@ finished, it will ask for a username and password as input.
 
 7. [`Install build dependencies`](#install-build-dependencies).
 
-##### Existing Installs
+#### Existing Installs
 
 Follow these instructions if you have an existing install of WSL, specifically
 `Ubuntu`.
@@ -172,13 +111,13 @@ install to a more recent version of `Ubuntu`:
 
 5. [`Install build dependencies`](#install-build-dependencies).
 
-##### Install Build Dependencies
+#### Install Build Dependencies
 
 1. Run the following to install build dependencies from the `Ubuntu` package
 registry:
 
     ```bash
-    sudo apt install bison flex g++ gcc-arm-none-eabi git lib32z1 make ninja-build pkg-config python3 p7zip libpng-dev
+    sudo apt install bison flex g++ gcc-arm-none-eabi git lib32z1 make ninja-build pkg-config python3 p7zip
     ```
 
 2. [Download the repository](#2-downloading-the-repository).
@@ -207,7 +146,7 @@ the following commands to install necessary build dependencies:
     ```bash
     echo 'export PATH=${PATH}:/mingw64/bin' >> ~/.bashrc
     source ~/.bashrc
-    pacman -S bison flex gcc git make ninja python mingw-w64-ucrt-x86_64-arm-none-eabi-gcc p7zip mingw-w64-x86_64-libpng
+    pacman -S bison flex gcc git make ninja python mingw-w64-x86_64-arm-none-eabi-gcc p7zip
     ```
 
     Press 'Y' when prompted to confirm the installation.
@@ -288,7 +227,7 @@ the repository](#2-downloading-the-repository).
 2. Install the following packages via `apt`:
 
     ```bash
-    sudo apt install bison flex g++ gcc-arm-none-eabi git make ninja-build pkg-config wget python3 xz-utils nasm libc6:i386 libpng-dev
+    sudo apt install bison flex g++ gcc-arm-none-eabi git make ninja-build pkg-config wget python3 xz-utils nasm libc6:i386
     ```
 
 #### Arch Linux (and derivatives, e.g., Manjaro, Endeavour)
@@ -298,13 +237,13 @@ the repository](#2-downloading-the-repository).
 2. Install dependencies via `pacman`:
 
     ```bash
-    sudo pacman -S arm-none-eabi-gcc bison flex gcc git make ninja python wget xz lib32-glibc libpng
+    sudo pacman -S arm-none-eabi-gcc bison flex gcc git make ninja python wget xz lib32-glibc
     ```
 
 #### Fedora (and derivatives, e.g., AlmaLinux, Red Hat Enterprise Linux)
 
 ```bash
-sudo dnf install arm-none-eabi-gcc-cs bison flex gcc-c++ git make ninja-build python3 wget2 xz glibc32 libpng
+sudo dnf install arm-none-eabi-gcc-cs bison flex gcc-c++ git make ninja-build python3 wget2 xz glibc32
 ```
 
 ## 2. Downloading the Repository
@@ -323,10 +262,6 @@ To build the ROM, run:
 
 ```bash
 make
-```
-or to skip the checksum if you want to modify the code:
-```
-make rom
 ```
 
 If everything works, then the following ROM should be built:

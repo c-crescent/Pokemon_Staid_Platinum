@@ -9,7 +9,7 @@
     ScriptEntryEnd
 
 EternaCityCondominiums1F_ExpertM:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     Message EternaCityCondominiums1F_Text_WantMeToRateNicknames
@@ -93,7 +93,7 @@ EternaCityCondominiums1F_GaveSameNickname:
     End
 
 EternaCityCondominiums1F_NinjaBoy:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_TRADED_FOR_CHARAP_CHATOT, EternaCityCondominiums1F_DidChatotLearnChatter
@@ -148,7 +148,7 @@ EternaCityCondominiums1F_DidChatotLearnChatter:
     End
 
 EternaCityCondominiums1F_PokefanM:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GetTimeOfDay VAR_RESULT

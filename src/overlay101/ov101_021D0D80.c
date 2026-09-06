@@ -620,10 +620,10 @@ static void ov101_021D18F4(SysTask *param0, void *param1)
             Sound_SetBGMPlayerPaused(PLAYER_FIELD, TRUE);
             break;
         case UnkEnum_ov101_021D1894_01:
-            Sound_StopBGM(SEQ_SLOT_ATARI_sseq, 0);
+            Sound_StopBGM(SEQ_SLOT_ATARI, 0);
             break;
         case UnkEnum_ov101_021D1894_02:
-            Sound_StopBGM(SEQ_SLOT_OOATARI_sseq, 0);
+            Sound_StopBGM(SEQ_SLOT_OOATARI, 0);
             break;
         }
 
@@ -635,10 +635,10 @@ static void ov101_021D18F4(SysTask *param0, void *param1)
             Sound_SetBGMPlayerPaused(PLAYER_FIELD, FALSE);
             break;
         case UnkEnum_ov101_021D1894_01:
-            Sound_PlayBasicBGM(SEQ_SLOT_ATARI_sseq);
+            Sound_PlayBasicBGM(SEQ_SLOT_ATARI);
             break;
         case UnkEnum_ov101_021D1894_02:
-            Sound_PlayBasicBGM(SEQ_SLOT_OOATARI_sseq);
+            Sound_PlayBasicBGM(SEQ_SLOT_OOATARI);
             break;
         }
 

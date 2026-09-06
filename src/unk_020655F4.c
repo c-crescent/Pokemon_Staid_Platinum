@@ -5,6 +5,7 @@
 
 #include "constants/map_object.h"
 #include "generated/movement_actions.h"
+#include "generated/sdat.h"
 
 #include "struct_decls/map_object.h"
 
@@ -17,14 +18,11 @@
 #include "map_object.h"
 #include "map_object_move.h"
 #include "overworld_anim_manager.h"
-#include "sound.h"
 #include "sound_playback.h"
 #include "sys_task.h"
 #include "sys_task_manager.h"
 #include "unk_02069BE0.h"
 #include "unk_020EDBAC.h"
-
-#include "res/sound/pl_sound_data.naix"
 
 typedef struct MoveAnimData {
     int state;
@@ -813,7 +811,7 @@ static void MovementAction_InitJumpCustomSound(MapObject *mapObj, int dir, fx32 
 
 static void MovementAction_InitJump(MapObject *mapObj, int dir, fx32 distance, s16 duration, u16 param4, s16 param5, u16 param6)
 {
-    MovementAction_InitJumpCustomSound(mapObj, dir, distance, duration, param4, param5, param6, SEQ_SE_DP_DANSA_sseq);
+    MovementAction_InitJumpCustomSound(mapObj, dir, distance, duration, param4, param5, param6, SEQ_SE_DP_DANSA);
 }
 
 static BOOL MovementAction_Jump_Step1(MapObject *mapObj)
@@ -867,7 +865,7 @@ static BOOL MovementAction_Jump_Step1(MapObject *mapObj)
     sub_02062B68(mapObj);
     sub_02062A0C(mapObj, MAP_OBJ_UNK_A0_00);
     MapObject_AdvanceMovementStep(mapObj);
-    Sound_PlayEffect(SEQ_SE_PL_SUTYA2_sseq_3);
+    Sound_PlayEffect(SEQ_SE_DP_SUTYA2);
 
     return TRUE;
 }
@@ -1932,7 +1930,7 @@ static BOOL sub_02067068(MapObject *mapObj)
     sub_02062B68(mapObj);
     sub_02062A0C(mapObj, MAP_OBJ_UNK_A0_00);
     MapObject_AdvanceMovementStep(mapObj);
-    Sound_PlayEffect(SEQ_SE_PL_SUTYA2_sseq_3);
+    Sound_PlayEffect(SEQ_SE_DP_SUTYA2);
 
     return TRUE;
 }

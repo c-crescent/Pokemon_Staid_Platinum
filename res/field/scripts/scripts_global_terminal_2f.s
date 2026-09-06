@@ -66,7 +66,7 @@ GlobalTerminal2F_Dummy1:
     End
 
 GlobalTerminal2F_BoxDataMachine:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     SetVar VAR_0x8005, 6
     GoTo GlobalTerminal2F_BoxDataMenu
@@ -106,7 +106,7 @@ GlobalTerminal2F_ExplainBoxData:
     End
 
 GlobalTerminal2F_DressUpDataMachine:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     SetVar VAR_0x8005, 5
     GoTo GlobalTerminal2F_DressUpDataMenu

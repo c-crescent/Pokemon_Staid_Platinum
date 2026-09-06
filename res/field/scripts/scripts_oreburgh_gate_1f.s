@@ -13,7 +13,7 @@ OreburghGate1F_OnTransition:
     End
 
 OreburghGate1F_Hiker:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     CheckBadgeAcquired BADGE_ID_COAL, VAR_RESULT

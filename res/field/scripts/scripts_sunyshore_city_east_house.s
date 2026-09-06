@@ -7,7 +7,7 @@
     ScriptEntryEnd
 
 SunyshoreCityEastHouse_Scientist:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfGe VAR_SUNYSHORE_CITY_EAST_HOUSE_SCIENTIST_STATE, 1, SunyshoreCityEastHouse_TryCheckNatures

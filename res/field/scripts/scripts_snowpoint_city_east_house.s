@@ -8,7 +8,7 @@
     ScriptEntryEnd
 
 SnowpointCityEastHouse_ExpertM:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_DAILY_HEARD_TRENDY_SAYING_SNOWPOINT_CITY_EAST_HOUSE, SnowpointCityEastHouse_UseTrendySayings
@@ -48,7 +48,7 @@ SnowpointCityEastHouse_AreYouUsingTrendySayings:
     End
 
 SnowpointCityEastHouse_Hiker:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     Message SnowpointCityEastHouse_Text_WantMeToTeachMove
@@ -107,12 +107,12 @@ SnowpointCityEastHouse_TryReplaceMove:
     GetPartyMonMove VAR_RESULT, VAR_0x8000, VAR_0x8002
     BufferMoveName 1, VAR_RESULT
     Message SnowpointCityEastHouse_Text_OneTwoThreePoof
-    PlaySE SEQ_SE_DP_KON_sseq
-    WaitSE SEQ_SE_DP_KON_sseq
+    PlaySE SEQ_SE_DP_KON
+    WaitSE SEQ_SE_DP_KON
     WaitTime 30, VAR_RESULT
     Message SnowpointCityEastHouse_Text_PokemonForgotMove
     WaitTime 32, VAR_RESULT
-    PlayFanfare SEQ_FANFA1_sseq
+    PlayFanfare SEQ_FANFA1
     BufferMoveName 1, VAR_0x8003
     Message SnowpointCityEastHouse_Text_PokemonLearnedMove2
     WaitFanfare
@@ -140,7 +140,7 @@ SnowpointCityEastHouse_TeachMove:
     BufferPartyMonNickname 0, VAR_0x8000
     BufferMoveName 1, VAR_0x8003
     Message SnowpointCityEastHouse_Text_PokemonLearnedMove
-    PlayFanfare SEQ_FANFA1_sseq
+    PlayFanfare SEQ_FANFA1
     WaitFanfare
     WaitTime 16, VAR_RESULT
     GoTo SnowpointCityEastHouse_BeSeeingYou

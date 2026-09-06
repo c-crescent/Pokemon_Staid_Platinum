@@ -23,7 +23,7 @@ JubilifeTV2F_Idol:
     End
 
 JubilifeTV2F_GymGuide:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_RECEIVED_JUBILIFE_TV_2F_ACCESSORY_STARTER_MASK, JubilifeTV2F_IHopeYouCollectAccessories

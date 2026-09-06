@@ -12,7 +12,7 @@ FuegoIronworksBuilding_OnTransition:
     End
 
 FuegoIronworksBuilding_MrFuego:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_MR_FUEGO_ASKED_FOR_TRADE, FuegoIronworksBuilding_CheckStarPieceForTradeAgain

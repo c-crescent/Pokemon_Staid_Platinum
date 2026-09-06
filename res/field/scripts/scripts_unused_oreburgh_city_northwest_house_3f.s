@@ -7,7 +7,7 @@
     ScriptEntryEnd
 
 OreburghCityNorthwestHouse3F_Lass:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_RECEIVED_UNUSED_OREBURGH_CITY_NORTHWEST_HOUSE_3F_HARD_STONE, OreburghCityNorthwestHouse3F_IntensifiesPowerOfRockTypeMoves

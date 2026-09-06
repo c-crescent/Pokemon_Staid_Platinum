@@ -6,7 +6,7 @@
     ScriptEntryEnd
 
 TVBroadcast_Interact:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     IncrementGameRecord RECORD_WATCHED_TV
     CheckBroadcastStatus VAR_RESULT

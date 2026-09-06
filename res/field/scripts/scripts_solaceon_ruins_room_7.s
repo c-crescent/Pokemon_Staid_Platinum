@@ -6,7 +6,7 @@
     ScriptEntryEnd
 
 SolaceonRuinsRoom7_Inscription:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     MessageUnown SolaceonRuinsRoom7_Text_AllLivesTouchOtherLives
     WaitButton

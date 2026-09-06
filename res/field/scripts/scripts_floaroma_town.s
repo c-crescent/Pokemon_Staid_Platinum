@@ -19,7 +19,7 @@ FloaromaTown_OnTransition:
     End
 
 FloaromaTown_Grunts:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     ApplyMovement LOCALID_GRUNT_M_WEST, FloaromaTown_Movement_WalkOnSpotEast
     WaitMovement
@@ -44,7 +44,7 @@ FloaromaTown_Movement_WalkOnSpotWest:
     EndMovement
 
 FloaromaTown_SchoolKidM:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfGe VAR_VALLEY_WINDWORKS_TEAM_GALACTIC_STATE, 2, FloaromaTown_OddlyPleasantMood
@@ -99,7 +99,7 @@ FloaromaTown_SignboardFloaromaMeadow:
     End
 
 FloaromaTown_Beauty:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     FindPartySlotWithFatefulEncounterSpecies VAR_RESULT, SPECIES_SHAYMIN

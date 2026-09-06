@@ -79,7 +79,7 @@ static BOOL Task_UseVistaLighthouseBinoculars(FieldTask *taskMan)
         VistaLighthouseBinoculars_SetPlayerHidden(fieldSystem->playerAvatar, TRUE);
         VistaLighthouseBinoculars_SetCamera(fieldSystem);
         sub_02056B30(taskMan, 3, 17, 0xffff, 0x0, 6, 1, HEAP_ID_FIELD2);
-        Sound_PlayEffect(SEQ_SE_DP_KASYA_sseq);
+        Sound_PlayEffect(SEQ_SE_DP_KASYA);
         binoculars->state++;
         break;
     case 5:
@@ -89,7 +89,7 @@ static BOOL Task_UseVistaLighthouseBinoculars(FieldTask *taskMan)
         break;
     case 6:
         sub_02056B30(taskMan, 3, 16, 0xffff, 0x0, 6, 1, HEAP_ID_FIELD2);
-        Sound_PlayEffect(SEQ_SE_DP_KASYA_sseq);
+        Sound_PlayEffect(SEQ_SE_DP_KASYA);
         binoculars->state++;
         break;
     case 7:

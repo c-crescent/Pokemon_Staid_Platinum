@@ -6,7 +6,7 @@
     ScriptEntryEnd
 
 Route215GateToVeilstoneCity_RuinManiac:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_USED_SECRETPOTION, Route215GateToVeilstoneCity_BlockingPokemonAreGone

@@ -23,7 +23,7 @@ AcuityCavern_RemoveUxie:
     End
 
 AcuityCavern_Uxie:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     PlayCry SPECIES_UXIE

@@ -33,7 +33,7 @@ TwinleafTown_SetPlayerHouseState5:
     Return
 
 TwinleafTown_Guitarist:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_HAS_POKEDEX, TwinleafTown_EveryoneGoesOnAdventures
@@ -385,7 +385,7 @@ TwinleafTown_CoordEvent_RivalThud:
     ApplyMovement LOCALID_RIVAL, TwinleafTown_Movement_RivalExitHouse
     ApplyMovement LOCALID_PLAYER, TwinleafTown_Movement_PlayerGetPushedBackByRival
     WaitMovement
-    PlaySE SEQ_SE_DP_WALL_HIT2_sseq
+    PlaySE SEQ_SE_DP_WALL_HIT2
     Message TwinleafTown_Text_BigThud
     WaitTime 30, VAR_RESULT
     Common_SetRivalBGM
@@ -462,7 +462,7 @@ TwinleafTown_Collector:
     End
 
 TwinleafTown_BreederF:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_HAS_POKEDEX, TwinleafTown_HelpingPutTogetherPokedex

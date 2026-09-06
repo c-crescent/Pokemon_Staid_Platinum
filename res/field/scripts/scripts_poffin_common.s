@@ -8,7 +8,7 @@
     End
 
 PoffinCommon_PokefanF:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     Message PoffinCommon_Text_HereYouMayCookPoffins
@@ -52,7 +52,7 @@ PoffinCommon_FadeOut:
 
 PoffinCommon_ReturnToFieldFadeIn:
     ReturnToField
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     FadeScreenIn
@@ -84,7 +84,7 @@ PoffinCommon_CookAlone:
     GoToIfEq VAR_RESULT, 2, PoffinCommon_PoffinCaseIsFull
     WaitTime 30, VAR_RESULT
     Call PoffinCommon_FadeOut
-    OpenPoffinCooking FALSE
+    ScrCmd_1D7 0
     Call PoffinCommon_ReturnToFieldFadeIn
     GoTo PoffinCommon_PleaseVisitAgain
     End
@@ -161,7 +161,7 @@ PoffinCommon_DoCookingInAGroup:
     FadeScreenOut
     WaitFadeScreen
     ReleaseAll
-    OpenPoffinCooking TRUE
+    ScrCmd_1D7 1
     EndCommunication
     Call PoffinCommon_ReturnToFieldFadeIn
     GoTo PoffinCommon_PleaseVisitAgain

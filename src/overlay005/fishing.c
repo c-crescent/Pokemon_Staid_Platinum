@@ -232,7 +232,7 @@ static BOOL FishingTask_CastRod(FishingTask *fishingTask, PlayerAvatar *playerAv
     fishingTask->counter++;
 
     if (fishingTask->counter == 10) {
-        Sound_PlayEffect(SEQ_SE_DP_FW104_sseq);
+        Sound_PlayEffect(SEQ_SE_DP_FW104);
     }
 
     if (fishingTask->counter < 34) {

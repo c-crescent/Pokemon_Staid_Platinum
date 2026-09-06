@@ -68,7 +68,7 @@ ResortArea_Beauty2:
     End
 
 ResortArea_AceTrainerF:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     CallIfUnset FLAG_JOINED_RIBBON_SYNDICATE, ResortArea_LongToBecomeMember
@@ -284,7 +284,7 @@ ResortArea_Movement_PlayerWalkWest:
     EndMovement
 
 ResortArea_ProfRowan:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     Message ResortArea_Text_RowanAskVisit
@@ -314,7 +314,7 @@ ResortArea_VillaVisitorEnd:
     End
 
 ResortArea_Roark:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     Message ResortArea_Text_RoarkAskVisit
@@ -338,7 +338,7 @@ ResortArea_RoarkDeclinedVisit:
     End
 
 ResortArea_Gardenia:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     Message ResortArea_Text_GardeniaAskVisit
@@ -362,7 +362,7 @@ ResortArea_GardeniaDeclinedVisit:
     End
 
 ResortArea_Maylene:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     Message ResortArea_Text_MayleneAskVisit
@@ -386,7 +386,7 @@ ResortArea_MayleneDeclinedVisit:
     End
 
 ResortArea_Byron:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     Message ResortArea_Text_ByronAskVisit

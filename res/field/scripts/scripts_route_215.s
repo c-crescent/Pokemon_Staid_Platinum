@@ -37,7 +37,7 @@ Route215_Dummy1:
     End
 
 Route215_BlackBelt:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_RECEIVED_ROUTE_215_TM66, Route215_PaybackIsHarsh

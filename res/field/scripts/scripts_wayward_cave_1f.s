@@ -19,7 +19,7 @@ WaywardCave1F_ResetFollowerMiraState:
     End
 
 WaywardCave1F_Mira:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     SetPlayerBike FALSE
@@ -28,7 +28,7 @@ WaywardCave1F_Mira:
     CallIfUnset FLAG_TALKED_TO_WAYWARD_CAVE_1F_MIRA, WaywardCave1F_PleaseTakeMeToTheExit
     CallIfSet FLAG_TALKED_TO_WAYWARD_CAVE_1F_MIRA, WaywardCave1F_ILikeYourName
     BufferPlayerName 0
-    PlayFanfare SEQ_GONIN_sseq
+    PlayFanfare SEQ_GONIN
     Message WaywardCave1F_Text_PlayerDecidedToGoWithMira
     WaitFanfare
     SetFlag FLAG_TALKED_TO_WAYWARD_CAVE_1F_MIRA

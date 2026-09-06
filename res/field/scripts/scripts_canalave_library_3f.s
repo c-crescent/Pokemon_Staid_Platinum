@@ -131,7 +131,7 @@ CanalaveLibrary3F_Explosion:
     WaitMovement
     BufferPlayerName 0
     Message CanalaveLibrary3F_Text_ThatLeavesLakeValor
-    WaitSE SE_CONFIRM_sseq_3
+    WaitSE SEQ_SE_CONFIRM
     MessageInstant CanalaveLibrary3F_Text_BigExplosion
     ScrCmd_29F 1
     Message CanalaveLibrary3F_Text_AreYouUnharmed
@@ -175,12 +175,12 @@ CanalaveLibrary3F_Explosion:
     WaitMovement
     Message CanalaveLibrary3F_Text_LeaveNowToo
     CloseMessage
-    StopSE SE_CONFIRM_sseq_3
+    StopSE SEQ_SE_CONFIRM
     ApplyMovement LOCALID_PROF_ROWAN, CanalaveLibrary3F_Movement_ProfRowanLeave
     WaitMovement
-    PlaySE SEQ_SE_DP_KAIDAN2_sseq
+    PlaySE SEQ_SE_DP_KAIDAN2
     RemoveObject LOCALID_PROF_ROWAN
-    StopSE SEQ_SE_DP_KAIDAN2_sseq
+    StopSE SEQ_SE_DP_KAIDAN2
     SetVar VAR_CANALAVE_CITY_STATE, 4
     SetVar VAR_CANALAVE_LIBRARY_STATE, 2
     SetFlag FLAG_LAKE_VALOR_EXPLODED
@@ -335,7 +335,7 @@ CanalaveLibrary3F_Movement_CounterpartWalkOnSpotNorth:
     EndMovement
 
 CanalaveLibrary3F_ScientistF:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_LAKE_VALOR_EXPLODED, CanalaveLibrary3F_WasThatAnEarthquake
@@ -353,7 +353,7 @@ CanalaveLibrary3F_WasThatAnEarthquake:
     End
 
 CanalaveLibrary3F_Youngster:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_LAKE_VALOR_EXPLODED, CanalaveLibrary3F_ImFeelingWobbly
@@ -371,7 +371,7 @@ CanalaveLibrary3F_ImFeelingWobbly:
     End
 
 CanalaveLibrary3F_SinnohMyth:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     Message CanalaveLibrary3F_Text_AskReadSinnohMyth
     ShowYesNoMenu VAR_RESULT
@@ -395,7 +395,7 @@ CanalaveLibrary3F_ReadSinnohMyth:
     End
 
 CanalaveLibrary3F_SinnohRegionsMythology:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     Message CanalaveLibrary3F_Text_AskReadSinnohRegionsMythology
     ShowYesNoMenu VAR_RESULT
@@ -419,7 +419,7 @@ CanalaveLibrary3F_ReadSinnohRegionsMythology:
     End
 
 CanalaveLibrary3F_SinnohsMyth:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     Message CanalaveLibrary3F_Text_AskReadSinnohsMyth
     ShowYesNoMenu VAR_RESULT
@@ -443,7 +443,7 @@ CanalaveLibrary3F_ReadSinnohsMyth:
     End
 
 CanalaveLibrary3F_VeilstonesMyth:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     Message CanalaveLibrary3F_Text_AskReadVeilstonesMyth
     ShowYesNoMenu VAR_RESULT
@@ -473,7 +473,7 @@ CanalaveLibrary3F_ReadVeilstonesMyth:
     End
 
 CanalaveLibrary3F_TheOriginalStory:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     Message CanalaveLibrary3F_Text_AskReadTheOriginalStory
     ShowYesNoMenu VAR_RESULT
@@ -503,7 +503,7 @@ CanalaveLibrary3F_ReadTheOriginalStory:
     End
 
 CanalaveLibrary3F_HorrificMyth:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     Message CanalaveLibrary3F_Text_AskReadHorrificMyth
     ShowYesNoMenu VAR_RESULT
@@ -527,7 +527,7 @@ CanalaveLibrary3F_ReadHorrificMyth:
     End
 
 CanalaveLibrary3F_SinnohFolkStories:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     Message CanalaveLibrary3F_Text_SinnohFolkStories
     Message CanalaveLibrary3F_Text_ReadWhichStory

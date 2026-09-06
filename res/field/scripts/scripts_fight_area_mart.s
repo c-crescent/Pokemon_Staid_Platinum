@@ -16,7 +16,7 @@ FightAreaMart_Dummy2:
     End
 
 FightAreaMart_Socialite:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_RECEIVED_FIGHT_AREA_MART_SCOPE_LENS, FightAreaMart_DilemmaEveryTime

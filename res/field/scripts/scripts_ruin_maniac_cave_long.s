@@ -11,7 +11,7 @@ RuinManiacCaveLong_OnTransition:
     End
 
 RuinManiacCaveLong_RuinManiac:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GetUnownFormsSeenCount VAR_RESULT

@@ -4,11 +4,10 @@
 #include "generated/first_arrival_to_zones.h"
 #include "generated/map_headers.h"
 #include "generated/pokemon_contest_types.h"
+#include "generated/sdat.h"
 
 #include "rtc.h"
 #include "vars_flags.h"
-
-#include "res/sound/pl_sound_data.naix"
 
 static void SetFlag(VarsFlags *varsFlags, u16 flagID);
 static void ClearFlag(VarsFlags *varsFlags, u16 flagID);
@@ -234,37 +233,37 @@ u16 SystemFlag_GetAltMusicForHeader(VarsFlags *varsFlags, enum MapHeaderID mapHe
     switch (mapHeader) {
     case MAP_HEADER_LAKE_VALOR_DRAINED:
         if (CheckFlag(varsFlags, FLAG_ALT_MUSIC_LAKE_VALOR) == TRUE) {
-            sdatID = SEQ_D_LAKE_sseq;
+            sdatID = SEQ_D_LAKE;
         }
         break;
 
     case MAP_HEADER_VALOR_CAVERN:
         if (CheckFlag(varsFlags, FLAG_ALT_MUSIC_LAKE_VALOR) == TRUE) {
-            sdatID = SEQ_D_RYAYHY_sseq;
+            sdatID = SEQ_D_RYAYHY;
         }
         break;
 
     case MAP_HEADER_LAKE_VERITY:
         if (CheckFlag(varsFlags, FLAG_ALT_MUSIC_LAKE_VERITY) == TRUE) {
-            sdatID = SEQ_D_LAKE_sseq;
+            sdatID = SEQ_D_LAKE;
         }
         break;
 
     case MAP_HEADER_LAKE_ACUITY:
         if (CheckFlag(varsFlags, FLAG_ALT_MUSIC_LAKE_ACUITY) == TRUE) {
-            sdatID = SEQ_D_LAKE_sseq;
+            sdatID = SEQ_D_LAKE;
         }
         break;
 
     case MAP_HEADER_PAL_PARK:
         if (CheckFlag(varsFlags, FLAG_ALT_MUSIC_PAL_PARK) == TRUE) {
-            sdatID = SEQ_D_SAFARI_sseq;
+            sdatID = SEQ_D_SAFARI;
         }
         break;
 
     case MAP_HEADER_SANDGEM_TOWN_POKEMON_RESEARCH_LAB:
         if (CheckFlag(varsFlags, FLAG_ALT_MUSIC_ROWANS_LAB) == TRUE) {
-            sdatID = SEQ_OPENING_sseq_1;
+            sdatID = SEQ_OPENING2;
         }
         break;
 
@@ -278,16 +277,16 @@ u16 SystemFlag_GetAltMusicForHeader(VarsFlags *varsFlags, enum MapHeaderID mapHe
     case MAP_HEADER_GALACTIC_HQ_LABORATORY:
         if (CheckFlag(varsFlags, FLAG_ALT_MUSIC_GALACTIC_HQ) == TRUE) {
             if (!IsNight()) {
-                sdatID = SEQ_CITY07_D_sseq;
+                sdatID = SEQ_CITY07_D;
             } else {
-                sdatID = SEQ_CITY07_N_sseq;
+                sdatID = SEQ_CITY07_N;
             }
             break;
         }
 
         if (mapHeader == MAP_HEADER_GALACTIC_HQ_1F) {
             if (CheckFlag(varsFlags, FLAG_ALT_MUSIC_GALACTIC_HQ_1F) == TRUE) {
-                sdatID = SEQ_D_AGITO_sseq;
+                sdatID = SEQ_D_AGITO;
             }
         }
         break;
@@ -298,9 +297,9 @@ u16 SystemFlag_GetAltMusicForHeader(VarsFlags *varsFlags, enum MapHeaderID mapHe
     case MAP_HEADER_TEAM_GALACTIC_ETERNA_BUILDING_4F:
         if (CheckFlag(varsFlags, FLAG_ALT_MUSIC_GALACTIC_ETERNA_BUILDING) == TRUE) {
             if (!IsNight()) {
-                sdatID = SEQ_CITY04_D_sseq;
+                sdatID = SEQ_CITY04_D;
             } else {
-                sdatID = SEQ_CITY04_N_sseq;
+                sdatID = SEQ_CITY04_N;
             }
         }
         break;
@@ -308,9 +307,9 @@ u16 SystemFlag_GetAltMusicForHeader(VarsFlags *varsFlags, enum MapHeaderID mapHe
     case MAP_HEADER_VALLEY_WINDWORKS_BUILDING:
         if (CheckFlag(varsFlags, FLAG_ALT_MUSIC_VALLEY_WINDWORKS_BUILDING) == TRUE) {
             if (!IsNight()) {
-                sdatID = SEQ_ROAD_C_D_sseq;
+                sdatID = SEQ_ROAD_C_D;
             } else {
-                sdatID = SEQ_ROAD_C_N_sseq;
+                sdatID = SEQ_ROAD_C_N;
             }
         }
         break;
@@ -318,9 +317,9 @@ u16 SystemFlag_GetAltMusicForHeader(VarsFlags *varsFlags, enum MapHeaderID mapHe
     case MAP_HEADER_FLOAROMA_MEADOW:
         if (CheckFlag(varsFlags, FLAG_ALT_MUSIC_FLOAROMA_MEADOW) == TRUE) {
             if (!IsNight()) {
-                sdatID = SEQ_TOWN03_D_sseq;
+                sdatID = SEQ_TOWN03_D;
             } else {
-                sdatID = SEQ_TOWN03_N_sseq;
+                sdatID = SEQ_TOWN03_N;
             }
         }
         break;
@@ -328,16 +327,16 @@ u16 SystemFlag_GetAltMusicForHeader(VarsFlags *varsFlags, enum MapHeaderID mapHe
     case MAP_HEADER_ROUTE_224:
         if (CheckFlag(varsFlags, FLAG_ALT_MUSIC_ROUTE_224) == TRUE) {
             if (!IsNight()) {
-                sdatID = SEQ_TOWN03_D_sseq;
+                sdatID = SEQ_TOWN03_D;
             } else {
-                sdatID = SEQ_TOWN03_N_sseq;
+                sdatID = SEQ_TOWN03_N;
             }
         }
         break;
 
     case MAP_HEADER_POKEMON_LEAGUE_CHAMPION_ROOM:
         if (CheckFlag(varsFlags, FLAG_ALT_MUSIC_CHAMPION_ROOM) == TRUE) {
-            sdatID = SEQ_SILENCE_FIELD_sseq;
+            sdatID = SEQ_SILENCE_FIELD;
         }
         break;
 
@@ -430,7 +429,7 @@ BOOL SystemFlag_CheckInPalPark(VarsFlags *varsFlags)
     return CheckFlag(varsFlags, FLAG_IN_PAL_PARK);
 }
 
-void SystemFlag_ClearOnCyclingRoad(VarsFlags *varsFlags)
+void SystemFlag_CheckOnCyclingRoad(VarsFlags *varsFlags)
 {
     ClearFlag(varsFlags, FLAG_ON_CYCLING_ROAD);
 }

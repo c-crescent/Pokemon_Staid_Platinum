@@ -18,7 +18,7 @@ HearthomeCityDPGymElevatorRoom1_CoordEvent_MoveLift:
 
 HearthomeCityDPGymElevatorRoom1_BgSignCorrect:
     LockAll
-    PlaySE SEQ_SE_DP_UG_020_sseq
+    PlaySE SEQ_SE_DP_UG_020
     Message HearthomeCityDPGymElevatorRoom1_Text_Correct
     WaitButton
     CloseMessage
@@ -26,10 +26,10 @@ HearthomeCityDPGymElevatorRoom1_BgSignCorrect:
     End
 
 HearthomeCityDPGymElevatorRoom1_BgSignQuestion:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     Message HearthomeCityDPGymElevatorRoom1_Text_WhatIs3Times13
-    PlaySE SEQ_SE_DP_MAZYO4_sseq
+    PlaySE SEQ_SE_DP_MAZYO4
     WaitButton
     CloseMessage
     ReleaseAll

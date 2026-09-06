@@ -6,7 +6,7 @@
     ScriptEntryEnd
 
 GroupConnections_AceTrainerM:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     DoGroupConnectionAction GC_ACTION_CHECK_IS_ENTRY_VALID, RECORD_MIXED_RNG_PLAYER_OVERRIDE, VAR_RESULT

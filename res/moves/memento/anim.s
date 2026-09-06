@@ -13,9 +13,9 @@ L_0:
     AddPokemonSprite BATTLER_ROLE_DEFENDER_PARTNER, FALSE, BATTLE_ANIM_MON_SPRITE_3, 3
     BtlAnimCmd_082 3, 1, 3
     Func_Memento
-    PlaySoundEffectL SEQ_SE_DP_W060_sseq
+    PlaySoundEffectL SEQ_SE_DP_W060
     Delay 24
-    PlaySoundEffectR SEQ_SE_DP_W060B_sseq
+    PlaySoundEffectR SEQ_SE_DP_W060B
     WaitForAnimTasks
     FreePokemonSpriteManager
     RemovePokemonSprite BATTLE_ANIM_MON_SPRITE_0

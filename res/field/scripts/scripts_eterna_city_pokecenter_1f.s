@@ -19,7 +19,7 @@ EternaCityPokecenter1F_BattleGirl:
     End
 
 EternaCityPokecenter1F_SchoolKidM:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_TEAM_GALACTIC_LEFT_ETERNA_BUILDING, EternaCityPokecenter1F_IGotMyPokemonBack
@@ -41,7 +41,7 @@ EternaCityPokecenter1F_Buneary:
     End
 
 EternaCityPokecenter1F_PokemonBreederF:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfEq VAR_MAP_LOCAL_0x02, 1, EternaCityPokecenter1F_PokemonWillOpenUp

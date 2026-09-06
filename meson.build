@@ -1,6 +1,6 @@
 project('pokeplatinum', ['c', 'cpp', 'nasm'],
     version: '1.0',
-    meson_version: '>=1.12.0',
+    meson_version: '>=1.10.0',
     default_options : [
         'buildtype=plain',
         'warning_level=0'
@@ -245,6 +245,9 @@ main = executable('main',
 ############################################################
 ichneumon_sub = subproject('NitroSDK'
     ).get_variable('ichneumon_sub')
+ichneumon_sub_defs = subproject('NitroSDK'
+    ).get_variable('ichneumon_sub_defs')
+
 ichneumon_sub_defs = subproject('NitroSDK'
     ).get_variable('ichneumon_sub_defs')
 

@@ -9,7 +9,7 @@
     ScriptEntryEnd
 
 SolaceonTownPokemonNewsPress_GymGuide:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_COULD_NOT_RECEIVE_POKEMON_NEWS_PRESS_REWARD, SolaceonTownPokemonNewsPress_TryGiveReward
@@ -193,7 +193,7 @@ SolaceonTownPokemonNewsPress_PokemonBreederM:
     End
 
 SolaceonTownPokemonNewsPress_PC:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     Message SolaceonTownPokemonNewsPress_Text_TopStory
     Message SolaceonTownPokemonNewsPress_Text_ReadWhichArticle

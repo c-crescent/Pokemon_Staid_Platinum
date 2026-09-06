@@ -27,7 +27,7 @@
     ScriptEntryEnd
 
 OreburghCity_Rival:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_TALKED_TO_OREBURGH_CITY_RIVAL, OreburghCity_GymLeaderWentDownToTheMine
@@ -49,7 +49,7 @@ OreburghCity_GymLeaderWentDownToTheMine:
     End
 
 OreburghCity_Youngster:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfBadgeAcquired BADGE_ID_COAL, OreburghCity_CanISeeYourTrainerCase
@@ -123,7 +123,7 @@ OreburghCity_RivalRunIntoPlayerZ751:
     End
 
 OreburghCity_NextStopTheEternaGymBadge:
-    PlaySE SEQ_SE_DP_WALL_HIT2_sseq
+    PlaySE SEQ_SE_DP_WALL_HIT2
     Message OreburghCity_Text_BigThud
     CloseMessage
     Common_SetRivalBGM
@@ -174,7 +174,7 @@ OreburghCity_RivalLeaveZ751:
     End
 
 OreburghCity_RemoveRival:
-    PlaySE SEQ_SE_DP_KAIDAN2_sseq
+    PlaySE SEQ_SE_DP_KAIDAN2
     RemoveObject LOCALID_RIVAL
     Common_FadeToDefaultMusic2
     SetVar VAR_OREBURGH_CITY_STATE, 3
@@ -270,7 +270,7 @@ OreburghCity_Worker1:
     End
 
 OreburghCity_Worker2:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_RECEIVED_OREBURGH_CITY_SUPER_POTION, OreburghCity_PutsASmileOnMyFace
@@ -487,7 +487,7 @@ OreburghCity_BattleGirl1:
     End
 
 OreburghCity_SchoolKidF:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_ROARK_RETURNED_TO_OREBURGH_GYM, OreburghCity_GymLeaderIsSafetySupervisor

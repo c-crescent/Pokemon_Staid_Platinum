@@ -2,10 +2,9 @@
 #define POKEPLATINUM_SOUND_PLAYBACK_H
 
 #include "constants/sound.h"
+#include "generated/sdat.h"
 
 #include "sound_system.h"
-
-#include "res/sound/pl_sound_data.naix"
 
 enum BGMFadeInType {
     BGM_FADE_IN_TYPE_FROM_ZERO = 0, // Fade in from volume 0

@@ -1,4 +1,4 @@
-// Copyright (c) 2015 YamaArashi, 2021-2025 red031000
+// Copyright (c) 2015 YamaArashi, 2021-2024 red031000
 
 #include <stddef.h>
 #include <string.h>
@@ -556,19 +556,13 @@ uint32_t ReadNtrImage(char *path, int tilesWide, int bitDepth, int colsPerChunk,
 
     if (verbose)
     {
-        printf("Suggested NCGR options: ");
-
-        if (!convertTo8Bpp)
-        {
+        if (!convertTo8Bpp) {
             printf("-bitdepth %d ", bitDepth);
-        }
-        else
-        {
+        } else {
             printf("-convertTo4Bpp ");
         }
 
-        if (buffer[0x6] == 1)
-        {
+        if (buffer[0x6] == 1) {
             printf("-version101 ");
         }
 
@@ -577,31 +571,26 @@ uint32_t ReadNtrImage(char *path, int tilesWide, int bitDepth, int colsPerChunk,
             printf("-clobbersize ");
         }
 
-        if (buffer[0xE] == 2)
-        {
+        if (buffer[0xE] == 2) {
             printf("-sopc ");
         }
 
-        if (charHeader[0x12])
-        {
+        if (charHeader[0x12]) {
             printf("-mappingtype %d ", 1 << (5 + (charHeader[0x12] >> 4)));
         }
 
         if (scanned)
         {
-            printf("-scanned ");
+            printf("-scan ");
         }
 
-        if (charHeader[0x15] == 1)
-        {
+        if (charHeader[0x15] == 1) {
             printf("-vram ");
         }
 
         if (tilesWide && ReadS16(charHeader, 0xA) != 0xFF) {
             printf("-width %d ", ReadS16(charHeader, 0xA));
         }
-
-        puts(""); // at least 1 line is always output (-bitdepth / -convertTo4Bpp)
     }
 
     if (bitDepth == 4 && !convertTo8Bpp)
@@ -628,6 +617,7 @@ uint32_t ReadNtrImage(char *path, int tilesWide, int bitDepth, int colsPerChunk,
     } else {
         tilesTall = numTiles / tilesWide + (numTiles % tilesWide != 0);
     }
+
 
     if (tilesWide % colsPerChunk != 0)
         FATAL_ERROR("The width in tiles (%d) isn't a multiple of the specified tiles per row (%d)", tilesWide, colsPerChunk);
@@ -698,6 +688,7 @@ static int SnapToTile(int val)
     return val;
 }
 
+
 struct Dimensions {
     int width;
     int height;
@@ -711,10 +702,6 @@ static struct Dimensions CalculateOAMDimensions(struct OAM *oam)
     };
 
     int oamSize = oam->attr1.Size;
-    if (oamSize > 3)
-    {
-        FATAL_ERROR("oamSize greater than expected\n");
-    }
     switch (oam->attr0.Shape)
     {
     case 0:
@@ -768,12 +755,6 @@ static struct Dimensions CalculateOAMDimensions(struct OAM *oam)
     return oamdim;
 }
 
-struct CellInfo {
-    int height;
-    int minX;
-    int minY;
-};
-
 void ApplyCellsToImage(char *cellFilePath, struct Image *image, bool toPNG, bool snap, bool noSkip, bool convertBpp)
 {
     char *cellFileExtension = GetFileExtension(cellFilePath);
@@ -803,7 +784,9 @@ void ApplyCellsToImage(char *cellFilePath, struct Image *image, bool toPNG, bool
     int outputHeight = -1;
     int outputWidth = 0;
     int numTiles = 0;
-    struct CellInfo *cellInfo = malloc(sizeof(struct CellInfo) * options->cellCount);
+    int cellHeights[options->cellCount];
+    int minXs[options->cellCount];
+    int minYs[options->cellCount];
 
     for (int i = 0; i < options->cellCount; i++)
     {
@@ -817,8 +800,8 @@ void ApplyCellsToImage(char *cellFilePath, struct Image *image, bool toPNG, bool
         {
             cellHeight = options->cells[i]->maxY - options->cells[i]->minY;
             cellWidth = options->cells[i]->maxX - options->cells[i]->minX;
-            cellInfo[i].minX = options->cells[i]->minX;
-            cellInfo[i].minY = options->cells[i]->minY;
+            minXs[i] = options->cells[i]->minX;
+            minYs[i] = options->cells[i]->minY;
         }
         else
         {
@@ -858,8 +841,8 @@ void ApplyCellsToImage(char *cellFilePath, struct Image *image, bool toPNG, bool
             }
             cellWidth = maxX - minX;
             cellHeight = maxY - minY;
-            cellInfo[i].minX = minX;
-            cellInfo[i].minY = minY;
+            minXs[i] = minX;
+            minYs[i] = minY;
         }
         if (snap)
         {
@@ -872,7 +855,7 @@ void ApplyCellsToImage(char *cellFilePath, struct Image *image, bool toPNG, bool
         {
             outputWidth = cellWidth;
         }
-        cellInfo[i].height = cellHeight;
+        cellHeights[i] = cellHeight;
     }
 
     if (outputHeight < 1 || outputWidth == 0)
@@ -892,7 +875,7 @@ void ApplyCellsToImage(char *cellFilePath, struct Image *image, bool toPNG, bool
             continue;
         }
         scanHeight++;
-        int cellHeight = cellInfo[i].height;
+        int cellHeight = cellHeights[i];
         if (snap)
         {
             cellHeight = SnapToTile(cellHeight);
@@ -903,18 +886,18 @@ void ApplyCellsToImage(char *cellFilePath, struct Image *image, bool toPNG, bool
         {
             struct Dimensions oamdim = CalculateOAMDimensions(&options->cells[i]->oam[j]);
 
-            int x = options->cells[i]->oam[j].attr1.XCoordinate;
+            int x = options->cells[i]->oam[j].attr1.XCoordinate; // 8 bits
             if (x & (1 << 8))
             {
                 x |= ~0x1FF;
             }
-            int y = options->cells[i]->oam[j].attr0.YCoordinate;
+            int y = options->cells[i]->oam[j].attr0.YCoordinate; // 7 bits
             if (y & (1 << 7))
             {
                 y |= ~0xFF;
             }
-            x -= cellInfo[i].minX;
-            y -= cellInfo[i].minY;
+            x -= minXs[i];
+            y -= minYs[i];
 
             if (snap)
             {
@@ -1002,7 +985,6 @@ void ApplyCellsToImage(char *cellFilePath, struct Image *image, bool toPNG, bool
     }
 
     free(image->pixels);
-    free(cellInfo);
     if (toPNG)
     {
         image->pixels = newPixels;
@@ -1031,8 +1013,8 @@ void WriteEmbeddableHeader(char *path, void *buffer, int bufferSize, const char 
     if (header == NULL)
         FATAL_ERROR("Failed to open output file %s\n", headerPath);
 
-    fprintf(header, "#ifndef GUARD_EMBEDDABLE_%s_H\n", embedName);
-    fprintf(header, "#define GUARD_EMBEDDABLE_%s_H\n", embedName);
+    fprintf(header, "#ifndef GUARD_EMBED_%s_H\n", embedName);
+    fprintf(header, "#define GUARD_EMBED_%s_H\n", embedName);
     fprintf(header, "\n");
     fprintf(header, "__attribute__((aligned(4))) const u8 %s[] = {\n", embedName);
 
@@ -1641,6 +1623,11 @@ void ReadNtrCell_CEBK(unsigned char * restrict data, unsigned int blockOffset, u
     unsigned int ucatOffset = (data[blockOffset + 0x1c] | data[blockOffset + 0x1d] << 8 | data[blockOffset + 0x1e] << 16 | data[blockOffset + 0x1f] << 24);
     options->vramTransferEnabled = vramTransferOffset > 0;
     options->ucatEnabled = ucatOffset > 0;
+    /*if (!options->extended)
+    {
+        //in theory not extended should be implemented, however not 100% sure
+        FATAL_ERROR("Don't know how to deal with not extended yet, bug red031000.\n");
+    }*/
 
     options->mappingType = data[blockOffset + 0x10];
 
@@ -1915,6 +1902,12 @@ void WriteNtrCell(char *path, struct JsonToCellOptions *options)
 
     memset(KBECContents, 0, kbecSize);
 
+    /*if (!options->extended)
+    {
+        //in theory not extended should be implemented, however not 100% sure
+        FATAL_ERROR("Don't know how to deal with not extended yet, bug red031000.\n");
+    }*/
+
     int i;
     int totalOam = 0;
     for (i = 0; i < options->cellCount * iterNum; i += iterNum)
@@ -2000,9 +1993,9 @@ void WriteNtrCell(char *path, struct JsonToCellOptions *options)
     }
 
     // word-aligned
-    if (offset % 4 > 0)
+    while (offset % 4 > 0)
     {
-        offset += 4 - (offset % 4);
+        offset += 0x01;
     }
 
     // VRAM transfer data
@@ -2039,11 +2032,11 @@ void WriteNtrCell(char *path, struct JsonToCellOptions *options)
     // UCAT data
     if (options->ucatEnabled)
     {
-        // UCAT magic
+       // UCAT magic
         strcpy((char *) (KBECContents + offset), "TACU");
         offset += 0x04;
 
-        // ucat size
+       // ucat size
         KBECContents[offset] = ucatSize & 0xFF;
         KBECContents[offset + 1] = (ucatSize >> 8) & 0xFF;
         KBECContents[offset + 2] = (ucatSize >> 16) & 0xFF;

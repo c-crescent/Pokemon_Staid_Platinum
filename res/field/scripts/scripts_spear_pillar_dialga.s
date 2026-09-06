@@ -29,7 +29,7 @@ SpearPillarDialga_TryEnableHallOfOriginEnd:
     Return
 
 SpearPillarDialga_Rift:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     GoToIfGe VAR_SPEAR_PILLAR_DIALGA_STATE, 1, SpearPillarDialga_TimeEmanatesFromRift
     GoToIfSet FLAG_CAUGHT_DIALGA, SpearPillarDialga_TimeEmanatesFromRift

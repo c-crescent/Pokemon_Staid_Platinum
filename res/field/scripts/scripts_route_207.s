@@ -142,7 +142,7 @@ Route207_Dummy3:
     End
 
 Route207_CyclistM:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_RECEIVED_BICYCLE, Route207_ChangeGearTakeARun

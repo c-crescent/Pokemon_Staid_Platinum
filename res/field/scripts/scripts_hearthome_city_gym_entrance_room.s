@@ -9,7 +9,7 @@
     ScriptEntryEnd
 
 HearthomeGym_GymGuide:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfBadgeAcquired BADGE_ID_RELIC, HearthomeGym_GymGuideAfterBadge
@@ -42,7 +42,7 @@ HearthomeGym_GymGuideAfterBadge:
     End
 
 HearthomeGym_GymStatue:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     GoToIfBadgeAcquired BADGE_ID_RELIC, HearthomeGym_GymStatueAfterBadge
     BufferRivalName 0

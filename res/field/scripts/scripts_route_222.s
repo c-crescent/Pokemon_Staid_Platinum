@@ -29,7 +29,7 @@ Route222_SetPolicemanThomasBattle:
     End
 
 Route222_RichBoy:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_RECEIVED_ROUTE_222_TM56, Route222_ExplainFling

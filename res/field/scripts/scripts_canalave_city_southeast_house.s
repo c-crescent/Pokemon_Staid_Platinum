@@ -7,7 +7,7 @@
     ScriptEntryEnd
 
 CanalaveCitySoutheastHouse_AceTrainerF:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_RECEIVED_CANALAVE_CITY_SOUTHEAST_HOUSE_TM48, CanalaveCitySoutheastHouse_ExplainSkillSwap

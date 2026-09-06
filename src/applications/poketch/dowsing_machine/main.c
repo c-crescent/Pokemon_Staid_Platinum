@@ -1,6 +1,8 @@
 #include <nitro.h>
 #include <nitro/sinit.h>
 
+#include "generated/sdat.h"
+
 #include "applications/poketch/dowsing_machine/graphics.h"
 #include "applications/poketch/poketch_system.h"
 
@@ -10,8 +12,6 @@
 #include "sys_task.h"
 #include "sys_task_manager.h"
 #include "touch_screen.h"
-
-#include "res/sound/pl_sound_data.naix"
 
 #define DOWSING_RESULT_NO_ITEMS     0
 #define DOWSING_RESULT_FAR_ITEMS    1
@@ -167,7 +167,7 @@ static BOOL State_UpdateApp(PoketchDowsingMachine *appData)
     case 0:
         if (CheckScreenTapped(appData, &x, &y)) {
             FindNearbyHiddenItems(appData, x, y);
-            PoketchSystem_PlaySoundEffect(SEQ_SE_DP_POKETCH_009_sseq);
+            PoketchSystem_PlaySoundEffect(SEQ_SE_DP_POKETCH_009);
             PoketchDowsingMachineGraphics_StartTask(appData->graphics, DOWSING_MACHINE_GRAPHICS_START_PING);
             appData->subState = 1;
         }
@@ -198,7 +198,7 @@ static BOOL State_UpdateApp(PoketchDowsingMachine *appData)
         break;
     case 3:
         if (PoketchDowsingMachineGraphics_TaskIsNotActive(appData->graphics, DOWSING_MACHINE_GRAPHICS_START_PING)) {
-            PoketchSystem_PlaySoundEffect(SEQ_SE_DP_POKETCH_009_sseq);
+            PoketchSystem_PlaySoundEffect(SEQ_SE_DP_POKETCH_009);
             PoketchDowsingMachineGraphics_StartTask(appData->graphics, DOWSING_MACHINE_GRAPHICS_START_PING);
             appData->subState = 1;
         }

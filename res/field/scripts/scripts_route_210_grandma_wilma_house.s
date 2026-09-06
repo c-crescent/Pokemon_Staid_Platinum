@@ -12,7 +12,7 @@ Route210GrandmaWilmaHouse_OnTransition:
     End
 
 Route210GrandmaWilmaHouse_Wilma:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_TALKED_TO_ROUTE_210_GRANDMA_WILMA, Route210GrandmaWilmaHouse_AskTeachDracoMeteor

@@ -1229,13 +1229,13 @@ static BOOL TextPrinter_HandleSound(TextPrinterTemplate *printer, u16 param)
     case 2:
         return Sound_IsBGMPausedByFanfare();
     case 3:
-        Sound_PlayEffect(SEQ_SE_DP_KON_sseq);
+        Sound_PlayEffect(SEQ_SE_DP_KON);
         break;
     case 4:
-        Sound_PlayFanfare(SEQ_FANFA1_sseq);
+        Sound_PlayFanfare(SEQ_FANFA1);
         break;
     case 5:
-        return Sound_IsEffectPlaying(SEQ_SE_DP_KON_sseq);
+        return Sound_IsEffectPlaying(SEQ_SE_DP_KON);
     }
 
     return FALSE;

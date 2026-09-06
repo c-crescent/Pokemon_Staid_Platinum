@@ -7,7 +7,7 @@
     ScriptEntryEnd
 
 CelesticTownPokecenter1F_BlackBelt:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     CheckPoketchAppRegistered POKETCH_APPID_ANALOGWATCH, VAR_RESULT

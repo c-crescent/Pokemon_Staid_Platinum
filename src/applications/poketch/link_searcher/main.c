@@ -1,6 +1,8 @@
 #include <nitro.h>
 #include <nitro/sinit.h>
 
+#include "generated/sdat.h"
+
 #include "applications/poketch/link_searcher/graphics.h"
 #include "applications/poketch/poketch_system.h"
 #include "field/field_system.h"
@@ -14,8 +16,6 @@
 #include "sys_task_manager.h"
 #include "touch_screen.h"
 #include "unk_02033200.h"
-
-#include "res/sound/pl_sound_data.naix"
 
 #define COMM_STATE_IDLE      0
 #define COMM_STATE_SEARCHING 1
@@ -192,7 +192,7 @@ static BOOL State_OnIntroScreen(PoketchLinkSearcher *appData)
                 ChangeState(appData, STATE_SHOW_RESULTS);
             }
         } else {
-            PoketchSystem_PlaySoundEffect(SEQ_SE_DP_BEEP_sseq);
+            PoketchSystem_PlaySoundEffect(SEQ_SE_DP_BEEP);
         }
     }
 

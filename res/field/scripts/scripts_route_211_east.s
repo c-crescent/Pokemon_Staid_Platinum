@@ -9,7 +9,7 @@
     ScriptEntryEnd
 
 Route211East_AceTrainerM:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     GoToIfSet FLAG_RECEIVED_ROUTE_211_EAST_TM77, Route211East_ExplainPsychUp
     Message Route211East_Text_ImStrong

@@ -35,11 +35,11 @@ HearthomeCityNortheastHouseElevator_ElevatorDown:
     End
 
 HearthomeCityNortheastHouseElevator_ElevatorAnimation:
-    WaitSE SE_CONFIRM_sseq_3
+    WaitSE SEQ_SE_CONFIRM
     PlayElevatorAnimation VAR_0x8004, 4
     ApplyMovement LOCALID_PLAYER, HearthomeCityNortheastHouseElevator_Movement_PlayerWalkOut
     WaitMovement
-    PlaySE SEQ_SE_DP_KAIDAN2_sseq
+    PlaySE SEQ_SE_DP_KAIDAN2
     Return
 
     .balign 4, 0

@@ -16,7 +16,7 @@ VictoryRoad_DontHideCollector:
     End
 
 VictoryRoad_Collector:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_GAME_COMPLETED, VictoryRoad1F_YoullMeetManyPokemon

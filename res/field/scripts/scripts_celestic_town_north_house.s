@@ -14,7 +14,7 @@ CelesticTownNorthHouse_OnTransition:
     End
 
 CelesticTownNorthHouse_ExpertM:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     Message CelesticTownNorthHouse_Text_LikeToKnowMesprit
@@ -36,7 +36,7 @@ CelesticTownNorthHouse_ExpertMEnd:
     End
 
 CelesticTownNorthHouse_Elder:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_GAME_COMPLETED, CelesticTownNorthHouse_TryGiveAzureFlute

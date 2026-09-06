@@ -12,13 +12,13 @@ L_0:
     End
 
 L_1:
-    PlaySoundEffectC SEQ_SE_DP_KAZE_sseq
+    PlaySoundEffectC SEQ_SE_DP_KAZE
     WaitForBgSwitch
     CreateEmitter 0, 3, EMITTER_CB_NONE
-    PlaySoundEffectC SEQ_SE_DP_W059_sseq
+    PlaySoundEffectC SEQ_SE_DP_W059
     CreateEmitter 0, 1, EMITTER_CB_SET_POS_TO_DEFENDER_SIDE
     Delay 4
-    PlaySoundEffectR SEQ_SE_DP_151_sseq
+    PlaySoundEffectR SEQ_SE_DP_151
     Delay 12
     CreateEmitter 0, 0, EMITTER_CB_SET_POS_TO_DEFENDER_SIDE
     CreateEmitter 0, 2, EMITTER_CB_SET_POS_TO_DEFENDER_SIDE
@@ -35,19 +35,19 @@ L_1:
     SetVar BATTLE_ANIM_VAR_BG_SCREEN_MODE, 1
     SetVar BATTLE_ANIM_VAR_BG_BLEND_TYPE, 0
     RestoreBg 50, BATTLE_BG_SWITCH_MODE_FADE | BATTLE_BG_SWITCH_FLAG_STOP
-    StopSoundEffect SEQ_SE_DP_KAZE_sseq
-    StopSoundEffect SEQ_SE_DP_W059_sseq
+    StopSoundEffect SEQ_SE_DP_KAZE
+    StopSoundEffect SEQ_SE_DP_W059
     WaitForBgSwitch
     End
 
 L_2:
-    PlaySoundEffectC SEQ_SE_DP_KAZE_sseq
+    PlaySoundEffectC SEQ_SE_DP_KAZE
     WaitForBgSwitch
     CreateEmitter 0, 4, EMITTER_CB_NONE
-    PlaySoundEffectC SEQ_SE_DP_W059_sseq
+    PlaySoundEffectC SEQ_SE_DP_W059
     CreateEmitter 0, 1, EMITTER_CB_SET_POS_TO_DEFENDER_SIDE
     Delay 4
-    PlaySoundEffectR SEQ_SE_DP_151_sseq
+    PlaySoundEffectR SEQ_SE_DP_151
     Delay 12
     CreateEmitter 0, 0, EMITTER_CB_SET_POS_TO_DEFENDER_SIDE
     CreateEmitter 0, 2, EMITTER_CB_SET_POS_TO_DEFENDER_SIDE
@@ -64,7 +64,7 @@ L_2:
     SetVar BATTLE_ANIM_VAR_BG_SCREEN_MODE, 1
     SetVar BATTLE_ANIM_VAR_BG_BLEND_TYPE, 0
     RestoreBg 50, BATTLE_BG_SWITCH_MODE_FADE | BATTLE_BG_SWITCH_FLAG_STOP
-    StopSoundEffect SEQ_SE_DP_KAZE_sseq
-    StopSoundEffect SEQ_SE_DP_W059_sseq
+    StopSoundEffect SEQ_SE_DP_KAZE
+    StopSoundEffect SEQ_SE_DP_W059
     WaitForBgSwitch
     End

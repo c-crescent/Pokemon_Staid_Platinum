@@ -7,7 +7,7 @@
     ScriptEntryEnd
 
 SolaceonRuinsRoom2_Hiker:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_RECEIVED_SOLACEON_RUINS_ROOM_2_GREEN_SHARD, SolaceonRuinsRoom2_IveFinallyGotDefog

@@ -30,7 +30,7 @@ PokemonMansionOffice_SetDontBlockStatue:
     End
 
 PokemonMansionOffice_MrBacklot:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_DAILY_ADDED_TROPHY_GARDEN_MON, PokemonMansionOffice_ThereAreCutePokemon
@@ -171,7 +171,7 @@ PokemonMansionOffice_Movement_MrBacklotWalkOnSpotSouth:
     EndMovement
 
 PokemonMansionOffice_OldMan:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GetNationalDexEnabled VAR_RESULT
@@ -246,7 +246,7 @@ PokemonMansionOffice_ThereWereSomePokemon:
     End
 
 PokemonMansionOffice_Policeman:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     Message PokemonMansionOffice_Text_LookDontTouchStatue
@@ -290,7 +290,7 @@ PokemonMansionOffice_Statue:
     End
 
 PokemonMansionOffice_Book:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     Message PokemonMansionOffice_Text_WouldYouReadBook
     ShowYesNoMenu VAR_RESULT

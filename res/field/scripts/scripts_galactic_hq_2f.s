@@ -12,7 +12,7 @@
     ScriptEntryEnd
 
 GalacticHQ2F_Bed:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     Message GalacticHQ2F_Text_TakeARest
     ShowYesNoMenu VAR_RESULT
@@ -25,7 +25,7 @@ GalacticHQ2F_TakeARest:
     CloseMessage
     FadeScreenOut
     WaitFadeScreen
-    PlayFanfare SEQ_ASA_sseq
+    PlayFanfare SEQ_ASA
     WaitFanfare
     HealParty
     FadeScreenIn
@@ -63,7 +63,7 @@ GalacticHQ2F_Refrigerator:
     End
 
 GalacticHQ2F_Report:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     Message GalacticHQ2F_Text_ReadReport

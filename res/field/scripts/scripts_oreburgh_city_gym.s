@@ -8,7 +8,7 @@
     ScriptEntryEnd
 
 OreburghGym_Roark:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfBadgeAcquired BADGE_ID_COAL, OreburghGym_AlreadyHaveCoalBadge
@@ -21,7 +21,7 @@ OreburghGym_Roark:
     Message OreburghGym_Text_BeatRoark
     BufferPlayerName 0
     Message OreburghGym_Text_RoarkReceiveCoalBadge
-    PlayFanfare SEQ_BADGE_sseq
+    PlayFanfare SEQ_BADGE
     WaitFanfare
     SetTrainerFlag TRAINER_YOUNGSTER_JONATHON
     SetTrainerFlag TRAINER_YOUNGSTER_DARIUS
@@ -77,7 +77,7 @@ OreburghGym_LostBattle:
     End
 
 OreburghGym_GymGuide:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfBadgeAcquired BADGE_ID_COAL, OreburghGym_GymGuideAfterBadge
@@ -96,7 +96,7 @@ OreburghGym_GymGuideAfterBadge:
     End
 
 OreburghGym_GymStatue:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     GoToIfBadgeAcquired BADGE_ID_COAL, OreburghGym_GymStatueAfterBadge
     BufferRivalName 0

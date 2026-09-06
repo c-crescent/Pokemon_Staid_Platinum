@@ -4,6 +4,7 @@
 
 #include "constants/graphics.h"
 #include "generated/items.h"
+#include "generated/sdat.h"
 
 #include "applications/poketch/poketch_animation.h"
 #include "applications/poketch/poketch_graphics.h"
@@ -19,7 +20,6 @@
 #include "sys_task_manager.h"
 
 #include "res/graphics/poketch/poketch.naix"
-#include "res/sound/pl_sound_data.naix"
 
 #define POKE_ICON_TILE_COUNT 16
 #define POKE_ICON_SIZE_BYTES (POKE_ICON_TILE_COUNT * TILE_SIZE_4BPP)
@@ -438,6 +438,6 @@ static void Task_RedrawAppScreen(SysTask *task, void *taskMan)
 
     Bg_CopyTilemapBufferToVRAM(graphics->bgConfig, BG_LAYER_SUB_2);
 
-    PoketchSystem_PlaySoundEffect(SEQ_SE_DP_POKETCH_010_sseq);
+    PoketchSystem_PlaySoundEffect(SEQ_SE_DP_POKETCH_010);
     EndTask(taskMan);
 }

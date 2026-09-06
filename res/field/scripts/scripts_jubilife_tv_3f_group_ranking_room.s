@@ -11,21 +11,21 @@
     ScriptEntryEnd
 
 JubilifeTV3FGroupRankingRoom_RecordMachinePokemon:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     StartRankingsMachine 3
     ReleaseAll
     End
 
 JubilifeTV3FGroupRankingRoom_RecordMachineBattles:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     StartRankingsMachine 4
     ReleaseAll
     End
 
 JubilifeTV3FGroupRankingRoom_RecordMachineContests:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     StartRankingsMachine 5
     ReleaseAll

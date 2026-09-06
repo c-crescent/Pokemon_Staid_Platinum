@@ -343,7 +343,7 @@ CanalaveCity_ProfRowan:
     End
 
 CanalaveCity_Counterpart:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GetPlayerGender VAR_RESULT
@@ -365,7 +365,7 @@ CanalaveCity_CounterpartEnd:
     End
 
 CanalaveCity_Collector:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_LAKE_VALOR_EXPLODED, CanalaveCity_TremorWasNoQuake
@@ -383,7 +383,7 @@ CanalaveCity_NPCEnd:
     End
 
 CanalaveCity_PokemonBreederM:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_LAKE_VALOR_EXPLODED, CanalaveCity_WhatWasThatTremor
@@ -408,7 +408,7 @@ CanalaveCity_ImpatientBoyAtLibrary:
     End
 
 CanalaveCity_AceTrainerF:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_LAKE_VALOR_EXPLODED, CanalaveCity_ExplosionAtLakeValor
@@ -420,7 +420,7 @@ CanalaveCity_ExplosionAtLakeValor:
     GoTo CanalaveCity_NPCEnd
 
 CanalaveCity_Lass:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_LAKE_VALOR_EXPLODED, CanalaveCity_CouldntForetellTremor
@@ -432,7 +432,7 @@ CanalaveCity_CouldntForetellTremor:
     GoTo CanalaveCity_NPCEnd
 
 CanalaveCity_Psyduck:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_LAKE_VALOR_EXPLODED, CanalaveCity_PsyduckCryGuaagwa
@@ -446,7 +446,7 @@ CanalaveCity_PsyduckCryGuaagwa:
     GoTo CanalaveCity_NPCEnd
 
 CanalaveCity_OldMan:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_LAKE_VALOR_EXPLODED, CanalaveCity_WhatCouldExplode
@@ -492,7 +492,7 @@ CanalaveCity_Door:
     End
 
 CanalaveCity_SailorEldritch:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GetPlayerDir VAR_0x8004
@@ -559,7 +559,7 @@ CanalaveCity_SailorEldritchEnterShip:
     CloseMessage
     ApplyMovement LOCALID_SAILOR_ELDRITCH, CanalaveCity_Movement_SailorEldritchFaceEast
     WaitMovement
-    PlaySE SEQ_SE_DP_KAIDAN2_sseq
+    PlaySE SEQ_SE_DP_KAIDAN2
     ApplyMovement LOCALID_SAILOR_ELDRITCH, CanalaveCity_Movement_SetInvisible
     WaitMovement
     Return
@@ -567,7 +567,7 @@ CanalaveCity_SailorEldritchEnterShip:
 CanalaveCity_PlayerEnterShipSouth:
     ApplyMovement LOCALID_PLAYER, CanalaveCity_Movement_PlayerWalkToShipSouth
     WaitMovement
-    PlaySE SEQ_SE_DP_KAIDAN2_sseq
+    PlaySE SEQ_SE_DP_KAIDAN2
     ApplyMovement LOCALID_PLAYER, CanalaveCity_Movement_SetInvisible
     WaitMovement
     Return
@@ -575,7 +575,7 @@ CanalaveCity_PlayerEnterShipSouth:
 CanalaveCity_PlayerEnterShipEast:
     ApplyMovement LOCALID_PLAYER, CanalaveCity_Movement_PlayerWalkToShipEast
     WaitMovement
-    PlaySE SEQ_SE_DP_KAIDAN2_sseq
+    PlaySE SEQ_SE_DP_KAIDAN2
     ApplyMovement LOCALID_PLAYER, CanalaveCity_Movement_SetInvisible
     WaitMovement
     Return
@@ -583,7 +583,7 @@ CanalaveCity_PlayerEnterShipEast:
 CanalaveCity_PlayerEnterShipNorth:
     ApplyMovement LOCALID_PLAYER, CanalaveCity_Movement_PlayerWalkToShipNorth
     WaitMovement
-    PlaySE SEQ_SE_DP_KAIDAN2_sseq
+    PlaySE SEQ_SE_DP_KAIDAN2
     ApplyMovement LOCALID_PLAYER, CanalaveCity_Movement_SetInvisible
     WaitMovement
     Return
@@ -679,7 +679,7 @@ CanalaveCity_Movement_SailorEldritchLeave:
     EndMovement
 
 CanalaveCity_RivalLibrary:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     CheckItem ITEM_HM04, 1, VAR_RESULT

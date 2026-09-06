@@ -100,7 +100,7 @@ static BOOL EggHatchCutscene_Normal(EggHatchCutscene *eggHatch)
     case 2:
         if (IsScreenFadeDone() == TRUE) {
             Sound_StopWaveOutAndSequences();
-            Sound_SetSceneAndPlayBGM(SOUND_SCENE_13, SEQ_SHINKA_sseq, 1);
+            Sound_SetSceneAndPlayBGM(SOUND_SCENE_13, SEQ_SHINKA, 1);
             eggHatch->state++;
         }
         break;
@@ -139,7 +139,7 @@ static BOOL EggHatchCutscene_Normal(EggHatchCutscene *eggHatch)
             break;
         }
 
-        Sound_PlayFanfare(SEQ_FANFA5_sseq);
+        Sound_PlayFanfare(SEQ_FANFA5);
         eggHatch->state++;
     case 9:
         if (Sound_IsBGMPausedByFanfare()) {
@@ -255,7 +255,7 @@ static BOOL EggHatchCutscene_Manaphy(EggHatchCutscene *eggHatch)
         eggHatch->state++;
     case 2:
         if (IsScreenFadeDone() == TRUE) {
-            Sound_SetSceneAndPlayBGM(SOUND_SCENE_13, SEQ_SHINKA_sseq, 1);
+            Sound_SetSceneAndPlayBGM(SOUND_SCENE_13, SEQ_SHINKA, 1);
             eggHatch->state++;
         }
         break;
@@ -280,7 +280,7 @@ static BOOL EggHatchCutscene_Manaphy(EggHatchCutscene *eggHatch)
             break;
         }
 
-        Sound_PlayFanfare(SEQ_FANFA5_sseq);
+        Sound_PlayFanfare(SEQ_FANFA5);
         eggHatch->state++;
     case 9:
         if (Sound_IsBGMPausedByFanfare()) {
@@ -372,7 +372,7 @@ static BOOL InitializeEggAnimation(EggHatchCutscene *eggHatch)
         break;
     case 1:
         if (++eggHatch->subStateTimer >= 25) {
-            Sound_PlayEffect(SEQ_SE_DP_EGG01_sseq);
+            Sound_PlayEffect(SEQ_SE_DP_EGG01);
             eggHatch->subState++;
         }
         break;
@@ -398,7 +398,7 @@ static BOOL StartBreakingEgg(EggHatchCutscene *eggHatch)
         break;
     case 1:
         if (EggHatch_ShakeEgg(eggHatch, EGG_MINOR_SHAKE) == EGG_SHAKE_FINISHED) {
-            Sound_PlayEffect(SEQ_SE_DP_EGG01_sseq);
+            Sound_PlayEffect(SEQ_SE_DP_EGG01);
 
             ManagedSprite_SetAnimationFrame(eggHatch->eggSprite, ANIM_FRAME_COUPLE_CRACKS);
             eggHatch->subState++;
@@ -428,7 +428,7 @@ static BOOL FirstEggShardsBreakOff(EggHatchCutscene *eggHatch)
         int shakeProgress = EggHatch_ShakeEgg(eggHatch, EGG_BIG_SHAKE);
 
         if (shakeProgress == EGG_SHAKE_HALF_OVER) {
-            Sound_PlayEffect(SEQ_SE_DP_EGG01_sseq);
+            Sound_PlayEffect(SEQ_SE_DP_EGG01);
             ManagedSprite_SetAnimationFrame(eggHatch->eggSprite, ANIM_FRAME_BIG_CRACKS);
             EggHatchParticleSystem_CreateEmitter(eggHatch->graphics.eps, EMITTER_FIRST_EGG_SHARDS);
         }
@@ -461,7 +461,7 @@ static BOOL MoreEggShardsBreakAway(EggHatchCutscene *eggHatch)
         int shakeProgress = EggHatch_ShakeEgg(eggHatch, EGG_BIGGER_SHAKE);
 
         if (shakeProgress == EGG_SHAKE_HALF_OVER) {
-            Sound_PlayEffect(SEQ_SE_DP_EGG01_sseq);
+            Sound_PlayEffect(SEQ_SE_DP_EGG01);
 
             ManagedSprite_SetAnimationFrame(eggHatch->eggSprite, ANIM_FRAME_GAPING_HOLE);
             EggHatchParticleSystem_CreateEmitter(eggHatch->graphics.eps, EMITTER_MORE_EGG_SHARDS);
@@ -498,7 +498,7 @@ static BOOL CompleteEggAnimation(EggHatchCutscene *eggHatch)
 
         if (shakeProgress == EGG_SHAKE_HALF_OVER) {
             ManagedSprite_SetAnimationFrame(eggHatch->eggSprite, ANIM_FRAME_READY_TO_SHATTER);
-            Sound_PlayEffect(SEQ_SE_DP_BOWA3_sseq);
+            Sound_PlayEffect(SEQ_SE_DP_BOWA3);
             EggHatchParticleSystem_CreateEmitter(eggHatch->graphics.eps, EMITTER_EGG_EXPLODES);
             EggHatchParticleSystem_CreateEmitter(eggHatch->graphics.eps, EMITTER_SPARKLES);
         }
@@ -602,13 +602,13 @@ static BOOL ManaphyEggAnimation(EggHatchCutscene *eggHatch)
     case 1:
         switch (eggHatch->subStateTimer) {
         case 25:
-            Sound_PlayEffect(SEQ_SE_DP_W278_sseq);
+            Sound_PlayEffect(SEQ_SE_DP_W278);
             break;
         case 80:
-            Sound_PlayEffect(SEQ_SE_DP_W080C_sseq);
+            Sound_PlayEffect(SEQ_SE_DP_W080C);
             break;
         case 142:
-            Sound_PlayEffect(SEQ_SE_DP_W361_sseq);
+            Sound_PlayEffect(SEQ_SE_DP_W361);
             break;
         }
 

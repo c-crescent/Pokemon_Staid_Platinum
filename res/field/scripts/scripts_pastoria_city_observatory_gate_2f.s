@@ -10,7 +10,7 @@
     ScriptEntryEnd
 
 PastoriaCityObservatoryGate2F_Binocular:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     ShowMoney 20, 2
     Message PastoriaCityObservatoryGate2F_Text_AskPut100InBinoculars
@@ -25,8 +25,8 @@ PastoriaCityObservatoryGate2F_TryUseBinoculars:
     GoToIfNotEnoughMoney 100, PastoriaCityObservatoryGate2F_NotEnoughMoney
     RemoveMoney 100
     UpdateMoneyDisplay
-    PlaySE SEQ_SE_DP_REGI_sseq
-    WaitSE SEQ_SE_DP_REGI_sseq
+    PlaySE SEQ_SE_DP_REGI
+    WaitSE SEQ_SE_DP_REGI
     HideMoney
     StartGreatMarshLookout
     ReleaseAll

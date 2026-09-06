@@ -4272,7 +4272,7 @@ static BOOL BattleControllerPlayer_CheckBattleOver(BattleSystem *battleSys, Batt
         case TRAINER_CLASS_LEADER_CANDICE:
         case TRAINER_CLASS_LEADER_BYRON:
         case TRAINER_CLASS_LEADER_VOLKNER:
-            Sound_PlayBGM(VICTORY_GYM_LEADER_sseq);
+            Sound_PlayBGM(SEQ_VICTORY_GYM_LEADER);
             break;
 
         case TRAINER_CLASS_TOWER_TYCOON:
@@ -4280,11 +4280,11 @@ static BOOL BattleControllerPlayer_CheckBattleOver(BattleSystem *battleSys, Batt
         case TRAINER_CLASS_FACTORY_HEAD:
         case TRAINER_CLASS_ARCADE_STAR:
         case TRAINER_CLASS_CASTLE_VALET:
-            Sound_PlayBGM(VICTORY_FRONTIER_BRAIN_sseq);
+            Sound_PlayBGM(SEQ_VICTORY_FRONTIER_BRAIN);
             break;
 
         case TRAINER_CLASS_CHAMPION_CYNTHIA:
-            Sound_PlayBGM(VICTORY_CHAMPION_sseq);
+            Sound_PlayBGM(SEQ_VICTORY_CHAMPION);
             break;
 
         case TRAINER_CLASS_COMMANDER_MARS:
@@ -4292,22 +4292,22 @@ static BOOL BattleControllerPlayer_CheckBattleOver(BattleSystem *battleSys, Batt
         case TRAINER_CLASS_COMMANDER_SATURN:
         case TRAINER_CLASS_GALACTIC_GRUNT_MALE:
         case TRAINER_CLASS_GALACTIC_GRUNT_FEMALE:
-            Sound_PlayBGM(VICTORY_GALACTIC_GRUNT_sseq);
+            Sound_PlayBGM(SEQ_VICTORY_GALACTIC_GRUNT);
             break;
 
         case TRAINER_CLASS_GALACTIC_BOSS:
-            Sound_PlayBGM(VICTORY_CYRUS_sseq);
+            Sound_PlayBGM(SEQ_VICTORY_CYRUS);
             break;
 
         case TRAINER_CLASS_ELITE_FOUR_AARON:
         case TRAINER_CLASS_ELITE_FOUR_BERTHA:
         case TRAINER_CLASS_ELITE_FOUR_FLINT:
         case TRAINER_CLASS_ELITE_FOUR_LUCIAN:
-            Sound_PlayBGM(VICTORY_ELITE_FOUR_sseq);
+            Sound_PlayBGM(SEQ_VICTORY_ELITE_FOUR);
             break;
 
         default:
-            Sound_PlayBGM(VICTORY_TRAINER_sseq);
+            Sound_PlayBGM(SEQ_VICTORY_TRAINER);
             break;
         }
 

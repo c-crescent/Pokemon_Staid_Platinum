@@ -19,8 +19,7 @@ be_seq_narc = custom_target(be_seq_target_name,
     output: be_seq_target_name,
     input: script_bin_gen.process(
         effect_script_files,
-        extra_args: ['--out-dir', be_seq_private_dir],
-        depends: [text_banks],
+        extra_args: ['--out-dir', be_seq_private_dir]
     ),
     command: [
         nitroarc_exe,
@@ -37,11 +36,7 @@ sub_seq_narc = custom_target(sub_seq_narc_name,
     ],
     input: script_bin_gen.process(
         subscript_files,
-        extra_args: ['--out-dir', sub_seq_private_dir],
-        depends: [
-            text_banks,
-            pl_sound_data_sdat,
-        ],
+        extra_args: ['--out-dir', sub_seq_private_dir]
     ),
     command: [
         nitroarc_exe,
@@ -61,7 +56,6 @@ waza_seq_narc = custom_target(waza_seq_target_name,
             '--out-dir', waza_seq_private_dir,
             '--parent-dir',
         ],
-        depends: [text_banks],
         preserve_path_from: move_script_srcdir,
     ),
     command: [

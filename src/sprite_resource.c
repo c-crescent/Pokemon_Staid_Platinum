@@ -400,11 +400,11 @@ int SpriteResourceCollection_Extend(SpriteResourceCollection *spriteResources, c
     GF_ASSERT(spriteResources);
     GF_ASSERT(table);
 
-    SpriteResourceCollection_ExtendEx(spriteResources, table, 0, table->count, outList, heapID);
+    SpriteResoureCollection_ExtendEx(spriteResources, table, 0, table->count, outList, heapID);
     return table->count;
 }
 
-void SpriteResourceCollection_ExtendEx(SpriteResourceCollection *spriteResources, const SpriteResourceTable *table, int first, int count, SpriteResourceList *outList, enum HeapID heapID)
+void SpriteResoureCollection_ExtendEx(SpriteResourceCollection *spriteResources, const SpriteResourceTable *table, int first, int count, SpriteResourceList *outList, enum HeapID heapID)
 {
     for (int i = first; i < first + count; i++) {
         SpriteResource *spriteRes = SpriteResourceCollection_AddFromTable(spriteResources, table, i, heapID);

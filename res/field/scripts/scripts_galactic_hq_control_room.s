@@ -33,7 +33,7 @@ GalacticHQControlRoom_OnResume:
     End
 
 GalacticHQControlRoom_Saturn:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_FREED_GALACTIC_HQ_POKEMON, GalacticHQControlRoom_BossCraftedRedChain
@@ -111,7 +111,7 @@ GalacticHQControlRoom_Movement_SaturnWalkEastOnSpotWest:
     EndMovement
 
 GalacticHQControlRoom_MachineUxie:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     GoToIfSet FLAG_FREED_GALACTIC_HQ_POKEMON, GalacticHQControlRoom_UxieWasSealedInside
     Message GalacticHQControlRoom_Text_UxieIsSealedInside
@@ -128,7 +128,7 @@ GalacticHQControlRoom_UxieWasSealedInside:
     End
 
 GalacticHQControlRoom_MachineMesprit:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     GoToIfSet FLAG_FREED_GALACTIC_HQ_POKEMON, GalacticHQControlRoom_MespritWasSealedInside
     Message GalacticHQControlRoom_Text_MespritIsSealedInside
@@ -145,7 +145,7 @@ GalacticHQControlRoom_MespritWasSealedInside:
     End
 
 GalacticHQControlRoom_MachineAzelf:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     GoToIfSet FLAG_FREED_GALACTIC_HQ_POKEMON, GalacticHQControlRoom_AzelfWasSealedInside
     Message GalacticHQControlRoom_Text_AzelfIsSealedInside
@@ -171,7 +171,7 @@ GalacticHQControlRoom_Dummy9:
     End
 
 GalacticHQControlRoom_Button:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     GoToIfSet FLAG_FREED_GALACTIC_HQ_POKEMON, GalacticHQControlRoom_AlreadyPressedButton
     Message GalacticHQControlRoom_Text_AskPressButton
@@ -182,7 +182,7 @@ GalacticHQControlRoom_Button:
 
 GalacticHQControlRoom_FreePokemon:
     SetVar VAR_GALACTIC_HQ_CONTROL_ROOM_STATE, 0
-    PlaySE SEQ_SE_DP_BUTTON3_sseq
+    PlaySE SEQ_SE_DP_BUTTON3
     BufferPlayerName 0
     Message GalacticHQControlRoom_Text_PlayerPressedButton
     CloseMessage
@@ -338,7 +338,7 @@ GalacticHQControlRoom_Azelf:
     End
 
 GalacticHQControlRoom_Charon:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     GoToIfSet FLAG_DEFEATED_GALACTIC_HQ_CONTROL_ROOM_SATURN, GalacticHQControlRoom_PerhapsAnotherOption
     ApplyMovement LOCALID_CHARON, GalacticHQControlRoom_Movement_CharonWalkOnSpotNorth

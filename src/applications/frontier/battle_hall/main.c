@@ -430,7 +430,7 @@ static BOOL State_SelectNextBattle(BattleHallApp *app)
 
         if (JOY_NEW(PAD_BUTTON_A)) {
             if (BattleHall_CursorPosToType(app->cursorPos) == BATTLE_HALL_MON_SUMMARY) {
-                Sound_PlayEffect(SEQ_SE_DP_DECIDE_sseq);
+                Sound_PlayEffect(SEQ_SE_DP_DECIDE);
                 StartScreenFade(FADE_BOTH_SCREENS, FADE_TYPE_BRIGHTNESS_OUT, FADE_TYPE_BRIGHTNESS_OUT, COLOR_BLACK, 6, 1, HEAP_ID_BATTLE_HALL_APP);
 
                 app->summaryScreenOpen = TRUE;
@@ -438,23 +438,23 @@ static BOOL State_SelectNextBattle(BattleHallApp *app)
             } else {
                 if (IsHallMatronBattleAvailable(app) == TRUE) {
                     if (BattleHall_CursorPosToType(app->cursorPos) != TYPE_MYSTERY) {
-                        Sound_PlayEffect(SEQ_SE_DP_BOX03_sseq);
+                        Sound_PlayEffect(SEQ_SE_DP_BOX03);
                         return FALSE;
                     }
                 } else {
                     if (BattleHall_GetRankOfType(GetCursorPos(app->cursorPos), app->typeRanks) >= HALL_MAX_TYPE_RANK) {
-                        Sound_PlayEffect(SEQ_SE_DP_BOX03_sseq);
+                        Sound_PlayEffect(SEQ_SE_DP_BOX03);
 
                         return FALSE;
                     }
 
                     if (BattleHall_CursorPosToType(app->cursorPos) == TYPE_MYSTERY) {
-                        Sound_PlayEffect(SEQ_SE_DP_BOX03_sseq);
+                        Sound_PlayEffect(SEQ_SE_DP_BOX03);
                         return FALSE;
                     }
                 }
 
-                Sound_PlayEffect(SEQ_SE_DP_DECIDE_sseq);
+                Sound_PlayEffect(SEQ_SE_DP_DECIDE);
 
                 if (!BattleHall_IsMultiPlayerChallenge(app->challengeType)) {
                     ChangeCellBackground(app->bgConfig, app->cursorPos, CELL_BACKGROUND_SELECTED);
@@ -494,8 +494,8 @@ static BOOL State_SelectNextBattle(BattleHallApp *app)
                 app->savedCursorPos = app->cursorPos;
                 app->subState = SELECT_STATE_PRINT_MATRON_MSG;
             } else {
-                Sound_StopEffect(SE_CONFIRM_sseq_3, 0);
-                Sound_PlayEffect(SEQ_SE_DP_UG_020_sseq);
+                Sound_StopEffect(SEQ_SE_CONFIRM, 0);
+                Sound_PlayEffect(SEQ_SE_DP_UG_020);
 
                 if (app->savedCursorPos != 0x75) {
                     app->cursorPos = app->savedCursorPos;
@@ -633,8 +633,8 @@ static BOOL State_MultiplayerConfirmSelection(BattleHallApp *app)
         case MENU_NOTHING_CHOSEN:
             break;
         case MENU_YES:
-            Sound_StopEffect(SE_CONFIRM_sseq_3, 0);
-            Sound_PlayEffect(SEQ_SE_DP_UG_020_sseq);
+            Sound_StopEffect(SEQ_SE_CONFIRM, 0);
+            Sound_PlayEffect(SEQ_SE_DP_UG_020);
             FreeYesNoMenu(app);
             app->subState = MCONFIRM_STATE_SEND_CONFIRM_COMM;
             break;
@@ -1256,7 +1256,7 @@ static void UpdateCursorPosition(BattleHallApp *app, int _)
     }
 
     if (updateMade == TRUE) {
-        Sound_PlayEffect(SE_CONFIRM_sseq_3);
+        Sound_PlayEffect(SEQ_SE_CONFIRM);
         BattleHallAppSprite_SetPosition(app->cursorSprite, GetCursorX(app), GetCursorY(app));
     }
 

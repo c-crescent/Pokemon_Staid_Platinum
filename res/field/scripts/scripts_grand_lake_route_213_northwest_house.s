@@ -8,7 +8,7 @@
     ScriptEntryEnd
 
 GrandLakeRoute213NorthwestHouse_Clown:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_RECEIVED_GRAND_LAKE_ROUTE_213_NORTHWEST_HOUSE_TM92, GrandLakeRoute213NorthwestHouse_ExplainTrickRoom
@@ -34,7 +34,7 @@ GrandLakeRoute213NorthwestHouse_BagIsFull:
     End
 
 GrandLakeRoute213NorthwestHouse_Psychic:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfSet FLAG_TALKED_TO_GRAND_LAKE_ROUTE_213_NORTHWEST_HOUSE_PSYCHIC, GrandLakeRoute213NorthwestHouse_GazedIntoManyEyes

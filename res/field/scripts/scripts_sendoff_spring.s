@@ -68,7 +68,7 @@ SendoffSpring_Movement_CynthiaWalkOnSpotEast:
     EndMovement
 
 SendoffSpring_Cynthia:
-    PlaySE SE_CONFIRM_sseq_3
+    PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
     GoToIfGe VAR_EXITED_DISTORTION_WORLD_STATE, 3, SendoffSpring_IWishIBattledGiratina

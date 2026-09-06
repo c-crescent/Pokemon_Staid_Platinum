@@ -6,7 +6,7 @@ L_0:
     Delay 2
     CreateEmitter 0, 1, EMITTER_CB_SET_POS_TO_DEFENDER
     CreateEmitter 0, 0, EMITTER_CB_SET_POS_TO_DEFENDER
-    PlaySoundEffectR SEQ_SE_DP_W030_sseq
+    PlaySoundEffectR SEQ_SE_DP_W030
     WaitForAnimTasks
     WaitForAllEmitters
     UnloadParticleSystem 0
