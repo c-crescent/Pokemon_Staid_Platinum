@@ -596,6 +596,11 @@
 > - ATK: 79(+20)
 > - DEF: 105(+20)
 
+> Mothim
+> Type: Bug / Fire
+> - ATK: 104(+10)
+> - SPA: 104(+10)
+
 > Vespiqueen
 > - ATK: 102(+22)
 > - SPA: 102(+22)

@@ -1,13 +1,13 @@
 {
     "base_stats": {
         "hp": 70,
-        "attack": 94,
+        "attack": 104,
         "defense": 50,
         "speed": 66,
-        "special_attack": 94,
+        "special_attack": 104,
         "special_defense": 50
     },
-    "types": [ "TYPE_BUG", "TYPE_FLYING" ],
+    "types": [ "TYPE_BUG", "TYPE_FIRE" ],
     "catch_rate": 45,
     "base_exp_reward": 159,
     "ev_yields": {
@@ -35,6 +35,7 @@
     "learnset": {
         "by_level": [
             [ 1, "MOVE_TACKLE" ],
+            [ 1, "MOVE_EMBER" ],
             [ 10, "MOVE_PROTECT" ],
             [ 15, "MOVE_BUG_BITE" ],
             [ 20, "MOVE_HIDDEN_POWER" ],
@@ -63,6 +64,7 @@
             "TM29",
             "TM30",
             "TM32",
+            "TM38",
             "TM40",
             "TM42",
             "TM43",
@@ -70,9 +72,11 @@
             "TM45",
             "TM46",
             "TM48",
+            "TM50",
             "TM51",
             "TM53",
             "TM58",
+            "TM61",
             "TM62",
             "TM68",
             "TM70",
