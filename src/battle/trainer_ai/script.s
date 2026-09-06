@@ -5190,9 +5190,7 @@ Expert_CloseCombat:
     IfMoveEffectivenessEquals TYPE_MULTI_IMMUNE, Expert_CloseCombat_ScoreMinus1
     IfMoveEffectivenessEquals TYPE_MULTI_QUARTER_DAMAGE, Expert_CloseCombat_ScoreMinus1
     IfMoveEffectivenessEquals TYPE_MULTI_HALF_DAMAGE, Expert_CloseCombat_ScoreMinus1
-    IfSpeedCompareEqualTo COMPARE_SPEED_SLOWER, Expert_CloseCombat_SlowerCheckHP
-    IfHPPercentGreaterThan AI_BATTLER_ATTACKER, 60, Expert_CloseCombat_End
-    GoTo Expert_CloseCombat_ScoreMinus1
+    GoTo Expert_CloseCombat_End
 
 Expert_CloseCombat_SlowerCheckHP:
     IfHPPercentGreaterThan AI_BATTLER_ATTACKER, 80, Expert_CloseCombat_End
